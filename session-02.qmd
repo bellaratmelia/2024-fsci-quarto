@@ -1,9 +1,0 @@
----
-title: "Session 02"
-author: "Bella Ratmelia & Dong Danping"
-format: revealjs
----
-
-# Session 02 - Research Writing with Quarto
-
-Welcome!

@@ -1,9 +1,0 @@
----
-title: "Session 1"
-author: "Bella Ratmelia & Dong Danping"
-format: revealjs
----
-
-# Session 01 - Introduction
-
-Welcome!
