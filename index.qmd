@@ -1,0 +1,33 @@
+---
+title: "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio"
+---
+
+*by Bella Ratmelia and Danping Dong*
+
+## Description
+
+In academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.
+
+The primary objective of this course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.
+
+Quarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming. Prior experience with R is highly recommended for this course.
+
+## Learning Objectives
+
+By the end of the session, participants will be able to:
+
+1.  Describe how Quarto can enhance transparency in scientific and technical publishing.
+
+2.  Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.
+
+3.  Convert Quarto documents into the following format: static HTML document, Word, and RevealJS presentation to cater to different publication and presentation needs.
+
+4.  Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
+
+## Pre-session Preparation
+
+Please ensure that you have completed the following activities before the workshop begin:
+
+-   Download and install the latest version of R
+
+-   Download and install the latest version of RStudio (Quarto already comes bundled with RStudio
