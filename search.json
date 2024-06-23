@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
+    "section": "",
+    "text": "by Bella Ratmelia and Danping Dong"
+  },
+  {
+    "objectID": "index.html#description",
+    "href": "index.html#description",
+    "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
+    "section": "Description",
+    "text": "Description\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming. Prior experience with R is highly recommended for this course."
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nConvert Quarto documents into the following format: static HTML document, Word, and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience."
+  },
+  {
+    "objectID": "index.html#pre-session-preparation",
+    "href": "index.html#pre-session-preparation",
+    "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
+    "section": "Pre-session Preparation",
+    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio (Quarto already comes bundled with RStudio"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Important\n\n\n\nThe schedule may be adjusted to ensure it aligns with the participants’ comfort and learning pace."
+  },
+  {
+    "objectID": "schedule.html#session-1",
+    "href": "schedule.html#session-1",
+    "title": "Schedule",
+    "section": "Session 1",
+    "text": "Session 1\nDate & Time: Monday, 29 July 2024, 10 AM - 1 PM (PDT)\nVenue: UCLA"
+  },
+  {
+    "objectID": "schedule.html#session-2",
+    "href": "schedule.html#session-2",
+    "title": "Schedule",
+    "section": "Session 2",
+    "text": "Session 2\nDate & Time: Tuesday, 30 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
+  },
+  {
+    "objectID": "schedule.html#session-3",
+    "href": "schedule.html#session-3",
+    "title": "Schedule",
+    "section": "Session 3",
+    "text": "Session 3\nDate & Time: Wednesday, 31 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
+  }
+]
