@@ -21,3 +21,7 @@ We covered the following topic:
 -   Rmarkdown basics
 
 ## Overview for today
+
+-   Code chunks with `knitr`
+
+-   Rendering to Static document and RevealJS presentation
