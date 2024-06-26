@@ -18,7 +18,7 @@
     "href": "session-01.html#slide-3",
     "title": "Session 1",
     "section": "Slide 3",
-    "text": "Slide 3\ntest"
+    "text": "Slide 3\ntest\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
   },
   {
     "objectID": "schedule.html",
@@ -77,10 +77,17 @@
     "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio (Quarto already comes bundled with RStudio"
   },
   {
-    "objectID": "session-02.html#slide-1",
-    "href": "session-02.html#slide-1",
-    "title": "Session 02",
-    "section": "Slide 1",
-    "text": "Slide 1\nHello"
+    "objectID": "session-02.html#recap-from-yesterday",
+    "href": "session-02.html#recap-from-yesterday",
+    "title": "Session 02 - Integrating codes",
+    "section": "Recap from yesterday",
+    "text": "Recap from yesterday\nWe covered the following topic:\n\nLiterate Programming\nQuarto and Research Transparency and Reproducibility\nRmarkdown basics"
+  },
+  {
+    "objectID": "session-02.html#overview-for-today",
+    "href": "session-02.html#overview-for-today",
+    "title": "Session 02 - Integrating codes",
+    "section": "Overview for today",
+    "text": "Overview for today\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
   }
 ]
