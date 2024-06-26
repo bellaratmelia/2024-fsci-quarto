@@ -1,5 +1,5 @@
 ---
-title: "Session 1"
+title: "Getting Started with Quarto"
 author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
@@ -8,20 +8,40 @@ format:
     height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
+    chalkboard: true
 ---
 
 # Session 01 - Introduction
 
 Welcome!
 
-## Slide 1
+## Welcome
 
 Hello
 
-## Slide 2
+## Learning Objectives
 
-Helloo
+-   point one
 
-## Slide 3
+-   point two
 
-test
+## Setup and instructions
+
+1.  [Download](https://posit.co/download/rstudio-desktop/) and install R
+2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
+3.  Install these R packages:
+
+```{r}
+pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "quarto", "rmarkdown", "gtsummary", "palmerpenguins", "fs", "skimr" )
+install.packages(pkg_list)
+```
+
+## Quarto vs R Markdown
+
+## Basic Markdown syntax
+
+## What is YAML?
+
+## Code Chunks
+
+## Output formats
