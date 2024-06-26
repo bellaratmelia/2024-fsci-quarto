@@ -1,7 +1,13 @@
 ---
 title: "Session 03"
 author: "Bella Ratmelia & Dong Danping"
-format: revealjs
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    width: 1980
+    height: 1080
+    slide-number: true
+    footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
 ---
 
 # Session 03 - Website for Your Research Project

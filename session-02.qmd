@@ -1,12 +1,23 @@
 ---
-title: "Session 02"
+title: "Session 02 - Integrating codes"
 author: "Bella Ratmelia & Dong Danping"
-format: revealjs
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    width: 1980
+    height: 1080
+    slide-number: true
+    footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
 ---
 
-# Session 02 - Research Writing with Quarto
+## Recap from yesterday
 
-Welcome!
+We covered the following topic:
 
-## Slide 1
-Hello
+-   Literate Programming
+
+-   Quarto and Research Transparency and Reproducibility
+
+-   Rmarkdown basics
+
+## Overview for today
