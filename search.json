@@ -53,14 +53,14 @@
     "href": "index.html",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
     "section": "",
-    "text": "by Bella Ratmelia and Danping Dong"
+    "text": "Bella Ratmelia & Danping Dong\nResearch & Data Services, SMU Libraries\n29 - 31 July 2024 @ UCLA"
   },
   {
-    "objectID": "index.html#description",
-    "href": "index.html#description",
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
-    "section": "Description",
-    "text": "Description\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming. Prior experience with R is highly recommended for this course."
+    "section": "About This Course",
+    "text": "About This Course\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming.\n\nPrior experience with R is highly recommended for this course."
   },
   {
     "objectID": "index.html#learning-objectives",
@@ -74,7 +74,7 @@
     "href": "index.html#pre-session-preparation",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
     "section": "Pre-session Preparation",
-    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio (Quarto already comes bundled with RStudio"
+    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R.\nDownload and install the latest version of RStudio.\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4"
   },
   {
     "objectID": "session-02.html#recap-from-yesterday",
@@ -88,6 +88,6 @@
     "href": "session-02.html#overview-for-today",
     "title": "Session 02 - Integrating codes",
     "section": "Overview for today",
-    "text": "Overview for today\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+    "text": "Overview for today\n\nCode chunks with knitr\nRendering to Static document and RevealJS presentation\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
   }
 ]
