@@ -17,7 +17,13 @@ Welcome!
 
 ## Welcome
 
-Hello
+Hello!
+
+-   We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown
+
+<!-- -->
+
+-   If you need more help, please let one of the instructors know
 
 ## Learning Objectives
 
@@ -32,15 +38,50 @@ Hello
 3.  Install these R packages:
 
 ```{r}
+#| eval: false
+#| echo: fenced
+#| code-line-numbers: false
+
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
 pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "quarto", "rmarkdown", "gtsummary", "palmerpenguins", "fs", "skimr" )
+
 install.packages(pkg_list)
 ```
+
+## What is Quarto
+
+-   Quarto is an open-source scientific and technical publishing system
+
+-   you can weave together narrative text and code to produce elegantly formatted output such as documents, web pages, blog posts, books and more
+
+## A little bit about Markdown and RMarkdown
+
+-   lightweight markup language created in 2004
+
+-   plain text with simple syntax for easy text formatting
+
+-   widely used for documentation, README files and web content
+
+-   RMarkdown is an extension of Markdown developed by RStudio which allows embedding of R code chunks within Markdown documents
+
+-   reproducible research in R!
+
+## How does RMarkdown work
+
+## some concepts
+
+-   **Literate Programming:** Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code
 
 ## Quarto vs R Markdown
 
 ## Basic Markdown syntax
 
+-   table,
+
 ## What is YAML?
+
+-   YAML (YAML Ain't Markup Language) headers in Quarto documents control various aspects of document rendering and metadata.
 
 ## Code Chunks
 
