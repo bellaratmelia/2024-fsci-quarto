@@ -14,14 +14,90 @@ format:
 
 We covered the following topic:
 
--   Literate Programming
-
 -   Quarto and Research Transparency and Reproducibility
 
 -   Rmarkdown basics
 
 ## Overview for today
 
--   Code chunks with `knitr`
+-   Literate Programming - Weaving Code chunks with narrative text (using `knitr` )
 
--   Rendering to Static document and RevealJS presentation
+-   Citations and Footnotes
+
+-   Academic templates
+
+-   Rendering to static Word document and RevealJS presentation (like this presentation!)
+
+## Literate Programming
+
+> Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.
+
+Essentially:
+
+-   The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability
+
+-   The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.
+
+-   The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.
+
+## Effect on Research Transparency & Reproducibility
+
+-   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
+
+-   This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.
+
+-   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
+
+In Quarto, this is enabled through **Code Chunks**
+
+## Introducing: Code Chunks
+
+An example of code chunk:
+
+```{r}
+#| echo: true
+
+library(tidyverse)                              # <1>
+
+diamonds %>% ggplot(aes(x = color, fill = cut)) + # <2>
+    geom_bar()
+```
+
+1.  Load the `tidyverse` library
+2.  Visualize the distribution of color and kind of cuts for each color
+
+## Citations
+
+RStudio will detect Zotero installation and access your Zotero library
+
+Once you cite, Quarto will create a bib file
+
+The style is determined by the `.csl` file. You can download it from the CSL repo
+
+There are various ways to do in-text citations
+
+## Footnotes
+
+This is how you can add footnotes
+
+Exercise: Look at a sample document, let's try to recreate this.
+
+Alternatively, if you have a working paper with Footnores, you can try to recreate yours in Quarto!
+
+## Academic Templates with Quarto Journals
+
+See here for more info: <https://quarto.org/docs/extensions/listing-journals.html>
+
+# Rendering to Docx or PDF
+
+## Rendering to Docx
+
+Simplest way is to change the YAML
+
+Of course you have to have MS word installed.
+
+## Rendering to PDF
+
+workaround: if you can't render it to PDF, a workaround that I like to use is to render it to HTML page, and the "print" them as PDF
+
+# Rendering to Presentation

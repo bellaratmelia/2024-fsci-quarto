@@ -4,3 +4,7 @@ $font-family-sans-serif: "Roboto", Lato, Helvetica, sans-serif;
 $presentation-font-size-root: 40px;
 
 /*-- scss:rules --*/
+
+.reveal code.sourceCode {
+  font-size: 1.2em;
+}

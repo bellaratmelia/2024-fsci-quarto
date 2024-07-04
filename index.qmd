@@ -18,7 +18,9 @@ The primary objective of this course is to equip participants with the necessary
 
 Quarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming.
 
-> Prior experience with R is highly recommended for this course.
+::: callout-note
+*Prior experience with R is highly recommended for this course.*
+:::
 
 ## Learning Objectives
 
