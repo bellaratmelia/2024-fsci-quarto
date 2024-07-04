@@ -8,10 +8,10 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.5.53">
 
   <meta name="author" content="Bella Ratmelia &amp; Dong Danping">
-  <title>FSCI2024 C03 - Session 02 - Integrating codes</title>
+  <title>FSCI2024 C03 – Session 02 - Integrating codes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -341,7 +406,6 @@ Bella Ratmelia &amp; Dong Danping
 <h2>Recap from yesterday</h2>
 <p>We covered the following topic:</p>
 <ul>
-<li><p>Literate Programming</p></li>
 <li><p>Quarto and Research Transparency and Reproducibility</p></li>
 <li><p>Rmarkdown basics</p></li>
 </ul>
@@ -349,9 +413,89 @@ Bella Ratmelia &amp; Dong Danping
 <section id="overview-for-today" class="slide level2">
 <h2>Overview for today</h2>
 <ul>
-<li><p>Code chunks with <code>knitr</code></p></li>
-<li><p>Rendering to Static document and RevealJS presentation</p></li>
+<li><p>Literate Programming - Weaving Code chunks with narrative text (using <code>knitr</code> )</p></li>
+<li><p>Citations and Footnotes</p></li>
+<li><p>Academic templates</p></li>
+<li><p>Rendering to static Word document and RevealJS presentation (like this presentation!)</p></li>
 </ul>
+</section>
+<section id="literate-programming" class="slide level2">
+<h2>Literate Programming</h2>
+<blockquote>
+<p>Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.</p>
+</blockquote>
+<p>Essentially:</p>
+<ul>
+<li><p>The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability</p></li>
+<li><p>The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.</p></li>
+<li><p>The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.</p></li>
+</ul>
+</section>
+<section id="effect-on-research-transparency-reproducibility" class="slide level2">
+<h2>Effect on Research Transparency &amp; Reproducibility</h2>
+<ul>
+<li><p>Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.</p></li>
+<li><p>This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.</p></li>
+<li><p>Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.</p></li>
+</ul>
+<p>In Quarto, this is enabled through <strong>Code Chunks</strong></p>
+</section>
+<section id="introducing-code-chunks" class="slide level2">
+<h2>Introducing: Code Chunks</h2>
+<p>An example of code chunk:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3"></a>diamonds <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">fill =</span> cut)) <span class="sc">+</span></span>
+<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a>    <span class="fu">geom_bar</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">Load the <code>tidyverse</code> library</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="2">Visualize the distribution of color and kind of cuts for each color</span>
+</dd>
+</dl>
+</div>
+
+</div>
+<img data-src="session-02_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="citations" class="slide level2">
+<h2>Citations</h2>
+<p>RStudio will detect Zotero installation and access your Zotero library</p>
+<p>Once you cite, Quarto will create a bib file</p>
+<p>The style is determined by the <code>.csl</code> file. You can download it from the CSL repo</p>
+<p>There are various ways to do in-text citations</p>
+</section>
+<section id="footnotes" class="slide level2">
+<h2>Footnotes</h2>
+<p>This is how you can add footnotes</p>
+<p>Exercise: Look at a sample document, let’s try to recreate this.</p>
+<p>Alternatively, if you have a working paper with Footnores, you can try to recreate yours in Quarto!</p>
+</section>
+<section id="academic-templates-with-quarto-journals" class="slide level2">
+<h2>Academic Templates with Quarto Journals</h2>
+<p>See here for more info: <a href="https://quarto.org/docs/extensions/listing-journals.html" class="uri">https://quarto.org/docs/extensions/listing-journals.html</a></p>
+</section>
+<section>
+<section id="rendering-to-docx-or-pdf" class="title-slide slide level1 center">
+<h1>Rendering to Docx or PDF</h1>
+
+</section>
+<section id="rendering-to-docx" class="slide level2">
+<h2>Rendering to Docx</h2>
+<p>Simplest way is to change the YAML</p>
+<p>Of course you have to have MS word installed.</p>
+</section>
+<section id="rendering-to-pdf" class="slide level2">
+<h2>Rendering to PDF</h2>
+<p>workaround: if you can’t render it to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF</p>
+</section></section>
+<section id="rendering-to-presentation" class="title-slide slide level1 center">
+<h1>Rendering to Presentation</h1>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -569,6 +713,44 @@ Bella Ratmelia &amp; Dong Danping
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -601,18 +783,7 @@ Bella Ratmelia &amp; Dong Danping
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -644,7 +815,29 @@ Bella Ratmelia &amp; Dong Danping
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/bellaratmelia\.github\.io\/2024-fsci-quarto\/");
@@ -652,7 +845,7 @@ Bella Ratmelia &amp; Dong Danping
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

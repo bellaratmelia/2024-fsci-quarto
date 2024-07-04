@@ -1,24 +1,87 @@
 [
   {
-    "objectID": "session-01.html#slide-1",
-    "href": "session-01.html#slide-1",
-    "title": "Session 1",
-    "section": "Slide 1",
-    "text": "Slide 1\nHello"
+    "objectID": "session-01.html#welcome",
+    "href": "session-01.html#welcome",
+    "title": "Getting Started with Quarto",
+    "section": "Welcome",
+    "text": "Welcome\nHello!\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\n\n\n\nIf you need more help, please let one of the instructors know"
   },
   {
-    "objectID": "session-01.html#slide-2",
-    "href": "session-01.html#slide-2",
-    "title": "Session 1",
-    "section": "Slide 2",
-    "text": "Slide 2\nHelloo"
+    "objectID": "session-01.html#learning-objectives",
+    "href": "session-01.html#learning-objectives",
+    "title": "Getting Started with Quarto",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\npoint one\npoint two"
   },
   {
-    "objectID": "session-01.html#slide-3",
-    "href": "session-01.html#slide-3",
-    "title": "Session 1",
-    "section": "Slide 3",
-    "text": "Slide 3\ntest\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+    "objectID": "session-01.html#setup-and-instructions",
+    "href": "session-01.html#setup-and-instructions",
+    "title": "Getting Started with Quarto",
+    "section": "Setup and instructions",
+    "text": "Setup and instructions\n\nDownload and install R\nDownload and install the latest version of RStudio\nInstall these R packages:\n\n\n```{r}\n#| eval: false\n#| code-line-numbers: false\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"quarto\", \"rmarkdown\", \"gtsummary\", \"palmerpenguins\", \"fs\", \"skimr\" )\n\ninstall.packages(pkg_list)\n```"
+  },
+  {
+    "objectID": "session-01.html#what-is-quarto",
+    "href": "session-01.html#what-is-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "What is Quarto",
+    "text": "What is Quarto\n\nQuarto is an open-source scientific and technical publishing system\nyou can weave together narrative text and code to produce elegantly formatted output such as documents, web pages, blog posts, books and more"
+  },
+  {
+    "objectID": "session-01.html#a-little-bit-about-markdown-and-rmarkdown",
+    "href": "session-01.html#a-little-bit-about-markdown-and-rmarkdown",
+    "title": "Getting Started with Quarto",
+    "section": "A little bit about Markdown and RMarkdown",
+    "text": "A little bit about Markdown and RMarkdown\n\nlightweight markup language created in 2004\nplain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown developed by RStudio which allows embedding of R code chunks within Markdown documents\nreproducible research in R!"
+  },
+  {
+    "objectID": "session-01.html#how-does-rmarkdown-work",
+    "href": "session-01.html#how-does-rmarkdown-work",
+    "title": "Getting Started with Quarto",
+    "section": "How does RMarkdown work",
+    "text": "How does RMarkdown work"
+  },
+  {
+    "objectID": "session-01.html#some-concepts",
+    "href": "session-01.html#some-concepts",
+    "title": "Getting Started with Quarto",
+    "section": "some concepts",
+    "text": "some concepts\n\nLiterate Programming: Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code"
+  },
+  {
+    "objectID": "session-01.html#quarto-vs-r-markdown",
+    "href": "session-01.html#quarto-vs-r-markdown",
+    "title": "Getting Started with Quarto",
+    "section": "Quarto vs R Markdown",
+    "text": "Quarto vs R Markdown"
+  },
+  {
+    "objectID": "session-01.html#basic-markdown-syntax",
+    "href": "session-01.html#basic-markdown-syntax",
+    "title": "Getting Started with Quarto",
+    "section": "Basic Markdown syntax",
+    "text": "Basic Markdown syntax\n\ntable,"
+  },
+  {
+    "objectID": "session-01.html#what-is-yaml",
+    "href": "session-01.html#what-is-yaml",
+    "title": "Getting Started with Quarto",
+    "section": "What is YAML?",
+    "text": "What is YAML?\n\nYAML (YAML Ain’t Markup Language) headers in Quarto documents control various aspects of document rendering and metadata."
+  },
+  {
+    "objectID": "session-01.html#code-chunks",
+    "href": "session-01.html#code-chunks",
+    "title": "Getting Started with Quarto",
+    "section": "Code Chunks",
+    "text": "Code Chunks"
+  },
+  {
+    "objectID": "session-01.html#output-formats",
+    "href": "session-01.html#output-formats",
+    "title": "Getting Started with Quarto",
+    "section": "Output formats",
+    "text": "Output formats\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
   },
   {
     "objectID": "schedule.html",
@@ -60,7 +123,7 @@
     "href": "index.html#about-this-course",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
     "section": "About This Course",
-    "text": "About This Course\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming.\n\nPrior experience with R is highly recommended for this course."
+    "text": "About This Course\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming.\n\n\n\n\n\n\nNote\n\n\n\nPrior experience with R is highly recommended for this course."
   },
   {
     "objectID": "index.html#learning-objectives",
@@ -81,13 +144,69 @@
     "href": "session-02.html#recap-from-yesterday",
     "title": "Session 02 - Integrating codes",
     "section": "Recap from yesterday",
-    "text": "Recap from yesterday\nWe covered the following topic:\n\nLiterate Programming\nQuarto and Research Transparency and Reproducibility\nRmarkdown basics"
+    "text": "Recap from yesterday\nWe covered the following topic:\n\nQuarto and Research Transparency and Reproducibility\nRmarkdown basics"
   },
   {
     "objectID": "session-02.html#overview-for-today",
     "href": "session-02.html#overview-for-today",
     "title": "Session 02 - Integrating codes",
     "section": "Overview for today",
-    "text": "Overview for today\n\nCode chunks with knitr\nRendering to Static document and RevealJS presentation\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+    "text": "Overview for today\n\nLiterate Programming - Weaving Code chunks with narrative text (using knitr )\nCitations and Footnotes\nAcademic templates\nRendering to static Word document and RevealJS presentation (like this presentation!)"
+  },
+  {
+    "objectID": "session-02.html#literate-programming",
+    "href": "session-02.html#literate-programming",
+    "title": "Session 02 - Integrating codes",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives."
+  },
+  {
+    "objectID": "session-02.html#effect-on-research-transparency-reproducibility",
+    "href": "session-02.html#effect-on-research-transparency-reproducibility",
+    "title": "Session 02 - Integrating codes",
+    "section": "Effect on Research Transparency & Reproducibility",
+    "text": "Effect on Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through Code Chunks"
+  },
+  {
+    "objectID": "session-02.html#introducing-code-chunks",
+    "href": "session-02.html#introducing-code-chunks",
+    "title": "Session 02 - Integrating codes",
+    "section": "Introducing: Code Chunks",
+    "text": "Introducing: Code Chunks\nAn example of code chunk:\n\n1library(tidyverse)\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n\n\n1\n\nLoad the tidyverse library\n\n2\n\nVisualize the distribution of color and kind of cuts for each color"
+  },
+  {
+    "objectID": "session-02.html#citations",
+    "href": "session-02.html#citations",
+    "title": "Session 02 - Integrating codes",
+    "section": "Citations",
+    "text": "Citations\nRStudio will detect Zotero installation and access your Zotero library\nOnce you cite, Quarto will create a bib file\nThe style is determined by the .csl file. You can download it from the CSL repo\nThere are various ways to do in-text citations"
+  },
+  {
+    "objectID": "session-02.html#footnotes",
+    "href": "session-02.html#footnotes",
+    "title": "Session 02 - Integrating codes",
+    "section": "Footnotes",
+    "text": "Footnotes\nThis is how you can add footnotes\nExercise: Look at a sample document, let’s try to recreate this.\nAlternatively, if you have a working paper with Footnores, you can try to recreate yours in Quarto!"
+  },
+  {
+    "objectID": "session-02.html#academic-templates-with-quarto-journals",
+    "href": "session-02.html#academic-templates-with-quarto-journals",
+    "title": "Session 02 - Integrating codes",
+    "section": "Academic Templates with Quarto Journals",
+    "text": "Academic Templates with Quarto Journals\nSee here for more info: https://quarto.org/docs/extensions/listing-journals.html"
+  },
+  {
+    "objectID": "session-02.html#rendering-to-docx",
+    "href": "session-02.html#rendering-to-docx",
+    "title": "Session 02 - Integrating codes",
+    "section": "Rendering to Docx",
+    "text": "Rendering to Docx\nSimplest way is to change the YAML\nOf course you have to have MS word installed."
+  },
+  {
+    "objectID": "session-02.html#rendering-to-pdf",
+    "href": "session-02.html#rendering-to-pdf",
+    "title": "Session 02 - Integrating codes",
+    "section": "Rendering to PDF",
+    "text": "Rendering to PDF\nworkaround: if you can’t render it to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF"
   }
 ]
