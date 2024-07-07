@@ -3,12 +3,13 @@ title: "Getting Started with Quarto"
 author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
-    theme: [default, custom.scss]
+    theme: [simple, custom.scss]
     width: 1980
     height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
     chalkboard: true
+    incremental: true
 ---
 
 # Session 01 - Introduction
@@ -86,3 +87,44 @@ install.packages(pkg_list)
 ## Code Chunks
 
 ## Output formats
+
+# Template slides and notes
+
+## Multiple Columns
+
+:::: {.columns}
+
+::: {.column .fragment width="50%"}
+Left column
+- point 1
+- point 2
+:::
+
+::: {.column .fragment width="50%"}
+Right column
+- point 3
+- point 4
+:::
+
+::::
+## Absolute positions
+::: {.absolute bottom=25 left=100 .fragment}
+
+![](images/howard-gentleman.jpeg){width=150 fig-alt="Howard dressed as a victorian gentleman"}
+
+:::
+
+## Column Fragment
+
+```{r}
+#| output-location: column-fragment
+library(ggplot2)
+
+ggplot(mtcars, aes(x = mpg, y = disp)) +
+  geom_point()
+```
+
+## Tips
+- Alt + Click to Zoom into a section for text that look small on screen
+- Ctrl + Plus to zoom in
+
