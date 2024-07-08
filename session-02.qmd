@@ -28,7 +28,7 @@ We covered the following topic:
 
 -   Rendering to static Word document and RevealJS presentation (like this presentation!)
 
-## Literate Programming
+## Refresher: Literate Programming
 
 > Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.
 
@@ -39,14 +39,6 @@ Essentially:
 -   The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.
 
 -   The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.
-
-## Effect on Research Transparency & Reproducibility
-
--   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
-
--   This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.
-
--   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
 
 In Quarto, this is enabled through **Code Chunks**
 

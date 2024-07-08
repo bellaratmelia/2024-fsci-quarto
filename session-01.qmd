@@ -74,6 +74,28 @@ install.packages(pkg_list)
 
 -   **Literate Programming:** Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code
 
+## Literate Programming
+
+> Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.
+
+Essentially:
+
+-   The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability
+
+-   The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.
+
+-   The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.
+
+## Effect on Research Transparency & Reproducibility
+
+-   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
+
+-   This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.
+
+-   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
+
+In Quarto, this is enabled through code chunks - more details about this on the next session
+
 ## Quarto vs R Markdown
 
 ## Basic Markdown syntax
@@ -92,26 +114,20 @@ install.packages(pkg_list)
 
 ## Multiple Columns
 
-:::: {.columns}
-
+::: columns
 ::: {.column .fragment width="50%"}
-Left column
-- point 1
-- point 2
+Left column - point 1 - point 2
 :::
 
 ::: {.column .fragment width="50%"}
-Right column
-- point 3
-- point 4
+Right column - point 3 - point 4
+:::
 :::
 
-::::
 ## Absolute positions
-::: {.absolute bottom=25 left=100 .fragment}
 
-![](images/howard-gentleman.jpeg){width=150 fig-alt="Howard dressed as a victorian gentleman"}
-
+::: {.absolute .fragment bottom="25" left="100"}
+![](images/howard-gentleman.jpeg){width="150" fig-alt="Howard dressed as a victorian gentleman"}
 :::
 
 ## Column Fragment
@@ -125,6 +141,6 @@ ggplot(mtcars, aes(x = mpg, y = disp)) +
 ```
 
 ## Tips
-- Alt + Click to Zoom into a section for text that look small on screen
-- Ctrl + Plus to zoom in
 
+-   Alt + Click to Zoom into a section for text that look small on screen
+-   Ctrl + Plus to zoom in
