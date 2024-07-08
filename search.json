@@ -11,7 +11,7 @@
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
     "section": "About This Workshop",
-    "text": "About This Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need more help, please let one of the instructors know"
+    "text": "About This Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need more help, please let one of the instructors know."
   },
   {
     "objectID": "session-01.html#learning-objectives",
@@ -49,46 +49,18 @@
     "text": "Example: eLife Reproducible Article\n\n\n\n\n\n\n\n\n\nA figure from the reproducible article\n\n\n\n\n\n\n\nThe underlying live codes for the same figure"
   },
   {
-    "objectID": "session-01.html#research-transparency-reproducibility",
-    "href": "session-01.html#research-transparency-reproducibility",
+    "objectID": "session-01.html#markdown-and-r-markdown",
+    "href": "session-01.html#markdown-and-r-markdown",
     "title": "Getting Started with Quarto",
-    "section": "Research Transparency & Reproducibility",
-    "text": "Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session"
+    "section": "Markdown and R Markdown",
+    "text": "Markdown and R Markdown\n\nMarkdown is the underlying document syntax for Quarto and R Markdown\nlightweight markup language, which uses plain text with simple syntax for text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents"
   },
   {
-    "objectID": "session-01.html#what-is-quarto",
-    "href": "session-01.html#what-is-quarto",
+    "objectID": "session-01.html#markdown-basics",
+    "href": "session-01.html#markdown-basics",
     "title": "Getting Started with Quarto",
-    "section": "What is Quarto",
-    "text": "What is Quarto\n\nQuarto is an open-source scientific and technical publishing system\nyou can weave together narrative text and code to produce elegantly formatted output such as documents, web pages, blog posts, books and more"
-  },
-  {
-    "objectID": "session-01.html#a-little-bit-about-markdown-and-rmarkdown",
-    "href": "session-01.html#a-little-bit-about-markdown-and-rmarkdown",
-    "title": "Getting Started with Quarto",
-    "section": "A little bit about Markdown and RMarkdown",
-    "text": "A little bit about Markdown and RMarkdown\n\nlightweight markup language created in 2004\nplain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown developed by RStudio which allows embedding of R code chunks within Markdown documents\nreproducible research in R!"
-  },
-  {
-    "objectID": "session-01.html#how-does-rmarkdown-work",
-    "href": "session-01.html#how-does-rmarkdown-work",
-    "title": "Getting Started with Quarto",
-    "section": "How does RMarkdown work",
-    "text": "How does RMarkdown work"
-  },
-  {
-    "objectID": "session-01.html#quarto-vs-r-markdown",
-    "href": "session-01.html#quarto-vs-r-markdown",
-    "title": "Getting Started with Quarto",
-    "section": "Quarto vs R Markdown",
-    "text": "Quarto vs R Markdown"
-  },
-  {
-    "objectID": "session-01.html#basic-markdown-syntax",
-    "href": "session-01.html#basic-markdown-syntax",
-    "title": "Getting Started with Quarto",
-    "section": "Basic Markdown syntax",
-    "text": "Basic Markdown syntax\n\ntable,"
+    "section": "Markdown Basics",
+    "text": "Markdown Basics"
   },
   {
     "objectID": "session-01.html#what-is-yaml",
