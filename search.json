@@ -49,6 +49,20 @@
     "text": "some concepts\n\nLiterate Programming: Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code"
   },
   {
+    "objectID": "session-01.html#literate-programming",
+    "href": "session-01.html#literate-programming",
+    "title": "Getting Started with Quarto",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives."
+  },
+  {
+    "objectID": "session-01.html#effect-on-research-transparency-reproducibility",
+    "href": "session-01.html#effect-on-research-transparency-reproducibility",
+    "title": "Getting Started with Quarto",
+    "section": "Effect on Research Transparency & Reproducibility",
+    "text": "Effect on Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session"
+  },
+  {
     "objectID": "session-01.html#quarto-vs-r-markdown",
     "href": "session-01.html#quarto-vs-r-markdown",
     "title": "Getting Started with Quarto",
@@ -182,18 +196,11 @@
     "text": "Overview for today\n\nLiterate Programming - Weaving Code chunks with narrative text (using knitr )\nCitations and Footnotes\nAcademic templates\nRendering to static Word document and RevealJS presentation (like this presentation!)"
   },
   {
-    "objectID": "session-02.html#literate-programming",
-    "href": "session-02.html#literate-programming",
+    "objectID": "session-02.html#refresher-literate-programming",
+    "href": "session-02.html#refresher-literate-programming",
     "title": "Session 02 - Integrating codes",
-    "section": "Literate Programming",
-    "text": "Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives."
-  },
-  {
-    "objectID": "session-02.html#effect-on-research-transparency-reproducibility",
-    "href": "session-02.html#effect-on-research-transparency-reproducibility",
-    "title": "Session 02 - Integrating codes",
-    "section": "Effect on Research Transparency & Reproducibility",
-    "text": "Effect on Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through Code Chunks"
+    "section": "Refresher: Literate Programming",
+    "text": "Refresher: Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.\n\nIn Quarto, this is enabled through Code Chunks"
   },
   {
     "objectID": "session-02.html#introducing-code-chunks",
