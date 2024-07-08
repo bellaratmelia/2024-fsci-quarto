@@ -99,8 +99,6 @@
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -405,15 +403,27 @@ Bella Ratmelia &amp; Dong Danping
 
 </section>
 <section>
-<section id="session-01---introduction" class="title-slide slide level1 center">
-<h1>Session 01 - Introduction</h1>
+<section id="session-01---introduction-to-quarto" class="title-slide slide level1 center">
+<h1>Session 01 - Introduction to Quarto</h1>
 <p>Welcome!</p>
 </section>
 <section id="welcome" class="slide level2">
 <h2>Welcome</h2>
 <p>Hello!</p>
 <ul>
+<li class="fragment">Let’s get to know each other!</li>
+</ul>
+</section>
+<section id="about-this-workshop" class="slide level2">
+<h2>About This Workshop</h2>
+<ul>
 <li class="fragment">We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown</li>
+<li class="fragment"><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">Workshop Website</a> (built with Quarto)
+<ul>
+<li class="fragment">Pre-workshop setup instructions</li>
+<li class="fragment">Workshop materials</li>
+<li class="fragment">Lesson objectives and lesson plan</li>
+</ul></li>
 </ul>
 <!-- -->
 <ul>
@@ -422,30 +432,82 @@ Bella Ratmelia &amp; Dong Danping
 </section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
-<ul>
-<li class="fragment"><p>point one</p></li>
-<li class="fragment"><p>point two</p></li>
-</ul>
+<p>By the end of the session, participants will be able to:</p>
+<ol type="1">
+<li class="fragment"><p>Describe how Quarto can enhance transparency in scientific and technical publishing.</p></li>
+<li class="fragment"><p>Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.</p></li>
+<li class="fragment"><p>Publish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.</p></li>
+<li class="fragment"><p>Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.</p></li>
+</ol>
 </section>
 <section id="setup-and-instructions" class="slide level2">
 <h2>Setup and instructions</h2>
 <ol type="1">
-<li class="fragment"><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install R</li>
+<li class="fragment"><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of R</li>
 <li class="fragment"><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of RStudio</li>
-<li class="fragment">Install these R packages:</li>
+<li class="fragment"><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto</li>
+<li class="fragment">Install these R packages (to be updated):</li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| code-line-numbers: false</span></span>
+<div class="cell" data-fragment="true">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"gtExtras"</span>, <span class="st">"reactable"</span>, <span class="st">"ggiraph"</span>, <span class="st">"here"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"gtsummary"</span>, <span class="st">"fs"</span>, <span class="st">"skimr"</span>)</span>
 <span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">options(repos = c(CRAN = "https://cloud.r-project.org"))</span></span>
-<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">pkg_list &lt;- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "quarto", "rmarkdown", "gtsummary", "palmerpenguins", "fs", "skimr" )</span></span>
-<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">install.packages(pkg_list)</span></span>
-<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="literate-programming" class="slide level2">
+<h2>Literate Programming</h2>
+<blockquote>
+<p>“<em>Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a <strong>computer</strong> what to do, let us concentrate rather on explaining to <strong>human</strong> beings what we want a computer to do.</em>”</p>
+<p>– Donald Knuth, 1984</p>
+</blockquote>
+<p>Essentially, literate programming is about:</p>
+<ul>
+<li class="fragment"><p>Creating code that is not only executable but also readable and understandable by humans</p></li>
+<li class="fragment"><p>Weaving code and documentation in a <strong>single document</strong>, emphasizing human-readable explanation alongside executable code</p></li>
+</ul>
+</section>
+<section id="example-elife-reproducible-article" class="slide level2">
+<h2>Example: eLife Reproducible Article</h2>
+</section>
+<section id="section" class="slide level2">
+<h2><img data-src="images\02_reproducible_elife.PNG"></h2>
+</section>
+<section id="example-elife-reproducible-article-1" class="slide level2">
+<h2>Example: eLife Reproducible Article</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images\03a_elife_figure.PNG"></p>
+<figcaption>A figure from the reproducible article</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images\03b_elife_figure_code.PNG"></p>
+<figcaption>The underlying live codes for the same figure</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="research-transparency-reproducibility" class="slide level2 hidden">
+<h2>Research Transparency &amp; Reproducibility</h2>
+<ul>
+<li class="fragment"><p>Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.</p></li>
+<li class="fragment"><p>This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.</p></li>
+<li class="fragment"><p>Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.</p></li>
+</ul>
+<p>In Quarto, this is enabled through code chunks - more details about this on the next session</p>
 </section>
 <section id="what-is-quarto" class="slide level2">
 <h2>What is Quarto</h2>
@@ -466,33 +528,6 @@ Bella Ratmelia &amp; Dong Danping
 </section>
 <section id="how-does-rmarkdown-work" class="slide level2">
 <h2>How does RMarkdown work</h2>
-</section>
-<section id="some-concepts" class="slide level2">
-<h2>some concepts</h2>
-<ul>
-<li class="fragment"><strong>Literate Programming:</strong> Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code</li>
-</ul>
-</section>
-<section id="literate-programming" class="slide level2">
-<h2>Literate Programming</h2>
-<blockquote>
-<p>Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.</p>
-</blockquote>
-<p>Essentially:</p>
-<ul>
-<li class="fragment"><p>The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability</p></li>
-<li class="fragment"><p>The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.</p></li>
-<li class="fragment"><p>The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.</p></li>
-</ul>
-</section>
-<section id="effect-on-research-transparency-reproducibility" class="slide level2">
-<h2>Effect on Research Transparency &amp; Reproducibility</h2>
-<ul>
-<li class="fragment"><p>Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.</p></li>
-<li class="fragment"><p>This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.</p></li>
-<li class="fragment"><p>Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.</p></li>
-</ul>
-<p>In Quarto, this is enabled through code chunks - more details about this on the next session</p>
 </section>
 <section id="quarto-vs-r-markdown" class="slide level2">
 <h2>Quarto vs R Markdown</h2>
@@ -562,7 +597,6 @@ Bella Ratmelia &amp; Dong Danping
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -583,8 +617,7 @@ Bella Ratmelia &amp; Dong Danping
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -755,7 +788,7 @@ Bella Ratmelia &amp; Dong Danping
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,

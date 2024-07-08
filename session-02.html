@@ -94,7 +94,27 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -406,17 +426,17 @@ Bella Ratmelia &amp; Dong Danping
 <h2>Recap from yesterday</h2>
 <p>We covered the following topic:</p>
 <ul>
-<li><p>Quarto and Research Transparency and Reproducibility</p></li>
-<li><p>Rmarkdown basics</p></li>
+<li class="fragment"><p>Quarto and Research Transparency and Reproducibility</p></li>
+<li class="fragment"><p>Rmarkdown basics</p></li>
 </ul>
 </section>
 <section id="overview-for-today" class="slide level2">
 <h2>Overview for today</h2>
 <ul>
-<li><p>Literate Programming - Weaving Code chunks with narrative text (using <code>knitr</code> )</p></li>
-<li><p>Citations and Footnotes</p></li>
-<li><p>Academic templates</p></li>
-<li><p>Rendering to static Word document and RevealJS presentation (like this presentation!)</p></li>
+<li class="fragment"><p>Literate Programming - Weaving Code chunks with narrative text (using <code>knitr</code> )</p></li>
+<li class="fragment"><p>Citations and Footnotes</p></li>
+<li class="fragment"><p>Academic templates</p></li>
+<li class="fragment"><p>Rendering to static Word document and RevealJS presentation (like this presentation!)</p></li>
 </ul>
 </section>
 <section id="refresher-literate-programming" class="slide level2">
@@ -426,14 +446,19 @@ Bella Ratmelia &amp; Dong Danping
 </blockquote>
 <p>Essentially:</p>
 <ul>
-<li><p>The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability</p></li>
-<li><p>The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.</p></li>
-<li><p>The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.</p></li>
+<li class="fragment"><p>The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability</p></li>
+<li class="fragment"><p>The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.</p></li>
+<li class="fragment"><p>The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.</p></li>
+<li class="fragment"><p>In Quarto, this is enabled through <strong>Code Chunks</strong></p></li>
 </ul>
-<p>In Quarto, this is enabled through <strong>Code Chunks</strong></p>
 </section>
-<section id="introducing-code-chunks" class="slide level2">
-<h2>Introducing: Code Chunks</h2>
+<section>
+<section id="introducing-code-chunks" class="title-slide slide level1 center">
+<h1>Introducing: Code Chunks</h1>
+
+</section>
+<section id="how-does-it-look-like" class="slide level2">
+<h2>How does it look like?</h2>
 <p>An example of code chunk:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -442,39 +467,149 @@ Bella Ratmelia &amp; Dong Danping
 <span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a>    <span class="fu">geom_bar</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
-<dd>
+<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd class="fragment">
 <span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">Load the <code>tidyverse</code> library</span>
 </dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd>
+<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd class="fragment">
 <span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="2">Visualize the distribution of color and kind of cuts for each color</span>
 </dd>
 </dl>
 </div>
-
 </div>
-<img data-src="session-02_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="citations" class="slide level2">
-<h2>Citations</h2>
-<p>RStudio will detect Zotero installation and access your Zotero library</p>
-<p>Once you cite, Quarto will create a bib file</p>
-<p>The style is determined by the <code>.csl</code> file. You can download it from the CSL repo</p>
-<p>There are various ways to do in-text citations</p>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="session-02_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="footnotes" class="slide level2">
-<h2>Footnotes</h2>
-<p>This is how you can add footnotes</p>
-<p>Exercise: Look at a sample document, let’s try to recreate this.</p>
-<p>Alternatively, if you have a working paper with Footnores, you can try to recreate yours in Quarto!</p>
+<section id="anatomy-of-a-code-chunk" class="slide level2">
+<h2>Anatomy of a code chunk</h2>
+<p>For R, the code chunks are generated with the help of <code>knitr</code> package.</p>
+<p>Each code chunk will have a list of <strong>cell options</strong> that looks like this if you use <code>source</code> view:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a></a><span class="in">#| label: fig-polar</span></span>
+<span id="cb1-3"><a></a><span class="in">#| echo: false</span></span>
+<span id="cb1-4"><a></a><span class="in">#| output: true</span></span>
+<span id="cb1-5"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are many options, but the important ones are:</p>
+<ul>
+<li class="fragment"><p><code>echo</code> - Whether to display the source code in the rendered output (true/false)</p></li>
+<li class="fragment"><p><code>output</code> - Whether to display the output of the code (true/false)</p></li>
+<li class="fragment"><p><code>label</code> - Unique label for the code chunks - useful for cross-referencing!</p></li>
+<li class="fragment"><p><code>output-location</code> - Location of output relative to the code that generates it (more relevant for presentations)</p></li>
+</ul>
 </section>
-<section id="academic-templates-with-quarto-journals" class="slide level2">
-<h2>Academic Templates with Quarto Journals</h2>
+<section id="code-annotations" class="slide level2">
+<h2>Code Annotations</h2>
+<ul>
+<li class="fragment"><p>Code blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.</p></li>
+<li class="fragment"><p>Pretty much like footnotes, but for your code chunks.</p></li>
+<li class="fragment"><p>Great for teaching / presentation!</p></li>
+</ul>
+</section>
+<section id="anatomy-of-a-code-annotation" class="slide level2">
+<h2>Anatomy of a code annotation</h2>
+<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode numberSource code-annotation-code number-lines code-with-copy"><code class="sourceCode"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a>```r</span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a>#| echo: true</span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a>#| output-location: fragment</span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a></span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a>library(tidyverse)</span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a>diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +</span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a>    geom_bar()</span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9"></a>```</span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10"></a>1.  load the tidyverse library for the ggplot package</span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11"></a>2.  Visualize the distribution of color and kind of cut for each color</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li class="fragment"><p>Each annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., <code># &lt;1&gt;</code>).</p></li>
+<li class="fragment"><p>If the annotation covers multiple lines, the same annotation number can be repeated.</p></li>
+<li class="fragment"><p>After the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number.</p></li>
+</ul>
+</section></section>
+<section id="lets-try-this-together" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Hands-on exercises to explore the cell options &amp; code annotations</p>
+</section>
+
+<section>
+<section id="citations-footnotes-and-cross-referencing" class="title-slide slide level1 center">
+<h1>Citations, Footnotes, and Cross-Referencing</h1>
+
+</section>
+<section id="citations-in-quarto" class="slide level2">
+<h2>Citations in Quarto</h2>
+<p>By default, Quarto will use Pandoc engine to convert the in-text citations and generate the references in your document. You will need the following components:</p>
+<ol type="1">
+<li class="fragment"><p>A <strong>quarto document</strong> formatted with in-text citations in Rmarkdown syntax (more on this later).</p></li>
+<li class="fragment"><p>A <strong>bibliographic file</strong>, e.g.&nbsp;BibLaTeX (.bib) or BibTeX (.bibtex) file.</p></li>
+<li class="fragment"><p>A <strong>Citation Style Language (CSL) file</strong> which specifies the formatting to use when generating the citations and bibliography (when not using natbib or biblatex to generate the bibliography).</p>
+<ul>
+<li class="fragment">By default, Quarto will use the Chicago style. You can download additional .csl file in this CSL Project repository: <a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a></li>
+</ul></li>
+</ol>
+</section>
+<section id="bibliographic-data-source-csl-file" class="slide level2">
+<h2>Bibliographic data source + CSL file</h2>
+<p>This will be specified in the YAML section of your quarto document.</p>
+<pre><code>---
+title: "Manuscript"
+bibliography: references.bib
+csl: nature.csl
+---</code></pre>
+<ul>
+<li class="fragment"><p><code>references.bib</code> is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.</p></li>
+<li class="fragment"><p><code>nature.csl</code> is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: <a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a></p></li>
+</ul>
+</section>
+<section id="the-syntax-for-in-text-citations" class="slide level2">
+<h2>The syntax for in-text citations</h2>
+<p>Common ones:</p>
+<ul>
+<li class="fragment"><p><code>@katz2021</code> mentioned that… –&gt; <span class="citation" data-cites="katz2021">Katz et al. (<a href="#/references-section-output" role="doc-biblioref" onclick="">2021</a>)</span> mentioned that…</p></li>
+<li class="fragment"><p>Katz et al.&nbsp;<code>[-@katz2021]</code> mentioned that… –&gt; Katz et al. <span class="citation" data-cites="katz2021">(<a href="#/references-section-output" role="doc-biblioref" onclick="">2021</a>)</span> mentioned that…</p></li>
+<li class="fragment"><p>Software citation is good <code>[@katz2021, pp. 33-35]</code> –&gt; Software citation is good <span class="citation" data-cites="katz2021">(<a href="#/references-section-output" role="doc-biblioref" onclick="">Katz et al. 2021, 33–35</a>)</span>!</p></li>
+<li class="fragment"><p>More researchers are saying that software citation is good <code>[@katz2021; @park2019]</code> –&gt; More researchers are saying that software citation is good <span class="citation" data-cites="katz2021 park2019">(<a href="#/references-section-output" role="doc-biblioref" onclick="">Katz et al. 2021</a>; <a href="#/references-section-output" role="doc-biblioref" onclick="">Park and Wolfram 2019</a>)</span></p></li>
+</ul>
+</section>
+<section id="the-references-section" class="slide level2">
+<h2>The References section</h2>
+<p>By default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the <code>source</code> view on Quarto):</p>
+<pre><code>### References
+
+::: {#refs}
+:::</code></pre>
+</section>
+<section id="references-section-output" class="slide level2 smaller scrollable">
+<h2>References section output</h2>
+<h3 id="references">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-katz2021" class="csl-entry" role="listitem">
+Katz, Daniel S., Neil P. Chue Hong, Tim Clark, August Muench, Shelley Stall, Daina Bouquin, Matthew Cannon, et al. 2021. <span>“Recognizing the Value of Software: A Software Citation Guide.”</span> <a href="https://doi.org/10.12688/f1000research.26932.2">https://doi.org/10.12688/f1000research.26932.2</a>.
+</div>
+<div id="ref-park2019" class="csl-entry" role="listitem">
+Park, Hyoungjoo, and Dietmar Wolfram. 2019. <span>“Research Software Citation in the Data Citation Index: Current Practices and Implications for Research Software Sharing and Reuse.”</span> <em>Journal of Informetrics</em> 13 (2): 574–82. <a href="https://doi.org/10.1016/j.joi.2019.03.005">https://doi.org/10.1016/j.joi.2019.03.005</a>.
+</div>
+</div>
+</section></section>
+<section id="lets-try-this-together-1" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Hands-on exercises to explore citations and references in Quarto.</p>
+</section>
+
+<section id="academic-templates-with-quarto-journals" class="title-slide slide level1 center">
+<h1>Academic Templates with Quarto Journals</h1>
 <p>See here for more info: <a href="https://quarto.org/docs/extensions/listing-journals.html" class="uri">https://quarto.org/docs/extensions/listing-journals.html</a></p>
 </section>
+
 <section>
-<section id="rendering-to-docx-or-pdf" class="title-slide slide level1 center">
-<h1>Rendering to Docx or PDF</h1>
+<section id="rendering-to-static-documents" class="title-slide slide level1 center">
+<h1>Rendering to Static Documents</h1>
 
 </section>
 <section id="rendering-to-docx" class="slide level2">

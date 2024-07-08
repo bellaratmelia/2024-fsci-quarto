@@ -4,21 +4,56 @@
     "href": "session-01.html#welcome",
     "title": "Getting Started with Quarto",
     "section": "Welcome",
-    "text": "Welcome\nHello!\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\n\n\n\nIf you need more help, please let one of the instructors know"
+    "text": "Welcome\nHello!\n\nLet’s get to know each other!"
+  },
+  {
+    "objectID": "session-01.html#about-this-workshop",
+    "href": "session-01.html#about-this-workshop",
+    "title": "Getting Started with Quarto",
+    "section": "About This Workshop",
+    "text": "About This Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need more help, please let one of the instructors know"
   },
   {
     "objectID": "session-01.html#learning-objectives",
     "href": "session-01.html#learning-objectives",
     "title": "Getting Started with Quarto",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\npoint one\npoint two"
+    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience."
   },
   {
     "objectID": "session-01.html#setup-and-instructions",
     "href": "session-01.html#setup-and-instructions",
     "title": "Getting Started with Quarto",
     "section": "Setup and instructions",
-    "text": "Setup and instructions\n\nDownload and install R\nDownload and install the latest version of RStudio\nInstall these R packages:\n\n\n```{r}\n#| eval: false\n#| code-line-numbers: false\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"quarto\", \"rmarkdown\", \"gtsummary\", \"palmerpenguins\", \"fs\", \"skimr\" )\n\ninstall.packages(pkg_list)\n```"
+    "text": "Setup and instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nInstall these R packages (to be updated):\n\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"rmarkdown\", \"gtsummary\", \"fs\", \"skimr\")\n\ninstall.packages(pkg_list)"
+  },
+  {
+    "objectID": "session-01.html#literate-programming",
+    "href": "session-01.html#literate-programming",
+    "title": "Getting Started with Quarto",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code"
+  },
+  {
+    "objectID": "session-01.html#example-elife-reproducible-article",
+    "href": "session-01.html#example-elife-reproducible-article",
+    "title": "Getting Started with Quarto",
+    "section": "Example: eLife Reproducible Article",
+    "text": "Example: eLife Reproducible Article"
+  },
+  {
+    "objectID": "session-01.html#example-elife-reproducible-article-1",
+    "href": "session-01.html#example-elife-reproducible-article-1",
+    "title": "Getting Started with Quarto",
+    "section": "Example: eLife Reproducible Article",
+    "text": "Example: eLife Reproducible Article\n\n\n\n\n\n\n\n\n\nA figure from the reproducible article\n\n\n\n\n\n\n\nThe underlying live codes for the same figure"
+  },
+  {
+    "objectID": "session-01.html#research-transparency-reproducibility",
+    "href": "session-01.html#research-transparency-reproducibility",
+    "title": "Getting Started with Quarto",
+    "section": "Research Transparency & Reproducibility",
+    "text": "Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session"
   },
   {
     "objectID": "session-01.html#what-is-quarto",
@@ -40,27 +75,6 @@
     "title": "Getting Started with Quarto",
     "section": "How does RMarkdown work",
     "text": "How does RMarkdown work"
-  },
-  {
-    "objectID": "session-01.html#some-concepts",
-    "href": "session-01.html#some-concepts",
-    "title": "Getting Started with Quarto",
-    "section": "some concepts",
-    "text": "some concepts\n\nLiterate Programming: Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code"
-  },
-  {
-    "objectID": "session-01.html#literate-programming",
-    "href": "session-01.html#literate-programming",
-    "title": "Getting Started with Quarto",
-    "section": "Literate Programming",
-    "text": "Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives."
-  },
-  {
-    "objectID": "session-01.html#effect-on-research-transparency-reproducibility",
-    "href": "session-01.html#effect-on-research-transparency-reproducibility",
-    "title": "Getting Started with Quarto",
-    "section": "Effect on Research Transparency & Reproducibility",
-    "text": "Effect on Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session"
   },
   {
     "objectID": "session-01.html#quarto-vs-r-markdown",
@@ -179,7 +193,7 @@
     "href": "index.html#pre-session-preparation",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
     "section": "Pre-session Preparation",
-    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R.\nDownload and install the latest version of RStudio.\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4"
+    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4\n\nInstall these R packages (to be updated):\n\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"rmarkdown\", \"gtsummary\", \"fs\", \"skimr\")\n\ninstall.packages(pkg_list)"
   },
   {
     "objectID": "session-02.html#recap-from-yesterday",
@@ -200,35 +214,70 @@
     "href": "session-02.html#refresher-literate-programming",
     "title": "Session 02 - Integrating codes",
     "section": "Refresher: Literate Programming",
-    "text": "Refresher: Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.\n\nIn Quarto, this is enabled through Code Chunks"
+    "text": "Refresher: Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.\nIn Quarto, this is enabled through Code Chunks"
   },
   {
-    "objectID": "session-02.html#introducing-code-chunks",
-    "href": "session-02.html#introducing-code-chunks",
+    "objectID": "session-02.html#how-does-it-look-like",
+    "href": "session-02.html#how-does-it-look-like",
     "title": "Session 02 - Integrating codes",
-    "section": "Introducing: Code Chunks",
-    "text": "Introducing: Code Chunks\nAn example of code chunk:\n\n1library(tidyverse)\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n\n\n1\n\nLoad the tidyverse library\n\n2\n\nVisualize the distribution of color and kind of cuts for each color"
+    "section": "How does it look like?",
+    "text": "How does it look like?\nAn example of code chunk:\n\n1library(tidyverse)\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n\n\n1\n\nLoad the tidyverse library\n\n2\n\nVisualize the distribution of color and kind of cuts for each color"
   },
   {
-    "objectID": "session-02.html#citations",
-    "href": "session-02.html#citations",
+    "objectID": "session-02.html#anatomy-of-a-code-chunk",
+    "href": "session-02.html#anatomy-of-a-code-chunk",
     "title": "Session 02 - Integrating codes",
-    "section": "Citations",
-    "text": "Citations\nRStudio will detect Zotero installation and access your Zotero library\nOnce you cite, Quarto will create a bib file\nThe style is determined by the .csl file. You can download it from the CSL repo\nThere are various ways to do in-text citations"
+    "section": "Anatomy of a code chunk",
+    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)"
   },
   {
-    "objectID": "session-02.html#footnotes",
-    "href": "session-02.html#footnotes",
+    "objectID": "session-02.html#code-annotations",
+    "href": "session-02.html#code-annotations",
     "title": "Session 02 - Integrating codes",
-    "section": "Footnotes",
-    "text": "Footnotes\nThis is how you can add footnotes\nExercise: Look at a sample document, let’s try to recreate this.\nAlternatively, if you have a working paper with Footnores, you can try to recreate yours in Quarto!"
+    "section": "Code Annotations",
+    "text": "Code Annotations\n\nCode blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.\nPretty much like footnotes, but for your code chunks.\nGreat for teaching / presentation!"
   },
   {
-    "objectID": "session-02.html#academic-templates-with-quarto-journals",
-    "href": "session-02.html#academic-templates-with-quarto-journals",
+    "objectID": "session-02.html#anatomy-of-a-code-annotation",
+    "href": "session-02.html#anatomy-of-a-code-annotation",
     "title": "Session 02 - Integrating codes",
-    "section": "Academic Templates with Quarto Journals",
-    "text": "Academic Templates with Quarto Journals\nSee here for more info: https://quarto.org/docs/extensions/listing-journals.html"
+    "section": "Anatomy of a code annotation",
+    "text": "Anatomy of a code annotation\n```r\n#| echo: true\n#| output-location: fragment\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n```\n1.  load the tidyverse library for the ggplot package\n2.  Visualize the distribution of color and kind of cut for each color\n\nEach annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., # &lt;1&gt;).\nIf the annotation covers multiple lines, the same annotation number can be repeated.\nAfter the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number."
+  },
+  {
+    "objectID": "session-02.html#citations-in-quarto",
+    "href": "session-02.html#citations-in-quarto",
+    "title": "Session 02 - Integrating codes",
+    "section": "Citations in Quarto",
+    "text": "Citations in Quarto\nBy default, Quarto will use Pandoc engine to convert the in-text citations and generate the references in your document. You will need the following components:\n\nA quarto document formatted with in-text citations in Rmarkdown syntax (more on this later).\nA bibliographic file, e.g. BibLaTeX (.bib) or BibTeX (.bibtex) file.\nA Citation Style Language (CSL) file which specifies the formatting to use when generating the citations and bibliography (when not using natbib or biblatex to generate the bibliography).\n\nBy default, Quarto will use the Chicago style. You can download additional .csl file in this CSL Project repository: https://github.com/citation-style-language/styles"
+  },
+  {
+    "objectID": "session-02.html#bibliographic-data-source-csl-file",
+    "href": "session-02.html#bibliographic-data-source-csl-file",
+    "title": "Session 02 - Integrating codes",
+    "section": "Bibliographic data source + CSL file",
+    "text": "Bibliographic data source + CSL file\nThis will be specified in the YAML section of your quarto document.\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: https://github.com/citation-style-language/styles"
+  },
+  {
+    "objectID": "session-02.html#the-syntax-for-in-text-citations",
+    "href": "session-02.html#the-syntax-for-in-text-citations",
+    "title": "Session 02 - Integrating codes",
+    "section": "The syntax for in-text citations",
+    "text": "The syntax for in-text citations\nCommon ones:\n\n@katz2021 mentioned that… –&gt; Katz et al. (2021) mentioned that…\nKatz et al. [-@katz2021] mentioned that… –&gt; Katz et al. (2021) mentioned that…\nSoftware citation is good [@katz2021, pp. 33-35] –&gt; Software citation is good (Katz et al. 2021, 33–35)!\nMore researchers are saying that software citation is good [@katz2021; @park2019] –&gt; More researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)"
+  },
+  {
+    "objectID": "session-02.html#the-references-section",
+    "href": "session-02.html#the-references-section",
+    "title": "Session 02 - Integrating codes",
+    "section": "The References section",
+    "text": "The References section\nBy default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the source view on Quarto):\n### References\n\n::: {#refs}\n:::"
+  },
+  {
+    "objectID": "session-02.html#references-section-output",
+    "href": "session-02.html#references-section-output",
+    "title": "Session 02 - Integrating codes",
+    "section": "References section output",
+    "text": "References section output\nReferences\n\n\nKatz, Daniel S., Neil P. Chue Hong, Tim Clark, August Muench, Shelley Stall, Daina Bouquin, Matthew Cannon, et al. 2021. “Recognizing the Value of Software: A Software Citation Guide.” https://doi.org/10.12688/f1000research.26932.2.\n\n\nPark, Hyoungjoo, and Dietmar Wolfram. 2019. “Research Software Citation in the Data Citation Index: Current Practices and Implications for Research Software Sharing and Reuse.” Journal of Informetrics 13 (2): 574–82. https://doi.org/10.1016/j.joi.2019.03.005."
   },
   {
     "objectID": "session-02.html#rendering-to-docx",
