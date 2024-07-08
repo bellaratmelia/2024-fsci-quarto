@@ -30,9 +30,10 @@ Hello!
     -   Workshop materials
     -   Lesson objectives and lesson plan
 
-<!-- -->
+::: aside
+If you need more help, please let one of the instructors know.
+:::
 
--   If you need more help, please let one of the instructors know
 
 ## Learning Objectives
 
@@ -80,7 +81,7 @@ Essentially, literate programming is about:
 
 ## Example: eLife Reproducible Article
 ![](images\02_reproducible_elife.PNG)
-- 
+
 ## Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
@@ -89,7 +90,7 @@ Essentially, literate programming is about:
 ![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)
 :::
 
-## Research Transparency & Reproducibility {.hidden}
+## Research Transparency & Reproducibility {visibility="hidden"}
 
 -   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
 
@@ -98,32 +99,38 @@ Essentially, literate programming is about:
 -   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
 
 In Quarto, this is enabled through code chunks - more details about this on the next session
-
+::: {.notes}
+These are some speaker notes
+:::
 ## What is Quarto
 
 -   Quarto is an open-source scientific and technical publishing system
 
--   you can weave together narrative text and code to produce elegantly formatted output such as documents, web pages, blog posts, books and more
+-   It is built upon R Markdown
 
-## A little bit about Markdown and RMarkdown
+-   Supports multiple programming languages (R, Python, Julia)
 
--   lightweight markup language created in 2004
+-   Enables the creation of dynamic and reproducible documents, reports, presentations and websites 
 
--   plain text with simple syntax for easy text formatting
+::: aside
+Existing R Markdown documents can be easily migrated to Quarto. 
+:::
+::: {.notes}
+Our slides and workshop websites are all built with Quarto!
+:::
+
+## Markdown and R Markdown
+
+- **Markdown** is the underlying document syntax for Quarto and R Markdown
+
+-   lightweight markup language, which uses plain text with simple syntax for text formatting
 
 -   widely used for documentation, README files and web content
 
--   RMarkdown is an extension of Markdown developed by RStudio which allows embedding of R code chunks within Markdown documents
+-   RMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents
 
--   reproducible research in R!
+## Markdown Basics
 
-## How does RMarkdown work
-
-## Quarto vs R Markdown
-
-## Basic Markdown syntax
-
--   table,
 
 ## What is YAML?
 
