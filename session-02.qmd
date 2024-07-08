@@ -8,6 +8,9 @@ format:
     height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
+    incremental: true
+    smaller: false
+bibliography: references.bib
 ---
 
 ## Recap from yesterday
@@ -40,14 +43,17 @@ Essentially:
 
 -   The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.
 
-In Quarto, this is enabled through **Code Chunks**
+-   In Quarto, this is enabled through **Code Chunks**
 
-## Introducing: Code Chunks
+# Introducing: Code Chunks
+
+## How does it look like?
 
 An example of code chunk:
 
 ```{r}
 #| echo: true
+#| output-location: fragment
 
 library(tidyverse)                              # <1>
 
@@ -58,29 +64,131 @@ diamonds %>% ggplot(aes(x = color, fill = cut)) + # <2>
 1.  Load the `tidyverse` library
 2.  Visualize the distribution of color and kind of cuts for each color
 
-## Citations
+## Anatomy of a code chunk
 
-RStudio will detect Zotero installation and access your Zotero library
+For R, the code chunks are generated with the help of `knitr` package.
 
-Once you cite, Quarto will create a bib file
+Each code chunk will have a list of **cell options** that looks like this if you use `source` view:
 
-The style is determined by the `.csl` file. You can download it from the CSL repo
+```{{r}}
+#| label: fig-polar
+#| echo: false
+#| output: true
+```
 
-There are various ways to do in-text citations
+There are many options, but the important ones are:
 
-## Footnotes
+-   `echo` - Whether to display the source code in the rendered output (true/false)
 
-This is how you can add footnotes
+-   `output` - Whether to display the output of the code (true/false)
 
-Exercise: Look at a sample document, let's try to recreate this.
+-   `label` - Unique label for the code chunks - useful for cross-referencing!
 
-Alternatively, if you have a working paper with Footnores, you can try to recreate yours in Quarto!
+-   `output-location` - Location of output relative to the code that generates it (more relevant for presentations)
 
-## Academic Templates with Quarto Journals
+## Code Annotations
+
+-   Code blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.
+
+-   Pretty much like footnotes, but for your code chunks.
+
+-   Great for teaching / presentation!
+
+## Anatomy of a code annotation
+
+````         
+```r
+#| echo: true
+#| output-location: fragment
+
+library(tidyverse)                                  #<1>
+
+diamonds %>% ggplot(aes(x = color, fill = cut)) +   #<2>
+    geom_bar()                                      #<2>
+```
+1.  load the tidyverse library for the ggplot package
+2.  Visualize the distribution of color and kind of cut for each color
+````
+
+-   Each annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., `# <1>`).
+
+-   If the annotation covers multiple lines, the same annotation number can be repeated.
+
+-   After the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number.
+
+# Let's try this together!
+
+Hands-on exercises to explore the cell options & code annotations
+
+# Citations, Footnotes, and Cross-Referencing
+
+## Citations in Quarto
+
+By default, Quarto will use Pandoc engine to convert the in-text citations and generate the references in your document. You will need the following components:
+
+1.  A **quarto document** formatted with in-text citations in Rmarkdown syntax (more on this later).
+
+2.  A **bibliographic file**, e.g. BibLaTeX (.bib) or BibTeX (.bibtex) file.
+
+3.  A **Citation Style Language (CSL) file** which specifies the formatting to use when generating the citations and bibliography (when not using natbib or biblatex to generate the bibliography).
+
+    -   By default, Quarto will use the Chicago style. You can download additional .csl file in this CSL Project repository: <https://github.com/citation-style-language/styles>
+
+## Bibliographic data source + CSL file
+
+This will be specified in the YAML section of your quarto document.
+
+```         
+---
+title: "Manuscript"
+bibliography: references.bib
+csl: nature.csl
+---
+```
+
+-   `references.bib` is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.
+
+-   `nature.csl` is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: <https://github.com/citation-style-language/styles>
+
+## The syntax for in-text citations
+
+Common ones:
+
+-   `@katz2021` mentioned that... --\> @katz2021 mentioned that...
+
+-   Katz et al. `[-@katz2021]` mentioned that... --\> Katz et al. [-@katz2021] mentioned that...
+
+-   Software citation is good `[@katz2021, pp. 33-35]` --\> Software citation is good [@katz2021, pp. 33-35]!
+
+-   More researchers are saying that software citation is good `[@katz2021; @park2019]` --\> More researchers are saying that software citation is good [@katz2021; @park2019]
+
+## The References section
+
+By default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the `source` view on Quarto):
+
+```         
+### References
+
+::: {#refs}
+:::
+```
+
+## References section output
+
+### References
+
+::: {#refs}
+:::
+
+# Let's try this together!
+
+Hands-on exercises to explore citations and references in Quarto.
+
+# Academic Templates with Quarto Journals
 
 See here for more info: <https://quarto.org/docs/extensions/listing-journals.html>
 
-# Rendering to Docx or PDF
+# Rendering to Static Documents
 
 ## Rendering to Docx
 
