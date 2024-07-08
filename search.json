@@ -81,7 +81,35 @@
     "href": "session-01.html#output-formats",
     "title": "Getting Started with Quarto",
     "section": "Output formats",
-    "text": "Output formats\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+    "text": "Output formats"
+  },
+  {
+    "objectID": "session-01.html#multiple-columns",
+    "href": "session-01.html#multiple-columns",
+    "title": "Getting Started with Quarto",
+    "section": "Multiple Columns",
+    "text": "Multiple Columns\n\n\nLeft column - point 1 - point 2\n\nRight column - point 3 - point 4"
+  },
+  {
+    "objectID": "session-01.html#absolute-positions",
+    "href": "session-01.html#absolute-positions",
+    "title": "Getting Started with Quarto",
+    "section": "Absolute positions",
+    "text": "Absolute positions"
+  },
+  {
+    "objectID": "session-01.html#column-fragment",
+    "href": "session-01.html#column-fragment",
+    "title": "Getting Started with Quarto",
+    "section": "Column Fragment",
+    "text": "Column Fragment"
+  },
+  {
+    "objectID": "session-01.html#tips",
+    "href": "session-01.html#tips",
+    "title": "Getting Started with Quarto",
+    "section": "Tips",
+    "text": "Tips\n\nAlt + Click to Zoom into a section for text that look small on screen\nCtrl + Plus to zoom in\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
   },
   {
     "objectID": "schedule.html",
