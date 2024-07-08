@@ -3,16 +3,16 @@ title: "Getting Started with Quarto"
 author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
-    theme: [simple, custom.scss]
+    theme: [default, custom.scss]
     width: 1980
     height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
-    chalkboard: true
+    chalkboard: false
     incremental: true
 ---
 
-# Session 01 - Introduction
+# Session 01 - Introduction to Quarto
 
 Welcome!
 
@@ -20,35 +20,71 @@ Welcome!
 
 Hello!
 
+-   Let's get to know each other!
+
+## About This Workshop
 -   We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown
+- [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
+    - Pre-workshop setup instructions
+    - Workshop materials
+    - Lesson objectives and lesson plan
 
 <!-- -->
 
 -   If you need more help, please let one of the instructors know
 
 ## Learning Objectives
+By the end of the session, participants will be able to:
 
--   point one
+1. Describe how Quarto can enhance transparency in scientific and technical publishing.
 
--   point two
+2. Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.
+
+3. Publish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.
+
+4. Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
 
 ## Setup and instructions
 
-1.  [Download](https://posit.co/download/rstudio-desktop/) and install R
+1.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of R
 2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
-3.  Install these R packages:
+3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
+4.  Install these R packages (to be updated):
 
 ```{r}
 #| eval: false
-#| echo: fenced
+#| echo: TRUE
 #| code-line-numbers: false
+#| fragment: true
 
 options(repos = c(CRAN = "https://cloud.r-project.org"))
 
-pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "quarto", "rmarkdown", "gtsummary", "palmerpenguins", "fs", "skimr" )
+pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "rmarkdown", "gtsummary", "fs", "skimr")
 
 install.packages(pkg_list)
 ```
+
+## Literate Programming
+
+> "Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do." 
+>
+> -- Donald Knuth, 1984
+
+Essentially:
+
+-   Create code that is not only executable but also readable and understandable by humans
+
+-   Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code
+
+## Effect on Research Transparency & Reproducibility
+
+-   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
+
+-   This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.
+
+-   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
+
+In Quarto, this is enabled through code chunks - more details about this on the next session
 
 ## What is Quarto
 
@@ -70,31 +106,8 @@ install.packages(pkg_list)
 
 ## How does RMarkdown work
 
-## some concepts
 
--   **Literate Programming:** Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code
 
-## Literate Programming
-
-> Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.
-
-Essentially:
-
--   The program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability
-
--   The code segments ordered in a logical manner for the reader, rather than the order required by the compiler.
-
--   The narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.
-
-## Effect on Research Transparency & Reproducibility
-
--   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
-
--   This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.
-
--   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
-
-In Quarto, this is enabled through code chunks - more details about this on the next session
 
 ## Quarto vs R Markdown
 
