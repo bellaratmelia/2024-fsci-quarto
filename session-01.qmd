@@ -23,26 +23,28 @@ Hello!
 -   Let's get to know each other!
 
 ## About This Workshop
+
 -   We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown
-- [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
-    - Pre-workshop setup instructions
-    - Workshop materials
-    - Lesson objectives and lesson plan
+-   [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
+    -   Pre-workshop setup instructions
+    -   Workshop materials
+    -   Lesson objectives and lesson plan
 
 <!-- -->
 
 -   If you need more help, please let one of the instructors know
 
 ## Learning Objectives
+
 By the end of the session, participants will be able to:
 
-1. Describe how Quarto can enhance transparency in scientific and technical publishing.
+1.  Describe how Quarto can enhance transparency in scientific and technical publishing.
 
-2. Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.
+2.  Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.
 
-3. Publish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.
+3.  Publish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.
 
-4. Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
+4.  Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
 
 ## Setup and instructions
 
@@ -66,17 +68,28 @@ install.packages(pkg_list)
 
 ## Literate Programming
 
-> "Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do." 
+> "*Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a **computer** what to do, let us concentrate rather on explaining to **human** beings what we want a computer to do.*"
 >
 > -- Donald Knuth, 1984
 
-Essentially:
+Essentially, literate programming is about:
 
--   Create code that is not only executable but also readable and understandable by humans
+-   Creating code that is not only executable but also readable and understandable by humans
 
--   Code and documentation are written together in a single document, emphasizing human-readable explanation alongside executable code
+-   Weaving code and documentation in a **single document**, emphasizing human-readable explanation alongside executable code
 
-## Effect on Research Transparency & Reproducibility
+## Example: eLife Reproducible Article
+![](images\02_reproducible_elife.PNG)
+- 
+## Example: eLife Reproducible Article
+
+::: {layout-ncol="2"}
+![A figure from the reproducible article](images\03a_elife_figure.PNG)
+
+![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)
+:::
+
+## Research Transparency & Reproducibility {.hidden}
 
 -   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
 
@@ -105,9 +118,6 @@ In Quarto, this is enabled through code chunks - more details about this on the 
 -   reproducible research in R!
 
 ## How does RMarkdown work
-
-
-
 
 ## Quarto vs R Markdown
 
