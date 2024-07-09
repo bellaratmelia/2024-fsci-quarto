@@ -15,3 +15,9 @@ $presentation-font-size-root: 40px;
     background-color: #F0F0F0;
     line-height: 1.2;
 }
+
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  height: 200px;
+}

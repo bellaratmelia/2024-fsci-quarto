@@ -9,7 +9,9 @@ format:
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
     chalkboard: false
+    logo: "images/smu logo.png"
     incremental: true
+    multiplex: true
 ---
 
 # Session 01 - Introduction to Quarto
@@ -33,7 +35,6 @@ Hello!
 ::: aside
 If you need more help, please let one of the instructors know.
 :::
-
 
 ## Learning Objectives
 
@@ -80,6 +81,7 @@ Essentially, literate programming is about:
 -   Weaving code and documentation in a **single document**, emphasizing human-readable explanation alongside executable code
 
 ## Example: eLife Reproducible Article
+
 ![](images\02_reproducible_elife.PNG)
 
 ## Example: eLife Reproducible Article
@@ -98,11 +100,8 @@ Essentially, literate programming is about:
 
 -   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
 
-In Quarto, this is enabled through code chunks - more details about this on the next session
-::: {.notes}
-These are some speaker notes
-:::
-## What is Quarto
+In Quarto, this is enabled through code chunks - more details about this on the next session ::: {.notes} These are some speaker notes ::: \## What is Quarto
+## What is Quarto?
 
 -   Quarto is an open-source scientific and technical publishing system
 
@@ -110,31 +109,140 @@ These are some speaker notes
 
 -   Supports multiple programming languages (R, Python, Julia)
 
--   Enables the creation of dynamic and reproducible documents, reports, presentations and websites 
+-   Enables the creation of dynamic and reproducible documents, reports, presentations and websites
 
 ::: aside
-Existing R Markdown documents can be easily migrated to Quarto. 
+Existing R Markdown documents can be easily migrated to Quarto.
 :::
-::: {.notes}
+
+::: notes
 Our slides and workshop websites are all built with Quarto!
 :::
 
+## What does a Quarto document look like?
+
+![](images/01_quarto_doc.png)
+
+## What is YAML?
+
+- Quarto documents begin with YAML (YAML Ain't Markup Language) headers
+- YAML specify document metadata and controls settings for document rendering, such as:
+  + Title, author, date
+  + Output format (HTML, PDF, Word, etc.)
+  + Table of contents settings
+  + Bibliography and citation style
+  + And more!
+
+
 ## Markdown and R Markdown
 
-- **Markdown** is the underlying document syntax for Quarto and R Markdown
+-   **Markdown** is the underlying document syntax for Quarto and R Markdown
 
--   lightweight markup language, which uses plain text with simple syntax for text formatting
+-   lightweight markup language, which uses plain text with simple syntax for easy text formatting
 
 -   widely used for documentation, README files and web content
 
 -   RMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents
 
-## Markdown Basics
+## Markdown Basics: Syntax
+
++-----------------------------------------+-----------------------------------------+
+| Markdown Syntax                         | Output                                  |
++=========================================+=========================================+
+| ``` markdown                            | *italics*, **bold**, ***bold italics*** |
+| *italics*, **bold**, ***bold italics*** |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | superscript^2^ / subscript~2~           |
+| superscript^2^ / subscript~2~           |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | ~~strikethrough~~                       |
+| ~~strikethrough~~                       |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | `verbatim code`                         |
+| `verbatim code`                         |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+::: {.callout-tip}
+### Tip
+To create a line break, you can use two spaces at the end of a line OR a backslash OR html tag `</br>`
+:::
 
 
-## What is YAML?
+## Markdown Basics - Headings
 
--   YAML (YAML Ain't Markup Language) headers in Quarto documents control various aspects of document rendering and metadata.
++-----------------+-----------------------------------+
+| Markdown Syntax | Output                            |
++=================+===================================+
+| ```             | # Header 1 {.heading-output}      |
+| # Header 1      |                                   |
+| ```             |                                   |
++-----------------+-----------------------------------+
+| ```             | ## Header 2 {.heading-output}     |
+| ## Header 2     |                                   |
+| ```             |                                   |
++-----------------+-----------------------------------+
+| ```             | ### Header 3 {.heading-output}    |
+| ### Header 3    |                                   |
+| ```             |                                   |
++-----------------+-----------------------------------+
+| ```             | #### Header 4 {.heading-output}   |
+| #### Header 4   |                                   |
+| ```             |                                   |
++-----------------+-----------------------------------+
+| ```             | ##### Header 5 {.heading-output}  |
+| ##### Header 5  |                                   |
+| ```             |                                   |
++-----------------+-----------------------------------+
+| ```             | ###### Header 6 {.heading-output} |
+| ###### Header 6 |                                   |
+| ```             |                                   |
++-----------------+-----------------------------------+
+
+```{=html}
+<style type="text/css">
+.heading-output {
+  border-bottom: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+</style>
+```
+## Links & Images
+
+
+::: columns
+::: {.column .fragment width="50%"}
+**Markdown Syntax**
+
+
+```         
+<https://quarto.org>
+```
+
+
+```         
+[Quarto](https://quarto.org)
+```
+:::
+
+::: {.column .fragment width="50%"}
+**Output**
+
+
+<https://quarto.org>
+
+
+[Quarto](https://quarto.org)
+:::
+:::
+
+# Let's try this together!
+
+Markdown document
+
 
 ## Code Chunks
 
