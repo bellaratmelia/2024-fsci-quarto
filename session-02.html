@@ -602,9 +602,72 @@ Park, Hyoungjoo, and Dietmar Wolfram. 2019. <span>“Research Software Citation 
 <p>Let’s explore citations, footnotes, and cross-referencing in Quarto.</p>
 </section>
 
-<section id="academic-templates-with-quarto-journals" class="title-slide slide level1 center">
-<h1>Academic Templates with Quarto Journals</h1>
-<p>See here for more info: <a href="https://quarto.org/docs/extensions/listing-journals.html" class="uri">https://quarto.org/docs/extensions/listing-journals.html</a></p>
+<section>
+<section id="specific-features-for-scholarly-writing" class="title-slide slide level1 center">
+<h1>Specific features for Scholarly Writing</h1>
+
+</section>
+<section id="academic-templates-with-quarto-journals" class="slide level2">
+<h2>Academic Templates with Quarto Journals</h2>
+<ul>
+<li class="fragment"><p>Quarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.</p></li>
+<li class="fragment"><p>See here for more info: <a href="https://quarto.org/docs/extensions/listing-journals.html" class="uri">https://quarto.org/docs/extensions/listing-journals.html</a> - some of the templates are contributed by the member of community.</p></li>
+<li class="fragment"><p>These extensions provide rich YAML metadata specifically for academic writing.</p></li>
+<li class="fragment"><p>Let’s dive into these metadata first before we explore the templates!</p></li>
+</ul>
+</section>
+<section id="front-matter" class="slide level2">
+<h2>Front Matter</h2>
+<p>Scholarly articles demand extensive details in their front matter, beyond just a title and author. Quarto offers a comprehensive range of YAML metadata keys to include these details. This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.</p>
+<p>Below is a YAML header example:</p>
+<pre><code>---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+date: 2024-07-01
+author:
+  - name: Bella Ratmelia
+    id: br
+    orcid: 0000-0003-4913-9508
+    email: bellar@smu.edu.sg
+    corresponding: true
+    affiliation: 
+      - name: Singapore Management University
+        city: Singapore
+        url: www.smu.edu.sg
+  - name: Danping Dong
+    id: dp
+    orcid: 0000-0003-4913-9508
+    email: bellar@smu.edu.sg
+    affiliation: 
+      - name: Singapore Management University
+        city: Singapore
+        url: www.smu.edu.sg
+abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+keywords:
+  - Library
+  - Carpentry
+license: "CC BY"
+copyright: 
+  holder: Bella Ratmelia
+  year: 2024
+citation: 
+  container-title: Journal of Library Carpentry
+  volume: 1
+  issue: 1
+  doi: 10.5555/12345678
+funding: "The author received no specific funding for this work."
+---</code></pre>
+</section>
+<section id="front-matter---rendering-result-in-html" class="slide level2">
+<h2>Front Matter - Rendering result in HTML</h2>
+
+<img data-src="images/04_quarto_frontmatter.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="info-on-licensing-and-citing" class="slide level2">
+<h2>Info on licensing and citing</h2>
+
+<img data-src="images/04_quarto_backmatter.jpg" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section id="lets-try-this-together-2" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Explore the available metadata for Front Matter and the available extension for journal submissions.</p>
 </section>
 
 <section>
@@ -614,13 +677,75 @@ Park, Hyoungjoo, and Dietmar Wolfram. 2019. <span>“Research Software Citation 
 </section>
 <section id="rendering-to-docx" class="slide level2">
 <h2>Rendering to Docx</h2>
-<p>Simplest way is to change the YAML</p>
-<p>Of course you have to have MS word installed.</p>
+<p>By default, Quarto will render document output to HTML. We can change it to render to Word by changing the YAML header like so:</p>
+<pre><code>---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+format:
+  docx:
+    toc: true
+    number-sections: true
+    highlight-style: github
+---</code></pre>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>You need to have Microsoft Word installed to be able to produce and view the Word output.</strong></p>
+</div>
+</div>
+</div>
 </section>
 <section id="rendering-to-pdf" class="slide level2">
 <h2>Rendering to PDF</h2>
-<p>workaround: if you can’t render it to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF</p>
+<p>Similar to docx, you can change the render output to PDF by amending the YAML header like so:</p>
+<pre><code>---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    highlight-style: github
+---</code></pre>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Latest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of <code>TinyTex</code> and any missing TeX packages (required for LaTeX rendering)</p>
+<p>If you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>You can update or install TinyTex in the RStudio Terminal with this command:</p>
+<p><code>quarto install tinytex</code></p>
+</div>
+</div>
+</div>
 </section></section>
+<section id="lets-try-this-together-3" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Try rendering your document to word (if you have it installed) or PDF!</p>
+</section>
+
 <section id="presentation-with-revealjs" class="title-slide slide level1 center">
 <h1>Presentation with RevealJS</h1>
 

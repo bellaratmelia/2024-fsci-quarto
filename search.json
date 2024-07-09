@@ -252,17 +252,45 @@
     "text": "References section output\nReferences\n\n\nKatz, Daniel S., Neil P. Chue Hong, Tim Clark, August Muench, Shelley Stall, Daina Bouquin, Matthew Cannon, et al. 2021. “Recognizing the Value of Software: A Software Citation Guide.” https://doi.org/10.12688/f1000research.26932.2.\n\n\nPark, Hyoungjoo, and Dietmar Wolfram. 2019. “Research Software Citation in the Data Citation Index: Current Practices and Implications for Research Software Sharing and Reuse.” Journal of Informetrics 13 (2): 574–82. https://doi.org/10.1016/j.joi.2019.03.005."
   },
   {
+    "objectID": "session-02.html#academic-templates-with-quarto-journals",
+    "href": "session-02.html#academic-templates-with-quarto-journals",
+    "title": "Session 02 - Integrating codes",
+    "section": "Academic Templates with Quarto Journals",
+    "text": "Academic Templates with Quarto Journals\n\nQuarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.\nSee here for more info: https://quarto.org/docs/extensions/listing-journals.html - some of the templates are contributed by the member of community.\nThese extensions provide rich YAML metadata specifically for academic writing.\nLet’s dive into these metadata first before we explore the templates!"
+  },
+  {
+    "objectID": "session-02.html#front-matter",
+    "href": "session-02.html#front-matter",
+    "title": "Session 02 - Integrating codes",
+    "section": "Front Matter",
+    "text": "Front Matter\nScholarly articles demand extensive details in their front matter, beyond just a title and author. Quarto offers a comprehensive range of YAML metadata keys to include these details. This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.\nBelow is a YAML header example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\n  - name: Danping Dong\n    id: dp\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\ncitation: \n  container-title: Journal of Library Carpentry\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\nfunding: \"The author received no specific funding for this work.\"\n---"
+  },
+  {
+    "objectID": "session-02.html#front-matter---rendering-result-in-html",
+    "href": "session-02.html#front-matter---rendering-result-in-html",
+    "title": "Session 02 - Integrating codes",
+    "section": "Front Matter - Rendering result in HTML",
+    "text": "Front Matter - Rendering result in HTML"
+  },
+  {
+    "objectID": "session-02.html#info-on-licensing-and-citing",
+    "href": "session-02.html#info-on-licensing-and-citing",
+    "title": "Session 02 - Integrating codes",
+    "section": "Info on licensing and citing",
+    "text": "Info on licensing and citing"
+  },
+  {
     "objectID": "session-02.html#rendering-to-docx",
     "href": "session-02.html#rendering-to-docx",
     "title": "Session 02 - Integrating codes",
     "section": "Rendering to Docx",
-    "text": "Rendering to Docx\nSimplest way is to change the YAML\nOf course you have to have MS word installed."
+    "text": "Rendering to Docx\nBy default, Quarto will render document output to HTML. We can change it to render to Word by changing the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  docx:\n    toc: true\n    number-sections: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nYou need to have Microsoft Word installed to be able to produce and view the Word output."
   },
   {
     "objectID": "session-02.html#rendering-to-pdf",
     "href": "session-02.html#rendering-to-pdf",
     "title": "Session 02 - Integrating codes",
     "section": "Rendering to PDF",
-    "text": "Rendering to PDF\nworkaround: if you can’t render it to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF"
+    "text": "Rendering to PDF\nSimilar to docx, you can change the render output to PDF by amending the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nLatest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of TinyTex and any missing TeX packages (required for LaTeX rendering)\nIf you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF.\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou can update or install TinyTex in the RStudio Terminal with this command:\nquarto install tinytex"
   }
 ]
