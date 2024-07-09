@@ -498,23 +498,144 @@ Bella Ratmelia &amp; Dong Danping
 </div>
 </section>
 
+<section id="what-does-a-quarto-document-look-like" class="slide level2">
+<h2>What does a Quarto document look like?</h2>
+
+<img data-src="images/01_quarto_doc.png" class="r-stretch"></section>
+<section id="what-is-yaml" class="slide level2">
+<h2>What is YAML?</h2>
+<ul>
+<li class="fragment">Quarto documents begin with YAML (YAML Ain’t Markup Language) headers</li>
+<li class="fragment">YAML specify document metadata and controls settings for document rendering, such as:
+<ul>
+<li class="fragment">Title, author, date</li>
+<li class="fragment">Output format (HTML, PDF, Word, etc.)</li>
+<li class="fragment">Table of contents settings</li>
+<li class="fragment">Bibliography and citation style</li>
+<li class="fragment">And more!</li>
+</ul></li>
+</ul>
+</section>
 <section id="markdown-and-r-markdown" class="slide level2">
 <h2>Markdown and R Markdown</h2>
 <ul>
 <li class="fragment"><p><strong>Markdown</strong> is the underlying document syntax for Quarto and R Markdown</p></li>
-<li class="fragment"><p>lightweight markup language, which uses plain text with simple syntax for text formatting</p></li>
+<li class="fragment"><p>lightweight markup language, which uses plain text with simple syntax for easy text formatting</p></li>
 <li class="fragment"><p>widely used for documentation, README files and web content</p></li>
 <li class="fragment"><p>RMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents</p></li>
 </ul>
 </section>
-<section id="markdown-basics" class="slide level2">
-<h2>Markdown Basics</h2>
+<section id="markdown-basics-syntax" class="slide level2">
+<h2>Markdown Basics: Syntax</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong></td>
+</tr>
+<tr class="even">
+<td><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td>superscript<sup>2</sup> / subscript<sub>2</sub></td>
+</tr>
+<tr class="odd">
+<td><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><del>strikethrough</del></td>
+</tr>
+<tr class="even">
+<td><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><code>verbatim code</code></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>To create a line break, you can use two spaces at the end of a line OR a backslash OR html tag <code>&lt;/br&gt;</code></p>
+</div>
+</div>
+</div>
 </section>
-<section id="what-is-yaml" class="slide level2">
-<h2>What is YAML?</h2>
-<ul>
-<li class="fragment">YAML (YAML Ain’t Markup Language) headers in Quarto documents control various aspects of document rendering and metadata.</li>
-</ul>
+<section id="markdown-basics---headings" class="slide level2">
+<h2>Markdown Basics - Headings</h2>
+<table class="caption-top" style="width:75%;">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code># Header 1</code></pre></td>
+<td><h1 id="header-1" class="heading-output">Header 1</h1></td>
+</tr>
+<tr class="even">
+<td><pre><code>## Header 2</code></pre></td>
+<td><h2 id="header-2" class="heading-output">Header 2</h2></td>
+</tr>
+<tr class="odd">
+<td><pre><code>### Header 3</code></pre></td>
+<td><h3 id="header-3" class="heading-output">Header 3</h3></td>
+</tr>
+<tr class="even">
+<td><pre><code>#### Header 4</code></pre></td>
+<td><h4 id="header-4" class="heading-output">Header 4</h4></td>
+</tr>
+<tr class="odd">
+<td><pre><code>##### Header 5</code></pre></td>
+<td><h5 id="header-5" class="heading-output">Header 5</h5></td>
+</tr>
+<tr class="even">
+<td><pre><code>###### Header 6</code></pre></td>
+<td><h6 id="header-6" class="heading-output">Header 6</h6></td>
+</tr>
+</tbody>
+</table>
+<style type="text/css">
+.heading-output {
+  border-bottom: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+</style>
+</section>
+<section id="links-images" class="slide level2">
+<h2>Links &amp; Images</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<p><strong>Markdown Syntax</strong></p>
+<pre><code>&lt;https://quarto.org&gt;</code></pre>
+<pre><code>[Quarto](https://quarto.org)</code></pre>
+</div><div class="column fragment" style="width:50%;">
+<p><strong>Output</strong></p>
+<p><a href="https://quarto.org" class="uri">https://quarto.org</a></p>
+<p><a href="https://quarto.org">Quarto</a></p>
+</div></div>
+</section></section>
+<section>
+<section id="lets-try-this-together" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Markdown document</p>
 </section>
 <section id="code-chunks" class="slide level2">
 <h2>Code Chunks</h2>
@@ -554,6 +675,7 @@ Bella Ratmelia &amp; Dong Danping
 </ul>
 
 <div class="quarto-auto-generated-content">
+<p><img src="images/smu logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">C03 Making Research More Transparent with Quarto and RStudio</a></p>
 </div>
@@ -569,6 +691,8 @@ Bella Ratmelia &amp; Dong Danping
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="site_libs/revealjs/plugin/multiplex/multiplex.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -590,6 +714,7 @@ Bella Ratmelia &amp; Dong Danping
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'multiplex': {"secret":null,"id":"466348b03d0c7f72","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -763,7 +888,7 @@ Bella Ratmelia &amp; Dong Danping
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
-          RevealNotes,
+          
           RevealSearch,
           RevealZoom
         ]
