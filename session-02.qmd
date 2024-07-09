@@ -182,7 +182,7 @@ By default, Quarto will place the references section at the end of the document.
 
 # Let's try this together!
 
-Hands-on exercises to explore citations and references in Quarto.
+Let's explore citations, footnotes, and cross-referencing in Quarto.
 
 # Academic Templates with Quarto Journals
 
@@ -200,4 +200,4 @@ Of course you have to have MS word installed.
 
 workaround: if you can't render it to PDF, a workaround that I like to use is to render it to HTML page, and the "print" them as PDF
 
-# Rendering to Presentation
+# Presentation with RevealJS

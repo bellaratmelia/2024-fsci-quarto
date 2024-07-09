@@ -79,8 +79,9 @@ Essentially, literate programming is about:
 -   Weaving code and documentation in a **single document**, emphasizing human-readable explanation alongside executable code
 
 ## Example: eLife Reproducible Article
-![](images\02_reproducible_elife.PNG)
-- 
+
+## ![](images\02_reproducible_elife.PNG)
+
 ## Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
