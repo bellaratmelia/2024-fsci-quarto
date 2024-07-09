@@ -292,5 +292,26 @@
     "title": "Session 02 - Integrating codes",
     "section": "Rendering to PDF",
     "text": "Rendering to PDF\nSimilar to docx, you can change the render output to PDF by amending the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nLatest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of TinyTex and any missing TeX packages (required for LaTeX rendering)\nIf you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF.\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou can update or install TinyTex in the RStudio Terminal with this command:\nquarto install tinytex"
+  },
+  {
+    "objectID": "session-02.html#why-revealjs-and-not-ppt",
+    "href": "session-02.html#why-revealjs-and-not-ppt",
+    "title": "Session 02 - Integrating codes",
+    "section": "Why RevealJS (and not ppt?)",
+    "text": "Why RevealJS (and not ppt?)\n\nNot a proprietary format - it is rendered as HTML slides which you can put on GitHub if you’d like to host it online.\nCan be downloaded as PDF for easier distribution\nText-based using Rmarkdown - easier to edit and incorporate codes, code output, callouts, etc."
+  },
+  {
+    "objectID": "session-02.html#rendering-to-presentation",
+    "href": "session-02.html#rendering-to-presentation",
+    "title": "Session 02 - Integrating codes",
+    "section": "Rendering to Presentation",
+    "text": "Rendering to Presentation\nSimilar to docx and PDF, we can change the render output format to revealjs through the YAML header like so:\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n\n\n\n\n\nNote\n\n\nFun Fact: The slides for this workshops are created with Quarto and RevealJS!"
+  },
+  {
+    "objectID": "session-02.html#header-options-for-revealjs-presentations",
+    "href": "session-02.html#header-options-for-revealjs-presentations",
+    "title": "Session 02 - Integrating codes",
+    "section": "Header options for RevealJS presentations",
+    "text": "Header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
   }
 ]
