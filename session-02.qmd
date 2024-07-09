@@ -182,22 +182,168 @@ By default, Quarto will place the references section at the end of the document.
 
 # Let's try this together!
 
-Hands-on exercises to explore citations and references in Quarto.
+Let's explore citations, footnotes, and cross-referencing in Quarto.
 
-# Academic Templates with Quarto Journals
+# Specific features for Scholarly Writing
 
-See here for more info: <https://quarto.org/docs/extensions/listing-journals.html>
+## Academic Templates with Quarto Journals
+
+-   Quarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.
+
+-   See here for more info: <https://quarto.org/docs/extensions/listing-journals.html> - some of the templates are contributed by the member of community.
+
+-   These extensions provide rich YAML metadata specifically for academic writing.
+
+-   Let's dive into these metadata first before we explore the templates!
+
+## Front Matter
+
+Scholarly articles demand extensive details in their front matter, beyond just a title and author. Quarto offers a comprehensive range of YAML metadata keys to include these details. This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.
+
+Below is a YAML header example:
+
+```         
+---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+date: 2024-07-01
+author:
+  - name: Bella Ratmelia
+    id: br
+    orcid: 0000-0003-4913-9508
+    email: bellar@smu.edu.sg
+    corresponding: true
+    affiliation: 
+      - name: Singapore Management University
+        city: Singapore
+        url: www.smu.edu.sg
+  - name: Danping Dong
+    id: dp
+    orcid: 0000-0003-4913-9508
+    email: bellar@smu.edu.sg
+    affiliation: 
+      - name: Singapore Management University
+        city: Singapore
+        url: www.smu.edu.sg
+abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+keywords:
+  - Library
+  - Carpentry
+license: "CC BY"
+copyright: 
+  holder: Bella Ratmelia
+  year: 2024
+citation: 
+  container-title: Journal of Library Carpentry
+  volume: 1
+  issue: 1
+  doi: 10.5555/12345678
+funding: "The author received no specific funding for this work."
+---
+```
+
+## Front Matter - Rendering result in HTML
+
+![](images/04_quarto_frontmatter.jpg){fig-align="center"}
+
+## Info on licensing and citing
+
+![](images/04_quarto_backmatter.jpg){fig-align="center"}
+
+# Let's try this together!
+
+Explore the available metadata for Front Matter and the available extension for journal submissions.
 
 # Rendering to Static Documents
 
 ## Rendering to Docx
 
-Simplest way is to change the YAML
+By default, Quarto will render document output to HTML. We can change it to render to Word by changing the YAML header like so:
 
-Of course you have to have MS word installed.
+```         
+---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+format:
+  docx:
+    toc: true
+    number-sections: true
+    highlight-style: github
+---
+```
+
+::: callout-note
+**You need to have Microsoft Word installed to be able to produce and view the Word output.**
+:::
 
 ## Rendering to PDF
 
-workaround: if you can't render it to PDF, a workaround that I like to use is to render it to HTML page, and the "print" them as PDF
+Similar to docx, you can change the render output to PDF by amending the YAML header like so:
 
-# Rendering to Presentation
+```         
+---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    highlight-style: github
+---
+```
+
+::: callout-note
+Latest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of `TinyTex` and any missing TeX packages (required for LaTeX rendering)
+
+If you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to HTML page, and the "print" them as PDF.
+:::
+
+::: callout-note
+You can update or install TinyTex in the RStudio Terminal with this command:
+
+`quarto install tinytex`
+:::
+
+# Let's try this together!
+
+Try rendering your document to word (if you have it installed) or PDF!
+
+# Presentation with RevealJS
+
+## Why RevealJS (and not ppt?)
+
+-   Not a proprietary format - it is rendered as HTML slides which you can put on GitHub if you'd like to host it online.
+
+-   Can be downloaded as PDF for easier distribution
+
+-   Text-based using Rmarkdown - easier to edit and incorporate codes, code output, callouts, etc.
+
+## Rendering to Presentation
+
+Similar to docx and PDF, we can change the render output format to revealjs through the YAML header like so:
+
+```         
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+```
+
+::: callout-note
+**Fun Fact: The slides for this workshops are created with Quarto and RevealJS!**
+:::
+
+## Header options for RevealJS presentations
+
+There are many options, but several ones that you may find useful:
+
+-   `incremental` - controls whether to show all bullet points at once, or as you progress the slides.
+
+-   `slide-number` - controls whether to show slide numbers (will appear at the bottom right corner)
+
+-   `theme` - Theme name, theme scss file, or a mix of both.
+
+-   `scrollable` - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the `.scrollable` class on the slide title.
+
+# Let's try it together!
+
+Hands-on exercises to create and modify RevealJS presentation.
