@@ -307,3 +307,43 @@ You can update or install TinyTex in the RStudio Terminal with this command:
 Try rendering your document to word (if you have it installed) or PDF!
 
 # Presentation with RevealJS
+
+## Why RevealJS (and not ppt?)
+
+-   Not a proprietary format - it is rendered as HTML slides which you can put on GitHub if you'd like to host it online.
+
+-   Can be downloaded as PDF for easier distribution
+
+-   Text-based using Rmarkdown - easier to edit and incorporate codes, code output, callouts, etc.
+
+## Rendering to Presentation
+
+Similar to docx and PDF, we can change the render output format to revealjs through the YAML header like so:
+
+```         
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+```
+
+::: callout-note
+**Fun Fact: The slides for this workshops are created with Quarto and RevealJS!**
+:::
+
+## Header options for RevealJS presentations
+
+There are many options, but several ones that you may find useful:
+
+-   `incremental` - controls whether to show all bullet points at once, or as you progress the slides.
+
+-   `slide-number` - controls whether to show slide numbers (will appear at the bottom right corner)
+
+-   `theme` - Theme name, theme scss file, or a mix of both.
+
+-   `scrollable` - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the `.scrollable` class on the slide title.
+
+# Let's try it together!
+
+Hands-on exercises to create and modify RevealJS presentation.
