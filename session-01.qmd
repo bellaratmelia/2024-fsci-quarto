@@ -4,8 +4,8 @@ author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
     theme: [default, custom.scss]
-    width: 1980
-    height: 1080
+    width: 1600
+    height: 900
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
     chalkboard: false
@@ -53,7 +53,8 @@ By the end of the session, participants will be able to:
 1.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of R
 2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
-4.  Install these R packages (to be updated):
+4.  Clone the GitHub repository from <link>
+5.  Install these R packages (to be updated):
 
 ```{r}
 #| eval: false
@@ -92,7 +93,7 @@ Essentially, literate programming is about:
 ![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)
 :::
 
-## Research Transparency & Reproducibility {visibility="hidden"}
+## Research Transparency & Reproducibility
 
 -   Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.
 
@@ -100,20 +101,27 @@ Essentially, literate programming is about:
 
 -   Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.
 
-In Quarto, this is enabled through code chunks - more details about this on the next session ::: {.notes} These are some speaker notes ::: \## What is Quarto
+In Quarto, this is enabled through code chunks - more details about this on the next session
+
+::: notes
+These are some speaker notes
+:::
+
+## A Quick Overview or Recap of R & R Studio
+
+\[to add some screenshots/bullet points here\] If needed, do a 5 min intro to the R interface
+
 ## What is Quarto?
 
 -   Quarto is an open-source scientific and technical publishing system
 
--   It is built upon R Markdown
+-   It is the next-generation of R Markdown
 
 -   Supports multiple programming languages (R, Python, Julia)
 
 -   Enables the creation of dynamic and reproducible documents, reports, presentations and websites
 
-::: aside
-Existing R Markdown documents can be easily migrated to Quarto.
-:::
+![](images/quarto%20universe.png)
 
 ::: notes
 Our slides and workshop websites are all built with Quarto!
@@ -123,16 +131,47 @@ Our slides and workshop websites are all built with Quarto!
 
 ![](images/01_quarto_doc.png)
 
+## What does a Quarto document look like?
+
+A Quarto document (.qmd) is a plain text file that can be rendered to many different formats, e.g. html, PDF, .docx
+
+![](images/01a%20penguins.png)
+
+## Rendering to different formats
+
+-   HTML reports and websites
+-   PDF reports
+-   MS Office Word
+-   Presentations (revealjs, Powerpoint, Beamer)
+-   Books
+
+## What can you do with Quarto?
+
+::: {layout-ncol="2"}
+![Creating html for web publishing](images/04_website_html.PNG){fig-align="left" width="714"}
+
+![Generating reports in PDF](images/04_PDF_report.png){fig-align="left" width="495"}
+:::
+
+## What can you do with Quarto?
+
+![MS Word for office workflows](images/04_MS%20word.PNG){height="600"}
+
+## What can you do with Quarto?
+
+Or presentations, like the one you are looking at right now.
+
 ## What is YAML?
 
-- Quarto documents begin with YAML (YAML Ain't Markup Language) headers
-- YAML specify document metadata and controls settings for document rendering, such as:
-  + Title, author, date
-  + Output format (HTML, PDF, Word, etc.)
-  + Table of contents settings
-  + Bibliography and citation style
-  + And more!
-
+::: nonincremental
+-   Quarto documents begin with **YAML** (**Y**AML **A**in't **M**arkup **L**anguage) headers
+-   YAML specify document metadata and control settings which influences document rendering and final output in many different ways:
+    -   Title, author, date
+    -   Output format (HTML, PDF, Word, etc.)
+    -   Table of contents settings
+    -   Bibliography and citation style
+    -   And more!
+:::
 
 ## Markdown and R Markdown
 
@@ -165,11 +204,14 @@ Our slides and workshop websites are all built with Quarto!
 | `verbatim code`                         |                                         |
 | ```                                     |                                         |
 +-----------------------------------------+-----------------------------------------+
-::: {.callout-tip}
-### Tip
-To create a line break, you can use two spaces at the end of a line OR a backslash OR html tag `</br>`
-:::
 
+::: callout-tip
+### Tip
+
+To create a line break, you can use two spaces at the end of a line OR a backslash `\`.
+
+To create a paragraph, type `Enter` twice.
+:::
 
 ## Markdown Basics - Headings
 
@@ -210,18 +252,69 @@ To create a line break, you can use two spaces at the end of a line OR a backsla
 }
 </style>
 ```
-## Links & Images
+# Let's try this together!
 
+Create your first Quarto document.
+
+## Lists
+
+::: panel-tabset
+### Code {.smaller}
+
+```         
+**Unordered List**
+
+-   item 1
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
+
+**Ordered List**
+
+1.  item 1
+2.  item 2
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+**Checkbox**
+
+-  [ ] Task 1 
+-  [x] Task 2
+```
+
+### Output {.smaller}
+
+::: nonincremental
+**Unordered List**
+
+-   item 1
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
+
+**Ordered List**
+
+1.  item 1
+2.  item 2
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+**Checkbox**
+
+-   [ ] Task 1
+-   [x] Task 2
+:::
+:::
+
+## Links
 
 ::: columns
 ::: {.column .fragment width="50%"}
 **Markdown Syntax**
 
-
 ```         
 <https://quarto.org>
 ```
-
 
 ```         
 [Quarto](https://quarto.org)
@@ -231,54 +324,137 @@ To create a line break, you can use two spaces at the end of a line OR a backsla
 ::: {.column .fragment width="50%"}
 **Output**
 
-
 <https://quarto.org>
-
 
 [Quarto](https://quarto.org)
 :::
 :::
 
-# Let's try this together!
+## Images from web
 
-Markdown document
+Images can be embedded using the following syntax: `![alt text](image url)`.
 
+::: panel-tabset
+### Code
 
-## Code Chunks
-
-## Output formats
-
-# Template slides and notes
-
-## Multiple Columns
-
-::: columns
-::: {.column .fragment width="50%"}
-Left column - point 1 - point 2
-:::
-
-::: {.column .fragment width="50%"}
-Right column - point 3 - point 4
-:::
-:::
-
-## Absolute positions
-
-::: {.absolute .fragment bottom="25" left="100"}
-![](images/howard-gentleman.jpeg){width="150" fig-alt="Howard dressed as a victorian gentleman"}
-:::
-
-## Column Fragment
-
-```{r}
-#| output-location: column-fragment
-library(ggplot2)
-
-ggplot(mtcars, aes(x = mpg, y = disp)) +
-  geom_point()
+```         
+![Quarto Logo](https://quarto.org/quarto.png)
 ```
 
-## Tips
+### Output
 
--   Alt + Click to Zoom into a section for text that look small on screen
--   Ctrl + Plus to zoom in
+![Quarto Logo](https://quarto.org/quarto.png)
+:::
+
+## Images from local directory {.smaller}
+
+::: panel-tabset
+### Code
+
+```         
+![Elephant](images/elephant.png)
+```
+
+### Output
+
+![Elephant](images/elephant.png){height="600"}
+:::
+
+# Let's try this together!
+Adding lists, links and images to your Quarto document. 
+
+## Anatomy of a Quarto document
+
+::: nonincremental
+-   **Metadata (YAML)**
+
+```         
+---
+format: html
+---
+```
+
+-   **Code**
+
+```{r}
+#| eval: false
+#| echo: true
+library(dplyr)
+mtcars %>% 
+  group_by(cyl) %>%
+  summarize(mean = mean(mpg), .groups = "drop")
+```
+
+-   **Text**
+
+```         
+## Heading 1
+This is a sentence with some **bold text**.
+```
+:::
+
+## More YAML
+
+::: columns
+::: {.column .nonincremental width="50%"}
+```         
+---
+title: "My Document"
+format: 
+  html:
+    toc: true
+    code-fold: true
+---
+```
+:::
+
+::: {.column .nonincremental width="50%"}
+
+**More Document Options in YAML:**
+
+-   Table of Contents
+
+-   Styling (making things pretty)
+
+-   Code related settings
+
+-   References & Citation
+:::
+:::
+
+## Rendering
+
+Besides rendering with the RStudio button, you may also render via:
+
+-   Terminal or system shell:
+
+```         
+quarto render document.qmd # defaults to html
+quarto render document.qmd --to pdf
+quarto render document.qmd --to docx
+```
+
+-   R console using `quarto` R package
+
+```         
+library(quarto)
+quarto_render("document.qmd") # defaults to html
+quarto_render("document.qmd", output_format = "pdf")
+```
+
+# Let's try this together! 
+Add more YAML options and try other rendering methods. 
+
+## Figures
+- Figure settings
+- Figure layout
+
+## Tables
+
+## Cross References
+
+## Call-out box
+
+# Let's try this together!
+Use the penguin document to figures, tables and cross references. 
+
