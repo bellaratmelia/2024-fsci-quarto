@@ -445,6 +445,7 @@ Bella Ratmelia &amp; Dong Danping
 <li class="fragment"><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of R</li>
 <li class="fragment"><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of RStudio</li>
 <li class="fragment"><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto</li>
+<li class="fragment">Clone the GitHub repository from <link></li>
 <li class="fragment">Install these R packages (to be updated):</li>
 </ol>
 <div class="cell" data-fragment="true">
@@ -497,24 +498,128 @@ Bella Ratmelia &amp; Dong Danping
 </div>
 </div>
 </section>
+<section id="research-transparency-reproducibility" class="slide level2">
+<h2>Research Transparency &amp; Reproducibility</h2>
+<ul>
+<li class="fragment"><p>Enables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.</p></li>
+<li class="fragment"><p>This integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.</p></li>
+<li class="fragment"><p>Reduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.</p></li>
+</ul>
+<p>In Quarto, this is enabled through code chunks - more details about this on the next session</p>
+<aside class="notes">
+<p>These are some speaker notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-quick-overview-or-recap-of-r-r-studio" class="slide level2">
+<h2>A Quick Overview or Recap of R &amp; R Studio</h2>
+<p>[to add some screenshots/bullet points here] If needed, do a 5 min intro to the R interface</p>
+</section>
+<section id="what-is-quarto" class="slide level2">
+<h2>What is Quarto?</h2>
+<ul>
+<li class="fragment"><p>Quarto is an open-source scientific and technical publishing system</p></li>
+<li class="fragment"><p>It is the next-generation of R Markdown</p></li>
+<li class="fragment"><p>Supports multiple programming languages (R, Python, Julia)</p></li>
+<li class="fragment"><p>Enables the creation of dynamic and reproducible documents, reports, presentations and websites</p></li>
+</ul>
 
+<img data-src="images/quarto universe.png" class="r-stretch"><aside class="notes">
+<p>Our slides and workshop websites are all built with Quarto!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="what-does-a-quarto-document-look-like" class="slide level2">
 <h2>What does a Quarto document look like?</h2>
 
 <img data-src="images/01_quarto_doc.png" class="r-stretch"></section>
+<section id="what-does-a-quarto-document-look-like-1" class="slide level2">
+<h2>What does a Quarto document look like?</h2>
+<p>A Quarto document (.qmd) is a plain text file that can be rendered to many different formats, e.g.&nbsp;html, PDF, .docx</p>
+
+<img data-src="images/01a penguins.png" class="r-stretch"></section>
+<section id="rendering-to-different-formats" class="slide level2">
+<h2>Rendering to different formats</h2>
+<ul>
+<li class="fragment">HTML reports and websites</li>
+<li class="fragment">PDF reports</li>
+<li class="fragment">MS Office Word</li>
+<li class="fragment">Presentations (revealjs, Powerpoint, Beamer)</li>
+<li class="fragment">Books</li>
+</ul>
+</section>
+<section id="what-can-you-do-with-quarto" class="slide level2">
+<h2>What can you do with Quarto?</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/04_website_html.PNG" width="714"></p>
+<figcaption>Creating html for web publishing</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/04_PDF_report.png" width="495"></p>
+<figcaption>Generating reports in PDF</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-can-you-do-with-quarto-1" class="slide level2">
+<h2>What can you do with Quarto?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/04_MS word.PNG" height="600"></p>
+<figcaption>MS Word for office workflows</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-can-you-do-with-quarto-2" class="slide level2">
+<h2>What can you do with Quarto?</h2>
+<p>Or presentations, like the one you are looking at right now.</p>
+</section>
 <section id="what-is-yaml" class="slide level2">
 <h2>What is YAML?</h2>
+<div>
 <ul>
-<li class="fragment">Quarto documents begin with YAML (YAML Ain’t Markup Language) headers</li>
-<li class="fragment">YAML specify document metadata and controls settings for document rendering, such as:
+<li>Quarto documents begin with <strong>YAML</strong> (<strong>Y</strong>AML <strong>A</strong>in’t <strong>M</strong>arkup <strong>L</strong>anguage) headers</li>
+<li>YAML specify document metadata and control settings which influences document rendering and final output in many different ways:
 <ul>
-<li class="fragment">Title, author, date</li>
-<li class="fragment">Output format (HTML, PDF, Word, etc.)</li>
-<li class="fragment">Table of contents settings</li>
-<li class="fragment">Bibliography and citation style</li>
-<li class="fragment">And more!</li>
+<li>Title, author, date</li>
+<li>Output format (HTML, PDF, Word, etc.)</li>
+<li>Table of contents settings</li>
+<li>Bibliography and citation style</li>
+<li>And more!</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="markdown-and-r-markdown" class="slide level2">
 <h2>Markdown and R Markdown</h2>
@@ -566,7 +671,8 @@ Bella Ratmelia &amp; Dong Danping
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>To create a line break, you can use two spaces at the end of a line OR a backslash OR html tag <code>&lt;/br&gt;</code></p>
+<p>To create a line break, you can use two spaces at the end of a line OR a backslash <code>\</code>.</p>
+<p>To create a paragraph, type <code>Enter</code> twice.</p>
 </div>
 </div>
 </div>
@@ -618,9 +724,73 @@ Bella Ratmelia &amp; Dong Danping
   margin-bottom: 0;
 }
 </style>
+</section></section>
+<section>
+<section id="lets-try-this-together" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Create your first Quarto document.</p>
 </section>
-<section id="links-images" class="slide level2">
-<h2>Links &amp; Images</h2>
+<section id="lists" class="slide level2">
+<h2>Lists</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code</a></li><li><a href="#tabset-1-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<pre><code>**Unordered List**
+
+-   item 1
+    -   sub-item 1
+    -   sub-item 2
+        -   sub-sub-item 1
+
+**Ordered List**
+
+1.  item 1
+2.  item 2
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+**Checkbox**
+
+-  [ ] Task 1 
+-  [x] Task 2</code></pre>
+</div>
+<div id="tabset-1-2">
+<div>
+<p><strong>Unordered List</strong></p>
+<ul>
+<li>item 1
+<ul>
+<li>sub-item 1</li>
+<li>sub-item 2
+<ul>
+<li>sub-sub-item 1</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Ordered List</strong></p>
+<ol type="1">
+<li>item 1</li>
+<li>item 2
+<ol type="i">
+<li>sub-item 1
+<ol type="A">
+<li>sub-sub-item 1</li>
+</ol></li>
+</ol></li>
+</ol>
+<p><strong>Checkbox</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Task 1</label></li>
+<li><label><input type="checkbox" checked="">Task 2</label></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="links" class="slide level2">
+<h2>Links</h2>
 <div class="columns">
 <div class="column fragment" style="width:50%;">
 <p><strong>Markdown Syntax</strong></p>
@@ -631,48 +801,137 @@ Bella Ratmelia &amp; Dong Danping
 <p><a href="https://quarto.org" class="uri">https://quarto.org</a></p>
 <p><a href="https://quarto.org">Quarto</a></p>
 </div></div>
-</section></section>
-<section>
-<section id="lets-try-this-together" class="title-slide slide level1 center">
-<h1>Let’s try this together!</h1>
-<p>Markdown document</p>
 </section>
-<section id="code-chunks" class="slide level2">
-<h2>Code Chunks</h2>
-</section>
-<section id="output-formats" class="slide level2">
-<h2>Output formats</h2>
-</section></section>
-<section>
-<section id="template-slides-and-notes" class="title-slide slide level1 center">
-<h1>Template slides and notes</h1>
-
-</section>
-<section id="multiple-columns" class="slide level2">
-<h2>Multiple Columns</h2>
-<div class="columns">
-<div class="column fragment" style="width:50%;">
-<p>Left column - point 1 - point 2</p>
-</div><div class="column fragment" style="width:50%;">
-<p>Right column - point 3 - point 4</p>
-</div></div>
-</section>
-<section id="absolute-positions" class="slide level2">
-<h2>Absolute positions</h2>
-<div class="absolute fragment" style="left: 100px; bottom: 25px; ">
-<p><img data-src="images/howard-gentleman.jpeg" alt="Howard dressed as a victorian gentleman" width="150"></p>
+<section id="images-from-web" class="slide level2">
+<h2>Images from web</h2>
+<p>Images can be embedded using the following syntax: <code>![alt text](image url)</code>.</p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<pre><code>![Quarto Logo](https://quarto.org/quarto.png)</code></pre>
+</div>
+<div id="tabset-2-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://quarto.org/quarto.png"></p>
+<figcaption>Quarto Logo</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="column-fragment" class="slide level2">
-<h2>Column Fragment</h2>
-
-<img data-src="session-01_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="tips" class="slide level2">
-<h2>Tips</h2>
+<section id="images-from-local-directory" class="slide level2 smaller">
+<h2>Images from local directory</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<pre><code>![Elephant](images/elephant.png)</code></pre>
+</div>
+<div id="tabset-3-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/elephant.png" height="600"></p>
+<figcaption>Elephant</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="lets-try-this-together-1" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Adding lists, links and images to your Quarto document.</p>
+</section>
+<section id="anatomy-of-a-quarto-document" class="slide level2">
+<h2>Anatomy of a Quarto document</h2>
+<div>
 <ul>
-<li class="fragment">Alt + Click to Zoom into a section for text that look small on screen</li>
-<li class="fragment">Ctrl + Plus to zoom in</li>
+<li><strong>Metadata (YAML)</strong></li>
 </ul>
+<pre><code>---
+format: html
+---</code></pre>
+<ul>
+<li><strong>Code</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>Text</strong></li>
+</ul>
+<pre><code>## Heading 1
+This is a sentence with some **bold text**.</code></pre>
+</div>
+</section>
+<section id="more-yaml" class="slide level2">
+<h2>More YAML</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>---
+title: "My Document"
+format: 
+  html:
+    toc: true
+    code-fold: true
+---</code></pre>
+</div><div class="column" style="width:50%;">
+<p><strong>More Document Options in YAML:</strong></p>
+<ul>
+<li><p>Table of Contents</p></li>
+<li><p>Styling (making things pretty)</p></li>
+<li><p>Code related settings</p></li>
+<li><p>References &amp; Citation</p></li>
+</ul>
+</div></div>
+</section>
+<section id="rendering" class="slide level2">
+<h2>Rendering</h2>
+<p>Besides rendering with the RStudio button, you may also render via:</p>
+<ul>
+<li class="fragment">Terminal or system shell:</li>
+</ul>
+<pre><code>quarto render document.qmd # defaults to html
+quarto render document.qmd --to pdf
+quarto render document.qmd --to docx</code></pre>
+<ul>
+<li class="fragment">R console using <code>quarto</code> R package</li>
+</ul>
+<pre><code>library(quarto)
+quarto_render("document.qmd") # defaults to html
+quarto_render("document.qmd", output_format = "pdf")</code></pre>
+</section></section>
+<section>
+<section id="lets-try-this-together-2" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Add more YAML options and try other rendering methods.</p>
+</section>
+<section id="figures" class="slide level2">
+<h2>Figures</h2>
+<ul>
+<li class="fragment">Figure settings</li>
+<li class="fragment">Figure layout</li>
+</ul>
+</section>
+<section id="tables" class="slide level2">
+<h2>Tables</h2>
+</section>
+<section id="cross-references" class="slide level2">
+<h2>Cross References</h2>
+</section>
+<section id="call-out-box" class="slide level2">
+<h2>Call-out box</h2>
+</section></section>
+<section id="lets-try-this-together-3" class="title-slide slide level1 center">
+<h1>Let’s try this together!</h1>
+<p>Use the penguin document to figures, tables and cross references.</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/smu logo.png" class="slide-logo"></p>
@@ -680,7 +939,7 @@ Bella Ratmelia &amp; Dong Danping
 <p><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">C03 Making Research More Transparent with Quarto and RStudio</a></p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -714,7 +973,7 @@ Bella Ratmelia &amp; Dong Danping
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":null,"id":"f2c9435d891e2c9c","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":null,"id":"be3ceb70f496e739","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -860,9 +1119,9 @@ Bella Ratmelia &amp; Dong Danping
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1980,
+        width: 1600,
 
-        height: 1080,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
