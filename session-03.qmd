@@ -8,8 +8,106 @@ format:
     height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
+    incremental: true
+    smaller: false
 ---
 
 # Session 03 - Website for Your Research Project
 
-Welcome!
+## Recap from yesterday
+
+We covered the following topic:
+
+-   Code Chunks
+
+-   Citations
+
+-   Front Matters and scholarly writing extensions
+
+-   Presentations
+
+## Overview for today
+
+-   Quarto website (+ publishing to Quarto Pub and GitHub Pages)
+
+-   Advanced Quarto format for future explorations: Quarto Manuscripts and Quarto Books
+
+# Quarto Websites
+
+## Why do I need a website?
+
+::: columns
+::: {.column width="50%"}
+**For yourself:**
+
+-   Highlight your work, including research papers, grants, publications, and ongoing projects, to make your contributions easily accessible to the academic community and the public.
+
+-   Share teaching materials, lecture notes, and other educational resources with students and colleagues.
+:::
+
+::: {.column width="50%"}
+**For your research group / lab:**
+
+-   Highlight research projects, publications, findings, and achievements to a broader audience including potential collaborators, funding agencies, and the general public.
+
+-   Provide updates and news about ongoing research, funding opportunities, and events.
+
+-   Attract prospective students, postdocs, and researchers who are interested in joining the lab by providing information on available positions, application procedures, and the benefits of working with the lab.
+:::
+:::
+
+## Why not use Sharepoint / WordPress / SquareSpace / etc?
+
+Couple of reasons: [^1]
+
+[^1]: <https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36>
+
+-   No R Markdown support (even math support is often nonexistent or awkward)
+
+-   Huge benefits of static websites compared to dynamic websites
+
+    -   all static files, no PHP or databases, no login/password, work everywhere (even offline)
+
+    -   typically fast to visit (no computation needed on the server side), and easy to speed up via CDN
+
+-   Other options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)
+
+## Quarto Website vs Quarto Document
+
+-   Quarto website is a form **Quarto Project** with multiple quarto documents inside.
+
+    -   Being in a Quarto Project indicates that these documents are connected / related to each other
+
+    -   Essentially the same concept as **R Project**
+
+-   Each of this document act as a webpage – the default format will be `format: html`
+
+-   Having said that, you can also have a presentation as part of the website (just like this course website!)
+
+## Anatomy of a Quarto Website
+
+In a new Quarto Website project, you will see the following files:
+
+|                      |                                                                                                               |
+|--------------------|------------------------------------------------------|
+| `_quarto.yml`        | The Quarto website project file. You can define site-wide YAML headers here, including the website navigation |
+| `about.qmd`          | The about page - automatically created                                                                        |
+| `index.qmd`          | The website home page - automatically created                                                                 |
+| `styles.css`         | Additional CSS styling if you'd like to customize further                                                     |
+| `project_name.Rproj` | The R project file                                                                                            |
+
+# Let's try it together!
+
+Create and explore Quarto Website
+
+## Publishing the website
+
+There are several options:
+
+-   Quarto Pub
+
+-   GitHub Pages
+
+-   Netlify
+
+-   Posit Connect
