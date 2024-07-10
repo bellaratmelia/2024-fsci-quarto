@@ -1,5 +1,215 @@
 [
   {
+    "objectID": "session-01.html#welcome",
+    "href": "session-01.html#welcome",
+    "title": "Getting Started with Quarto",
+    "section": "Welcome",
+    "text": "Welcome\nHello!\n\nLet’s get to know each other!"
+  },
+  {
+    "objectID": "session-01.html#about-this-workshop",
+    "href": "session-01.html#about-this-workshop",
+    "title": "Getting Started with Quarto",
+    "section": "About This Workshop",
+    "text": "About This Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need more help, please let one of the instructors know."
+  },
+  {
+    "objectID": "session-01.html#learning-objectives",
+    "href": "session-01.html#learning-objectives",
+    "title": "Getting Started with Quarto",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience."
+  },
+  {
+    "objectID": "session-01.html#setup-and-instructions",
+    "href": "session-01.html#setup-and-instructions",
+    "title": "Getting Started with Quarto",
+    "section": "Setup and instructions",
+    "text": "Setup and instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nInstall these R packages (to be updated):\n\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"rmarkdown\", \"gtsummary\", \"fs\", \"skimr\")\n\ninstall.packages(pkg_list)"
+  },
+  {
+    "objectID": "session-01.html#literate-programming",
+    "href": "session-01.html#literate-programming",
+    "title": "Getting Started with Quarto",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code"
+  },
+  {
+    "objectID": "session-01.html#example-elife-reproducible-article",
+    "href": "session-01.html#example-elife-reproducible-article",
+    "title": "Getting Started with Quarto",
+    "section": "Example: eLife Reproducible Article",
+    "text": "Example: eLife Reproducible Article"
+  },
+  {
+    "objectID": "session-01.html#example-elife-reproducible-article-1",
+    "href": "session-01.html#example-elife-reproducible-article-1",
+    "title": "Getting Started with Quarto",
+    "section": "Example: eLife Reproducible Article",
+    "text": "Example: eLife Reproducible Article\n\n\n\n\n\n\n\n\n\nA figure from the reproducible article\n\n\n\n\n\n\n\nThe underlying live codes for the same figure"
+  },
+  {
+    "objectID": "session-01.html#what-does-a-quarto-document-look-like",
+    "href": "session-01.html#what-does-a-quarto-document-look-like",
+    "title": "Getting Started with Quarto",
+    "section": "What does a Quarto document look like?",
+    "text": "What does a Quarto document look like?"
+  },
+  {
+    "objectID": "session-01.html#what-is-yaml",
+    "href": "session-01.html#what-is-yaml",
+    "title": "Getting Started with Quarto",
+    "section": "What is YAML?",
+    "text": "What is YAML?\n\nQuarto documents begin with YAML (YAML Ain’t Markup Language) headers\nYAML specify document metadata and controls settings for document rendering, such as:\n\nTitle, author, date\nOutput format (HTML, PDF, Word, etc.)\nTable of contents settings\nBibliography and citation style\nAnd more!"
+  },
+  {
+    "objectID": "session-01.html#markdown-and-r-markdown",
+    "href": "session-01.html#markdown-and-r-markdown",
+    "title": "Getting Started with Quarto",
+    "section": "Markdown and R Markdown",
+    "text": "Markdown and R Markdown\n\nMarkdown is the underlying document syntax for Quarto and R Markdown\nlightweight markup language, which uses plain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents"
+  },
+  {
+    "objectID": "session-01.html#markdown-basics-syntax",
+    "href": "session-01.html#markdown-basics-syntax",
+    "title": "Getting Started with Quarto",
+    "section": "Markdown Basics: Syntax",
+    "text": "Markdown Basics: Syntax\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\n\n\n\nTip\n\n\nTo create a line break, you can use two spaces at the end of a line OR a backslash OR html tag &lt;/br&gt;"
+  },
+  {
+    "objectID": "session-01.html#markdown-basics---headings",
+    "href": "session-01.html#markdown-basics---headings",
+    "title": "Getting Started with Quarto",
+    "section": "Markdown Basics - Headings",
+    "text": "Markdown Basics - Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6"
+  },
+  {
+    "objectID": "session-01.html#links-images",
+    "href": "session-01.html#links-images",
+    "title": "Getting Started with Quarto",
+    "section": "Links & Images",
+    "text": "Links & Images\n\n\nMarkdown Syntax\n&lt;https://quarto.org&gt;\n[Quarto](https://quarto.org)\n\nOutput\nhttps://quarto.org\nQuarto"
+  },
+  {
+    "objectID": "session-01.html#code-chunks",
+    "href": "session-01.html#code-chunks",
+    "title": "Getting Started with Quarto",
+    "section": "Code Chunks",
+    "text": "Code Chunks"
+  },
+  {
+    "objectID": "session-01.html#output-formats",
+    "href": "session-01.html#output-formats",
+    "title": "Getting Started with Quarto",
+    "section": "Output formats",
+    "text": "Output formats"
+  },
+  {
+    "objectID": "session-01.html#multiple-columns",
+    "href": "session-01.html#multiple-columns",
+    "title": "Getting Started with Quarto",
+    "section": "Multiple Columns",
+    "text": "Multiple Columns\n\n\nLeft column - point 1 - point 2\n\nRight column - point 3 - point 4"
+  },
+  {
+    "objectID": "session-01.html#absolute-positions",
+    "href": "session-01.html#absolute-positions",
+    "title": "Getting Started with Quarto",
+    "section": "Absolute positions",
+    "text": "Absolute positions"
+  },
+  {
+    "objectID": "session-01.html#column-fragment",
+    "href": "session-01.html#column-fragment",
+    "title": "Getting Started with Quarto",
+    "section": "Column Fragment",
+    "text": "Column Fragment"
+  },
+  {
+    "objectID": "session-01.html#tips",
+    "href": "session-01.html#tips",
+    "title": "Getting Started with Quarto",
+    "section": "Tips",
+    "text": "Tips\n\nAlt + Click to Zoom into a section for text that look small on screen\nCtrl + Plus to zoom in\n\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Important\n\n\n\nThe schedule may be adjusted to ensure it aligns with the participants’ comfort and learning pace."
+  },
+  {
+    "objectID": "schedule.html#session-1",
+    "href": "schedule.html#session-1",
+    "title": "Schedule",
+    "section": "Session 1",
+    "text": "Session 1\nDate & Time: Monday, 29 July 2024, 10 AM - 1 PM (PDT)\nVenue: UCLA"
+  },
+  {
+    "objectID": "schedule.html#session-2",
+    "href": "schedule.html#session-2",
+    "title": "Schedule",
+    "section": "Session 2",
+    "text": "Session 2\nDate & Time: Tuesday, 30 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
+  },
+  {
+    "objectID": "schedule.html#session-3",
+    "href": "schedule.html#session-3",
+    "title": "Schedule",
+    "section": "Session 3",
+    "text": "Session 3\nDate & Time: Wednesday, 31 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
+  },
+  {
+    "objectID": "session-03.html#recap-from-yesterday",
+    "href": "session-03.html#recap-from-yesterday",
+    "title": "Session 03",
+    "section": "Recap from yesterday",
+    "text": "Recap from yesterday\nWe covered the following topic:\n\nCode Chunks\nCitations\nFront Matters and scholarly writing extensions\nPresentations"
+  },
+  {
+    "objectID": "session-03.html#overview-for-today",
+    "href": "session-03.html#overview-for-today",
+    "title": "Session 03",
+    "section": "Overview for today",
+    "text": "Overview for today\n\nQuarto website (+ publishing to Quarto Pub and GitHub Pages)\nAdvanced Quarto format for future explorations: Quarto Manuscripts and Quarto Books"
+  },
+  {
+    "objectID": "session-03.html#why-do-i-need-a-website",
+    "href": "session-03.html#why-do-i-need-a-website",
+    "title": "Session 03",
+    "section": "Why do I need a website?",
+    "text": "Why do I need a website?\n\n\nFor yourself:\n\nHighlight your work, including research papers, grants, publications, and ongoing projects, to make your contributions easily accessible to the academic community and the public.\nShare teaching materials, lecture notes, and other educational resources with students and colleagues.\n\n\nFor your research group / lab:\n\nHighlight research projects, publications, findings, and achievements to a broader audience including potential collaborators, funding agencies, and the general public.\nProvide updates and news about ongoing research, funding opportunities, and events.\nAttract prospective students, postdocs, and researchers who are interested in joining the lab by providing information on available positions, application procedures, and the benefits of working with the lab."
+  },
+  {
+    "objectID": "session-03.html#why-not-use-sharepoint-wordpress-squarespace-etc",
+    "href": "session-03.html#why-not-use-sharepoint-wordpress-squarespace-etc",
+    "title": "Session 03",
+    "section": "Why not use Sharepoint / WordPress / SquareSpace / etc?",
+    "text": "Why not use Sharepoint / WordPress / SquareSpace / etc?\nCouple of reasons: 1\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nOther options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)\n\nhttps://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36"
+  },
+  {
+    "objectID": "session-03.html#quarto-website-vs-quarto-document",
+    "href": "session-03.html#quarto-website-vs-quarto-document",
+    "title": "Session 03",
+    "section": "Quarto Website vs Quarto Document",
+    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\n\nBeing in a Quarto Project indicates that these documents are connected / related to each other\nEssentially the same concept as R Project\n\nEach of this document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)"
+  },
+  {
+    "objectID": "session-03.html#anatomy-of-a-quarto-website",
+    "href": "session-03.html#anatomy-of-a-quarto-website",
+    "title": "Session 03",
+    "section": "Anatomy of a Quarto Website",
+    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file"
+  },
+  {
+    "objectID": "session-03.html#publishing-the-website",
+    "href": "session-03.html#publishing-the-website",
+    "title": "Session 03",
+    "section": "Publishing the website",
+    "text": "Publishing the website\nThere are several options:\n\nQuarto Pub\nGitHub Pages\nNetlify\nPosit Connect\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
@@ -173,166 +383,5 @@
     "title": "Session 02 - Integrating codes",
     "section": "Header options for RevealJS presentations",
     "text": "Header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
-  },
-  {
-    "objectID": "session-01.html#welcome",
-    "href": "session-01.html#welcome",
-    "title": "Getting Started with Quarto",
-    "section": "Welcome",
-    "text": "Welcome\nHello!\n\nLet’s get to know each other!"
-  },
-  {
-    "objectID": "session-01.html#about-this-workshop",
-    "href": "session-01.html#about-this-workshop",
-    "title": "Getting Started with Quarto",
-    "section": "About This Workshop",
-    "text": "About This Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need more help, please let one of the instructors know."
-  },
-  {
-    "objectID": "session-01.html#learning-objectives",
-    "href": "session-01.html#learning-objectives",
-    "title": "Getting Started with Quarto",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience."
-  },
-  {
-    "objectID": "session-01.html#setup-and-instructions",
-    "href": "session-01.html#setup-and-instructions",
-    "title": "Getting Started with Quarto",
-    "section": "Setup and instructions",
-    "text": "Setup and instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nInstall these R packages (to be updated):\n\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"rmarkdown\", \"gtsummary\", \"fs\", \"skimr\")\n\ninstall.packages(pkg_list)"
-  },
-  {
-    "objectID": "session-01.html#literate-programming",
-    "href": "session-01.html#literate-programming",
-    "title": "Getting Started with Quarto",
-    "section": "Literate Programming",
-    "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code"
-  },
-  {
-    "objectID": "session-01.html#example-elife-reproducible-article",
-    "href": "session-01.html#example-elife-reproducible-article",
-    "title": "Getting Started with Quarto",
-    "section": "Example: eLife Reproducible Article",
-    "text": "Example: eLife Reproducible Article"
-  },
-  {
-    "objectID": "session-01.html#example-elife-reproducible-article-1",
-    "href": "session-01.html#example-elife-reproducible-article-1",
-    "title": "Getting Started with Quarto",
-    "section": "Example: eLife Reproducible Article",
-    "text": "Example: eLife Reproducible Article\n\n\n\n\n\n\n\n\n\nA figure from the reproducible article\n\n\n\n\n\n\n\nThe underlying live codes for the same figure"
-  },
-  {
-    "objectID": "session-01.html#what-does-a-quarto-document-look-like",
-    "href": "session-01.html#what-does-a-quarto-document-look-like",
-    "title": "Getting Started with Quarto",
-    "section": "What does a Quarto document look like?",
-    "text": "What does a Quarto document look like?"
-  },
-  {
-    "objectID": "session-01.html#what-is-yaml",
-    "href": "session-01.html#what-is-yaml",
-    "title": "Getting Started with Quarto",
-    "section": "What is YAML?",
-    "text": "What is YAML?\n\nQuarto documents begin with YAML (YAML Ain’t Markup Language) headers\nYAML specify document metadata and controls settings for document rendering, such as:\n\nTitle, author, date\nOutput format (HTML, PDF, Word, etc.)\nTable of contents settings\nBibliography and citation style\nAnd more!"
-  },
-  {
-    "objectID": "session-01.html#markdown-and-r-markdown",
-    "href": "session-01.html#markdown-and-r-markdown",
-    "title": "Getting Started with Quarto",
-    "section": "Markdown and R Markdown",
-    "text": "Markdown and R Markdown\n\nMarkdown is the underlying document syntax for Quarto and R Markdown\nlightweight markup language, which uses plain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents"
-  },
-  {
-    "objectID": "session-01.html#markdown-basics-syntax",
-    "href": "session-01.html#markdown-basics-syntax",
-    "title": "Getting Started with Quarto",
-    "section": "Markdown Basics: Syntax",
-    "text": "Markdown Basics: Syntax\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\n\n\n\nTip\n\n\nTo create a line break, you can use two spaces at the end of a line OR a backslash OR html tag &lt;/br&gt;"
-  },
-  {
-    "objectID": "session-01.html#markdown-basics---headings",
-    "href": "session-01.html#markdown-basics---headings",
-    "title": "Getting Started with Quarto",
-    "section": "Markdown Basics - Headings",
-    "text": "Markdown Basics - Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6"
-  },
-  {
-    "objectID": "session-01.html#links-images",
-    "href": "session-01.html#links-images",
-    "title": "Getting Started with Quarto",
-    "section": "Links & Images",
-    "text": "Links & Images\n\n\nMarkdown Syntax\n&lt;https://quarto.org&gt;\n[Quarto](https://quarto.org)\n\nOutput\nhttps://quarto.org\nQuarto"
-  },
-  {
-    "objectID": "session-01.html#code-chunks",
-    "href": "session-01.html#code-chunks",
-    "title": "Getting Started with Quarto",
-    "section": "Code Chunks",
-    "text": "Code Chunks"
-  },
-  {
-    "objectID": "session-01.html#output-formats",
-    "href": "session-01.html#output-formats",
-    "title": "Getting Started with Quarto",
-    "section": "Output formats",
-    "text": "Output formats"
-  },
-  {
-    "objectID": "session-01.html#multiple-columns",
-    "href": "session-01.html#multiple-columns",
-    "title": "Getting Started with Quarto",
-    "section": "Multiple Columns",
-    "text": "Multiple Columns\n\n\nLeft column - point 1 - point 2\n\nRight column - point 3 - point 4"
-  },
-  {
-    "objectID": "session-01.html#absolute-positions",
-    "href": "session-01.html#absolute-positions",
-    "title": "Getting Started with Quarto",
-    "section": "Absolute positions",
-    "text": "Absolute positions"
-  },
-  {
-    "objectID": "session-01.html#column-fragment",
-    "href": "session-01.html#column-fragment",
-    "title": "Getting Started with Quarto",
-    "section": "Column Fragment",
-    "text": "Column Fragment"
-  },
-  {
-    "objectID": "session-01.html#tips",
-    "href": "session-01.html#tips",
-    "title": "Getting Started with Quarto",
-    "section": "Tips",
-    "text": "Tips\n\nAlt + Click to Zoom into a section for text that look small on screen\nCtrl + Plus to zoom in\n\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Important\n\n\n\nThe schedule may be adjusted to ensure it aligns with the participants’ comfort and learning pace."
-  },
-  {
-    "objectID": "schedule.html#session-1",
-    "href": "schedule.html#session-1",
-    "title": "Schedule",
-    "section": "Session 1",
-    "text": "Session 1\nDate & Time: Monday, 29 July 2024, 10 AM - 1 PM (PDT)\nVenue: UCLA"
-  },
-  {
-    "objectID": "schedule.html#session-2",
-    "href": "schedule.html#session-2",
-    "title": "Schedule",
-    "section": "Session 2",
-    "text": "Session 2\nDate & Time: Tuesday, 30 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
-  },
-  {
-    "objectID": "schedule.html#session-3",
-    "href": "schedule.html#session-3",
-    "title": "Schedule",
-    "section": "Session 3",
-    "text": "Session 3\nDate & Time: Wednesday, 31 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
   }
 ]

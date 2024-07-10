@@ -337,16 +337,130 @@ Bella Ratmelia &amp; Dong Danping
 </div>
 
 </section>
+<section>
 <section id="session-03---website-for-your-research-project" class="title-slide slide level1 center">
 <h1>Session 03 - Website for Your Research Project</h1>
-<p>Welcome!</p>
+
+</section>
+<section id="recap-from-yesterday" class="slide level2">
+<h2>Recap from yesterday</h2>
+<p>We covered the following topic:</p>
+<ul>
+<li class="fragment"><p>Code Chunks</p></li>
+<li class="fragment"><p>Citations</p></li>
+<li class="fragment"><p>Front Matters and scholarly writing extensions</p></li>
+<li class="fragment"><p>Presentations</p></li>
+</ul>
+</section>
+<section id="overview-for-today" class="slide level2">
+<h2>Overview for today</h2>
+<ul>
+<li class="fragment"><p>Quarto website (+ publishing to Quarto Pub and GitHub Pages)</p></li>
+<li class="fragment"><p>Advanced Quarto format for future explorations: Quarto Manuscripts and Quarto Books</p></li>
+</ul>
+</section></section>
+<section>
+<section id="quarto-websites" class="title-slide slide level1 center">
+<h1>Quarto Websites</h1>
+
+</section>
+<section id="why-do-i-need-a-website" class="slide level2">
+<h2>Why do I need a website?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>For yourself:</strong></p>
+<ul>
+<li class="fragment"><p>Highlight your work, including research papers, grants, publications, and ongoing projects, to make your contributions easily accessible to the academic community and the public.</p></li>
+<li class="fragment"><p>Share teaching materials, lecture notes, and other educational resources with students and colleagues.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>For your research group / lab:</strong></p>
+<ul>
+<li class="fragment"><p>Highlight research projects, publications, findings, and achievements to a broader audience including potential collaborators, funding agencies, and the general public.</p></li>
+<li class="fragment"><p>Provide updates and news about ongoing research, funding opportunities, and events.</p></li>
+<li class="fragment"><p>Attract prospective students, postdocs, and researchers who are interested in joining the lab by providing information on available positions, application procedures, and the benefits of working with the lab.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="why-not-use-sharepoint-wordpress-squarespace-etc" class="slide level2">
+<h2>Why not use Sharepoint / WordPress / SquareSpace / etc?</h2>
+<p>Couple of reasons: <sup>1</sup></p>
+<ul>
+<li class="fragment"><p>No R Markdown support (even math support is often nonexistent or awkward)</p></li>
+<li class="fragment"><p>Huge benefits of static websites compared to dynamic websites</p>
+<ul>
+<li class="fragment"><p>all static files, no PHP or databases, no login/password, work everywhere (even offline)</p></li>
+<li class="fragment"><p>typically fast to visit (no computation needed on the server side), and easy to speed up via CDN</p></li>
+</ul></li>
+<li class="fragment"><p>Other options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)</p></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36" class="uri">https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36</a></p></li></ol></aside></section>
+<section id="quarto-website-vs-quarto-document" class="slide level2">
+<h2>Quarto Website vs Quarto Document</h2>
+<ul>
+<li class="fragment"><p>Quarto website is a form <strong>Quarto Project</strong> with multiple quarto documents inside.</p>
+<ul>
+<li class="fragment"><p>Being in a Quarto Project indicates that these documents are connected / related to each other</p></li>
+<li class="fragment"><p>Essentially the same concept as <strong>R Project</strong></p></li>
+</ul></li>
+<li class="fragment"><p>Each of this document act as a webpage – the default format will be <code>format: html</code></p></li>
+<li class="fragment"><p>Having said that, you can also have a presentation as part of the website (just like this course website!)</p></li>
+</ul>
+</section>
+<section id="anatomy-of-a-quarto-website" class="slide level2">
+<h2>Anatomy of a Quarto Website</h2>
+<p>In a new Quarto Website project, you will see the following files:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><code>_quarto.yml</code></td>
+<td>The Quarto website project file. You can define site-wide YAML headers here, including the website navigation</td>
+</tr>
+<tr class="even">
+<td><code>about.qmd</code></td>
+<td>The about page - automatically created</td>
+</tr>
+<tr class="odd">
+<td><code>index.qmd</code></td>
+<td>The website home page - automatically created</td>
+</tr>
+<tr class="even">
+<td><code>styles.css</code></td>
+<td>Additional CSS styling if you’d like to customize further</td>
+</tr>
+<tr class="odd">
+<td><code>project_name.Rproj</code></td>
+<td>The R project file</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="lets-try-it-together" class="title-slide slide level1 center">
+<h1>Let’s try it together!</h1>
+<p>Create and explore Quarto Website</p>
+</section>
+<section id="publishing-the-website" class="slide level2">
+<h2>Publishing the website</h2>
+<p>There are several options:</p>
+<ul>
+<li class="fragment"><p>Quarto Pub</p></li>
+<li class="fragment"><p>GitHub Pages</p></li>
+<li class="fragment"><p>Netlify</p></li>
+<li class="fragment"><p>Posit Connect</p></li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">C03 Making Research More Transparent with Quarto and RStudio</a></p>
 </div>
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 
