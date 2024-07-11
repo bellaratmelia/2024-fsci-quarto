@@ -40,7 +40,9 @@ We covered the following topic:
 ::: {.column width="50%"}
 **For yourself:**
 
--   Highlight your work, including research papers, grants, publications, and ongoing projects, to make your contributions easily accessible to the academic community and the public.
+-   Highlight your work, including research papers, grants, publications, and ongoing projects,
+
+-   Make your contributions easily accessible to the academic community and the public.
 
 -   Share teaching materials, lecture notes, and other educational resources with students and colleagues.
 :::
@@ -48,11 +50,11 @@ We covered the following topic:
 ::: {.column width="50%"}
 **For your research group / lab:**
 
--   Highlight research projects, publications, findings, and achievements to a broader audience including potential collaborators, funding agencies, and the general public.
+-   Highlight research projects, publications, findings, and achievements to a broader audience (including potential collaborators, funding agencies, and the general public.)
 
 -   Provide updates and news about ongoing research, funding opportunities, and events.
 
--   Attract prospective students, postdocs, and researchers who are interested in joining the lab by providing information on available positions, application procedures, and the benefits of working with the lab.
+-   Attract prospective students, postdocs, and researchers who are interested in joining the lab.
 :::
 :::
 
@@ -88,26 +90,181 @@ Couple of reasons: [^1]
 
 In a new Quarto Website project, you will see the following files:
 
-|                      |                                                                                                               |
-|--------------------|------------------------------------------------------|
++----------------------+---------------------------------------------------------------------------------------------------------------+
 | `_quarto.yml`        | The Quarto website project file. You can define site-wide YAML headers here, including the website navigation |
++----------------------+---------------------------------------------------------------------------------------------------------------+
 | `about.qmd`          | The about page - automatically created                                                                        |
++----------------------+---------------------------------------------------------------------------------------------------------------+
 | `index.qmd`          | The website home page - automatically created                                                                 |
++----------------------+---------------------------------------------------------------------------------------------------------------+
 | `styles.css`         | Additional CSS styling if you'd like to customize further                                                     |
++----------------------+---------------------------------------------------------------------------------------------------------------+
 | `project_name.Rproj` | The R project file                                                                                            |
++----------------------+---------------------------------------------------------------------------------------------------------------+
+
+To add new pages or presentations to your website, simply add a new `.qmd` file and adjust the navigation in `_quarto.yml` file.
 
 # Let's try it together!
 
-Create and explore Quarto Website
+In your RStudio, go to `File` \> `New Project` \> `Quarto Website` (make sure to tick "Open in New Session")
 
-## Publishing the website
+# Publishing the website
 
-There are several options:
+## Publishing options
 
--   Quarto Pub
+There are several options, each with its own advantages [^2]
 
--   GitHub Pages
+[^2]: <https://quarto.org/docs/publishing/>
 
--   Netlify
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Quarto Pub    | Publishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content. Note: does not support private sites and there is no option to add collaborators or version control. |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| GitHub Pages  | Publish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub. Since it's on GitHub, you can add collaborators and apply version control.                    |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Netlify       | Professional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.                                                                                      |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Posit Connect | Publishing platform for secure sharing of data products within an organization. Use Posit Connect when you want to publish content within an organization rather than on the public internet.                                                               |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--   Posit Connect
+> For today's session, let us try to publish to **Quarto Pub** and **GitHub Pages**!
+
+## Publishing to Quarto Pub
+
+The steps:
+
+::: nonincremental
+1.  Create an account at Quarto Pub (<https://quartopub.com/>) - make sure to do this on your default browser
+
+2.  in RStudio, type the following command on the Terminal tab (not Console!): **`quarto publish quarto-pub`**
+
+3.  If this is your first time publishing the project, you will be required to authorize your account and generate the access token. Follow the instructions in terminal.
+
+4.  Once your site is successfully published, it will appear at `https://your-username.quarto.pub/project-name`
+:::
+
+::: callout-note
+You can also publish a single document or presentation with a slightly different command:
+
+`quarto publish quarto-pub document-name.qmd`
+:::
+
+## Publishing to GitHub - Refresher on Git
+
+[**Some glossaries:**]{.underline}
+
+-   **Git**: Git is a popular version control system that helps you manage and keep track of your source code history. It's widely used in software development but can be used for any set of files you want to track changes to.
+
+-   **GitHub**: GitHub is a web-based platform that uses Git for version control and is widely used for software development and collaborative projects. It provides a place to host your Git repositories and offers additional features to enhance collaboration, project management, and code sharing.
+
+-   **Repositories (Repos)**: A Git repository is where your project’s files and their history are stored. You can create a new repo or clone (copy) an existing one.
+
+-   **Remote Repos**: These are hosted versions of your local repo on platforms like GitHub, GitLab, or Bitbucket. You can push your changes to a remote repo to share with others or to back up your work. Others can clone your remote repo and contribute to it.
+
+-   **Commits**: A commit is like a snapshot of your project at a certain point in time. Each commit has a unique ID and includes a message describing what changes were made. You can commit changes locally and push them to a remote repository.
+
+## Refresher on Git (continued)
+
+-   **Branches**: A branch is a separate line of development. The default branch is usually called "main" or "master". You can create new branches to work on features or fixes without affecting the main branch.
+
+-   **Merging**: Merging is the process of combining changes from different branches. When your feature or fix is ready, you merge it back into the main branch.
+
+-   **Pushing**: uploading your local repository content to a remote repository.
+
+-   **Pulling**: fetching and combining changes from a remote repository to your local repository.
+
+## Refresher on Git - Typical Git Workflow (with analogy)
+
+```{=html5}
+<style type="text/css">
+    .table75 td:nth-child(1) {width: 10%;}  
+    .table75 td:nth-child(2) {width: 55%;}
+    .table75 td:nth-child(3) {width: 35%;}
+</style>
+```
+::: table75
++------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| **Step**   | **Git Task and Command**                                                    | **Online Shopping Equivalent**                                                                  |
++------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 1          | Stage your changes.                                                         | Adding items to your shopping cart.                                                             |
+|            |                                                                             |                                                                                                 |
+|            | `git add .`                                                                 |                                                                                                 |
++------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 2          | Commit your changes with a commit message                                   | Inputting your payment info and buyer's note to the seller (e.g. "leave package at the porch"). |
+|            |                                                                             |                                                                                                 |
+|            | `git commit -m "describe the changes here"`                                 |                                                                                                 |
+|            |                                                                             |                                                                                                 |
+|            | This creates a new commit in your local repository with the staged changes. |                                                                                                 |
++------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 3          | Push your commits to the remote repository hosted in GitHub                 | Clicking the "Purchase" button.                                                                 |
+|            |                                                                             |                                                                                                 |
+|            | `git push origin main`                                                      |                                                                                                 |
++------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 4          | Update your local repository with changes from the remote repository        | Getting updates on the status of your purchase.                                                 |
+|            |                                                                             |                                                                                                 |
+|            | `git pull origin main`                                                      |                                                                                                 |
++------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+:::
+
+## Publishing to GitHub
+
+There are 3 ways to publish to GitHub: [^3]
+
+[^3]: <https://quarto.org/docs/publishing/github-pages.html#overview>
+
+1.  Render sites on your local machine to the `docs` directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the `docs` directory.
+
+2.  Use the `quarto publish` command to publish content rendered on your local machine.
+
+3.  Use a **GitHub Action** to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.
+
+. . .
+
+Of all these options, we recommend option #3! (It requires more preparation at the beginning, but will be tidier in the long run)
+
+## Publishing to GitHub - steps
+
+1.  Have a [GitHub](https://github.com/) account!
+
+2.  Create a new Quarto Website Project, make sure to tick the "create git repository" option.
+
+3.  Add a few contents inside the project.
+
+4.  add `freeze: auto` in the `_quarto.yml` file
+
+5.  
+
+6.  Go to Github, and create a new repository with the exact same name as the website project name. Leave everything else empty for now (don't pick any license type).
+
+7.  Once the repo is created, copy the git link.
+
+8.  Go back to RStudio, and switch to the terminal tab, and type the following commands:
+
+    `git add .`
+
+    `git commit -m "initial commit"`
+
+    `git push origin main`
+
+9.  Setup GitHub Actions
+
+# Advanced Quarto Format: Books and Manuscripts
+
+## Quarto Books
+
+Quarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats:
+
+-   HTML
+
+-   PDF
+
+-   MS Word
+
+-   EPUB
+
+-   AsciiDoc
+
+## Quarto Manuscript
+
+-   Latest format, released in January 2024
+
+-   The underlying structure is very similar to Quarto website
