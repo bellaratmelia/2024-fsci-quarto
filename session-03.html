@@ -370,15 +370,16 @@ Bella Ratmelia &amp; Dong Danping
 <div class="column" style="width:50%;">
 <p><strong>For yourself:</strong></p>
 <ul>
-<li class="fragment"><p>Highlight your work, including research papers, grants, publications, and ongoing projects, to make your contributions easily accessible to the academic community and the public.</p></li>
+<li class="fragment"><p>Highlight your work, including research papers, grants, publications, and ongoing projects,</p></li>
+<li class="fragment"><p>Make your contributions easily accessible to the academic community and the public.</p></li>
 <li class="fragment"><p>Share teaching materials, lecture notes, and other educational resources with students and colleagues.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong>For your research group / lab:</strong></p>
 <ul>
-<li class="fragment"><p>Highlight research projects, publications, findings, and achievements to a broader audience including potential collaborators, funding agencies, and the general public.</p></li>
+<li class="fragment"><p>Highlight research projects, publications, findings, and achievements to a broader audience (including potential collaborators, funding agencies, and the general public.)</p></li>
 <li class="fragment"><p>Provide updates and news about ongoing research, funding opportunities, and events.</p></li>
-<li class="fragment"><p>Attract prospective students, postdocs, and researchers who are interested in joining the lab by providing information on available positions, application procedures, and the benefits of working with the lab.</p></li>
+<li class="fragment"><p>Attract prospective students, postdocs, and researchers who are interested in joining the lab.</p></li>
 </ul>
 </div></div>
 </section>
@@ -412,8 +413,8 @@ Bella Ratmelia &amp; Dong Danping
 <p>In a new Quarto Website project, you will see the following files:</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
+<col style="width: 17%">
+<col style="width: 82%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -438,20 +439,194 @@ Bella Ratmelia &amp; Dong Danping
 </tr>
 </tbody>
 </table>
+<p>To add new pages or presentations to your website, simply add a new <code>.qmd</code> file and adjust the navigation in <code>_quarto.yml</code> file.</p>
 </section></section>
-<section>
 <section id="lets-try-it-together" class="title-slide slide level1 center">
 <h1>Let’s try it together!</h1>
-<p>Create and explore Quarto Website</p>
+<p>In your RStudio, go to <code>File</code> &gt; <code>New Project</code> &gt; <code>Quarto Website</code> (make sure to tick “Open in New Session”)</p>
 </section>
-<section id="publishing-the-website" class="slide level2">
-<h2>Publishing the website</h2>
-<p>There are several options:</p>
+
+<section>
+<section id="publishing-the-website" class="title-slide slide level1 center">
+<h1>Publishing the website</h1>
+
+</section>
+<section id="publishing-options" class="slide level2">
+<h2>Publishing options</h2>
+<p>There are several options, each with its own advantages <sup>1</sup></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 94%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Quarto Pub</td>
+<td>Publishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content. Note: does not support private sites and there is no option to add collaborators or version control.</td>
+</tr>
+<tr class="even">
+<td>GitHub Pages</td>
+<td>Publish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub. Since it’s on GitHub, you can add collaborators and apply version control.</td>
+</tr>
+<tr class="odd">
+<td>Netlify</td>
+<td>Professional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.</td>
+</tr>
+<tr class="even">
+<td>Posit Connect</td>
+<td>Publishing platform for secure sharing of data products within an organization. Use Posit Connect when you want to publish content within an organization rather than on the public internet.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>For today’s session, let us try to publish to <strong>Quarto Pub</strong> and <strong>GitHub Pages</strong>!</p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://quarto.org/docs/publishing/" class="uri">https://quarto.org/docs/publishing/</a></p></li></ol></aside></section>
+<section id="publishing-to-quarto-pub" class="slide level2">
+<h2>Publishing to Quarto Pub</h2>
+<p>The steps:</p>
+<div>
+<ol type="1">
+<li><p>Create an account at Quarto Pub (<a href="https://quartopub.com/" class="uri">https://quartopub.com/</a>) - make sure to do this on your default browser</p></li>
+<li><p>in RStudio, type the following command on the Terminal tab (not Console!): <strong><code>quarto publish quarto-pub</code></strong></p></li>
+<li><p>If this is your first time publishing the project, you will be required to authorize your account and generate the access token. Follow the instructions in terminal.</p></li>
+<li><p>Once your site is successfully published, it will appear at <code>https://your-username.quarto.pub/project-name</code></p></li>
+</ol>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>You can also publish a single document or presentation with a slightly different command:</p>
+<p><code>quarto publish quarto-pub document-name.qmd</code></p>
+</div>
+</div>
+</div>
+</section>
+<section id="publishing-to-github---refresher-on-git" class="slide level2">
+<h2>Publishing to GitHub - Refresher on Git</h2>
+<p><u><strong>Some glossaries:</strong></u></p>
 <ul>
-<li class="fragment"><p>Quarto Pub</p></li>
-<li class="fragment"><p>GitHub Pages</p></li>
-<li class="fragment"><p>Netlify</p></li>
-<li class="fragment"><p>Posit Connect</p></li>
+<li class="fragment"><p><strong>Git</strong>: Git is a popular version control system that helps you manage and keep track of your source code history. It’s widely used in software development but can be used for any set of files you want to track changes to.</p></li>
+<li class="fragment"><p><strong>GitHub</strong>: GitHub is a web-based platform that uses Git for version control and is widely used for software development and collaborative projects. It provides a place to host your Git repositories and offers additional features to enhance collaboration, project management, and code sharing.</p></li>
+<li class="fragment"><p><strong>Repositories (Repos)</strong>: A Git repository is where your project’s files and their history are stored. You can create a new repo or clone (copy) an existing one.</p></li>
+<li class="fragment"><p><strong>Remote Repos</strong>: These are hosted versions of your local repo on platforms like GitHub, GitLab, or Bitbucket. You can push your changes to a remote repo to share with others or to back up your work. Others can clone your remote repo and contribute to it.</p></li>
+<li class="fragment"><p><strong>Commits</strong>: A commit is like a snapshot of your project at a certain point in time. Each commit has a unique ID and includes a message describing what changes were made. You can commit changes locally and push them to a remote repository.</p></li>
+</ul>
+</section>
+<section id="refresher-on-git-continued" class="slide level2">
+<h2>Refresher on Git (continued)</h2>
+<ul>
+<li class="fragment"><p><strong>Branches</strong>: A branch is a separate line of development. The default branch is usually called “main” or “master”. You can create new branches to work on features or fixes without affecting the main branch.</p></li>
+<li class="fragment"><p><strong>Merging</strong>: Merging is the process of combining changes from different branches. When your feature or fix is ready, you merge it back into the main branch.</p></li>
+<li class="fragment"><p><strong>Pushing</strong>: uploading your local repository content to a remote repository.</p></li>
+<li class="fragment"><p><strong>Pulling</strong>: fetching and combining changes from a remote repository to your local repository.</p></li>
+</ul>
+</section>
+<section id="refresher-on-git---typical-git-workflow-with-analogy" class="slide level2">
+<h2>Refresher on Git - Typical Git Workflow (with analogy)</h2>
+<style type="text/css">
+    .table75 td:nth-child(1) {width: 10%;}  
+    .table75 td:nth-child(2) {width: 55%;}
+    .table75 td:nth-child(3) {width: 35%;}
+</style>
+<div class="table75">
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 41%">
+<col style="width: 51%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Step</strong></td>
+<td><strong>Git Task and Command</strong></td>
+<td><strong>Online Shopping Equivalent</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td><p>Stage your changes.</p>
+<p><code>git add .</code></p></td>
+<td>Adding items to your shopping cart.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><p>Commit your changes with a commit message</p>
+<p><code>git commit -m "describe the changes here"</code></p>
+<p>This creates a new commit in your local repository with the staged changes.</p></td>
+<td>Inputting your payment info and buyer’s note to the seller (e.g.&nbsp;“leave package at the porch”).</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><p>Push your commits to the remote repository hosted in GitHub</p>
+<p><code>git push origin main</code></p></td>
+<td>Clicking the “Purchase” button.</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><p>Update your local repository with changes from the remote repository</p>
+<p><code>git pull origin main</code></p></td>
+<td>Getting updates on the status of your purchase.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="publishing-to-github" class="slide level2">
+<h2>Publishing to GitHub</h2>
+<p>There are 3 ways to publish to GitHub: <sup>1</sup></p>
+<ol type="1">
+<li class="fragment"><p>Render sites on your local machine to the <code>docs</code> directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the <code>docs</code> directory.</p></li>
+<li class="fragment"><p>Use the <code>quarto publish</code> command to publish content rendered on your local machine.</p></li>
+<li class="fragment"><p>Use a <strong>GitHub Action</strong> to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.</p></li>
+</ol>
+<div class="fragment">
+<p>Of all these options, we recommend option #3! (It requires more preparation at the beginning, but will be tidier in the long run)</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://quarto.org/docs/publishing/github-pages.html#overview" class="uri">https://quarto.org/docs/publishing/github-pages.html#overview</a></p></li></ol></aside></section>
+<section id="publishing-to-github---steps" class="slide level2">
+<h2>Publishing to GitHub - steps</h2>
+<ol type="1">
+<li class="fragment"><p>Have a <a href="https://github.com/">GitHub</a> account!</p></li>
+<li class="fragment"><p>Create a new Quarto Website Project, make sure to tick the “create git repository” option.</p></li>
+<li class="fragment"><p>Add a few contents inside the project.</p></li>
+<li class="fragment"><p>add <code>freeze: auto</code> in the <code>_quarto.yml</code> file</p></li>
+<li class="fragment"></li>
+<li class="fragment"><p>Go to Github, and create a new repository with the exact same name as the website project name. Leave everything else empty for now (don’t pick any license type).</p></li>
+<li class="fragment"><p>Once the repo is created, copy the git link.</p></li>
+<li class="fragment"><p>Go back to RStudio, and switch to the terminal tab, and type the following commands:</p>
+<p><code>git add .</code></p>
+<p><code>git commit -m "initial commit"</code></p>
+<p><code>git push origin main</code></p></li>
+<li class="fragment"><p>Setup GitHub Actions</p></li>
+</ol>
+</section></section>
+<section>
+<section id="advanced-quarto-format-books-and-manuscripts" class="title-slide slide level1 center">
+<h1>Advanced Quarto Format: Books and Manuscripts</h1>
+
+</section>
+<section id="quarto-books" class="slide level2">
+<h2>Quarto Books</h2>
+<p>Quarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats:</p>
+<ul>
+<li class="fragment"><p>HTML</p></li>
+<li class="fragment"><p>PDF</p></li>
+<li class="fragment"><p>MS Word</p></li>
+<li class="fragment"><p>EPUB</p></li>
+<li class="fragment"><p>AsciiDoc</p></li>
+</ul>
+</section>
+<section id="quarto-manuscript" class="slide level2">
+<h2>Quarto Manuscript</h2>
+<ul>
+<li class="fragment"><p>Latest format, released in January 2024</p></li>
+<li class="fragment"><p>The underlying structure is very similar to Quarto website</p></li>
 </ul>
 
 <div class="quarto-auto-generated-content">
