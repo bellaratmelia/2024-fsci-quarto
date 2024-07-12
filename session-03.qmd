@@ -78,9 +78,9 @@ Couple of reasons: [^1]
 
 -   Quarto website is a form **Quarto Project** with multiple quarto documents inside.
 
-    -   Being in a Quarto Project indicates that these documents are connected / related to each other
+-   **Quarto Project** indicates that these documents are connected / related to each other.
 
-    -   Essentially the same concept as **R Project**
+-   This means the documents' header automatically share a common YAML file
 
 -   Each of this document act as a webpage – the default format will be `format: html`
 
@@ -90,25 +90,15 @@ Couple of reasons: [^1]
 
 In a new Quarto Website project, you will see the following files:
 
-+----------------------+---------------------------------------------------------------------------------------------------------------+
+|                      |                                                                                                               |
+|----------------------|---------------------------------------------------------------------------------------------------------------|
 | `_quarto.yml`        | The Quarto website project file. You can define site-wide YAML headers here, including the website navigation |
-+----------------------+---------------------------------------------------------------------------------------------------------------+
 | `about.qmd`          | The about page - automatically created                                                                        |
-+----------------------+---------------------------------------------------------------------------------------------------------------+
 | `index.qmd`          | The website home page - automatically created                                                                 |
-+----------------------+---------------------------------------------------------------------------------------------------------------+
 | `styles.css`         | Additional CSS styling if you'd like to customize further                                                     |
-+----------------------+---------------------------------------------------------------------------------------------------------------+
 | `project_name.Rproj` | The R project file                                                                                            |
-+----------------------+---------------------------------------------------------------------------------------------------------------+
 
 To add new pages or presentations to your website, simply add a new `.qmd` file and adjust the navigation in `_quarto.yml` file.
-
-# Let's try it together!
-
-In your RStudio, go to `File` \> `New Project` \> `Quarto Website` (make sure to tick "Open in New Session")
-
-# Publishing the website
 
 ## Publishing options
 
@@ -116,17 +106,18 @@ There are several options, each with its own advantages [^2]
 
 [^2]: <https://quarto.org/docs/publishing/>
 
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|               |                                                                                                                                                                                                                                                             |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Quarto Pub    | Publishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content. Note: does not support private sites and there is no option to add collaborators or version control. |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | GitHub Pages  | Publish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub. Since it's on GitHub, you can add collaborators and apply version control.                    |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Netlify       | Professional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.                                                                                      |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Posit Connect | Publishing platform for secure sharing of data products within an organization. Use Posit Connect when you want to publish content within an organization rather than on the public internet.                                                               |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 > For today's session, let us try to publish to **Quarto Pub** and **GitHub Pages**!
+
+# Let's try it together!
+
+In your RStudio, go to `File` \> `New Project` \> `Quarto Website` (make sure to tick "Open in New Session")
 
 ## Publishing to Quarto Pub
 
@@ -182,27 +173,27 @@ You can also publish a single document or presentation with a slightly different
 </style>
 ```
 ::: table75
-+------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| **Step**   | **Git Task and Command**                                                    | **Online Shopping Equivalent**                                                                  |
-+------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| 1          | Stage your changes.                                                         | Adding items to your shopping cart.                                                             |
-|            |                                                                             |                                                                                                 |
-|            | `git add .`                                                                 |                                                                                                 |
-+------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| 2          | Commit your changes with a commit message                                   | Inputting your payment info and buyer's note to the seller (e.g. "leave package at the porch"). |
-|            |                                                                             |                                                                                                 |
-|            | `git commit -m "describe the changes here"`                                 |                                                                                                 |
-|            |                                                                             |                                                                                                 |
-|            | This creates a new commit in your local repository with the staged changes. |                                                                                                 |
-+------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| 3          | Push your commits to the remote repository hosted in GitHub                 | Clicking the "Purchase" button.                                                                 |
-|            |                                                                             |                                                                                                 |
-|            | `git push origin main`                                                      |                                                                                                 |
-+------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| 4          | Update your local repository with changes from the remote repository        | Getting updates on the status of your purchase.                                                 |
-|            |                                                                             |                                                                                                 |
-|            | `git pull origin main`                                                      |                                                                                                 |
-+------------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
++----------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| **Step** | **Git Task and Command**                                                    | **Online Shopping Equivalent**                                                                  |
++----------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 1        | Stage your changes.                                                         | Adding items to your shopping cart.                                                             |
+|          |                                                                             |                                                                                                 |
+|          | `git add .`                                                                 |                                                                                                 |
++----------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 2        | Commit your changes with a commit message                                   | Inputting your payment info and buyer's note to the seller (e.g. "leave package at the porch"). |
+|          |                                                                             |                                                                                                 |
+|          | `git commit -m "describe the changes here"`                                 |                                                                                                 |
+|          |                                                                             |                                                                                                 |
+|          | This creates a new commit in your local repository with the staged changes. |                                                                                                 |
++----------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 3        | Push your commits to the remote repository hosted in GitHub                 | Clicking the "Purchase" button.                                                                 |
+|          |                                                                             |                                                                                                 |
+|          | `git push origin main`                                                      |                                                                                                 |
++----------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+| 4        | Update your local repository with changes from the remote repository        | Getting updates on the status of your purchase.                                                 |
+|          |                                                                             |                                                                                                 |
+|          | `git pull origin main`                                                      |                                                                                                 |
++----------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 :::
 
 ## Publishing to GitHub
@@ -248,6 +239,10 @@ Of all these options, we recommend option #3! (It requires more preparation at t
 9.  Setup GitHub Actions
 
 # Advanced Quarto Format: Books and Manuscripts
+
+## Quarto Blog
+
+-   Exactly like Quarto website, but with added blog functionalities
 
 ## Quarto Books
 
