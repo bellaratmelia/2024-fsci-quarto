@@ -60,7 +60,7 @@
     "href": "session-03.html#quarto-website-vs-quarto-document",
     "title": "Session 03",
     "section": "Quarto Website vs Quarto Document",
-    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\n\nBeing in a Quarto Project indicates that these documents are connected / related to each other\nEssentially the same concept as R Project\n\nEach of this document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)"
+    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\nQuarto Project indicates that these documents are connected / related to each other.\nThis means the documents’ header automatically share a common YAML file\nEach of this document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)"
   },
   {
     "objectID": "session-03.html#anatomy-of-a-quarto-website",
@@ -117,6 +117,13 @@
     "title": "Session 03",
     "section": "Publishing to GitHub - steps",
     "text": "Publishing to GitHub - steps\n\nHave a GitHub account!\nCreate a new Quarto Website Project, make sure to tick the “create git repository” option.\nAdd a few contents inside the project.\nadd freeze: auto in the _quarto.yml file\n\nGo to Github, and create a new repository with the exact same name as the website project name. Leave everything else empty for now (don’t pick any license type).\nOnce the repo is created, copy the git link.\nGo back to RStudio, and switch to the terminal tab, and type the following commands:\ngit add .\ngit commit -m \"initial commit\"\ngit push origin main\nSetup GitHub Actions"
+  },
+  {
+    "objectID": "session-03.html#quarto-blog",
+    "href": "session-03.html#quarto-blog",
+    "title": "Session 03",
+    "section": "Quarto Blog",
+    "text": "Quarto Blog\n\nExactly like Quarto website, but with added blog functionalities"
   },
   {
     "objectID": "session-03.html#quarto-books",
