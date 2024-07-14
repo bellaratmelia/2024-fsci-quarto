@@ -4,8 +4,8 @@ author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
     theme: [default, custom.scss]
-    width: 1600
-    height: 900
+    width: 1920
+    height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
     chalkboard: false
@@ -361,7 +361,8 @@ Images can be embedded using the following syntax: `![alt text](image url)`.
 :::
 
 # Let's try this together!
-Adding lists, links and images to your Quarto document. 
+
+Adding lists, links and images to your Quarto document.
 
 ## Anatomy of a Quarto document
 
@@ -409,7 +410,6 @@ format:
 :::
 
 ::: {.column .nonincremental width="50%"}
-
 **More Document Options in YAML:**
 
 -   Table of Contents
@@ -442,12 +442,14 @@ quarto_render("document.qmd") # defaults to html
 quarto_render("document.qmd", output_format = "pdf")
 ```
 
-# Let's try this together! 
-Add more YAML options and try other rendering methods. 
+# Let's try this together!
+
+Add more YAML options and try other rendering methods.
 
 ## Figures
-- Figure settings
-- Figure layout
+
+-   Figure settings
+-   Figure layout
 
 ## Tables
 
@@ -456,5 +458,5 @@ Add more YAML options and try other rendering methods.
 ## Call-out box
 
 # Let's try this together!
-Use the penguin document to figures, tables and cross references. 
 
+Use the penguin document to figures, tables and cross references.

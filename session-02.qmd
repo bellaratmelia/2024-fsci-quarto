@@ -4,7 +4,7 @@ author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
     theme: [default, custom.scss]
-    width: 1980
+    width: 1920
     height: 1080
     slide-number: true
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
@@ -76,7 +76,7 @@ Each code chunk will have a list of **cell options** that looks like this if you
 #| output: true
 ```
 
-There are many options, but the important ones are:
+There are many code chunk options, but the important ones are:
 
 -   `echo` - Whether to display the source code in the rendered output (true/false)
 
@@ -118,7 +118,7 @@ diamonds %>% ggplot(aes(x = color, fill = cut)) +   #<2>
 
 # Let's try this together!
 
-Hands-on exercises to explore the cell options & code annotations
+Hands-on exercises to explore the cell options and code annotations!
 
 # Citations, Footnotes, and Cross-Referencing
 
@@ -136,7 +136,7 @@ By default, Quarto will use Pandoc engine to convert the in-text citations and g
 
 ## Bibliographic data source + CSL file
 
-This will be specified in the YAML section of your quarto document.
+Both files have to be specified in the YAML header like so: (In this example, the `.bib` file and the `.csl` file is located in the same folder as the `.qmd` document.)
 
 ```         
 ---
@@ -150,17 +150,16 @@ csl: nature.csl
 
 -   `nature.csl` is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: <https://github.com/citation-style-language/styles>
 
-## The syntax for in-text citations
+## In-text citations
 
 Common ones:
 
--   `@katz2021` mentioned that... --\> @katz2021 mentioned that...
-
--   Katz et al. `[-@katz2021]` mentioned that... --\> Katz et al. [-@katz2021] mentioned that...
-
--   Software citation is good `[@katz2021, pp. 33-35]` --\> Software citation is good [@katz2021, pp. 33-35]!
-
--   More researchers are saying that software citation is good `[@katz2021; @park2019]` --\> More researchers are saying that software citation is good [@katz2021; @park2019]
+| Syntax                                                                              | Output                                                                            |
+|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| `@katz2021` mentioned that...                                                       | @katz2021 mentioned that...                                                       |
+| Katz et al. `[-@katz2021]` mentioned that...                                        | Katz et al. [-@katz2021] mentioned that...                                        |
+| Software citation is good `[@katz2021, pp. 33-35]`                                  | Software citation is good [@katz2021, pp. 33-35]!                                 |
+| More researchers are saying that software citation is good `[@katz2021; @park2019]` | More researchers are saying that software citation is good [@katz2021; @park2019] |
 
 ## The References section
 
@@ -182,7 +181,7 @@ By default, Quarto will place the references section at the end of the document.
 
 # Let's try this together!
 
-Let's explore citations, footnotes, and cross-referencing in Quarto.
+Let's explore citations, footnotes, and cross-referencing in Quarto!
 
 # Specific features for Scholarly Writing
 
@@ -293,7 +292,7 @@ format:
 ::: callout-note
 Latest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of `TinyTex` and any missing TeX packages (required for LaTeX rendering)
 
-If you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to HTML page, and the "print" them as PDF.
+If you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to an HTML page, and then "print" them as PDF.
 :::
 
 ::: callout-note
