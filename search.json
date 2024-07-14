@@ -67,7 +67,7 @@
     "href": "session-03.html#anatomy-of-a-quarto-website",
     "title": "Session 03",
     "section": "Anatomy of a Quarto Website",
-    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file\n\n\n\nTo add new pages or presentations to your website, simply add a new .qmd file and adjust the navigation in _quarto.yml file."
+    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation.\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file\n\n\n\nTo add new pages or presentations to your website, simply add a new .qmd file and adjust the navigation in _quarto.yml file."
   },
   {
     "objectID": "session-03.html#publishing-options",
@@ -75,13 +75,6 @@
     "title": "Session 03",
     "section": "Publishing options",
     "text": "Publishing options\nThere are several options, each with its own advantages 1\n\n\n\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content. Note: does not support private sites and there is no option to add collaborators or version control.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub. Since it’s on GitHub, you can add collaborators and apply version control.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nPosit Connect\nPublishing platform for secure sharing of data products within an organization. Use Posit Connect when you want to publish content within an organization rather than on the public internet.\n\n\n\n\nFor today’s session, let us try to publish to Quarto Pub and GitHub Pages!\n\nhttps://quarto.org/docs/publishing/"
-  },
-  {
-    "objectID": "session-03.html#publishing-to-quarto-pub",
-    "href": "session-03.html#publishing-to-quarto-pub",
-    "title": "Session 03",
-    "section": "Publishing to Quarto Pub",
-    "text": "Publishing to Quarto Pub\nThe steps:\n\n\nCreate an account at Quarto Pub (https://quartopub.com/) - make sure to do this on your default browser\nin RStudio, type the following command on the Terminal tab (not Console!): quarto publish quarto-pub\nIf this is your first time publishing the project, you will be required to authorize your account and generate the access token. Follow the instructions in terminal.\nOnce your site is successfully published, it will appear at https://your-username.quarto.pub/project-name\n\n\n\n\n\n\n\n\nNote\n\n\nYou can also publish a single document or presentation with a slightly different command:\nquarto publish quarto-pub document-name.qmd"
   },
   {
     "objectID": "session-03.html#publishing-to-github---refresher-on-git",
@@ -109,14 +102,7 @@
     "href": "session-03.html#publishing-to-github",
     "title": "Session 03",
     "section": "Publishing to GitHub",
-    "text": "Publishing to GitHub\nThere are 3 ways to publish to GitHub: 1\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.\n\n\nOf all these options, we recommend option #3! (It requires more preparation at the beginning, but will be tidier in the long run)\n\nhttps://quarto.org/docs/publishing/github-pages.html#overview"
-  },
-  {
-    "objectID": "session-03.html#publishing-to-github---steps",
-    "href": "session-03.html#publishing-to-github---steps",
-    "title": "Session 03",
-    "section": "Publishing to GitHub - steps",
-    "text": "Publishing to GitHub - steps\n\nHave a GitHub account!\nCreate a new Quarto Website Project, make sure to tick the “create git repository” option.\nAdd a few contents inside the project.\nadd freeze: auto in the _quarto.yml file\n\nGo to Github, and create a new repository with the exact same name as the website project name. Leave everything else empty for now (don’t pick any license type).\nOnce the repo is created, copy the git link.\nGo back to RStudio, and switch to the terminal tab, and type the following commands:\ngit add .\ngit commit -m \"initial commit\"\ngit push origin main\nSetup GitHub Actions"
+    "text": "Publishing to GitHub\nThere are 3 ways to publish to GitHub: 1\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.\n\n\nFor today, let’s try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.\n\nhttps://quarto.org/docs/publishing/github-pages.html#overview"
   },
   {
     "objectID": "session-03.html#quarto-blog",
@@ -172,7 +158,7 @@
     "href": "session-02.html#anatomy-of-a-code-chunk",
     "title": "Session 02 - Integrating codes",
     "section": "Anatomy of a code chunk",
-    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)"
+    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many code chunk options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)"
   },
   {
     "objectID": "session-02.html#code-annotations",
@@ -200,14 +186,14 @@
     "href": "session-02.html#bibliographic-data-source-csl-file",
     "title": "Session 02 - Integrating codes",
     "section": "Bibliographic data source + CSL file",
-    "text": "Bibliographic data source + CSL file\nThis will be specified in the YAML section of your quarto document.\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: https://github.com/citation-style-language/styles"
+    "text": "Bibliographic data source + CSL file\nBoth files have to be specified in the YAML header like so: (In this example, the .bib file and the .csl file is located in the same folder as the .qmd document.)\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: https://github.com/citation-style-language/styles"
   },
   {
-    "objectID": "session-02.html#the-syntax-for-in-text-citations",
-    "href": "session-02.html#the-syntax-for-in-text-citations",
+    "objectID": "session-02.html#in-text-citations",
+    "href": "session-02.html#in-text-citations",
     "title": "Session 02 - Integrating codes",
-    "section": "The syntax for in-text citations",
-    "text": "The syntax for in-text citations\nCommon ones:\n\n@katz2021 mentioned that… –&gt; Katz et al. (2021) mentioned that…\nKatz et al. [-@katz2021] mentioned that… –&gt; Katz et al. (2021) mentioned that…\nSoftware citation is good [@katz2021, pp. 33-35] –&gt; Software citation is good (Katz et al. 2021, 33–35)!\nMore researchers are saying that software citation is good [@katz2021; @park2019] –&gt; More researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)"
+    "section": "In-text citations",
+    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)"
   },
   {
     "objectID": "session-02.html#the-references-section",
@@ -263,7 +249,7 @@
     "href": "session-02.html#rendering-to-pdf",
     "title": "Session 02 - Integrating codes",
     "section": "Rendering to PDF",
-    "text": "Rendering to PDF\nSimilar to docx, you can change the render output to PDF by amending the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nLatest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of TinyTex and any missing TeX packages (required for LaTeX rendering)\nIf you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to HTML page, and the “print” them as PDF.\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou can update or install TinyTex in the RStudio Terminal with this command:\nquarto install tinytex"
+    "text": "Rendering to PDF\nSimilar to docx, you can change the render output to PDF by amending the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nLatest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of TinyTex and any missing TeX packages (required for LaTeX rendering)\nIf you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to an HTML page, and then “print” them as PDF.\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou can update or install TinyTex in the RStudio Terminal with this command:\nquarto install tinytex"
   },
   {
     "objectID": "session-02.html#why-revealjs-and-not-ppt",

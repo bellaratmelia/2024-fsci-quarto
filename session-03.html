@@ -417,7 +417,7 @@ Bella Ratmelia &amp; Dong Danping
 <tbody>
 <tr class="odd">
 <td><code>_quarto.yml</code></td>
-<td>The Quarto website project file. You can define site-wide YAML headers here, including the website navigation</td>
+<td>The Quarto website project file. You can define site-wide YAML headers here, including the website navigation.</td>
 </tr>
 <tr class="even">
 <td><code>about.qmd</code></td>
@@ -473,33 +473,7 @@ Bella Ratmelia &amp; Dong Danping
 <section>
 <section id="lets-try-it-together" class="title-slide slide level1 center">
 <h1>Let’s try it together!</h1>
-<p>In your RStudio, go to <code>File</code> &gt; <code>New Project</code> &gt; <code>Quarto Website</code> (make sure to tick “Open in New Session”)</p>
-</section>
-<section id="publishing-to-quarto-pub" class="slide level2">
-<h2>Publishing to Quarto Pub</h2>
-<p>The steps:</p>
-<div>
-<ol type="1">
-<li><p>Create an account at Quarto Pub (<a href="https://quartopub.com/" class="uri">https://quartopub.com/</a>) - make sure to do this on your default browser</p></li>
-<li><p>in RStudio, type the following command on the Terminal tab (not Console!): <strong><code>quarto publish quarto-pub</code></strong></p></li>
-<li><p>If this is your first time publishing the project, you will be required to authorize your account and generate the access token. Follow the instructions in terminal.</p></li>
-<li><p>Once your site is successfully published, it will appear at <code>https://your-username.quarto.pub/project-name</code></p></li>
-</ol>
-</div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>You can also publish a single document or presentation with a slightly different command:</p>
-<p><code>quarto publish quarto-pub document-name.qmd</code></p>
-</div>
-</div>
-</div>
+<p>Refer to <code>session-03/publishing-to-quartopub.qmd</code> for the step-by-step guide for this activity.</p>
 </section>
 <section id="publishing-to-github---refresher-on-git" class="slide level2">
 <h2>Publishing to GitHub - Refresher on Git</h2>
@@ -531,9 +505,9 @@ Bella Ratmelia &amp; Dong Danping
 <div class="table75">
 <table class="caption-top" style="width:99%;">
 <colgroup>
-<col style="width: 5%">
+<col style="width: 6%">
 <col style="width: 41%">
-<col style="width: 52%">
+<col style="width: 51%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -579,26 +553,14 @@ Bella Ratmelia &amp; Dong Danping
 <li class="fragment"><p>Use a <strong>GitHub Action</strong> to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.</p></li>
 </ol>
 <div class="fragment">
-<p>Of all these options, we recommend option #3! (It requires more preparation at the beginning, but will be tidier in the long run)</p>
+<p>For today, let’s try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.</p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://quarto.org/docs/publishing/github-pages.html#overview" class="uri">https://quarto.org/docs/publishing/github-pages.html#overview</a></p></li></ol></aside></section>
-<section id="publishing-to-github---steps" class="slide level2">
-<h2>Publishing to GitHub - steps</h2>
-<ol type="1">
-<li class="fragment"><p>Have a <a href="https://github.com/">GitHub</a> account!</p></li>
-<li class="fragment"><p>Create a new Quarto Website Project, make sure to tick the “create git repository” option.</p></li>
-<li class="fragment"><p>Add a few contents inside the project.</p></li>
-<li class="fragment"><p>add <code>freeze: auto</code> in the <code>_quarto.yml</code> file</p></li>
-<li class="fragment"></li>
-<li class="fragment"><p>Go to Github, and create a new repository with the exact same name as the website project name. Leave everything else empty for now (don’t pick any license type).</p></li>
-<li class="fragment"><p>Once the repo is created, copy the git link.</p></li>
-<li class="fragment"><p>Go back to RStudio, and switch to the terminal tab, and type the following commands:</p>
-<p><code>git add .</code></p>
-<p><code>git commit -m "initial commit"</code></p>
-<p><code>git push origin main</code></p></li>
-<li class="fragment"><p>Setup GitHub Actions</p></li>
-</ol>
-</section></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://quarto.org/docs/publishing/github-pages.html#overview" class="uri">https://quarto.org/docs/publishing/github-pages.html#overview</a></p></li></ol></aside></section></section>
+<section id="lets-try-it-together-1" class="title-slide slide level1 center">
+<h1>Let’s try it together!</h1>
+<p>Refer to <code>session-03/publishing-to-gh-pages.qmd</code> for the step-by-step guide for this activity.</p>
+</section>
+
 <section>
 <section id="advanced-quarto-format-books-and-manuscripts" class="title-slide slide level1 center">
 <h1>Advanced Quarto Format: Books and Manuscripts</h1>
@@ -811,7 +773,7 @@ Bella Ratmelia &amp; Dong Danping
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1980,
+        width: 1920,
 
         height: 1080,
 
