@@ -86,6 +86,8 @@ There are many code chunk options, but the important ones are:
 
 -   `output-location` - Location of output relative to the code that generates it (more relevant for presentations)
 
+## Code Highlights
+
 ## Code Annotations
 
 -   Code blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.
@@ -120,7 +122,7 @@ diamonds %>% ggplot(aes(x = color, fill = cut)) +   #<2>
 
 Hands-on exercises to explore the cell options and code annotations!
 
-# Citations, Footnotes, and Cross-Referencing
+# Citations and Footnotes
 
 ## Citations in Quarto
 
@@ -155,7 +157,7 @@ csl: nature.csl
 Common ones:
 
 | Syntax                                                                              | Output                                                                            |
-|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+|------------------------------------|------------------------------------|
 | `@katz2021` mentioned that...                                                       | @katz2021 mentioned that...                                                       |
 | Katz et al. `[-@katz2021]` mentioned that...                                        | Katz et al. [-@katz2021] mentioned that...                                        |
 | Software citation is good `[@katz2021, pp. 33-35]`                                  | Software citation is good [@katz2021, pp. 33-35]!                                 |
@@ -303,7 +305,7 @@ You can update or install TinyTex in the RStudio Terminal with this command:
 
 # Let's try this together!
 
-Try rendering your document to word (if you have it installed) or PDF!
+Amend the YAML header in your document to convert it to PDF/ Word. Does the output look different than what you expected?
 
 # Presentation with RevealJS
 
