@@ -10,7 +10,7 @@ format:
     footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
     chalkboard: false
     logo: "images/smu logo.png"
-    incremental: true
+    incremental: false
     multiplex: true
 ---
 
@@ -460,3 +460,7 @@ Add more YAML options and try other rendering methods.
 # Let's try this together!
 
 Use the penguin document to figures, tables and cross references.
+
+## Hidden Slide {.hidden}
+
+test speaker slides:
