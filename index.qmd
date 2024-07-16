@@ -46,20 +46,12 @@ Please ensure that you have completed the following activities before the worksh
 
     -   Although Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4
 
-4.  Install these R packages (to be updated):
+4.  Install these R packages. Copy the following code and paste it in the **Console** tab (left side pane of RStudio), and then press Enter.
 
-```{r}
-#| eval: false
-#| echo: true
-
-options(repos = c(CRAN = "https://cloud.r-project.org"))
-
-pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "rmarkdown", "gtsummary", "fs", "skimr")
-
-install.packages(pkg_list)
-```
+    `install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary"))`
 
 5.  Clone the hands-on materials from GitHub. We will be using them for hands-on activities throughout the 3 days. Please follow the steps below:
+
     i.  Launch RStudio
 
     ii. At the top left corner, click on File –\> New Project–\> Version Control \> Git
