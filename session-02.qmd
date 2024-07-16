@@ -240,13 +240,19 @@ Common ones:
 
 -   Insert in-text citations by typing `@` which will trigger a popup of items saved in your Zotero library.
 
--   Alternatively, if you are using visual editor, click on `Insert` \> `Citation`, which will bring up a popup box where you can choose your citation source!
+-   Inserting citations and footnotes is generally easier in Visual editor :
+
+    -   click on `Insert` \> `Citation`, which will bring up a popup box where you can choose your citation source!
+    
+    -   click on `Insert` \> `Footnotes` to add footnotes
+
 
 ## Citation Sources
 
 Other than your Zotero library, here are the sources that you can retrieve from:
 
 ![](images/citation-sources.jpg){fig-align="center" width="600"}
+
 
 ## The References section
 
@@ -492,9 +498,22 @@ Amend the YAML header in your document to convert it to PDF/ Word. Does the outp
 
 -   Not a proprietary format - it is rendered as HTML slides which you can put on GitHub if you'd like to host it online.
 
--   Can be downloaded as PDF for easier distribution
+-   Being open-source, Reveal.js is free to use, which eliminates licensing costs associated with PowerPoint.
 
--   Text-based using Rmarkdown - easier to edit and incorporate codes, code output, callouts, etc.
+-   Extensive customization options through HTML, CSS, and JavaScript - and easily switch to HTML or PDF.
+
+-   Presentations are HTML-based and can be accessed via any web browser without needing specific software.
+
+-   Works across different operating systems and devices without compatibility issues.
+
+-   Presentations can be designed to be responsive and accessible, ensuring they look good on any device or screen size.
+
+-   Presentations can be hosted locally for offline access or online for easy sharing.
+
+-   Multiple people can collaborate on a presentation using version control systems like Git and track changes made.
+
+-   Access to a large community of developers who contribute to the project and provide support.
+
 
 ## Rendering to Presentation
 

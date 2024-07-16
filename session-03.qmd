@@ -74,6 +74,26 @@ Couple of reasons: [^1]
 
 -   Other options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)
 
+## Example of websites build with Quarto
+
+::: columns
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-masiello-group.png)
+[Masiello Research Group](https://faculty.washington.edu/masiello/) from University of Washington
+:::
+
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-practical-deep-learning.png)
+[Practical Deep Learning (online course)](https://course.fast.ai/) from fast.ai
+:::
+
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-nasa-openscapes.png)
+[NASA & OpenScapes website](https://nasa-openscapes.github.io/)
+:::
+
+:::
+
 ## Quarto Website vs Quarto Document
 
 -   Quarto website is a form **Quarto Project** with multiple quarto documents inside.
@@ -199,32 +219,59 @@ There are 3 ways to publish to GitHub: [^3]
 
 For today, let's try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.
 
+
 # Let's try it together!
 
-Refer to `04-websites/``publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
+Refer to ``` 04-websites/``publishing-to-gh-pages.qmd ``` for the step-by-step guide for this activity.
 
-# Advanced Quarto Format: Books and Manuscripts
+# Advanced Quarto Format: Blogs, Books and Manuscripts
 
 ## Quarto Blog
 
--   Exactly like Quarto website, but with added blog functionalities
+Exactly like Quarto website, but with added blog functionality! Some examples:
+
+::: columns
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-masiello-group.png)
+[Masiello Research Group](https://faculty.washington.edu/masiello/) from University of Washington
+:::
+
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-mike-mahoney.png)
+[Mike Mahoney](https://www.mm218.dev/) personal website & blog
+:::
+
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-mockup.png)
+[Tom Mock](https://themockup.blog/) personal website & blog
+:::
+
+:::
 
 ## Quarto Books
 
-Quarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats:
+Quarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats, such as HTML, PDF, MS Word, Epub, and AsciiDoc.
 
--   HTML
+Some examples of Quarto Books:
 
--   PDF
+::: columns
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/books/books-r4ds.png)
+[R for Data Science (2nd edition)](https://r4ds.hadley.nz/) by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund
+:::
 
--   MS Word
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/books/books-python-for-data.png)
+[Python for Data Analysis (3rd edition)](https://wesmckinney.com/book/) by Wes McKinney
+:::
 
--   EPUB
+::: {.column width="33%"}
+![](https://quarto.org/docs/gallery/websites/websites-hopr.png)
+[Hands-on Programming with R](https://jjallaire.github.io/hopr/) by Garret Grolemund
+:::
 
--   AsciiDoc
+:::
 
 ## Quarto Manuscript
 
--   Latest format, released in January 2024
-
--   The underlying structure is very similar to Quarto website
+Latest Quarto project format released in January 2024. The underlying structure is very similar to Quarto website.
