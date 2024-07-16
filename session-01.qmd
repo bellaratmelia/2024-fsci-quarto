@@ -256,6 +256,8 @@ To create a paragraph, type `Enter` twice.
 
 Create your first Quarto document.
 
+Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
+
 ## Lists
 
 ::: panel-tabset
@@ -364,6 +366,8 @@ Images can be embedded using the following syntax: `![alt text](image url)`.
 
 Adding lists, links and images to your Quarto document.
 
+Follow instructions for `Hands-on #2` at file path: `01-quarto-basics/basics.qmd`
+
 ## Anatomy of a Quarto document
 
 ::: nonincremental
@@ -444,23 +448,232 @@ quarto_render("document.qmd", output_format = "pdf")
 
 # Let's try this together!
 
-Add more YAML options and try other rendering methods.
+More YAML options and rendering.
+
+Follow instructions for `Hands-on #3` at file path: `01-quarto-basics/YAML.qmd`
+
 
 ## Figures
 
--   Figure settings
--   Figure layout
+Just now, we learned about adding images using this syntax `![Elephant](elephant.png)` This results in the following treatment for various output types: ![Example output for HTML, PDF and Word](images/05_figure_output.png){width="100%"}
+
+## Figures: Display size
+
+-   Change display size by adding `width` and `height` attributes:
+
+    `![Elephant](elephant.png){width=300}`
+
+-   Default units are pixels. You can also specify sizes using a percentage:
+
+    `![Elephant](elephant.png){width=80%}`
+
+::: callout-note
+If only width or height is specified, the other will be calculated automatically
+:::
+
+::: notes
+this is 80% of the container size, responsive design when the content area may change, consistent sizing across different devices, screen sizes and formats
+:::
+
+## Figures: Alignment
+
+-   Figures are centre-aligned by default. You may change alignment by doing this:
+
+    `![Elephant](elephant.png){fig-align="left"}`
+
+::: callout-note
+Figure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)
+:::
+
+![Elephant](images/elephant.png)
+
+## Figures: Alt Text
+
+-   Alt Text is important for accessibility, aiding visually impaired users, enhancing SEO, and providing context when images fail to load
+
+`![](elephant.png){fig-alt="A line drawing of an elephant."}`
+
+## Figures: Applying multiple parameters
+
+To combine the above attributes, separate arguments by a space, for example:
+
+`![](elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width=20%}`
+
+## Cross-reference a figure in your document
+
+-   You need to add a figure ID with the `fig-` prefix
+-   use `@` to reference the figure
+
+::: panel-tabset
+### Code
+
+```         
+![An Elephant](elephant.png){#fig-elephant}
+
+Refer to @fig-elephant for an illustration of an elephant. 
+```
+
+### Output
+
+![An Elephant](images/elephant.png){#fig-elephant height="200" fig-align="left"}
+
+Refer to @fig-elephant for an illustration of an elephant.
+:::
+
+## Figures: Layout in two columns
+
+**Code**
+
+```         
+::: {layout-ncol=2}
+![Surus](surus.png)
+
+![Hanno](hanno.png)
+:::
+```
+
+## Figures: Layout in two columns
+
+**Output**
+
+::: {layout-ncol="2"}
+![Surus](images/surus.png)
+
+![Hanno](images/hanno.png)
+:::
+
+::: callout-notes
+To learn more about different ways of figure layouts, refer to [this page](https://quarto.org/docs/authoring/figures.html).
+:::
 
 ## Tables
 
-## Cross References
+This is the code for a *pipe table*:
 
-## Call-out box
+```         
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+```
+
+And this is the output table:
+
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+
+::: callout-note
+You don't have to construct a table by hand - use Quarto's Visual Editor or an online markdown table generator like [this one](https://www.tablesgenerator.com/markdown_tables).
+:::
+
+## Table caption and attributes
+
+```         
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices {tbl-colwidths="[10,90]"}
+```
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Fruit prices {tbl-colwidths="\[10,90\]"}
+
+## Another table example
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Fruit prices {.striped .hover}
+
+## Cross-referencing a table in your document
+
+```         
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices {#tbl-fruits}
+```
+
+::: callout-important
+In order for a table to be cross-referenceable, its label must start with the tbl- prefix.
+:::
+
+## Cross-referencing a table in your document
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Fruit prices {#tbl-fruits}
+
+Refer to @tbl-fruits for price of fruits today.
+
+## Callout box
+
+::: {layout=[30,70]}
+
+5 Types of callout blocks:  
+-  `note`  
+-  `warning`  
+- `important`  
+- `tip`  
+- `caution`  
+
+This is how they look like: 
+![](images/06_callout.png){width=90%}
+:::
+
+## Callout box
+
+**Code**:
+
+```         
+::: callout-tip
+
+Alternatively, use the Quarto Visual Editor!
+
+:::
+```
+\
+
+**Output**
+
+::: callout-tip
+
+Alternatively, use the Quarto Visual Editor!
+
+:::
 
 # Let's try this together!
 
-Use the penguin document to figures, tables and cross references.
+Try out figures, tables and cross references.
 
-## Hidden Slide {.hidden}
+# Recap of today's session
+-  The role of Quarto in research transparency and reproducibility
+-  Rendering to various output types
+-  Introduction to Quarto
+  -  Markdown basics
+  -  Lists, links and images
+  -  More YAML options
+  -  Figures, tables and cross-references
 
-test speaker slides:
