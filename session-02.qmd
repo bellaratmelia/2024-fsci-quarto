@@ -11,6 +11,7 @@ format:
     incremental: true
     smaller: false
 bibliography: references.bib
+suppress-bibliography: true
 ---
 
 ## Recap from yesterday
@@ -52,17 +53,16 @@ Essentially:
 An example of code chunk:
 
 ```{r}
+#| label: code-chunk-example
 #| echo: true
+#| output: true
 #| output-location: fragment
 
-library(tidyverse)                              # <1>
+library(tidyverse)                               
 
-diamonds %>% ggplot(aes(x = color, fill = cut)) + # <2>
+diamonds %>% ggplot(aes(x = color, fill = cut)) + 
     geom_bar()
 ```
-
-1.  Load the `tidyverse` library
-2.  Visualize the distribution of color and kind of cuts for each color
 
 ## Anatomy of a code chunk
 
@@ -86,41 +86,112 @@ There are many code chunk options, but the important ones are:
 
 -   `output-location` - Location of output relative to the code that generates it (more relevant for presentations)
 
-## Code Highlights
+## Code Highlighting
+
+::: nonincremental
+-   Use `highlight-style` to specify the code highlighting style by choosing from the supported themes: a11y, arrow, atom-one, ayu, breeze, github, gruvbox
+
+    -   The themes are "adaptive" and will automatically switch between dark and light modes based on the website's theme.
+
+-   Use `code-line-numbers` to highlight specific lines of codes (this will make more sense for presentation, but you can also apply this to static documents)
+:::
+
+::: columns
+::: {.column width="50%"}
+```{{r}}
+#| echo: true
+#| output: false
+#| code-line-numbers: "3,4"
+#| highlight-style: github
+#| code-overflow: wrap
+
+library(tidyverse)
+
+diamonds %>% ggplot(aes(x = price)) +
+  geom_histogram(binwidth = 500, fill = "blue", color = "black") +
+  labs(title = "Histogram of Diamond Prices", 
+       x = "Price (USD)", 
+       y = "Frequency")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| label: code-highlighting
+#| echo: true
+#| output: false
+#| code-line-numbers: "3,4"
+#| highlight-style: github
+#| code-overflow: wrap
+
+library(tidyverse)
+
+diamonds %>% ggplot(aes(x = price)) +
+  geom_histogram(binwidth = 500, fill = "blue", color = "black") +
+  labs(title = "Histogram of Diamond Prices", 
+       x = "Price (USD)", 
+       y = "Frequency")
+
+```
+:::
+:::
 
 ## Code Annotations
 
--   Code blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.
+:::: {.columns}
 
--   Pretty much like footnotes, but for your code chunks.
+::: {.column width="70%"}
 
--   Great for teaching / presentation!
-
-## Anatomy of a code annotation
-
-````         
-```r
+```{r}
+#| label: code-annotations
 #| echo: true
 #| output-location: fragment
 
-library(tidyverse)                                  #<1>
+library(tidyverse)                                # <1>
 
-diamonds %>% ggplot(aes(x = color, fill = cut)) +   #<2>
-    geom_bar()                                      #<2>
+diamonds %>% ggplot(aes(x = color, fill = cut)) + # <2>
+    geom_bar()
 ```
-1.  load the tidyverse library for the ggplot package
-2.  Visualize the distribution of color and kind of cut for each color
-````
 
+1.  Load the `tidyverse` library
+2.  Visualize the distribution of color and kind of cuts for each color
+:::
+
+::: {.column width="30%"}
+
+-   Code blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.
+
+-   Great for teaching / presentation!
+:::
+
+::::
+
+
+## Anatomy of a code annotation
+
+::: columns
+::: {.column width="60%"}
+Syntax (in visual editor):
+
+![](images/code-annotation-sample.jpg){width="100%"}
+
+Output:
+
+![](images/code-annotation-sample-output.jpg){width="100%"}
+:::
+
+::: {.column width="40%"}
 -   Each annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., `# <1>`).
 
 -   If the annotation covers multiple lines, the same annotation number can be repeated.
 
 -   After the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number.
+:::
+:::
 
 # Let's try this together!
 
-Hands-on exercises to explore the cell options and code annotations!
+Refer to `01-quarto-basics/code-chunks.qmd` for the step-by-step guide for this activity.
 
 # Citations and Footnotes
 
@@ -150,7 +221,11 @@ csl: nature.csl
 
 -   `references.bib` is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.
 
--   `nature.csl` is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: <https://github.com/citation-style-language/styles>
+-   `nature.csl` is the citation style document, in this example is the nature citation style.
+
+    -   You will need to download the csl file from the repository and place it in your working directory.
+
+    -   CSL Project repository: <https://github.com/citation-style-language/styles>
 
 ## In-text citations
 
@@ -163,6 +238,16 @@ Common ones:
 | Software citation is good `[@katz2021, pp. 33-35]`                                  | Software citation is good [@katz2021, pp. 33-35]!                                 |
 | More researchers are saying that software citation is good `[@katz2021; @park2019]` | More researchers are saying that software citation is good [@katz2021; @park2019] |
 
+-   Insert in-text citations by typing `@` which will trigger a popup of items saved in your Zotero library.
+
+-   Alternatively, if you are using visual editor, click on `Insert` \> `Citation`, which will bring up a popup box where you can choose your citation source!
+
+## Citation Sources
+
+Other than your Zotero library, here are the sources that you can retrieve from:
+
+![](images/citation-sources.jpg){fig-align="center" width="600"}
+
 ## The References section
 
 By default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the `source` view on Quarto):
@@ -174,36 +259,51 @@ By default, Quarto will place the references section at the end of the document.
 :::
 ```
 
-## References section output
+Which will print out the output below:
 
-### References
-
-::: {#refs}
-:::
+![](images/references-output.jpg){width="60%"}
 
 # Let's try this together!
 
-Let's explore citations, footnotes, and cross-referencing in Quarto!
+Refer to `02-scholarly-writing/citations-references.qmd` for the step-by-step guide for this activity.
 
 # Specific features for Scholarly Writing
 
 ## Academic Templates with Quarto Journals
 
+:::: {.columns}
+
+::: {.column width="70%"}
+![<https://quarto.org/docs/extensions/listing-journals.html>](images/quarto-extensions.jpg){width="100%"}
+:::
+
+::: {.column width="30%"}
 -   Quarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.
 
--   See here for more info: <https://quarto.org/docs/extensions/listing-journals.html> - some of the templates are contributed by the member of community.
+-   These extensions provide rich YAML metadata specifically for academic writing (often referred as "Front Matter" metadata).
 
--   These extensions provide rich YAML metadata specifically for academic writing.
+-   **Let's dive into these Front Matter YAML metadata first before we explore the templates!**
 
--   Let's dive into these metadata first before we explore the templates!
+:::
+
+::::
+
+
+
 
 ## Front Matter
 
-Scholarly articles demand extensive details in their front matter, beyond just a title and author. Quarto offers a comprehensive range of YAML metadata keys to include these details. This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.
+:::{.nonincremental}
+-   Scholarly articles demand extensive details in their front matter, beyond just a title and author. 
+
+-   Quarto offers a comprehensive range of YAML metadata keys to include these details. 
+
+-   This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.
+:::
 
 Below is a YAML header example:
 
-```         
+```
 ---
 title: "Library Carpentry: Best practices in organizing shelf space in the library"
 date: 2024-07-01
@@ -241,6 +341,85 @@ citation:
 funding: "The author received no specific funding for this work."
 ---
 ```
+## Author-related metadata options
+The author key includes several sub-keys that offer additional details needed for scholarly articles. For example, you can add an author's affiliation, roles, email contact, and whether the author is a corresponding author.
+
+```
+---
+author:
+  name: Bella Ratmelia
+  orcid: 0000-0003-4913-9508
+  url: https://bellaratmelia.github.io
+  email: bellar@smu.edu.sg
+  corresponding: true
+  roles: "Conceptualization"
+  affiliation: 
+    - name: Singapore Management University
+      department: SMU Libraries
+      country: SG
+      url: www.smu.edu.sg
+      ror: 050qmg959
+---
+```
+
+## Article-related metadata options
+These metadata include things like abstract, keywords, license, copyright, and funding information. 
+
+```
+---
+abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+keywords:
+  - Library
+  - Carpentry
+license: "CC BY"
+copyright: 
+  holder: Bella Ratmelia
+  year: 2024
+funding: "The author received no specific funding for this work."
+---
+```
+
+## Metadata for citable articles - web article
+
+For articles published to the web, include author, date and citation url metadata. For example:
+
+```
+---
+title: "Library Carpentry: Best practices in organizing shelf space in the library"
+description: | 
+  Best practices in organizing shelf space in the library
+date: 2024-07-01
+author:
+  - name: Bella Ratmelia
+    id: br
+    orcid: 0000-0003-4913-9508
+    email: bellar@smu.edu.sg
+    corresponding: true
+    affiliation: 
+      - name: Singapore Management University
+        city: Singapore
+        url: www.smu.edu.sg
+citation: true
+bibliography: references.bib
+---
+```
+
+
+## Metadata for citable articles - journal article
+For journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:
+
+```
+---
+citation: 
+  type: article-journal
+  container-title: "Journal of Library Carpentry"
+  volume: 1
+  issue: 1
+  doi: 10.5555/12345678
+  url: https://example.com/summarizing-output
+bibliography: references.bib
+---  
+```
 
 ## Front Matter - Rendering result in HTML
 
@@ -252,7 +431,7 @@ funding: "The author received no specific funding for this work."
 
 # Let's try this together!
 
-Explore the available metadata for Front Matter and the available extension for journal submissions.
+Refer to `02-scholarly-writing/front-matter-metadata.qmd` for the step-by-step guide for this activity.
 
 # Rendering to Static Documents
 
@@ -333,7 +512,7 @@ format: revealjs
 **Fun Fact: The slides for this workshops are created with Quarto and RevealJS!**
 :::
 
-## Header options for RevealJS presentations
+## YAML header options for RevealJS presentations
 
 There are many options, but several ones that you may find useful:
 
@@ -347,4 +526,4 @@ There are many options, but several ones that you may find useful:
 
 # Let's try it together!
 
-Hands-on exercises to create and modify RevealJS presentation.
+Refer to `03-presentations/revealjs-presentation.qmd` for the step-by-step guide for this activity.
