@@ -151,7 +151,7 @@
     "href": "session-02.html#how-does-it-look-like",
     "title": "Session 02 - Integrating codes",
     "section": "How does it look like?",
-    "text": "How does it look like?\nAn example of code chunk:\n\nlibrary(tidyverse)\n\n\n2\n\nVisualize the distribution of color and kind of cuts for each color\n\n\n\n\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()"
+    "text": "How does it look like?\nAn example of code chunk:\n\nlibrary(tidyverse)                               \n\ndiamonds %&gt;% ggplot(aes(x = color, fill = cut)) + \n    geom_bar()"
   },
   {
     "objectID": "session-02.html#anatomy-of-a-code-chunk",
@@ -161,25 +161,25 @@
     "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many code chunk options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)"
   },
   {
-    "objectID": "session-02.html#code-highlights",
-    "href": "session-02.html#code-highlights",
+    "objectID": "session-02.html#code-highlighting",
+    "href": "session-02.html#code-highlighting",
     "title": "Session 02 - Integrating codes",
-    "section": "Code Highlights",
-    "text": "Code Highlights"
+    "section": "Code Highlighting",
+    "text": "Code Highlighting\n\n\nUse highlight-style to specify the code highlighting style by choosing from the supported themes: a11y, arrow, atom-one, ayu, breeze, github, gruvbox\n\nThe themes are “adaptive” and will automatically switch between dark and light modes based on the website’s theme.\n\nUse code-line-numbers to highlight specific lines of codes (this will make more sense for presentation, but you can also apply this to static documents)\n\n\n\n\n```{r}\n#| echo: true\n#| output: false\n#| code-line-numbers: \"3,4\"\n#| highlight-style: github\n#| code-overflow: wrap\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = price)) +\n  geom_histogram(binwidth = 500, fill = \"blue\", color = \"black\") +\n  labs(title = \"Histogram of Diamond Prices\", \n       x = \"Price (USD)\", \n       y = \"Frequency\")\n```\n\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = price)) +\n  geom_histogram(binwidth = 500, fill = \"blue\", color = \"black\") +\n  labs(title = \"Histogram of Diamond Prices\", \n       x = \"Price (USD)\", \n       y = \"Frequency\")"
   },
   {
     "objectID": "session-02.html#code-annotations",
     "href": "session-02.html#code-annotations",
     "title": "Session 02 - Integrating codes",
     "section": "Code Annotations",
-    "text": "Code Annotations\n\nCode blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.\nPretty much like footnotes, but for your code chunks.\nGreat for teaching / presentation!"
+    "text": "Code Annotations\n\n\n\n1library(tidyverse)\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n\n\n1\n\nLoad the tidyverse library\n\n2\n\nVisualize the distribution of color and kind of cuts for each color\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.\nGreat for teaching / presentation!"
   },
   {
     "objectID": "session-02.html#anatomy-of-a-code-annotation",
     "href": "session-02.html#anatomy-of-a-code-annotation",
     "title": "Session 02 - Integrating codes",
     "section": "Anatomy of a code annotation",
-    "text": "Anatomy of a code annotation\n```r\n#| echo: true\n#| output-location: fragment\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n```\n1.  load the tidyverse library for the ggplot package\n2.  Visualize the distribution of color and kind of cut for each color\n\nEach annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., # &lt;1&gt;).\nIf the annotation covers multiple lines, the same annotation number can be repeated.\nAfter the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number."
+    "text": "Anatomy of a code annotation\n\n\nSyntax (in visual editor):\n\nOutput:\n\n\n\nEach annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., # &lt;1&gt;).\nIf the annotation covers multiple lines, the same annotation number can be repeated.\nAfter the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number."
   },
   {
     "objectID": "session-02.html#citations-in-quarto",
@@ -193,42 +193,70 @@
     "href": "session-02.html#bibliographic-data-source-csl-file",
     "title": "Session 02 - Integrating codes",
     "section": "Bibliographic data source + CSL file",
-    "text": "Bibliographic data source + CSL file\nBoth files have to be specified in the YAML header like so: (In this example, the .bib file and the .csl file is located in the same folder as the .qmd document.)\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style. You will need to download the csl file from the repository and place it in your working directory. CSL Project repository: https://github.com/citation-style-language/styles"
+    "text": "Bibliographic data source + CSL file\nBoth files have to be specified in the YAML header like so: (In this example, the .bib file and the .csl file is located in the same folder as the .qmd document.)\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style.\n\nYou will need to download the csl file from the repository and place it in your working directory.\nCSL Project repository: https://github.com/citation-style-language/styles"
   },
   {
     "objectID": "session-02.html#in-text-citations",
     "href": "session-02.html#in-text-citations",
     "title": "Session 02 - Integrating codes",
     "section": "In-text citations",
-    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)"
+    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)\n\n\n\n\nInsert in-text citations by typing @ which will trigger a popup of items saved in your Zotero library.\nAlternatively, if you are using visual editor, click on Insert &gt; Citation, which will bring up a popup box where you can choose your citation source!"
+  },
+  {
+    "objectID": "session-02.html#citation-sources",
+    "href": "session-02.html#citation-sources",
+    "title": "Session 02 - Integrating codes",
+    "section": "Citation Sources",
+    "text": "Citation Sources\nOther than your Zotero library, here are the sources that you can retrieve from:"
   },
   {
     "objectID": "session-02.html#the-references-section",
     "href": "session-02.html#the-references-section",
     "title": "Session 02 - Integrating codes",
     "section": "The References section",
-    "text": "The References section\nBy default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the source view on Quarto):\n### References\n\n::: {#refs}\n:::"
-  },
-  {
-    "objectID": "session-02.html#references-section-output",
-    "href": "session-02.html#references-section-output",
-    "title": "Session 02 - Integrating codes",
-    "section": "References section output",
-    "text": "References section output\nReferences\n\n\nKatz, Daniel S., Neil P. Chue Hong, Tim Clark, August Muench, Shelley Stall, Daina Bouquin, Matthew Cannon, et al. 2021. “Recognizing the Value of Software: A Software Citation Guide.” https://doi.org/10.12688/f1000research.26932.2.\n\n\nPark, Hyoungjoo, and Dietmar Wolfram. 2019. “Research Software Citation in the Data Citation Index: Current Practices and Implications for Research Software Sharing and Reuse.” Journal of Informetrics 13 (2): 574–82. https://doi.org/10.1016/j.joi.2019.03.005."
+    "text": "The References section\nBy default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the source view on Quarto):\n### References\n\n::: {#refs}\n:::\nWhich will print out the output below:"
   },
   {
     "objectID": "session-02.html#academic-templates-with-quarto-journals",
     "href": "session-02.html#academic-templates-with-quarto-journals",
     "title": "Session 02 - Integrating codes",
     "section": "Academic Templates with Quarto Journals",
-    "text": "Academic Templates with Quarto Journals\n\nQuarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.\nSee here for more info: https://quarto.org/docs/extensions/listing-journals.html - some of the templates are contributed by the member of community.\nThese extensions provide rich YAML metadata specifically for academic writing.\nLet’s dive into these metadata first before we explore the templates!"
+    "text": "Academic Templates with Quarto Journals\n\n\n\n\n\nhttps://quarto.org/docs/extensions/listing-journals.html\n\n\n\n\nQuarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.\nThese extensions provide rich YAML metadata specifically for academic writing (often referred as “Front Matter” metadata).\nLet’s dive into these Front Matter YAML metadata first before we explore the templates!"
   },
   {
     "objectID": "session-02.html#front-matter",
     "href": "session-02.html#front-matter",
     "title": "Session 02 - Integrating codes",
     "section": "Front Matter",
-    "text": "Front Matter\nScholarly articles demand extensive details in their front matter, beyond just a title and author. Quarto offers a comprehensive range of YAML metadata keys to include these details. This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.\nBelow is a YAML header example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\n  - name: Danping Dong\n    id: dp\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\ncitation: \n  container-title: Journal of Library Carpentry\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\nfunding: \"The author received no specific funding for this work.\"\n---"
+    "text": "Front Matter\n\n\nScholarly articles demand extensive details in their front matter, beyond just a title and author.\nQuarto offers a comprehensive range of YAML metadata keys to include these details.\nThis metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.\n\n\nBelow is a YAML header example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\n  - name: Danping Dong\n    id: dp\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\ncitation: \n  container-title: Journal of Library Carpentry\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\nfunding: \"The author received no specific funding for this work.\"\n---"
+  },
+  {
+    "objectID": "session-02.html#author-related-metadata-options",
+    "href": "session-02.html#author-related-metadata-options",
+    "title": "Session 02 - Integrating codes",
+    "section": "Author-related metadata options",
+    "text": "Author-related metadata options\nThe author key includes several sub-keys that offer additional details needed for scholarly articles. For example, you can add an author’s affiliation, roles, email contact, and whether the author is a corresponding author.\n---\nauthor:\n  name: Bella Ratmelia\n  orcid: 0000-0003-4913-9508\n  url: https://bellaratmelia.github.io\n  email: bellar@smu.edu.sg\n  corresponding: true\n  roles: \"Conceptualization\"\n  affiliation: \n    - name: Singapore Management University\n      department: SMU Libraries\n      country: SG\n      url: www.smu.edu.sg\n      ror: 050qmg959\n---"
+  },
+  {
+    "objectID": "session-02.html#article-related-metadata-options",
+    "href": "session-02.html#article-related-metadata-options",
+    "title": "Session 02 - Integrating codes",
+    "section": "Article-related metadata options",
+    "text": "Article-related metadata options\nThese metadata include things like abstract, keywords, license, copyright, and funding information.\n---\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\nfunding: \"The author received no specific funding for this work.\"\n---"
+  },
+  {
+    "objectID": "session-02.html#metadata-for-citable-articles---web-article",
+    "href": "session-02.html#metadata-for-citable-articles---web-article",
+    "title": "Session 02 - Integrating codes",
+    "section": "Metadata for citable articles - web article",
+    "text": "Metadata for citable articles - web article\nFor articles published to the web, include author, date and citation url metadata. For example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndescription: | \n  Best practices in organizing shelf space in the library\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\ncitation: true\nbibliography: references.bib\n---"
+  },
+  {
+    "objectID": "session-02.html#metadata-for-citable-articles---journal-article",
+    "href": "session-02.html#metadata-for-citable-articles---journal-article",
+    "title": "Session 02 - Integrating codes",
+    "section": "Metadata for citable articles - journal article",
+    "text": "Metadata for citable articles - journal article\nFor journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:\n---\ncitation: \n  type: article-journal\n  container-title: \"Journal of Library Carpentry\"\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\n  url: https://example.com/summarizing-output\nbibliography: references.bib\n---"
   },
   {
     "objectID": "session-02.html#front-matter---rendering-result-in-html",
@@ -273,11 +301,11 @@
     "text": "Rendering to Presentation\nSimilar to docx and PDF, we can change the render output format to revealjs through the YAML header like so:\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n\n\n\n\n\nNote\n\n\nFun Fact: The slides for this workshops are created with Quarto and RevealJS!"
   },
   {
-    "objectID": "session-02.html#header-options-for-revealjs-presentations",
-    "href": "session-02.html#header-options-for-revealjs-presentations",
+    "objectID": "session-02.html#yaml-header-options-for-revealjs-presentations",
+    "href": "session-02.html#yaml-header-options-for-revealjs-presentations",
     "title": "Session 02 - Integrating codes",
-    "section": "Header options for RevealJS presentations",
-    "text": "Header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
+    "section": "YAML header options for RevealJS presentations",
+    "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
   },
   {
     "objectID": "session-01.html#welcome",
