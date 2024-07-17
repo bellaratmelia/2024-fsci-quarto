@@ -11,20 +11,22 @@ format:
     chalkboard: false
     logo: "images/smu logo.png"
     incremental: false
-    multiplex: true
+    multiplex: false
 ---
 
 # Session 01 - Introduction to Quarto
 
 Welcome!
 
-## Welcome
+# Welcome
 
 Hello!
 
--   Let's get to know each other!
+Let's get to know each other.
 
-## About This Workshop
+*What is your research area? Are you familiar with RStudio or R Markdown?*
+
+## About this Workshop
 
 -   We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown
 -   [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
@@ -33,7 +35,7 @@ Hello!
     -   Lesson objectives and lesson plan
 
 ::: aside
-If you need more help, please let one of the instructors know.
+If you need help at any time, please let one of the instructors know.
 :::
 
 ## Learning Objectives
@@ -48,13 +50,31 @@ By the end of the session, participants will be able to:
 
 4.  Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
 
-## Setup and instructions
+## Setup and Instructions
 
 1.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of R
 2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
+<<<<<<< HEAD
 4.  Clone the GitHub repository from <link>
 5.  Install these R packages by copying this line to your Terminal: `install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary"))`
+=======
+4.  Clone the GitHub repository from `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` - Refer to [instructions](https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation)
+5.  Install these R packages:
+
+```{r}
+#| eval: false
+#| echo: TRUE
+#| code-line-numbers: false
+#| fragment: true
+
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
+pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "rmarkdown", "gtsummary", "fs", "skimr")
+
+install.packages(pkg_list)
+```
+>>>>>>> ab793c41f298b74c3b96c75fbf347d95cb4af62c
 
 ## Literate Programming
 
@@ -68,11 +88,15 @@ Essentially, literate programming is about:
 
 -   Weaving code and documentation in a **single document**, emphasizing human-readable explanation alongside executable code
 
-## Example: eLife Reproducible Article
+------------------------------------------------------------------------
+
+### Example: eLife Reproducible Article
 
 ![](images\02_reproducible_elife.PNG)
 
-## Example: eLife Reproducible Article
+------------------------------------------------------------------------
+
+### Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
 ![A figure from the reproducible article](images\03a_elife_figure.PNG)
@@ -135,18 +159,26 @@ A Quarto document (.qmd) is a plain text file that can be rendered to many diffe
 ## What can you do with Quarto?
 
 ::: {layout-ncol="2"}
-![Creating html for web publishing](images/04_website_html.PNG){fig-align="left" width="714"}
+[![Creating html for web publishing](images/04_website_html.PNG){fig-align="left" width="714"}](https://quarto-dev.github.io/quarto-gallery/articles/html/html.html)
 
-![Generating reports in PDF](images/04_PDF_report.png){fig-align="left" width="495"}
+[![Generating reports in PDF](images/04_PDF_report.png){fig-align="left" width="495"}](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.pdf)
 :::
 
 ## What can you do with Quarto?
 
-![MS Word for office workflows](images/04_MS%20word.PNG){height="600"}
+[![MS Word for office workflows](images/04_MS%20word.PNG){height="600"}](https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx)
 
 ## What can you do with Quarto?
 
-Or presentations, like the one you are looking at right now.
+Create dynamic [presentations]{.fragment .highlight-blue}
+
+like the one you're [seeing]{.fragment .highlight-red} right now!
+
+::: {.fragment .fade-up}
+and much more!
+:::
+
+# Introduction to Quarto
 
 ## What is YAML?
 
@@ -510,11 +542,11 @@ Refer to @fig-elephant for an illustration of an elephant.
 
 **Code**
 
-```         
-::: {layout-ncol=2}
-![Surus](surus.png)
+```
+::: {layout-ncol="2"}
+![Surus](images/surus.png)
 
-![Hanno](hanno.png)
+![Hanno](images/hanno.png)
 :::
 ```
 
@@ -576,15 +608,18 @@ You don't have to construct a table by hand - use Quarto's Visual Editor or an o
 
 : Fruit prices {tbl-colwidths="\[10,90\]"}
 
-## Another table example
+## Print table outputs
 
-| fruit  | price |
-|--------|-------|
-| apple  | 2.05  |
-| pear   | 1.37  |
-| orange | 3.09  |
+Use the `knitr::kable()` function
 
-: Fruit prices {.striped .hover}
+```{r}
+#| echo: true
+knitr::kable(head(ggplot2::diamonds))
+```
+
+::: notes
+kable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.
+:::
 
 ## Cross-referencing a table in your document
 
