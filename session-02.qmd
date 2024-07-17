@@ -138,10 +138,8 @@ diamonds %>% ggplot(aes(x = price)) +
 
 ## Code Annotations
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="70%"}
-
 ```{r}
 #| label: code-annotations
 #| echo: true
@@ -158,14 +156,11 @@ diamonds %>% ggplot(aes(x = color, fill = cut)) + # <2>
 :::
 
 ::: {.column width="30%"}
-
 -   Code blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.
 
 -   Great for teaching / presentation!
 :::
-
-::::
-
+:::
 
 ## Anatomy of a code annotation
 
@@ -232,7 +227,7 @@ csl: nature.csl
 Common ones:
 
 | Syntax                                                                              | Output                                                                            |
-|------------------------------------|------------------------------------|
+|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | `@katz2021` mentioned that...                                                       | @katz2021 mentioned that...                                                       |
 | Katz et al. `[-@katz2021]` mentioned that...                                        | Katz et al. [-@katz2021] mentioned that...                                        |
 | Software citation is good `[@katz2021, pp. 33-35]`                                  | Software citation is good [@katz2021, pp. 33-35]!                                 |
@@ -243,16 +238,14 @@ Common ones:
 -   Inserting citations and footnotes is generally easier in Visual editor :
 
     -   click on `Insert` \> `Citation`, which will bring up a popup box where you can choose your citation source!
-    
-    -   click on `Insert` \> `Footnotes` to add footnotes
 
+    -   click on `Insert` \> `Footnotes` to add footnotes
 
 ## Citation Sources
 
 Other than your Zotero library, here are the sources that you can retrieve from:
 
 ![](images/citation-sources.jpg){fig-align="center" width="600"}
-
 
 ## The References section
 
@@ -277,8 +270,7 @@ Refer to `02-scholarly-writing/citations-references.qmd` for the step-by-step gu
 
 ## Academic Templates with Quarto Journals
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="70%"}
 ![<https://quarto.org/docs/extensions/listing-journals.html>](images/quarto-extensions.jpg){width="100%"}
 :::
@@ -289,27 +281,22 @@ Refer to `02-scholarly-writing/citations-references.qmd` for the step-by-step gu
 -   These extensions provide rich YAML metadata specifically for academic writing (often referred as "Front Matter" metadata).
 
 -   **Let's dive into these Front Matter YAML metadata first before we explore the templates!**
-
 :::
-
-::::
-
-
-
+:::
 
 ## Front Matter
 
-:::{.nonincremental}
--   Scholarly articles demand extensive details in their front matter, beyond just a title and author. 
+::: nonincremental
+-   Scholarly articles demand extensive details in their front matter, beyond just a title and author.
 
--   Quarto offers a comprehensive range of YAML metadata keys to include these details. 
+-   Quarto offers a comprehensive range of YAML metadata keys to include these details.
 
 -   This metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.
 :::
 
 Below is a YAML header example:
 
-```
+```         
 ---
 title: "Library Carpentry: Best practices in organizing shelf space in the library"
 date: 2024-07-01
@@ -347,10 +334,12 @@ citation:
 funding: "The author received no specific funding for this work."
 ---
 ```
+
 ## Author-related metadata options
+
 The author key includes several sub-keys that offer additional details needed for scholarly articles. For example, you can add an author's affiliation, roles, email contact, and whether the author is a corresponding author.
 
-```
+```         
 ---
 author:
   name: Bella Ratmelia
@@ -369,9 +358,10 @@ author:
 ```
 
 ## Article-related metadata options
-These metadata include things like abstract, keywords, license, copyright, and funding information. 
 
-```
+These metadata include things like abstract, keywords, license, copyright, and funding information.
+
+```         
 ---
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 keywords:
@@ -389,7 +379,7 @@ funding: "The author received no specific funding for this work."
 
 For articles published to the web, include author, date and citation url metadata. For example:
 
-```
+```         
 ---
 title: "Library Carpentry: Best practices in organizing shelf space in the library"
 description: | 
@@ -410,11 +400,11 @@ bibliography: references.bib
 ---
 ```
 
-
 ## Metadata for citable articles - journal article
+
 For journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:
 
-```
+```         
 ---
 citation: 
   type: article-journal
@@ -513,7 +503,6 @@ Amend the YAML header in your document to convert it to PDF/ Word. Does the outp
 -   Multiple people can collaborate on a presentation using version control systems like Git and track changes made.
 
 -   Access to a large community of developers who contribute to the project and provide support.
-
 
 ## Rendering to Presentation
 

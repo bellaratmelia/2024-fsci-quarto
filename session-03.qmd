@@ -78,20 +78,16 @@ Couple of reasons: [^1]
 
 ::: columns
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-masiello-group.png)
-[Masiello Research Group](https://faculty.washington.edu/masiello/) from University of Washington
+![](https://quarto.org/docs/gallery/websites/websites-masiello-group.png) [Masiello Research Group](https://faculty.washington.edu/masiello/) from University of Washington
 :::
 
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-practical-deep-learning.png)
-[Practical Deep Learning (online course)](https://course.fast.ai/) from fast.ai
+![](https://quarto.org/docs/gallery/websites/websites-practical-deep-learning.png) [Practical Deep Learning (online course)](https://course.fast.ai/) from fast.ai
 :::
 
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-nasa-openscapes.png)
-[NASA & OpenScapes website](https://nasa-openscapes.github.io/)
+![](https://quarto.org/docs/gallery/websites/websites-nasa-openscapes.png) [NASA & OpenScapes website](https://nasa-openscapes.github.io/)
 :::
-
 :::
 
 ## Quarto Website vs Quarto Document
@@ -100,9 +96,7 @@ Couple of reasons: [^1]
 
 -   **Quarto Project** indicates that these documents are connected / related to each other.
 
--   This means the documents' header automatically share a common YAML file
-
--   Each of this document act as a webpage – the default format will be `format: html`
+-   In Quarto website, each quarto document act as a webpage – the default format will be `format: html`
 
 -   Having said that, you can also have a presentation as part of the website (just like this course website!)
 
@@ -205,24 +199,49 @@ Refer to `04-websites/publishing-to-quartopub.qmd` for the step-by-step guide fo
 
 ## Publishing to GitHub
 
-There are 3 ways to publish to GitHub: [^3]
+There are 3 ways to publish to GitHub[^3]:
 
-[^3]: <https://quarto.org/docs/publishing/github-pages.html#overview>
 
-1.  Render sites on your local machine to the `docs` directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the `docs` directory.
 
-2.  Use the `quarto publish` command to publish content rendered on your local machine.
+::: columns
+::: {.column width="30%"}
+**Option 1: Manual transfer**
 
-3.  Use a **GitHub Action** to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.
+1.  Render quarto website on your local machine
+
+2.  Manually transfer the rendering result (placed in `_site` folder to your GitHub repository's `gh-pages` branch. GitHub Pages will use the contents inside this branch.
+:::
+
+::: {.column width="30%"}
+**Option 2: Publishing command**
+
+1.  Render quarto website on your local machine.
+
+2.  Use `quarto publish gh-pages` command in your terminal to publish the rendering results to GitHub.
+:::
+
+::: {.column width="40%"}
+**Option 3: GitHub Action**
+
+-   Instead of rendering in local machine, set up a GitHub action file to instruct GitHub to render the website on the "cloud".
+
+1.  Push source code change to GitHub repository.
+
+2.  GitHub renders the contents on the "cloud" and then display the result via GitHub Pages.
+
+3.  (optional) You can also instruct GitHub to execute any code chunks on the "cloud" by modifying the GitHub action file to ensure the correct package versions are installed.
+:::
+:::
 
 . . .
 
-For today, let's try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.
+For today, let's try **option #3**! This option requires more preparation at the beginning, but the repo will be tidier in the long run.
 
+[^3]: <https://quarto.org/docs/publishing/github-pages.html>
 
 # Let's try it together!
 
-Refer to ``` 04-websites/``publishing-to-gh-pages.qmd ``` for the step-by-step guide for this activity.
+Refer to `04-websites/publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
 
 # Advanced Quarto Format: Blogs, Books and Manuscripts
 
@@ -232,20 +251,16 @@ Exactly like Quarto website, but with added blog functionality! Some examples:
 
 ::: columns
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-masiello-group.png)
-[Masiello Research Group](https://faculty.washington.edu/masiello/) from University of Washington
+![](https://quarto.org/docs/gallery/websites/websites-masiello-group.png) [Masiello Research Group](https://faculty.washington.edu/masiello/) from University of Washington
 :::
 
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-mike-mahoney.png)
-[Mike Mahoney](https://www.mm218.dev/) personal website & blog
+![](https://quarto.org/docs/gallery/websites/websites-mike-mahoney.png) [Mike Mahoney](https://www.mm218.dev/) personal website & blog
 :::
 
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-mockup.png)
-[Tom Mock](https://themockup.blog/) personal website & blog
+![](https://quarto.org/docs/gallery/websites/websites-mockup.png) [Tom Mock](https://themockup.blog/) personal website & blog
 :::
-
 :::
 
 ## Quarto Books
@@ -256,22 +271,26 @@ Some examples of Quarto Books:
 
 ::: columns
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/books/books-r4ds.png)
-[R for Data Science (2nd edition)](https://r4ds.hadley.nz/) by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund
+![](https://quarto.org/docs/gallery/books/books-r4ds.png) [R for Data Science (2nd edition)](https://r4ds.hadley.nz/) by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund
 :::
 
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/books/books-python-for-data.png)
-[Python for Data Analysis (3rd edition)](https://wesmckinney.com/book/) by Wes McKinney
+![](https://quarto.org/docs/gallery/books/books-python-for-data.png) [Python for Data Analysis (3rd edition)](https://wesmckinney.com/book/) by Wes McKinney
 :::
 
 ::: {.column width="33%"}
-![](https://quarto.org/docs/gallery/websites/websites-hopr.png)
-[Hands-on Programming with R](https://jjallaire.github.io/hopr/) by Garret Grolemund
+![](https://quarto.org/docs/gallery/websites/websites-hopr.png) [Hands-on Programming with R](https://jjallaire.github.io/hopr/) by Garret Grolemund
 :::
-
 :::
 
 ## Quarto Manuscript
 
 Latest Quarto project format released in January 2024. The underlying structure is very similar to Quarto website.
+
+![<https://quarto-ext.github.io/manuscript-template-jupyter/>](https://quarto.org/docs/manuscripts/images/article-content.png)
+
+# Thank you!
+
+**Last activity: One-up One-down**
+
+Could you share one thing you like about the course, and one thing that you think can be improved?

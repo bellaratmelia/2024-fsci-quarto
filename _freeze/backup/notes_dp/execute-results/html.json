@@ -1,0 +1,17 @@
+{
+  "hash": "d6d20c132ac4a2a0ad9b9e08c8815a11",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Notes (for DP)\"\nauthor: \"Danping\"\nformat: html\n---\n\n\n## Absolute positions\n\n::: {.absolute .fragment bottom=\"25\" left=\"100\"}\n![](images/howard-gentleman.jpeg){width=\"150\" fig-alt=\"Howard dressed as a victorian gentleman\"}\n:::\n\n## Multiple Columns\n\n::: columns\n::: {.column .fragment width=\"50%\"}\nLeft column - point 1 - point 2\n:::\n\n::: {.column .fragment width=\"50%\"}\nRight column - point 3 - point 4\n:::\n:::\n\n## Column Fragment\n\n\n::: {.cell output-location='column-fragment'}\n\n```{.r .cell-code}\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = mpg, y = disp)) +\n  geom_point()\n```\n\n::: {.cell-output-display}\n![](notes_dp_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "notes_dp_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

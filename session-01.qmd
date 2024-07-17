@@ -54,20 +54,7 @@ By the end of the session, participants will be able to:
 2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
 4.  Clone the GitHub repository from <link>
-5.  Install these R packages (to be updated):
-
-```{r}
-#| eval: false
-#| echo: TRUE
-#| code-line-numbers: false
-#| fragment: true
-
-options(repos = c(CRAN = "https://cloud.r-project.org"))
-
-pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "rmarkdown", "gtsummary", "fs", "skimr")
-
-install.packages(pkg_list)
-```
+5.  Install these R packages by copying this line to your Terminal: `install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary"))`
 
 ## Literate Programming
 
@@ -452,7 +439,6 @@ More YAML options and rendering.
 
 Follow instructions for `Hands-on #3` at file path: `01-quarto-basics/YAML.qmd`
 
-
 ## Figures
 
 Just now, we learned about adding images using this syntax `![Elephant](elephant.png)` This results in the following treatment for various output types: ![Example output for HTML, PDF and Word](images/05_figure_output.png){width="100%"}
@@ -630,17 +616,15 @@ Refer to @tbl-fruits for price of fruits today.
 
 ## Callout box
 
-::: {layout=[30,70]}
+::: {layout="[30,70]"}
+5 Types of callout blocks:\
+- `note`\
+- `warning`\
+- `important`\
+- `tip`\
+- `caution`
 
-5 Types of callout blocks:  
--  `note`  
--  `warning`  
-- `important`  
-- `tip`  
-- `caution`  
-
-This is how they look like: 
-![](images/06_callout.png){width=90%}
+This is how they look like: ![](images/06_callout.png){width="90%"}
 :::
 
 ## Callout box
@@ -654,14 +638,13 @@ Alternatively, use the Quarto Visual Editor!
 
 :::
 ```
+
 \
 
 **Output**
 
 ::: callout-tip
-
 Alternatively, use the Quarto Visual Editor!
-
 :::
 
 # Let's try this together!
@@ -669,11 +652,11 @@ Alternatively, use the Quarto Visual Editor!
 Try out figures, tables and cross references.
 
 # Recap of today's session
--  The role of Quarto in research transparency and reproducibility
--  Rendering to various output types
--  Introduction to Quarto
-  -  Markdown basics
-  -  Lists, links and images
-  -  More YAML options
-  -  Figures, tables and cross-references
 
+-   The role of Quarto in research transparency and reproducibility
+-   Rendering to various output types
+-   Introduction to Quarto
+-   Markdown basics
+-   Lists, links and images
+-   More YAML options
+-   Figures, tables and cross-references

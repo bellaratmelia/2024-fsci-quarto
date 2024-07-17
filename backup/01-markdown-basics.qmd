@@ -14,7 +14,7 @@ Follow along and try out each example in your own Quarto document.
 
 Headings are created using the `#` symbol followed by a space. The number of `#` symbols determines the heading level.
 
-```
+```         
 ## Level 2 Heading
 
 ### Level 3 Heading
@@ -78,7 +78,7 @@ Inline code can be marked using backticks, e.g. \`inline code\` will output `inl
 
 Code blocks are created using triple backticks:
 
-```{r}
+```{r}}
 #| echo: fenced
-library(quarto)
+library(tidyverse)
 ```

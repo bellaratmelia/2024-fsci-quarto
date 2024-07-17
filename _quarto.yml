@@ -4,6 +4,7 @@ project:
   
 website:
   title: "FSCI2024 C03"
+  body-footer: "Created with [Quarto](https://quarto.org/) (+ love) by [Bella](https://bellaratmelia.github.io) and [Danping](https://dpdong19.github.io/)"   
   navbar:
     left:
       - href: index.qmd
