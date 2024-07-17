@@ -8,10 +8,10 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.47">
 
   <meta name="author" content="Bella Ratmelia &amp; Dong Danping">
-  <title>FSCI2024 C03 - Getting Started with Quarto</title>
+  <title>FSCI2024 C03 – Getting Started with Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -70,7 +70,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -84,7 +84,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -221,7 +221,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -401,20 +402,20 @@ Bella Ratmelia &amp; Dong Danping
 </div>
 
 </section>
-<section>
 <section id="session-01---introduction-to-quarto" class="title-slide slide level1 center">
 <h1>Session 01 - Introduction to Quarto</h1>
 <p>Welcome!</p>
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome</h2>
+
+<section>
+<section id="welcome" class="title-slide slide level1 center">
+<h1>Welcome</h1>
 <p>Hello!</p>
-<ul>
-<li>Let’s get to know each other!</li>
-</ul>
+<p>Let’s get to know each other.</p>
+<p><em>What is your research area? Are you familiar with RStudio or R Markdown?</em></p>
 </section>
 <section id="about-this-workshop" class="slide level2">
-<h2>About This Workshop</h2>
+<h2>About this Workshop</h2>
 <ul>
 <li>We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown</li>
 <li><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">Workshop Website</a> (built with Quarto)
@@ -426,7 +427,7 @@ Bella Ratmelia &amp; Dong Danping
 </ul>
 
 <aside><div>
-<p>If you need more help, please let one of the instructors know.</p>
+<p>If you need help at any time, please let one of the instructors know.</p>
 </div></aside></section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
@@ -439,20 +440,20 @@ Bella Ratmelia &amp; Dong Danping
 </ol>
 </section>
 <section id="setup-and-instructions" class="slide level2">
-<h2>Setup and instructions</h2>
+<h2>Setup and Instructions</h2>
 <ol type="1">
 <li><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of R</li>
 <li><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of RStudio</li>
 <li><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto</li>
-<li>Clone the GitHub repository from <link></li>
-<li>Install these R packages (to be updated):</li>
+<li>Clone the GitHub repository from <code>https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git</code> - Refer to <a href="https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation">instructions</a></li>
+<li>Install these R packages:</li>
 </ol>
 <div class="cell" data-fragment="true">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"gtExtras"</span>, <span class="st">"reactable"</span>, <span class="st">"ggiraph"</span>, <span class="st">"here"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"gtsummary"</span>, <span class="st">"fs"</span>, <span class="st">"skimr"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"gtExtras"</span>, <span class="st">"reactable"</span>, <span class="st">"ggiraph"</span>, <span class="st">"here"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"gtsummary"</span>, <span class="st">"fs"</span>, <span class="st">"skimr"</span>)</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="literate-programming" class="slide level2">
@@ -467,15 +468,20 @@ Bella Ratmelia &amp; Dong Danping
 <li><p>Weaving code and documentation in a <strong>single document</strong>, emphasizing human-readable explanation alongside executable code</p></li>
 </ul>
 </section>
-<section id="example-elife-reproducible-article" class="slide level2">
-<h2>Example: eLife Reproducible Article</h2>
+<section class="slide level2">
+
+<h3 id="example-elife-reproducible-article">Example: eLife Reproducible Article</h3>
 
 <img data-src="images\02_reproducible_elife.PNG" class="r-stretch"></section>
-<section id="example-elife-reproducible-article-1" class="slide level2">
-<h2>Example: eLife Reproducible Article</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<section class="slide level2">
+
+<h3 id="example-elife-reproducible-article-1">Example: eLife Reproducible Article</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images\03a_elife_figure.PNG"></p>
@@ -483,7 +489,7 @@ Bella Ratmelia &amp; Dong Danping
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images\03b_elife_figure_code.PNG"></p>
@@ -564,17 +570,24 @@ Bella Ratmelia &amp; Dong Danping
 </section>
 <section id="what-can-you-do-with-quarto" class="slide level2">
 <h2>What can you do with Quarto?</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 59.1%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/04_website_html.PNG" width="714"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><a href="https://quarto-dev.github.io/quarto-gallery/articles/html/html.html"><img data-src="images/04_website_html.PNG" class="quarto-figure quarto-figure-left" width="714" alt="Creating html for web publishing"></a></p>
+</figure>
+</div>
 <figcaption>Creating html for web publishing</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 40.9%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
 <p><img data-src="images/04_PDF_report.png" width="495"></p>
@@ -625,7 +638,7 @@ Bella Ratmelia &amp; Dong Danping
 </section>
 <section id="markdown-basics-syntax" class="slide level2">
 <h2>Markdown Basics: Syntax</h2>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -638,19 +651,19 @@ Bella Ratmelia &amp; Dong Danping
 </thead>
 <tbody>
 <tr class="odd">
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td>superscript<sup>2</sup> / subscript<sub>2</sub></td>
 </tr>
 <tr class="odd">
-<td><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><del>strikethrough</del></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><code>verbatim code</code></td>
 </tr>
 </tbody>
@@ -672,7 +685,7 @@ Bella Ratmelia &amp; Dong Danping
 </section>
 <section id="markdown-basics---headings" class="slide level2">
 <h2>Markdown Basics - Headings</h2>
-<table style="width:75%;">
+<table class="caption-top" style="width:75%;">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 50%">
@@ -775,8 +788,8 @@ Bella Ratmelia &amp; Dong Danping
 </ol>
 <p><strong>Checkbox</strong></p>
 <ul class="task-list">
-<li><input type="checkbox">Task 1</li>
-<li><input type="checkbox" checked="">Task 2</li>
+<li><label><input type="checkbox">Task 1</label></li>
+<li><label><input type="checkbox" checked="">Task 2</label></li>
 </ul>
 </div>
 </div>
@@ -794,8 +807,7 @@ Bella Ratmelia &amp; Dong Danping
 <p><strong>Output</strong></p>
 <p><a href="https://quarto.org" class="uri">https://quarto.org</a></p>
 <p><a href="https://quarto.org">Quarto</a></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="images-from-web" class="slide level2">
 <h2>Images from web</h2>
@@ -855,10 +867,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb18-2"><a href="#cb18-2"></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -886,8 +898,7 @@ format:
 <li><p>Code related settings</p></li>
 <li><p>References &amp; Citation</p></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="rendering" class="slide level2">
 <h2>Rendering</h2>
@@ -998,13 +1009,17 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 </div>
 <div id="tabset-4-2">
-<div id="fig-elephant" class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="images/elephant.png" height="200"></p>
-<figcaption>Figure&nbsp;1: An Elephant</figcaption>
+<div id="fig-elephant" class="quarto-float quarto-figure quarto-figure-left" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/elephant.png" class="quarto-figure quarto-figure-left" height="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: An Elephant
+</figcaption>
 </figure>
 </div>
-<p>Refer to <a href="#/cross-reference-a-figure-in-your-document">Figure&nbsp;1</a> for an illustration of an elephant.</p>
+<p>Refer to <a href="#/cross-reference-a-figure-in-your-document" class="quarto-xref">Figure&nbsp;1</a> for an illustration of an elephant.</p>
 </div>
 </div>
 </div>
@@ -1021,9 +1036,12 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 <section id="figures-layout-in-two-columns-1" class="slide level2">
 <h2>Figures: Layout in two columns</h2>
 <p><strong>Output</strong></p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/surus.png"></p>
@@ -1031,7 +1049,7 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/hanno.png"></p>
@@ -1054,7 +1072,7 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |</code></pre>
 <p>And this is the output table:</p>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Default</th>
@@ -1107,7 +1125,7 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 | orange | 3.09   |
 
 : Fruit prices {tbl-colwidths="[10,90]"}</code></pre>
-<table>
+<table class="caption-top">
 <caption>Fruit prices</caption>
 <colgroup>
 <col style="width: 10%">
@@ -1135,31 +1153,128 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 </tbody>
 </table>
 </section>
-<section id="another-table-example" class="slide level2">
-<h2>Another table example</h2>
-<table class="table-striped table-hover">
-<caption>Fruit prices</caption>
+<section id="print-table-outputs" class="slide level2">
+<h2>Print table outputs</h2>
+<p>Use the <code>knitr::kable()</code> function</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>fruit</th>
-<th>price</th>
+<th style="text-align: right;">carat</th>
+<th style="text-align: left;">cut</th>
+<th style="text-align: left;">color</th>
+<th style="text-align: left;">clarity</th>
+<th style="text-align: right;">depth</th>
+<th style="text-align: right;">table</th>
+<th style="text-align: right;">price</th>
+<th style="text-align: right;">x</th>
+<th style="text-align: right;">y</th>
+<th style="text-align: right;">z</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>apple</td>
-<td>2.05</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: left;">Ideal</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">SI2</td>
+<td style="text-align: right;">61.5</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">3.95</td>
+<td style="text-align: right;">3.98</td>
+<td style="text-align: right;">2.43</td>
 </tr>
 <tr class="even">
-<td>pear</td>
-<td>1.37</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: left;">Premium</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">SI1</td>
+<td style="text-align: right;">59.8</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">3.89</td>
+<td style="text-align: right;">3.84</td>
+<td style="text-align: right;">2.31</td>
 </tr>
 <tr class="odd">
-<td>orange</td>
-<td>3.09</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: left;">Good</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">VS1</td>
+<td style="text-align: right;">56.9</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">327</td>
+<td style="text-align: right;">4.05</td>
+<td style="text-align: right;">4.07</td>
+<td style="text-align: right;">2.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.29</td>
+<td style="text-align: left;">Premium</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">VS2</td>
+<td style="text-align: right;">62.4</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">334</td>
+<td style="text-align: right;">4.20</td>
+<td style="text-align: right;">4.23</td>
+<td style="text-align: right;">2.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.31</td>
+<td style="text-align: left;">Good</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">SI2</td>
+<td style="text-align: right;">63.3</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">4.34</td>
+<td style="text-align: right;">4.35</td>
+<td style="text-align: right;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.24</td>
+<td style="text-align: left;">Very Good</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">VVS2</td>
+<td style="text-align: right;">62.8</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">336</td>
+<td style="text-align: right;">3.94</td>
+<td style="text-align: right;">3.96</td>
+<td style="text-align: right;">2.48</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<aside class="notes">
+<p>kable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="cross-referencing-a-table-in-your-document" class="slide level2">
 <h2>Cross-referencing a table in your document</h2>
@@ -1186,9 +1301,13 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 </section>
 <section id="cross-referencing-a-table-in-your-document-1" class="slide level2">
 <h2>Cross-referencing a table in your document</h2>
-<div id="tbl-fruits">
-<table>
-<caption>Table&nbsp;1: Fruit prices</caption>
+<div id="tbl-fruits" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fruits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Fruit prices
+</figcaption>
+<div aria-describedby="tbl-fruits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>fruit</th>
@@ -1211,13 +1330,18 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 </tbody>
 </table>
 </div>
-<p>Refer to <a href="#/cross-referencing-a-table-in-your-document-1">Table&nbsp;1</a> for price of fruits today.</p>
+</figure>
+</div>
+<p>Refer to <a href="#/cross-referencing-a-table-in-your-document-1" class="quarto-xref">Table&nbsp;1</a> for price of fruits today.</p>
 </section>
 <section id="callout-box" class="slide level2">
 <h2>Callout box</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[30,70]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
 <p>5 Types of callout blocks:<br>
 - <code>note</code><br>
 - <code>warning</code><br>
@@ -1225,7 +1349,7 @@ Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 - <code>tip</code><br>
 - <code>caution</code></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
 <p>This is how they look like: <img data-src="images/06_callout.png" style="width:90.0%"></p>
 </div>
 </div>
@@ -1273,9 +1397,11 @@ Alternatively, use the Quarto Visual Editor!
 <li>Figures, tables and cross-references</li>
 </ul>
 
-
-<img src="images/smu logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="images/smu logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">C03 Making Research More Transparent with Quarto and RStudio</a></p>
+</div>
 </div>
 </section>
     </div>
@@ -1306,7 +1432,6 @@ Alternatively, use the Quarto Visual Editor!
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1493,42 +1618,80 @@ Alternatively, use the Quarto Visual Editor!
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1562,18 +1725,7 @@ Alternatively, use the Quarto Visual Editor!
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1605,11 +1757,50 @@ Alternatively, use the Quarto Visual Editor!
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1619,8 +1810,17 @@ Alternatively, use the Quarto Visual Editor!
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1634,7 +1834,11 @@ Alternatively, use the Quarto Visual Editor!
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

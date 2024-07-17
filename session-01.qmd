@@ -11,20 +11,22 @@ format:
     chalkboard: false
     logo: "images/smu logo.png"
     incremental: false
-    multiplex: true
+    multiplex: false
 ---
 
 # Session 01 - Introduction to Quarto
 
 Welcome!
 
-## Welcome
+# Welcome
 
 Hello!
 
--   Let's get to know each other!
+Let's get to know each other.
 
-## About This Workshop
+*What is your research area? Are you familiar with RStudio or R Markdown?*
+
+## About this Workshop
 
 -   We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown
 -   [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
@@ -33,7 +35,7 @@ Hello!
     -   Lesson objectives and lesson plan
 
 ::: aside
-If you need more help, please let one of the instructors know.
+If you need help at any time, please let one of the instructors know.
 :::
 
 ## Learning Objectives
@@ -48,13 +50,13 @@ By the end of the session, participants will be able to:
 
 4.  Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
 
-## Setup and instructions
+## Setup and Instructions
 
 1.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of R
 2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
-4.  Clone the GitHub repository from <link>
-5.  Install these R packages (to be updated):
+4.  Clone the GitHub repository from `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` - Refer to [instructions](https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation)
+5.  Install these R packages:
 
 ```{r}
 #| eval: false
@@ -81,11 +83,15 @@ Essentially, literate programming is about:
 
 -   Weaving code and documentation in a **single document**, emphasizing human-readable explanation alongside executable code
 
-## Example: eLife Reproducible Article
+------------------------------------------------------------------------
+
+### Example: eLife Reproducible Article
 
 ![](images\02_reproducible_elife.PNG)
 
-## Example: eLife Reproducible Article
+------------------------------------------------------------------------
+
+### Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
 ![A figure from the reproducible article](images\03a_elife_figure.PNG)
@@ -148,18 +154,26 @@ A Quarto document (.qmd) is a plain text file that can be rendered to many diffe
 ## What can you do with Quarto?
 
 ::: {layout-ncol="2"}
-![Creating html for web publishing](images/04_website_html.PNG){fig-align="left" width="714"}
+[![Creating html for web publishing](images/04_website_html.PNG){fig-align="left" width="714"}](https://quarto-dev.github.io/quarto-gallery/articles/html/html.html)
 
-![Generating reports in PDF](images/04_PDF_report.png){fig-align="left" width="495"}
+[![Generating reports in PDF](images/04_PDF_report.png){fig-align="left" width="495"}](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.pdf)
 :::
 
 ## What can you do with Quarto?
 
-![MS Word for office workflows](images/04_MS%20word.PNG){height="600"}
+[![MS Word for office workflows](images/04_MS%20word.PNG){height="600"}](https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx)
 
 ## What can you do with Quarto?
 
-Or presentations, like the one you are looking at right now.
+Create dynamic [presentations]{.fragment .highlight-blue}
+
+like the one you're [seeing]{.fragment .highlight-red} right now!
+
+::: {.fragment .fade-up}
+and much more!
+:::
+
+# Introduction to Quarto
 
 ## What is YAML?
 
@@ -452,7 +466,6 @@ More YAML options and rendering.
 
 Follow instructions for `Hands-on #3` at file path: `01-quarto-basics/YAML.qmd`
 
-
 ## Figures
 
 Just now, we learned about adding images using this syntax `![Elephant](elephant.png)` This results in the following treatment for various output types: ![Example output for HTML, PDF and Word](images/05_figure_output.png){width="100%"}
@@ -524,7 +537,7 @@ Refer to @fig-elephant for an illustration of an elephant.
 
 **Code**
 
-```         
+```{r}
 ::: {layout-ncol=2}
 ![Surus](surus.png)
 
@@ -590,15 +603,18 @@ You don't have to construct a table by hand - use Quarto's Visual Editor or an o
 
 : Fruit prices {tbl-colwidths="\[10,90\]"}
 
-## Another table example
+## Print table outputs
 
-| fruit  | price |
-|--------|-------|
-| apple  | 2.05  |
-| pear   | 1.37  |
-| orange | 3.09  |
+Use the `knitr::kable()` function
 
-: Fruit prices {.striped .hover}
+```{r}
+#| echo: true
+knitr::kable(head(ggplot2::diamonds))
+```
+
+::: notes
+kable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.
+:::
 
 ## Cross-referencing a table in your document
 
@@ -630,17 +646,15 @@ Refer to @tbl-fruits for price of fruits today.
 
 ## Callout box
 
-::: {layout=[30,70]}
+::: {layout="[30,70]"}
+5 Types of callout blocks:\
+- `note`\
+- `warning`\
+- `important`\
+- `tip`\
+- `caution`
 
-5 Types of callout blocks:  
--  `note`  
--  `warning`  
-- `important`  
-- `tip`  
-- `caution`  
-
-This is how they look like: 
-![](images/06_callout.png){width=90%}
+This is how they look like: ![](images/06_callout.png){width="90%"}
 :::
 
 ## Callout box
@@ -654,14 +668,13 @@ Alternatively, use the Quarto Visual Editor!
 
 :::
 ```
+
 \
 
 **Output**
 
 ::: callout-tip
-
 Alternatively, use the Quarto Visual Editor!
-
 :::
 
 # Let's try this together!
@@ -669,11 +682,11 @@ Alternatively, use the Quarto Visual Editor!
 Try out figures, tables and cross references.
 
 # Recap of today's session
--  The role of Quarto in research transparency and reproducibility
--  Rendering to various output types
--  Introduction to Quarto
-  -  Markdown basics
-  -  Lists, links and images
-  -  More YAML options
-  -  Figures, tables and cross-references
 
+-   The role of Quarto in research transparency and reproducibility
+-   Rendering to various output types
+-   Introduction to Quarto
+-   Markdown basics
+-   Lists, links and images
+-   More YAML options
+-   Figures, tables and cross-references
