@@ -402,20 +402,20 @@ Bella Ratmelia &amp; Dong Danping
 </div>
 
 </section>
-<section>
 <section id="session-01---introduction-to-quarto" class="title-slide slide level1 center">
 <h1>Session 01 - Introduction to Quarto</h1>
 <p>Welcome!</p>
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome</h2>
+
+<section>
+<section id="welcome" class="title-slide slide level1 center">
+<h1>Welcome</h1>
 <p>Hello!</p>
-<ul>
-<li>Let’s get to know each other!</li>
-</ul>
+<p>Let’s get to know each other.</p>
+<p><em>What is your research area? Are you familiar with RStudio or R Markdown?</em></p>
 </section>
 <section id="about-this-workshop" class="slide level2">
-<h2>About This Workshop</h2>
+<h2>About this Workshop</h2>
 <ul>
 <li>We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown</li>
 <li><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">Workshop Website</a> (built with Quarto)
@@ -427,7 +427,7 @@ Bella Ratmelia &amp; Dong Danping
 </ul>
 
 <aside><div>
-<p>If you need more help, please let one of the instructors know.</p>
+<p>If you need help at any time, please let one of the instructors know.</p>
 </div></aside></section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
@@ -440,13 +440,15 @@ Bella Ratmelia &amp; Dong Danping
 </ol>
 </section>
 <section id="setup-and-instructions" class="slide level2">
-<h2>Setup and instructions</h2>
+<h2>Setup and Instructions</h2>
 <ol type="1">
 <li><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of R</li>
 <li><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of RStudio</li>
-<li><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto</li>
+<li><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
 <li>Clone the GitHub repository from <link></li>
-<li>Install these R packages (to be updated):</li>
+<li><h1 id="install-these-r-packages-by-copying-this-line-to-your-terminal-install.packagesc-tidyverse-gt-rmarkdown-gtsummary">Install these R packages by copying this line to your Terminal: <code>install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary"))</code></h1></li>
+<li>Clone the GitHub repository from <code>https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git</code> - Refer to <a href="https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation">instructions</a></li>
+<li>Install these R packages:</li>
 </ol>
 <div class="cell" data-fragment="true">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
@@ -455,6 +457,21 @@ Bella Ratmelia &amp; Dong Danping
 <span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>ab793c41f298b74c3b96c75fbf347d95cb4af62c</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </section>
 <section id="literate-programming" class="slide level2">
 <h2>Literate Programming</h2>
@@ -468,12 +485,14 @@ Bella Ratmelia &amp; Dong Danping
 <li><p>Weaving code and documentation in a <strong>single document</strong>, emphasizing human-readable explanation alongside executable code</p></li>
 </ul>
 </section>
-<section id="example-elife-reproducible-article" class="slide level2">
-<h2>Example: eLife Reproducible Article</h2>
+<section class="slide level2">
+
+<h3 id="example-elife-reproducible-article">Example: eLife Reproducible Article</h3>
 
 <img data-src="images\02_reproducible_elife.PNG" class="r-stretch"></section>
-<section id="example-elife-reproducible-article-1" class="slide level2">
-<h2>Example: eLife Reproducible Article</h2>
+<section class="slide level2">
+
+<h3 id="example-elife-reproducible-article-1">Example: eLife Reproducible Article</h3>
 <div>
 
 </div>
@@ -576,7 +595,11 @@ Bella Ratmelia &amp; Dong Danping
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/04_website_html.PNG" width="714"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><a href="https://quarto-dev.github.io/quarto-gallery/articles/html/html.html"><img data-src="images/04_website_html.PNG" class="quarto-figure quarto-figure-left" width="714" alt="Creating html for web publishing"></a></p>
+</figure>
+</div>
 <figcaption>Creating html for web publishing</figcaption>
 </figure>
 </div>
@@ -584,7 +607,11 @@ Bella Ratmelia &amp; Dong Danping
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/04_PDF_report.png" width="495"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><a href="https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.pdf"><img data-src="images/04_PDF_report.png" class="quarto-figure quarto-figure-left" width="495" alt="Generating reports in PDF"></a></p>
+</figure>
+</div>
 <figcaption>Generating reports in PDF</figcaption>
 </figure>
 </div>
@@ -596,14 +623,23 @@ Bella Ratmelia &amp; Dong Danping
 <h2>What can you do with Quarto?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/04_MS word.PNG" height="600"></p>
+<p><a href="https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx"><img data-src="images/04_MS word.PNG" height="600" alt="MS Word for office workflows"></a></p>
 <figcaption>MS Word for office workflows</figcaption>
 </figure>
 </div>
 </section>
 <section id="what-can-you-do-with-quarto-2" class="slide level2">
 <h2>What can you do with Quarto?</h2>
-<p>Or presentations, like the one you are looking at right now.</p>
+<p>Create dynamic <span class="fragment highlight-blue">presentations</span></p>
+<p>like the one you’re <span class="fragment highlight-red">seeing</span> right now!</p>
+<div class="fragment fade-up">
+<p>and much more!</p>
+</div>
+</section></section>
+<section>
+<section id="introduction-to-quarto" class="title-slide slide level1 center">
+<h1>Introduction to Quarto</h1>
+
 </section>
 <section id="what-is-yaml" class="slide level2">
 <h2>What is YAML?</h2>
@@ -729,6 +765,7 @@ Bella Ratmelia &amp; Dong Danping
 <section id="lets-try-this-together" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>Create your first Quarto document.</p>
+<p>Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </section>
 <section id="lists" class="slide level2">
 <h2>Lists</h2>
@@ -845,6 +882,7 @@ Bella Ratmelia &amp; Dong Danping
 <section id="lets-try-this-together-1" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>Adding lists, links and images to your Quarto document.</p>
+<p>Follow instructions for <code>Hands-on #2</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </section>
 <section id="anatomy-of-a-quarto-document" class="slide level2">
 <h2>Anatomy of a Quarto document</h2>
@@ -911,32 +949,484 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <section>
 <section id="lets-try-this-together-2" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
-<p>Add more YAML options and try other rendering methods.</p>
+<p>More YAML options and rendering.</p>
+<p>Follow instructions for <code>Hands-on #3</code> at file path: <code>01-quarto-basics/YAML.qmd</code></p>
 </section>
 <section id="figures" class="slide level2">
 <h2>Figures</h2>
+<p>Just now, we learned about adding images using this syntax <code>![Elephant](elephant.png)</code> This results in the following treatment for various output types: <img data-src="images/05_figure_output.png" style="width:100.0%" alt="Example output for HTML, PDF and Word"></p>
+</section>
+<section id="figures-display-size" class="slide level2">
+<h2>Figures: Display size</h2>
 <ul>
-<li>Figure settings</li>
-<li>Figure layout</li>
+<li><p>Change display size by adding <code>width</code> and <code>height</code> attributes:</p>
+<p><code>![Elephant](elephant.png){width=300}</code></p></li>
+<li><p>Default units are pixels. You can also specify sizes using a percentage:</p>
+<p><code>![Elephant](elephant.png){width=80%}</code></p></li>
 </ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If only width or height is specified, the other will be calculated automatically</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>this is 80% of the container size, responsive design when the content area may change, consistent sizing across different devices, screen sizes and formats</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="figures-alignment" class="slide level2">
+<h2>Figures: Alignment</h2>
+<ul>
+<li><p>Figures are centre-aligned by default. You may change alignment by doing this:</p>
+<p><code>![Elephant](elephant.png){fig-align="left"}</code></p></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Figure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)</p>
+</div>
+</div>
+</div>
+
+<img data-src="images/elephant.png" class="r-stretch quarto-figure-center"><p class="caption">Elephant</p></section>
+<section id="figures-alt-text" class="slide level2">
+<h2>Figures: Alt Text</h2>
+<ul>
+<li>Alt Text is important for accessibility, aiding visually impaired users, enhancing SEO, and providing context when images fail to load</li>
+</ul>
+<p><code>![](elephant.png){fig-alt="A line drawing of an elephant."}</code></p>
+</section>
+<section id="figures-applying-multiple-parameters" class="slide level2">
+<h2>Figures: Applying multiple parameters</h2>
+<p>To combine the above attributes, separate arguments by a space, for example:</p>
+<p><code>![](elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width=20%}</code></p>
+</section>
+<section id="cross-reference-a-figure-in-your-document" class="slide level2">
+<h2>Cross-reference a figure in your document</h2>
+<ul>
+<li>You need to add a figure ID with the <code>fig-</code> prefix</li>
+<li>use <code>@</code> to reference the figure</li>
+</ul>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Code</a></li><li><a href="#tabset-4-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<pre><code>![An Elephant](elephant.png){#fig-elephant}
+
+Refer to @fig-elephant for an illustration of an elephant. </code></pre>
+</div>
+<div id="tabset-4-2">
+<div id="fig-elephant" class="quarto-float quarto-figure quarto-figure-left" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/elephant.png" class="quarto-figure quarto-figure-left" height="200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: An Elephant
+</figcaption>
+</figure>
+</div>
+<p>Refer to <a href="#/cross-reference-a-figure-in-your-document" class="quarto-xref">Figure&nbsp;1</a> for an illustration of an elephant.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="figures-layout-in-two-columns" class="slide level2">
+<h2>Figures: Layout in two columns</h2>
+<p><strong>Code</strong></p>
+<pre><code>::: {layout-ncol="2"}
+![Surus](images/surus.png)
+
+![Hanno](images/hanno.png)
+:::</code></pre>
+</section>
+<section id="figures-layout-in-two-columns-1" class="slide level2">
+<h2>Figures: Layout in two columns</h2>
+<p><strong>Output</strong></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/surus.png"></p>
+<figcaption>Surus</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hanno.png"></p>
+<figcaption>Hanno</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="callout-notes">
+<p>To learn more about different ways of figure layouts, refer to <a href="https://quarto.org/docs/authoring/figures.html">this page</a>.</p>
+</div>
 </section>
 <section id="tables" class="slide level2">
 <h2>Tables</h2>
+<p>This is the code for a <em>pipe table</em>:</p>
+<pre><code>| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |</code></pre>
+<p>And this is the output table:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Default</th>
+<th style="text-align: left;">Left</th>
+<th style="text-align: right;">Right</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td>123</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>You don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like <a href="https://www.tablesgenerator.com/markdown_tables">this one</a>.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="cross-references" class="slide level2">
-<h2>Cross References</h2>
+<section id="table-caption-and-attributes" class="slide level2">
+<h2>Table caption and attributes</h2>
+<pre><code>| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices {tbl-colwidths="[10,90]"}</code></pre>
+<table class="caption-top">
+<caption>Fruit prices</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="call-out-box" class="slide level2">
-<h2>Call-out box</h2>
+<section id="print-table-outputs" class="slide level2">
+<h2>Print table outputs</h2>
+<p>Use the <code>knitr::kable()</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(ggplot2<span class="sc">::</span>diamonds))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">carat</th>
+<th style="text-align: left;">cut</th>
+<th style="text-align: left;">color</th>
+<th style="text-align: left;">clarity</th>
+<th style="text-align: right;">depth</th>
+<th style="text-align: right;">table</th>
+<th style="text-align: right;">price</th>
+<th style="text-align: right;">x</th>
+<th style="text-align: right;">y</th>
+<th style="text-align: right;">z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.23</td>
+<td style="text-align: left;">Ideal</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">SI2</td>
+<td style="text-align: right;">61.5</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">3.95</td>
+<td style="text-align: right;">3.98</td>
+<td style="text-align: right;">2.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.21</td>
+<td style="text-align: left;">Premium</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">SI1</td>
+<td style="text-align: right;">59.8</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">3.89</td>
+<td style="text-align: right;">3.84</td>
+<td style="text-align: right;">2.31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.23</td>
+<td style="text-align: left;">Good</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">VS1</td>
+<td style="text-align: right;">56.9</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">327</td>
+<td style="text-align: right;">4.05</td>
+<td style="text-align: right;">4.07</td>
+<td style="text-align: right;">2.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.29</td>
+<td style="text-align: left;">Premium</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">VS2</td>
+<td style="text-align: right;">62.4</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">334</td>
+<td style="text-align: right;">4.20</td>
+<td style="text-align: right;">4.23</td>
+<td style="text-align: right;">2.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.31</td>
+<td style="text-align: left;">Good</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">SI2</td>
+<td style="text-align: right;">63.3</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">4.34</td>
+<td style="text-align: right;">4.35</td>
+<td style="text-align: right;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.24</td>
+<td style="text-align: left;">Very Good</td>
+<td style="text-align: left;">J</td>
+<td style="text-align: left;">VVS2</td>
+<td style="text-align: right;">62.8</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">336</td>
+<td style="text-align: right;">3.94</td>
+<td style="text-align: right;">3.96</td>
+<td style="text-align: right;">2.48</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<aside class="notes">
+<p>kable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cross-referencing-a-table-in-your-document" class="slide level2">
+<h2>Cross-referencing a table in your document</h2>
+<pre><code>| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices {#tbl-fruits}</code></pre>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>In order for a table to be cross-referenceable, its label must start with the tbl- prefix.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="cross-referencing-a-table-in-your-document-1" class="slide level2">
+<h2>Cross-referencing a table in your document</h2>
+<div id="tbl-fruits" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fruits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Fruit prices
+</figcaption>
+<div aria-describedby="tbl-fruits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Refer to <a href="#/cross-referencing-a-table-in-your-document-1" class="quarto-xref">Table&nbsp;1</a> for price of fruits today.</p>
+</section>
+<section id="callout-box" class="slide level2">
+<h2>Callout box</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[30,70]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
+<p>5 Types of callout blocks:<br>
+- <code>note</code><br>
+- <code>warning</code><br>
+- <code>important</code><br>
+- <code>tip</code><br>
+- <code>caution</code></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
+<p>This is how they look like: <img data-src="images/06_callout.png" style="width:90.0%"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="callout-box-1" class="slide level2">
+<h2>Callout box</h2>
+<p><strong>Code</strong>:</p>
+<pre><code>::: callout-tip
+
+Alternatively, use the Quarto Visual Editor!
+
+:::</code></pre>
+<p><br>
+</p>
+<p><strong>Output</strong></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Alternatively, use the Quarto Visual Editor!</p>
+</div>
+</div>
+</div>
 </section></section>
-<section>
 <section id="lets-try-this-together-3" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
-<p>Use the penguin document to figures, tables and cross references.</p>
+<p>Try out figures, tables and cross references.</p>
 </section>
-<section id="hidden-slide" class="slide level2 hidden">
-<h2>Hidden Slide</h2>
-<p>test speaker slides:</p>
+
+<section id="recap-of-todays-session" class="title-slide slide level1 center">
+<h1>Recap of today’s session</h1>
+<ul>
+<li>The role of Quarto in research transparency and reproducibility</li>
+<li>Rendering to various output types</li>
+<li>Introduction to Quarto</li>
+<li>Markdown basics</li>
+<li>Lists, links and images</li>
+<li>More YAML options</li>
+<li>Figures, tables and cross-references</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/smu logo.png" class="slide-logo"></p>
@@ -944,7 +1434,7 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <p><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">C03 Making Research More Transparent with Quarto and RStudio</a></p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -955,8 +1445,6 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/multiplex/socket.io.js"></script>
-  <script src="site_libs/revealjs/plugin/multiplex/multiplex.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -978,7 +1466,6 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":null,"id":"7e41a5eb65b34e5a","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1152,7 +1639,7 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
-          
+          RevealNotes,
           RevealSearch,
           RevealZoom
         ]

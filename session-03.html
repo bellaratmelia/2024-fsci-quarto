@@ -396,13 +396,23 @@ Bella Ratmelia &amp; Dong Danping
 <li class="fragment"><p>Other options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)</p></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36" class="uri">https://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36</a></p></li></ol></aside></section>
+<section id="example-of-websites-build-with-quarto" class="slide level2">
+<h2>Example of websites build with Quarto</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-masiello-group.png"> <a href="https://faculty.washington.edu/masiello/">Masiello Research Group</a> from University of Washington</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-practical-deep-learning.png"> <a href="https://course.fast.ai/">Practical Deep Learning (online course)</a> from fast.ai</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-nasa-openscapes.png"> <a href="https://nasa-openscapes.github.io/">NASA &amp; OpenScapes website</a></p>
+</div></div>
+</section>
 <section id="quarto-website-vs-quarto-document" class="slide level2">
 <h2>Quarto Website vs Quarto Document</h2>
 <ul>
 <li class="fragment"><p>Quarto website is a form <strong>Quarto Project</strong> with multiple quarto documents inside.</p></li>
 <li class="fragment"><p><strong>Quarto Project</strong> indicates that these documents are connected / related to each other.</p></li>
-<li class="fragment"><p>This means the documents’ header automatically share a common YAML file</p></li>
-<li class="fragment"><p>Each of this document act as a webpage – the default format will be <code>format: html</code></p></li>
+<li class="fragment"><p>In Quarto website, each quarto document act as a webpage – the default format will be <code>format: html</code></p></li>
 <li class="fragment"><p>Having said that, you can also have a presentation as part of the website (just like this course website!)</p></li>
 </ul>
 </section>
@@ -546,56 +556,87 @@ Bella Ratmelia &amp; Dong Danping
 </section>
 <section id="publishing-to-github" class="slide level2">
 <h2>Publishing to GitHub</h2>
-<p>There are 3 ways to publish to GitHub: <sup>1</sup></p>
+<p>There are 3 ways to publish to GitHub<sup>1</sup>:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Option 1: Manual transfer</strong></p>
 <ol type="1">
-<li class="fragment"><p>Render sites on your local machine to the <code>docs</code> directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the <code>docs</code> directory.</p></li>
-<li class="fragment"><p>Use the <code>quarto publish</code> command to publish content rendered on your local machine.</p></li>
-<li class="fragment"><p>Use a <strong>GitHub Action</strong> to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.</p></li>
+<li class="fragment"><p>Render quarto website on your local machine</p></li>
+<li class="fragment"><p>Manually transfer the rendering result (placed in <code>_site</code> folder to your GitHub repository’s <code>gh-pages</code> branch. GitHub Pages will use the contents inside this branch.</p></li>
 </ol>
+</div><div class="column" style="width:30%;">
+<p><strong>Option 2: Publishing command</strong></p>
+<ol type="1">
+<li class="fragment"><p>Render quarto website on your local machine.</p></li>
+<li class="fragment"><p>Use <code>quarto publish gh-pages</code> command in your terminal to publish the rendering results to GitHub.</p></li>
+</ol>
+</div><div class="column" style="width:40%;">
+<p><strong>Option 3: GitHub Action</strong></p>
+<ul>
+<li class="fragment">Instead of rendering in local machine, set up a GitHub action file to instruct GitHub to render the website on the “cloud”.</li>
+</ul>
+<ol type="1">
+<li class="fragment"><p>Push source code change to GitHub repository.</p></li>
+<li class="fragment"><p>GitHub renders the contents on the “cloud” and then display the result via GitHub Pages.</p></li>
+<li class="fragment"><p>(optional) You can also instruct GitHub to execute any code chunks on the “cloud” by modifying the GitHub action file to ensure the correct package versions are installed.</p></li>
+</ol>
+</div></div>
 <div class="fragment">
-<p>For today, let’s try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.</p>
+<p>For today, let’s try <strong>option #3</strong>! This option requires more preparation at the beginning, but the repo will be tidier in the long run.</p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://quarto.org/docs/publishing/github-pages.html#overview" class="uri">https://quarto.org/docs/publishing/github-pages.html#overview</a></p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://quarto.org/docs/publishing/github-pages.html" class="uri">https://quarto.org/docs/publishing/github-pages.html</a></p></li></ol></aside></section></section>
 <section id="lets-try-it-together-1" class="title-slide slide level1 center">
 <h1>Let’s try it together!</h1>
-<p>Refer to <code>04-websites/``publishing-to-gh-pages.qmd</code> for the step-by-step guide for this activity.</p>
+<p>Refer to <code>04-websites/publishing-to-gh-pages.qmd</code> for the step-by-step guide for this activity.</p>
 </section>
 
 <section>
-<section id="advanced-quarto-format-books-and-manuscripts" class="title-slide slide level1 center">
-<h1>Advanced Quarto Format: Books and Manuscripts</h1>
+<section id="advanced-quarto-format-blogs-books-and-manuscripts" class="title-slide slide level1 center">
+<h1>Advanced Quarto Format: Blogs, Books and Manuscripts</h1>
 
 </section>
 <section id="quarto-blog" class="slide level2">
 <h2>Quarto Blog</h2>
-<ul>
-<li class="fragment">Exactly like Quarto website, but with added blog functionalities</li>
-</ul>
+<p>Exactly like Quarto website, but with added blog functionality! Some examples:</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-masiello-group.png"> <a href="https://faculty.washington.edu/masiello/">Masiello Research Group</a> from University of Washington</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-mike-mahoney.png"> <a href="https://www.mm218.dev/">Mike Mahoney</a> personal website &amp; blog</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-mockup.png"> <a href="https://themockup.blog/">Tom Mock</a> personal website &amp; blog</p>
+</div></div>
 </section>
 <section id="quarto-books" class="slide level2">
 <h2>Quarto Books</h2>
-<p>Quarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats:</p>
-<ul>
-<li class="fragment"><p>HTML</p></li>
-<li class="fragment"><p>PDF</p></li>
-<li class="fragment"><p>MS Word</p></li>
-<li class="fragment"><p>EPUB</p></li>
-<li class="fragment"><p>AsciiDoc</p></li>
-</ul>
+<p>Quarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats, such as HTML, PDF, MS Word, Epub, and AsciiDoc.</p>
+<p>Some examples of Quarto Books:</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/books/books-r4ds.png"> <a href="https://r4ds.hadley.nz/">R for Data Science (2nd edition)</a> by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/books/books-python-for-data.png"> <a href="https://wesmckinney.com/book/">Python for Data Analysis (3rd edition)</a> by Wes McKinney</p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://quarto.org/docs/gallery/websites/websites-hopr.png"> <a href="https://jjallaire.github.io/hopr/">Hands-on Programming with R</a> by Garret Grolemund</p>
+</div></div>
 </section>
 <section id="quarto-manuscript" class="slide level2">
 <h2>Quarto Manuscript</h2>
-<ul>
-<li class="fragment"><p>Latest format, released in January 2024</p></li>
-<li class="fragment"><p>The underlying structure is very similar to Quarto website</p></li>
-</ul>
+<p>Latest Quarto project format released in January 2024. The underlying structure is very similar to Quarto website.</p>
+
+<img data-src="https://quarto.org/docs/manuscripts/images/article-content.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://quarto-ext.github.io/manuscript-template-jupyter/" class="uri">https://quarto-ext.github.io/manuscript-template-jupyter/</a></p></section></section>
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank you!</h1>
+<p><strong>Last activity: One-up One-down</strong></p>
+<p>Could you share one thing you like about the course, and one thing that you think can be improved?</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">C03 Making Research More Transparent with Quarto and RStudio</a></p>
 </div>
 </div>
-</section></section>
+</section>
+
 
     </div>
   </div>

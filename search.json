@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
     "section": "",
-    "text": "Bella Ratmelia & Danping Dong\nResearch & Data Services, SMU Libraries\n29 - 31 July 2024 @ UCLA"
+    "text": "Bella Ratmelia & Danping Dong\nResearch & Data Services, SMU Libraries\n29 - 31 July 2024 @ UCLA\nCreated with Quarto (+ love) by Bella and Danping"
   },
   {
     "objectID": "index.html#about-this-course",
@@ -25,7 +25,7 @@
     "href": "index.html#pre-session-preparation",
     "title": "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio",
     "section": "Pre-session Preparation",
-    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4\n\nInstall these R packages. Copy the following code and paste it in the Console tab (left side pane of RStudio), and then press Enter.\ninstall.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\"))\nClone the hands-on materials from GitHub. We will be using them for hands-on activities throughout the 3 days. Please follow the steps below:\n\nLaunch RStudio\nAt the top left corner, click on File –&gt; New Project–&gt; Version Control &gt; Git\npaste this URL https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git into the Repository URL box (rename the project and specify a working directory if you prefer), and click on Create Project"
+    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4\n\nDownload and install Git, and optionally GitHub Desktop, depending on your preference.\nGit is a version control system that can be used via command-line interface, whereas GitHub Desktop is a user-friendly graphical interface for Git.\nInstall these R packages. Copy the following code and paste it in the Console tab (left side pane of RStudio), and then press Enter.\ninstall.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\"))\nClone the hands-on materials from GitHub. We will be using them for hands-on activities throughout the 3 days. Please follow the steps below:\n\nLaunch RStudio\nAt the top left corner, click on File –&gt; New Project–&gt; Version Control &gt; Git\npaste this URL https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git into the Repository URL box (rename the project and specify a working directory if you prefer), and click on Create Project"
   },
   {
     "objectID": "session-03.html#recap-from-yesterday",
@@ -56,11 +56,18 @@
     "text": "Why not use Sharepoint / WordPress / SquareSpace / etc?\nCouple of reasons: 1\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nOther options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)\n\nhttps://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36"
   },
   {
+    "objectID": "session-03.html#example-of-websites-build-with-quarto",
+    "href": "session-03.html#example-of-websites-build-with-quarto",
+    "title": "Session 03",
+    "section": "Example of websites build with Quarto",
+    "text": "Example of websites build with Quarto\n\n\n Masiello Research Group from University of Washington\n\n Practical Deep Learning (online course) from fast.ai\n\n NASA & OpenScapes website"
+  },
+  {
     "objectID": "session-03.html#quarto-website-vs-quarto-document",
     "href": "session-03.html#quarto-website-vs-quarto-document",
     "title": "Session 03",
     "section": "Quarto Website vs Quarto Document",
-    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\nQuarto Project indicates that these documents are connected / related to each other.\nThis means the documents’ header automatically share a common YAML file\nEach of this document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)"
+    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\nQuarto Project indicates that these documents are connected / related to each other.\nIn Quarto website, each quarto document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)"
   },
   {
     "objectID": "session-03.html#anatomy-of-a-quarto-website",
@@ -102,28 +109,49 @@
     "href": "session-03.html#publishing-to-github",
     "title": "Session 03",
     "section": "Publishing to GitHub",
-    "text": "Publishing to GitHub\nThere are 3 ways to publish to GitHub: 1\n\nRender sites on your local machine to the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\nUse the quarto publish command to publish content rendered on your local machine.\nUse a GitHub Action to automatically render your files (a single Quarto document or a Quarto project) and publish the resulting content whenever you push a source code change to your repository.\n\n\nFor today, let’s try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.\n\nhttps://quarto.org/docs/publishing/github-pages.html#overview"
+    "text": "Publishing to GitHub\nThere are 3 ways to publish to GitHub1:\n\n\nOption 1: Manual transfer\n\nRender quarto website on your local machine\nManually transfer the rendering result (placed in _site folder to your GitHub repository’s gh-pages branch. GitHub Pages will use the contents inside this branch.\n\n\nOption 2: Publishing command\n\nRender quarto website on your local machine.\nUse quarto publish gh-pages command in your terminal to publish the rendering results to GitHub.\n\n\nOption 3: GitHub Action\n\nInstead of rendering in local machine, set up a GitHub action file to instruct GitHub to render the website on the “cloud”.\n\n\nPush source code change to GitHub repository.\nGitHub renders the contents on the “cloud” and then display the result via GitHub Pages.\n(optional) You can also instruct GitHub to execute any code chunks on the “cloud” by modifying the GitHub action file to ensure the correct package versions are installed.\n\n\n\nFor today, let’s try option #3! This option requires more preparation at the beginning, but the repo will be tidier in the long run.\n\nhttps://quarto.org/docs/publishing/github-pages.html"
   },
   {
     "objectID": "session-03.html#quarto-blog",
     "href": "session-03.html#quarto-blog",
     "title": "Session 03",
     "section": "Quarto Blog",
-    "text": "Quarto Blog\n\nExactly like Quarto website, but with added blog functionalities"
+    "text": "Quarto Blog\nExactly like Quarto website, but with added blog functionality! Some examples:\n\n\n Masiello Research Group from University of Washington\n\n Mike Mahoney personal website & blog\n\n Tom Mock personal website & blog"
   },
   {
     "objectID": "session-03.html#quarto-books",
     "href": "session-03.html#quarto-books",
     "title": "Session 03",
     "section": "Quarto Books",
-    "text": "Quarto Books\nQuarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats:\n\nHTML\nPDF\nMS Word\nEPUB\nAsciiDoc"
+    "text": "Quarto Books\nQuarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats, such as HTML, PDF, MS Word, Epub, and AsciiDoc.\nSome examples of Quarto Books:\n\n\n R for Data Science (2nd edition) by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund\n\n Python for Data Analysis (3rd edition) by Wes McKinney\n\n Hands-on Programming with R by Garret Grolemund"
   },
   {
     "objectID": "session-03.html#quarto-manuscript",
     "href": "session-03.html#quarto-manuscript",
     "title": "Session 03",
     "section": "Quarto Manuscript",
-    "text": "Quarto Manuscript\n\nLatest format, released in January 2024\nThe underlying structure is very similar to Quarto website\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+    "text": "Quarto Manuscript\nLatest Quarto project format released in January 2024. The underlying structure is very similar to Quarto website.\n\nhttps://quarto-ext.github.io/manuscript-template-jupyter/"
+  },
+  {
+    "objectID": "backup/notes_dp.html",
+    "href": "backup/notes_dp.html",
+    "title": "Notes (for DP)",
+    "section": "",
+    "text": "Created with Quarto (+ love) by Bella and Danping"
+  },
+  {
+    "objectID": "backup/notes_dp.html#multiple-columns",
+    "href": "backup/notes_dp.html#multiple-columns",
+    "title": "Notes (for DP)",
+    "section": "Multiple Columns",
+    "text": "Multiple Columns\n\n\nLeft column - point 1 - point 2\n\nRight column - point 3 - point 4"
+  },
+  {
+    "objectID": "backup/notes_dp.html#column-fragment",
+    "href": "backup/notes_dp.html#column-fragment",
+    "title": "Notes (for DP)",
+    "section": "Column Fragment",
+    "text": "Column Fragment\n\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = mpg, y = disp)) +\n  geom_point()"
   },
   {
     "objectID": "session-02.html#recap-from-yesterday",
@@ -200,7 +228,7 @@
     "href": "session-02.html#in-text-citations",
     "title": "Session 02 - Integrating codes",
     "section": "In-text citations",
-    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)\n\n\n\n\nInsert in-text citations by typing @ which will trigger a popup of items saved in your Zotero library.\nAlternatively, if you are using visual editor, click on Insert &gt; Citation, which will bring up a popup box where you can choose your citation source!"
+    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)\n\n\n\n\nInsert in-text citations by typing @ which will trigger a popup of items saved in your Zotero library.\nInserting citations and footnotes is generally easier in Visual editor :\n\nclick on Insert &gt; Citation, which will bring up a popup box where you can choose your citation source!\nclick on Insert &gt; Footnotes to add footnotes"
   },
   {
     "objectID": "session-02.html#citation-sources",
@@ -291,7 +319,7 @@
     "href": "session-02.html#why-revealjs-and-not-ppt",
     "title": "Session 02 - Integrating codes",
     "section": "Why RevealJS (and not ppt?)",
-    "text": "Why RevealJS (and not ppt?)\n\nNot a proprietary format - it is rendered as HTML slides which you can put on GitHub if you’d like to host it online.\nCan be downloaded as PDF for easier distribution\nText-based using Rmarkdown - easier to edit and incorporate codes, code output, callouts, etc."
+    "text": "Why RevealJS (and not ppt?)\n\nNot a proprietary format - it is rendered as HTML slides which you can put on GitHub if you’d like to host it online.\nBeing open-source, Reveal.js is free to use, which eliminates licensing costs associated with PowerPoint.\nExtensive customization options through HTML, CSS, and JavaScript - and easily switch to HTML or PDF.\nPresentations are HTML-based and can be accessed via any web browser without needing specific software.\nWorks across different operating systems and devices without compatibility issues.\nPresentations can be designed to be responsive and accessible, ensuring they look good on any device or screen size.\nPresentations can be hosted locally for offline access or online for easy sharing.\nMultiple people can collaborate on a presentation using version control systems like Git and track changes made.\nAccess to a large community of developers who contribute to the project and provide support."
   },
   {
     "objectID": "session-02.html#rendering-to-presentation",
@@ -308,18 +336,74 @@
     "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
   },
   {
-    "objectID": "session-01.html#welcome",
-    "href": "session-01.html#welcome",
-    "title": "Getting Started with Quarto",
-    "section": "Welcome",
-    "text": "Welcome\nHello!\n\nLet’s get to know each other!"
+    "objectID": "backup/01-markdown-basics.html",
+    "href": "backup/01-markdown-basics.html",
+    "title": "Try it together - Markdown Basics",
+    "section": "",
+    "text": "This document is designed to help you practice and familiarize yourself with the basic Markdown syntax used in Quarto documents.\nFollow along and try out each example in your own Quarto document.\nCreated with Quarto (+ love) by Bella and Danping"
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#introduction",
+    "href": "backup/01-markdown-basics.html#introduction",
+    "title": "Try it together - Markdown Basics",
+    "section": "",
+    "text": "This document is designed to help you practice and familiarize yourself with the basic Markdown syntax used in Quarto documents.\nFollow along and try out each example in your own Quarto document."
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#headings",
+    "href": "backup/01-markdown-basics.html#headings",
+    "title": "Try it together - Markdown Basics",
+    "section": "Headings",
+    "text": "Headings\nHeadings are created using the # symbol followed by a space. The number of # symbols determines the heading level.\n## Level 2 Heading\n\n### Level 3 Heading\n\n#### Level 4 Heading"
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#text-formatting",
+    "href": "backup/01-markdown-basics.html#text-formatting",
+    "title": "Try it together - Markdown Basics",
+    "section": "Text Formatting",
+    "text": "Text Formatting\nYou can add emphasis to your text using asterisks *.\nItalic text Bold text Bold and Italic text\nuse ` to add verbatim code."
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#lists",
+    "href": "backup/01-markdown-basics.html#lists",
+    "title": "Try it together - Markdown Basics",
+    "section": "Lists",
+    "text": "Lists\nFollow the example below to create a list of points.\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\n\nTask 1\nTask 2"
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#line-breaks",
+    "href": "backup/01-markdown-basics.html#line-breaks",
+    "title": "Try it together - Markdown Basics",
+    "section": "Line Breaks",
+    "text": "Line Breaks\nLine break doesn’t work with one single line-break. Try using two spaces at the end of a sentence.\nOR a backslash.\nNew paragraph can be created with two line-breaks.\nDo you notice the subtle differences?"
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#links",
+    "href": "backup/01-markdown-basics.html#links",
+    "title": "Try it together - Markdown Basics",
+    "section": "Links",
+    "text": "Links\nYou can create links using the following syntax: [link text](url).\nFor example, [Quarto Website](https://quarto.org) will be rendered as\nQuarto Website"
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#images",
+    "href": "backup/01-markdown-basics.html#images",
+    "title": "Try it together - Markdown Basics",
+    "section": "Images",
+    "text": "Images\nImages can be embedded using the following syntax: ![alt text](image url).\nFor example, ![Quarto Logo](https://quarto.org/quarto.png) will be rendered as:\n\n\n\nQuarto Logo"
+  },
+  {
+    "objectID": "backup/01-markdown-basics.html#code",
+    "href": "backup/01-markdown-basics.html#code",
+    "title": "Try it together - Markdown Basics",
+    "section": "Code",
+    "text": "Code\nInline code can be marked using backticks, e.g. `inline code` will output inline code.\nCode blocks are created using triple backticks:\n#| echo: fenced\nlibrary(tidyverse)"
   },
   {
     "objectID": "session-01.html#about-this-workshop",
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
-    "section": "About This Workshop",
-    "text": "About This Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need more help, please let one of the instructors know."
+    "section": "About this Workshop",
+    "text": "About this Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know."
   },
   {
     "objectID": "session-01.html#learning-objectives",
@@ -332,8 +416,8 @@
     "objectID": "session-01.html#setup-and-instructions",
     "href": "session-01.html#setup-and-instructions",
     "title": "Getting Started with Quarto",
-    "section": "Setup and instructions",
-    "text": "Setup and instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nClone the GitHub repository from \nInstall these R packages (to be updated):\n\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"rmarkdown\", \"gtsummary\", \"fs\", \"skimr\")\n\ninstall.packages(pkg_list)"
+    "section": "Setup and Instructions",
+    "text": "Setup and Instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nClone the GitHub repository from \nInstall these R packages by copying this line to your Terminal: install.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\"))\nClone the GitHub repository from https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git - Refer to instructions\nInstall these R packages:\n\n\noptions(repos = c(CRAN = \"https://cloud.r-project.org\"))\n\npkg_list &lt;- c( \"tidyverse\", \"gt\", \"gtExtras\", \"reactable\", \"ggiraph\", \"here\", \"rmarkdown\", \"gtsummary\", \"fs\", \"skimr\")\n\ninstall.packages(pkg_list)\n\n\n\n\n\n\n\n\nab793c41f298b74c3b96c75fbf347d95cb4af62c"
   },
   {
     "objectID": "session-01.html#literate-programming",
@@ -341,20 +425,6 @@
     "title": "Getting Started with Quarto",
     "section": "Literate Programming",
     "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code"
-  },
-  {
-    "objectID": "session-01.html#example-elife-reproducible-article",
-    "href": "session-01.html#example-elife-reproducible-article",
-    "title": "Getting Started with Quarto",
-    "section": "Example: eLife Reproducible Article",
-    "text": "Example: eLife Reproducible Article"
-  },
-  {
-    "objectID": "session-01.html#example-elife-reproducible-article-1",
-    "href": "session-01.html#example-elife-reproducible-article-1",
-    "title": "Getting Started with Quarto",
-    "section": "Example: eLife Reproducible Article",
-    "text": "Example: eLife Reproducible Article\n\n\n\n\n\n\n\n\n\nA figure from the reproducible article\n\n\n\n\n\n\n\nThe underlying live codes for the same figure"
   },
   {
     "objectID": "session-01.html#research-transparency-reproducibility",
@@ -403,7 +473,7 @@
     "href": "session-01.html#what-can-you-do-with-quarto",
     "title": "Getting Started with Quarto",
     "section": "What can you do with Quarto?",
-    "text": "What can you do with Quarto?\n\n\n\n\n\n\n\n\n\nCreating html for web publishing\n\n\n\n\n\n\n\nGenerating reports in PDF"
+    "text": "What can you do with Quarto?\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating html for web publishing\n\n\n\n\n\n\n\n\n\n\n\nGenerating reports in PDF"
   },
   {
     "objectID": "session-01.html#what-can-you-do-with-quarto-1",
@@ -417,7 +487,7 @@
     "href": "session-01.html#what-can-you-do-with-quarto-2",
     "title": "Getting Started with Quarto",
     "section": "What can you do with Quarto?",
-    "text": "What can you do with Quarto?\nOr presentations, like the one you are looking at right now."
+    "text": "What can you do with Quarto?\nCreate dynamic presentations\nlike the one you’re seeing right now!\n\nand much more!"
   },
   {
     "objectID": "session-01.html#what-is-yaml",
@@ -501,42 +571,112 @@
     "href": "session-01.html#figures",
     "title": "Getting Started with Quarto",
     "section": "Figures",
-    "text": "Figures\n\nFigure settings\nFigure layout"
+    "text": "Figures\nJust now, we learned about adding images using this syntax ![Elephant](elephant.png) This results in the following treatment for various output types:"
+  },
+  {
+    "objectID": "session-01.html#figures-display-size",
+    "href": "session-01.html#figures-display-size",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Display size",
+    "text": "Figures: Display size\n\nChange display size by adding width and height attributes:\n![Elephant](elephant.png){width=300}\nDefault units are pixels. You can also specify sizes using a percentage:\n![Elephant](elephant.png){width=80%}\n\n\n\n\n\n\n\nNote\n\n\nIf only width or height is specified, the other will be calculated automatically\n\n\n\n\nthis is 80% of the container size, responsive design when the content area may change, consistent sizing across different devices, screen sizes and formats"
+  },
+  {
+    "objectID": "session-01.html#figures-alignment",
+    "href": "session-01.html#figures-alignment",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Alignment",
+    "text": "Figures: Alignment\n\nFigures are centre-aligned by default. You may change alignment by doing this:\n![Elephant](elephant.png){fig-align=\"left\"}\n\n\n\n\n\n\n\nNote\n\n\nFigure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)\n\n\n\n\nElephant"
+  },
+  {
+    "objectID": "session-01.html#figures-alt-text",
+    "href": "session-01.html#figures-alt-text",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Alt Text",
+    "text": "Figures: Alt Text\n\nAlt Text is important for accessibility, aiding visually impaired users, enhancing SEO, and providing context when images fail to load\n\n![](elephant.png){fig-alt=\"A line drawing of an elephant.\"}"
+  },
+  {
+    "objectID": "session-01.html#figures-applying-multiple-parameters",
+    "href": "session-01.html#figures-applying-multiple-parameters",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Applying multiple parameters",
+    "text": "Figures: Applying multiple parameters\nTo combine the above attributes, separate arguments by a space, for example:\n![](elephant.png){fig-alt=\"A drawing of an elephant.\" fig-align=\"left\" width=20%}"
+  },
+  {
+    "objectID": "session-01.html#cross-reference-a-figure-in-your-document",
+    "href": "session-01.html#cross-reference-a-figure-in-your-document",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-reference a figure in your document",
+    "text": "Cross-reference a figure in your document\n\nYou need to add a figure ID with the fig- prefix\nuse @ to reference the figure\n\n\nCodeOutput\n\n\n![An Elephant](elephant.png){#fig-elephant}\n\nRefer to @fig-elephant for an illustration of an elephant. \n\n\n\n\n\n\n\n\nFigure 1: An Elephant\n\n\n\nRefer to Figure 1 for an illustration of an elephant."
+  },
+  {
+    "objectID": "session-01.html#figures-layout-in-two-columns",
+    "href": "session-01.html#figures-layout-in-two-columns",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Layout in two columns",
+    "text": "Figures: Layout in two columns\nCode\n::: {layout-ncol=\"2\"}\n![Surus](images/surus.png)\n\n![Hanno](images/hanno.png)\n:::"
+  },
+  {
+    "objectID": "session-01.html#figures-layout-in-two-columns-1",
+    "href": "session-01.html#figures-layout-in-two-columns-1",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Layout in two columns",
+    "text": "Figures: Layout in two columns\nOutput\n\n\n\n\n\n\n\n\n\nSurus\n\n\n\n\n\n\n\nHanno\n\n\n\n\n\n\nTo learn more about different ways of figure layouts, refer to this page."
   },
   {
     "objectID": "session-01.html#tables",
     "href": "session-01.html#tables",
     "title": "Getting Started with Quarto",
     "section": "Tables",
-    "text": "Tables"
+    "text": "Tables\nThis is the code for a pipe table:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\nAnd this is the output table:\n\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like this one."
   },
   {
-    "objectID": "session-01.html#cross-references",
-    "href": "session-01.html#cross-references",
+    "objectID": "session-01.html#table-caption-and-attributes",
+    "href": "session-01.html#table-caption-and-attributes",
     "title": "Getting Started with Quarto",
-    "section": "Cross References",
-    "text": "Cross References"
+    "section": "Table caption and attributes",
+    "text": "Table caption and attributes\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[10,90]\"}\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
   },
   {
-    "objectID": "session-01.html#call-out-box",
-    "href": "session-01.html#call-out-box",
+    "objectID": "session-01.html#print-table-outputs",
+    "href": "session-01.html#print-table-outputs",
     "title": "Getting Started with Quarto",
-    "section": "Call-out box",
-    "text": "Call-out box"
+    "section": "Print table outputs",
+    "text": "Print table outputs\nUse the knitr::kable() function\n\nknitr::kable(head(ggplot2::diamonds))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n0.23\nIdeal\nE\nSI2\n61.5\n55\n326\n3.95\n3.98\n2.43\n\n\n0.21\nPremium\nE\nSI1\n59.8\n61\n326\n3.89\n3.84\n2.31\n\n\n0.23\nGood\nE\nVS1\n56.9\n65\n327\n4.05\n4.07\n2.31\n\n\n0.29\nPremium\nI\nVS2\n62.4\n58\n334\n4.20\n4.23\n2.63\n\n\n0.31\nGood\nJ\nSI2\n63.3\n58\n335\n4.34\n4.35\n2.75\n\n\n0.24\nVery Good\nJ\nVVS2\n62.8\n57\n336\n3.94\n3.96\n2.48\n\n\n\n\n\n\nkable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table."
   },
   {
-    "objectID": "session-01.html#hidden-slide",
-    "href": "session-01.html#hidden-slide",
+    "objectID": "session-01.html#cross-referencing-a-table-in-your-document",
+    "href": "session-01.html#cross-referencing-a-table-in-your-document",
     "title": "Getting Started with Quarto",
-    "section": "Hidden Slide",
-    "text": "Hidden Slide\ntest speaker slides:\n\n\n\n\nC03 Making Research More Transparent with Quarto and RStudio"
+    "section": "Cross-referencing a table in your document",
+    "text": "Cross-referencing a table in your document\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {#tbl-fruits}\n\n\n\n\n\n\nImportant\n\n\nIn order for a table to be cross-referenceable, its label must start with the tbl- prefix."
+  },
+  {
+    "objectID": "session-01.html#cross-referencing-a-table-in-your-document-1",
+    "href": "session-01.html#cross-referencing-a-table-in-your-document-1",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-referencing a table in your document",
+    "text": "Cross-referencing a table in your document\n\n\n\nTable 1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09\n\n\n\n\n\n\nRefer to Table 1 for price of fruits today."
+  },
+  {
+    "objectID": "session-01.html#callout-box",
+    "href": "session-01.html#callout-box",
+    "title": "Getting Started with Quarto",
+    "section": "Callout box",
+    "text": "Callout box\n\n\n\n\n\n\n5 Types of callout blocks:\n- note\n- warning\n- important\n- tip\n- caution\n\n\nThis is how they look like:"
+  },
+  {
+    "objectID": "session-01.html#callout-box-1",
+    "href": "session-01.html#callout-box-1",
+    "title": "Getting Started with Quarto",
+    "section": "Callout box",
+    "text": "Callout box\nCode:\n::: callout-tip\n\nAlternatively, use the Quarto Visual Editor!\n\n:::\n\n\nOutput\n\n\n\n\n\n\nTip\n\n\nAlternatively, use the Quarto Visual Editor!"
   },
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Important\n\n\n\nThe schedule may be adjusted to ensure it aligns with the participants’ comfort and learning pace."
+    "text": "Important\n\n\n\nThe schedule may be adjusted to ensure it aligns with the participants’ comfort and learning pace.\nCreated with Quarto (+ love) by Bella and Danping"
   },
   {
     "objectID": "schedule.html#session-1",
