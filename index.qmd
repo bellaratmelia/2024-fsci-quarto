@@ -1,5 +1,6 @@
 ---
 title: "FSCI 2024 C03 Making Research More Transparent with Quarto and RStudio"
+format: html
 ---
 
 > [Bella Ratmelia](https://bellaratmelia.github.io/) & [Danping Dong](https://www.linkedin.com/in/danping-dong-6945a659/)\
