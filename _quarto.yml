@@ -4,7 +4,8 @@ project:
   
 website:
   title: "FSCI2024 C03"
-  body-footer: "Created with [Quarto](https://quarto.org/) (+ love) by [Bella](https://bellaratmelia.github.io) and [Danping](https://dpdong19.github.io/)"   
+  page-footer:
+    center: "Created with [Quarto](https://quarto.org/) (+ love) by [Bella](https://bellaratmelia.github.io) and [Danping](https://dpdong19.github.io/)"   
   navbar:
     left:
       - href: index.qmd
@@ -16,6 +17,16 @@ format:
     theme: zephyr
     css: styles.css
     toc: true
+    
+  revealjs: 
+    theme: [default, custom.scss]
+    width: 1920
+    height: 1080
+    slide-number: true
+    footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
+    chalkboard: false
+    logo: "images/smu logo.png"
+    incremental: true
 
 editor: visual
 

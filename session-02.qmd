@@ -1,15 +1,7 @@
 ---
-title: "Session 02 - Integrating codes"
+title: "Scholarly Writing and Presentation"
 author: "Bella Ratmelia & Dong Danping"
-format:
-  revealjs: 
-    theme: [default, custom.scss]
-    width: 1920
-    height: 1080
-    slide-number: true
-    footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
-    incremental: true
-    smaller: false
+format: revealjs
 bibliography: references.bib
 suppress-bibliography: true
 ---
@@ -227,7 +219,7 @@ csl: nature.csl
 Common ones:
 
 | Syntax                                                                              | Output                                                                            |
-|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+|------------------------------------|------------------------------------|
 | `@katz2021` mentioned that...                                                       | @katz2021 mentioned that...                                                       |
 | Katz et al. `[-@katz2021]` mentioned that...                                        | Katz et al. [-@katz2021] mentioned that...                                        |
 | Software citation is good `[@katz2021, pp. 33-35]`                                  | Software citation is good [@katz2021, pp. 33-35]!                                 |

@@ -3,20 +3,8 @@ title: "Getting Started with Quarto"
 author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
-    theme: [default, custom.scss]
-    width: 1920
-    height: 1080
-    slide-number: true
-    footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
-    chalkboard: false
-    logo: "images/smu logo.png"
     incremental: false
-    multiplex: false
 ---
-
-# Session 01 - Introduction to Quarto
-
-Welcome!
 
 # Welcome
 
@@ -55,26 +43,7 @@ By the end of the session, participants will be able to:
 1.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of R
 2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
-<<<<<<< HEAD
-4.  Clone the GitHub repository from <link>
-5.  Install these R packages by copying this line to your Terminal: `install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary"))`
-=======
-4.  Clone the GitHub repository from `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` - Refer to [instructions](https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation)
-5.  Install these R packages:
-
-```{r}
-#| eval: false
-#| echo: TRUE
-#| code-line-numbers: false
-#| fragment: true
-
-options(repos = c(CRAN = "https://cloud.r-project.org"))
-
-pkg_list <- c( "tidyverse", "gt", "gtExtras", "reactable", "ggiraph", "here", "rmarkdown", "gtsummary", "fs", "skimr")
-
-install.packages(pkg_list)
-```
->>>>>>> ab793c41f298b74c3b96c75fbf347d95cb4af62c
+4.  Clone the GitHub repository from `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` and installed the required packages - Refer to [instructions](https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation)
 
 ## Literate Programming
 
@@ -120,7 +89,7 @@ These are some speaker notes
 
 ## A Quick Overview or Recap of R & R Studio
 
-\[to add some screenshots/bullet points here\] If needed, do a 5 min intro to the R interface
+![](images/rstudio-tour.jpg){fig-align="center"}
 
 ## What is Quarto?
 
@@ -542,7 +511,7 @@ Refer to @fig-elephant for an illustration of an elephant.
 
 **Code**
 
-```
+```         
 ::: {layout-ncol="2"}
 ![Surus](images/surus.png)
 

@@ -1,18 +1,8 @@
 ---
-title: "Session 03"
+title: "Creating and Publishing Websites"
 author: "Bella Ratmelia & Dong Danping"
-format:
-  revealjs: 
-    theme: [default, custom.scss]
-    width: 1920
-    height: 1080
-    slide-number: true
-    footer: "[C03 Making Research More Transparent with Quarto and RStudio](https://bellaratmelia.github.io/2024-fsci-quarto/)"
-    incremental: true
-    smaller: false
+format: revealjs
 ---
-
-# Session 03 - Website for Your Research Project
 
 ## Recap from yesterday
 
@@ -136,6 +126,32 @@ There are several options, each with its own advantages [^2]
 
 > For today's session, let us try to publish to **Quarto Pub** and **GitHub Pages**!
 
+## Quarto Pub vs GitHub Pages
+
+::: columns
+::: {.column width="50%"}
+**Quarto Pub**
+
+-   Easiest way to publish
+
+-   Best for single-contributor project
+
+-   No version control option
+
+-   No private site / repo option
+:::
+
+::: {.column width="50%"}
+**GitHub Pages**
+
+-   Best for multi-contributor project
+
+-   Version control option
+
+-   Private site / repo option
+:::
+:::
+
 # Let's try it together!
 
 Refer to `04-websites/publishing-to-quartopub.qmd` for the step-by-step guide for this activity.
@@ -201,7 +217,7 @@ Refer to `04-websites/publishing-to-quartopub.qmd` for the step-by-step guide fo
 
 There are 3 ways to publish to GitHub[^3]:
 
-
+[^3]: <https://quarto.org/docs/publishing/github-pages.html>
 
 ::: columns
 ::: {.column width="30%"}
@@ -233,15 +249,9 @@ There are 3 ways to publish to GitHub[^3]:
 :::
 :::
 
-. . .
-
-For today, let's try **option #3**! This option requires more preparation at the beginning, but the repo will be tidier in the long run.
-
-[^3]: <https://quarto.org/docs/publishing/github-pages.html>
-
 # Let's try it together!
 
-Refer to `04-websites/publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
+For today, let's try **option #3**! Refer to `04-websites/publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
 
 # Advanced Quarto Format: Blogs, Books and Manuscripts
 
