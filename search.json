@@ -420,6 +420,13 @@
     "text": "Setup and Instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nClone the GitHub repository from https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git and installed the required packages - Refer to instructions"
   },
   {
+    "objectID": "session-01.html#outline-for-today",
+    "href": "session-01.html#outline-for-today",
+    "title": "Getting Started with Quarto",
+    "section": "Outline for today",
+    "text": "Outline for today\n\nLiterate Programming and Reproducible Research\nIntroduction to Quarto\nMarkdown Basics\nYAML\nFigures, tables and cross references\n\n\n\n\n\n\n\nNote\n\n\nWe will have some hands-on, in between the ‘lectures’!"
+  },
+  {
     "objectID": "session-01.html#literate-programming",
     "href": "session-01.html#literate-programming",
     "title": "Getting Started with Quarto",
@@ -488,6 +495,13 @@
     "title": "Getting Started with Quarto",
     "section": "What can you do with Quarto?",
     "text": "What can you do with Quarto?\nCreate dynamic presentations\nlike the one you’re seeing right now!\n\nand much more!"
+  },
+  {
+    "objectID": "session-01.html#working-in-different-programming-languages",
+    "href": "session-01.html#working-in-different-programming-languages",
+    "title": "Getting Started with Quarto",
+    "section": "Working in different programming languages",
+    "text": "Working in different programming languages\n\nQuarto supports R, Python,\nuse Quarto within Jupyter Notebook"
   },
   {
     "objectID": "session-01.html#what-is-yaml",
@@ -613,7 +627,7 @@
     "href": "session-01.html#figures-layout-in-two-columns",
     "title": "Getting Started with Quarto",
     "section": "Figures: Layout in two columns",
-    "text": "Figures: Layout in two columns\nCode\n::: {layout-ncol=\"2\"}\n![Surus](images/surus.png)\n\n![Hanno](images/hanno.png)\n:::"
+    "text": "Figures: Layout in two columns\n\nUseful for side-by-side comparisons or holding two images on one page/slide\n\nCode\n::: {layout-ncol=\"2\"}\n![Surus](images/surus.png)\n\n![Hanno](images/hanno.png)\n:::"
   },
   {
     "objectID": "session-01.html#figures-layout-in-two-columns-1",
@@ -627,21 +641,28 @@
     "href": "session-01.html#tables",
     "title": "Getting Started with Quarto",
     "section": "Tables",
-    "text": "Tables\nThis is the code for a pipe table:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\nAnd this is the output table:\n\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like this one."
+    "text": "Tables\n\n\nThis is the markdown source for a pipe table:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\n\nOutput:\n\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like this one."
   },
   {
-    "objectID": "session-01.html#table-caption-and-attributes",
-    "href": "session-01.html#table-caption-and-attributes",
+    "objectID": "session-01.html#table-caption",
+    "href": "session-01.html#table-caption",
     "title": "Getting Started with Quarto",
-    "section": "Table caption and attributes",
-    "text": "Table caption and attributes\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[10,90]\"}\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+    "section": "Table Caption",
+    "text": "Table Caption\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices\n\n\n\nFruit prices\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
   },
   {
-    "objectID": "session-01.html#print-table-outputs",
-    "href": "session-01.html#print-table-outputs",
+    "objectID": "session-01.html#table-attributes",
+    "href": "session-01.html#table-attributes",
     "title": "Getting Started with Quarto",
-    "section": "Print table outputs",
-    "text": "Print table outputs\nUse the knitr::kable() function\n\nknitr::kable(head(ggplot2::diamonds))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n0.23\nIdeal\nE\nSI2\n61.5\n55\n326\n3.95\n3.98\n2.43\n\n\n0.21\nPremium\nE\nSI1\n59.8\n61\n326\n3.89\n3.84\n2.31\n\n\n0.23\nGood\nE\nVS1\n56.9\n65\n327\n4.05\n4.07\n2.31\n\n\n0.29\nPremium\nI\nVS2\n62.4\n58\n334\n4.20\n4.23\n2.63\n\n\n0.31\nGood\nJ\nSI2\n63.3\n58\n335\n4.34\n4.35\n2.75\n\n\n0.24\nVery Good\nJ\nVVS2\n62.8\n57\n336\n3.94\n3.96\n2.48\n\n\n\n\n\n\nkable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table."
+    "section": "Table Attributes",
+    "text": "Table Attributes\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[10,90]\"}\n\n\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+  },
+  {
+    "objectID": "session-01.html#creating-tables-from-r-code-chunk-outputs",
+    "href": "session-01.html#creating-tables-from-r-code-chunk-outputs",
+    "title": "Getting Started with Quarto",
+    "section": "Creating tables from R code chunk outputs",
+    "text": "Creating tables from R code chunk outputs\nTo generate tables directly from R code chunk outputs, use the knitr::kable() function\n\n```{r}\nknitr::kable(head(ggplot2::diamonds))\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n0.23\nIdeal\nE\nSI2\n61.5\n55\n326\n3.95\n3.98\n2.43\n\n\n0.21\nPremium\nE\nSI1\n59.8\n61\n326\n3.89\n3.84\n2.31\n\n\n0.23\nGood\nE\nVS1\n56.9\n65\n327\n4.05\n4.07\n2.31\n\n\n0.29\nPremium\nI\nVS2\n62.4\n58\n334\n4.20\n4.23\n2.63\n\n\n0.31\nGood\nJ\nSI2\n63.3\n58\n335\n4.34\n4.35\n2.75\n\n\n0.24\nVery Good\nJ\nVVS2\n62.8\n57\n336\n3.94\n3.96\n2.48\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nkable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table."
   },
   {
     "objectID": "session-01.html#cross-referencing-a-table-in-your-document",
@@ -655,7 +676,14 @@
     "href": "session-01.html#cross-referencing-a-table-in-your-document-1",
     "title": "Getting Started with Quarto",
     "section": "Cross-referencing a table in your document",
-    "text": "Cross-referencing a table in your document\n\n\n\nTable 1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09\n\n\n\n\n\n\nRefer to Table 1 for price of fruits today."
+    "text": "Cross-referencing a table in your document\n\n\n\nTable 1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+  },
+  {
+    "objectID": "session-01.html#cross-referencing-a-table-in-your-document-2",
+    "href": "session-01.html#cross-referencing-a-table-in-your-document-2",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-referencing a table in your document",
+    "text": "Cross-referencing a table in your document\nRefer to @tbl-fruits for price of fruits today.\n\nRefer to Table 1 for price of fruits today."
   },
   {
     "objectID": "session-01.html#callout-box",
@@ -669,7 +697,7 @@
     "href": "session-01.html#callout-box-1",
     "title": "Getting Started with Quarto",
     "section": "Callout box",
-    "text": "Callout box\nCode:\n::: callout-tip\n\nAlternatively, use the Quarto Visual Editor!\n\n:::\n\n\nOutput\n\n\n\n\n\n\nTip\n\n\nAlternatively, use the Quarto Visual Editor!"
+    "text": "Callout box\nCode:\n::: callout-tip\n\nAlternatively, use the Quarto Visual Editor!\n\n:::\nOutput\n\n\n\n\n\n\nTip\n\n\nAlternatively, use the Quarto Visual Editor!"
   },
   {
     "objectID": "schedule.html",

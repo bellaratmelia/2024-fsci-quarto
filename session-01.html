@@ -8,7 +8,7 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.54">
+  <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Bella Ratmelia &amp; Dong Danping">
   <title>FSCI2024 C03 – Getting Started with Quarto</title>
@@ -443,6 +443,29 @@ Bella Ratmelia &amp; Dong Danping
 <li>Clone the GitHub repository from <code>https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git</code> and installed the required packages - Refer to <a href="https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation">instructions</a></li>
 </ol>
 </section>
+<section id="outline-for-today" class="slide level2">
+<h2>Outline for today</h2>
+<ul>
+<li>Literate Programming and Reproducible Research</li>
+<li>Introduction to Quarto</li>
+<li>Markdown Basics</li>
+<li>YAML</li>
+<li>Figures, tables and cross references</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>We will have some hands-on, in between the ‘lectures’!</p>
+</div>
+</div>
+</div>
+</section>
 <section id="literate-programming" class="slide level2">
 <h2>Literate Programming</h2>
 <blockquote>
@@ -605,6 +628,13 @@ Bella Ratmelia &amp; Dong Danping
 <div class="fragment fade-up">
 <p>and much more!</p>
 </div>
+</section>
+<section id="working-in-different-programming-languages" class="slide level2">
+<h2>Working in different programming languages</h2>
+<ul>
+<li>Quarto supports R, Python,</li>
+<li>use Quarto within Jupyter Notebook</li>
+</ul>
 </section></section>
 <section>
 <section id="introduction-to-quarto" class="title-slide slide level1 center">
@@ -763,7 +793,7 @@ Bella Ratmelia &amp; Dong Danping
 -  [x] Task 2</code></pre>
 </div>
 <div id="tabset-1-2">
-<div>
+<div style="font-size: 25px">
 <p><strong>Unordered List</strong></p>
 <ul>
 <li>item 1
@@ -1026,6 +1056,9 @@ Figure&nbsp;1: An Elephant
 </section>
 <section id="figures-layout-in-two-columns" class="slide level2">
 <h2>Figures: Layout in two columns</h2>
+<ul>
+<li>Useful for side-by-side comparisons or holding two images on one page/slide</li>
+</ul>
 <p><strong>Code</strong></p>
 <pre><code>::: {layout-ncol="2"}
 ![Surus](images/surus.png)
@@ -1065,13 +1098,16 @@ Figure&nbsp;1: An Elephant
 </section>
 <section id="tables" class="slide level2">
 <h2>Tables</h2>
-<p>This is the code for a <em>pipe table</em>:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>This is the markdown source for a <strong><em>pipe table</em></strong>:</p>
 <pre><code>| Default | Left | Right | Center |
 |---------|:-----|------:|:------:|
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |</code></pre>
-<p>And this is the output table:</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Output</strong>:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1102,6 +1138,7 @@ Figure&nbsp;1: An Elephant
 </tr>
 </tbody>
 </table>
+</div></div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1116,8 +1153,54 @@ Figure&nbsp;1: An Elephant
 </div>
 </div>
 </section>
-<section id="table-caption-and-attributes" class="slide level2">
-<h2>Table caption and attributes</h2>
+<section id="table-caption" class="slide level2">
+<h2>Table Caption</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Markdown</a></li><li><a href="#tabset-5-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<pre><code>| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices</code></pre>
+</div>
+<div id="tabset-5-2">
+<table class="caption-top">
+<caption>Fruit prices</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="table-attributes" class="slide level2">
+<h2>Table Attributes</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Markdown</a></li><li><a href="#tabset-6-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
 <pre><code>| fruit  | price  |
 |--------|--------|
 | apple  | 2.05   |
@@ -1125,6 +1208,8 @@ Figure&nbsp;1: An Elephant
 | orange | 3.09   |
 
 : Fruit prices {tbl-colwidths="[10,90]"}</code></pre>
+</div>
+<div id="tabset-6-2">
 <table class="caption-top">
 <caption>Fruit prices</caption>
 <colgroup>
@@ -1152,12 +1237,17 @@ Figure&nbsp;1: An Elephant
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 </section>
-<section id="print-table-outputs" class="slide level2">
-<h2>Print table outputs</h2>
-<p>Use the <code>knitr::kable()</code> function</p>
+<section id="creating-tables-from-r-code-chunk-outputs" class="slide level2">
+<h2>Creating tables from R code chunk outputs</h2>
+<p>To generate tables directly from R code chunk outputs, use the <code>knitr::kable()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(ggplot2<span class="sc">::</span>diamonds))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb27-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
+<span id="cb27-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>
@@ -1263,19 +1353,19 @@ Figure&nbsp;1: An Elephant
 </table>
 </div>
 </div>
-<aside class="notes">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
 <p>kable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div>
+</div>
+</div>
 </section>
 <section id="cross-referencing-a-table-in-your-document" class="slide level2">
 <h2>Cross-referencing a table in your document</h2>
@@ -1333,7 +1423,13 @@ Table&nbsp;1: Fruit prices
 </div>
 </figure>
 </div>
+</section>
+<section id="cross-referencing-a-table-in-your-document-2" class="slide level2">
+<h2>Cross-referencing a table in your document</h2>
+<pre><code>Refer to @tbl-fruits for price of fruits today.</code></pre>
+<div class="fragment">
 <p>Refer to <a href="#/cross-referencing-a-table-in-your-document-1" class="quarto-xref">Table&nbsp;1</a> for price of fruits today.</p>
+</div>
 </section>
 <section id="callout-box" class="slide level2">
 <h2>Callout box</h2>
@@ -1364,8 +1460,6 @@ Table&nbsp;1: Fruit prices
 Alternatively, use the Quarto Visual Editor!
 
 :::</code></pre>
-<p><br>
-</p>
 <p><strong>Output</strong></p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
