@@ -154,6 +154,55 @@
     "text": "Column Fragment\n\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = mpg, y = disp)) +\n  geom_point()"
   },
   {
+    "objectID": "backup/Session 01 hands-on instructor version/02-YAML-instructor-ver.html",
+    "href": "backup/Session 01 hands-on instructor version/02-YAML-instructor-ver.html",
+    "title": "Hands-on #3: Instructor Version",
+    "section": "",
+    "text": "Play around with YAML options and render the document to see the output.\n\n\nAdd table of contents toc: true\nchange the depth of your Table of Contents, e.g. toc-depth: 3\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"chosen theme\"\n\n\n\nrender with terminal and Quarto console\n\n\n\n\n\n\n---\nformat: pdf\n---\n\n\nTry Other options: html, pdf, docx, pptx, revealjs etc.\n\n\n\n\nTOC as a global option:\n\ntoc: true\ntoc-depth: 4\n\nTOC for specific format - note the nested layout:\n\n---\nformat: \n    html:\n        toc: true\n---\n\nNumbered sections\n\nnumber-sections: true\n\n\n\ntheme: \"quartz\"\n\n\n\nHiding code： hide codes in the output file\nNote: this can be override with settings inside individual code blocks, i.e. code chunk options\nCode Fold: true|false|show (fold but initially shown)\nformat:\n  html:\n    code-fold: true\n    code-summary: \"Show the code\"\nCode Overflow: wrap|scroll\nformat:\n  html:\n    code-overflow: wrap\nCode Tools: include tools for readers to copy codes or interact with your document\nformat:\n  html:\n    code-fold: true\n\n\nCode\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n#DEMO YAML Header Options\n---\nhighlight-style: \"breeze\" \ncode-line-numbers: true\ncode-tools: true\ncode-fold: show\ncode-overflow: \"wrap\" #Other option: scroll\n\neval: false #whether to run the code for every rendering\necho: true #whether to include code in the rendered document\nwarning: false #whether to display warnings in the rendered document\nerror: false #whether to display errors in the rendered document\n---"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/02-YAML-instructor-ver.html#hands-on-3",
+    "href": "backup/Session 01 hands-on instructor version/02-YAML-instructor-ver.html#hands-on-3",
+    "title": "Hands-on #3: Instructor Version",
+    "section": "",
+    "text": "Play around with YAML options and render the document to see the output.\n\n\nAdd table of contents toc: true\nchange the depth of your Table of Contents, e.g. toc-depth: 3\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"chosen theme\"\n\n\n\nrender with terminal and Quarto console\n\n\n\n\n\n\n---\nformat: pdf\n---\n\n\nTry Other options: html, pdf, docx, pptx, revealjs etc.\n\n\n\n\nTOC as a global option:\n\ntoc: true\ntoc-depth: 4\n\nTOC for specific format - note the nested layout:\n\n---\nformat: \n    html:\n        toc: true\n---\n\nNumbered sections\n\nnumber-sections: true\n\n\n\ntheme: \"quartz\"\n\n\n\nHiding code： hide codes in the output file\nNote: this can be override with settings inside individual code blocks, i.e. code chunk options\nCode Fold: true|false|show (fold but initially shown)\nformat:\n  html:\n    code-fold: true\n    code-summary: \"Show the code\"\nCode Overflow: wrap|scroll\nformat:\n  html:\n    code-overflow: wrap\nCode Tools: include tools for readers to copy codes or interact with your document\nformat:\n  html:\n    code-fold: true\n\n\nCode\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n#DEMO YAML Header Options\n---\nhighlight-style: \"breeze\" \ncode-line-numbers: true\ncode-tools: true\ncode-fold: show\ncode-overflow: \"wrap\" #Other option: scroll\n\neval: false #whether to run the code for every rendering\necho: true #whether to include code in the rendered document\nwarning: false #whether to display warnings in the rendered document\nerror: false #whether to display errors in the rendered document\n---"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html",
+    "href": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Q1 \nQ2 Adelie penguins have the shortest average Bill length. Check out ?@fig-adelie to see if this is true!"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#figure-questions",
+    "href": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#figure-questions",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Q1 \nQ2 Adelie penguins have the shortest average Bill length. Check out ?@fig-adelie to see if this is true!"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#tables",
+    "href": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#tables",
+    "title": "Hello, Quarto",
+    "section": "Tables",
+    "text": "Tables\nQ1&Q2\n\nPenguin Species Count\n\n\nSpecies\nCount\n\n\n\n\nAdelie\n152\n\n\nChinstrap\n68\n\n\nGentoo\n124\n\n\n\nQ3\n\npenguins %&gt;% \n  count(species) %&gt;%\n    knitr::kable(caption = \"Penguin Species Count\",\n                 col.names = c(\"Species\", \"Count\"))\n\n\nPenguin Species Count\n\n\nSpecies\nCount\n\n\n\n\nAdelie\n152\n\n\nChinstrap\n68\n\n\nGentoo\n124"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#two-column-layout",
+    "href": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#two-column-layout",
+    "title": "Hello, Quarto",
+    "section": "Two-column Layout",
+    "text": "Two-column Layout\n\n\n\n\n\n\n\n\n\n\n\n\nSpecies\nCount\n\n\n\n\nAdelie\n152\n\n\nChinstrap\n68\n\n\nGentoo\n124"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#backup-codes",
+    "href": "backup/Session 01 hands-on instructor version/03b-penguins-ins.html#backup-codes",
+    "title": "Hello, Quarto",
+    "section": "Backup Codes",
+    "text": "Backup Codes\n\nhead(penguins) # a preview of the first few rows of the penguins dataset\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\npenguins %&gt;% \n  count(species) # count the number of penguins by species\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\npenguins %&gt;% \n  group_by(species) %&gt;% # group the analysis by species\n  summarize(across(where(is.numeric), mean, na.rm = TRUE)) \n\nWarning: There was 1 warning in `summarize()`.\nℹ In argument: `across(where(is.numeric), mean, na.rm = TRUE)`.\nℹ In group 1: `species = Adelie`.\nCaused by warning:\n! The `...` argument of `across()` is deprecated as of dplyr 1.1.0.\nSupply arguments directly to `.fns` through an anonymous function instead.\n\n  # Previously\n  across(a:b, mean, na.rm = TRUE)\n\n  # Now\n  across(a:b, \\(x) mean(x, na.rm = TRUE))\n\n\n# A tibble: 3 × 6\n  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;\n1 Adelie              38.8          18.3              190.       3701. 2008.\n2 Chinstrap           48.8          18.4              196.       3733. 2008.\n3 Gentoo              47.5          15.0              217.       5076. 2008.\n\n  #for each numeric column, calculate the mean excluding na values\n\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(across(where(is.numeric), mean, na.rm = TRUE)) %&gt;%\n    knitr::kable(caption = \"Analysis by Penguin Species\")\n\n\nAnalysis by Penguin Species\n\n\n\n\n\n\n\n\n\n\nspecies\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nyear\n\n\n\n\nAdelie\n38.79139\n18.34636\n189.9536\n3700.662\n2008.013\n\n\nChinstrap\n48.83382\n18.42059\n195.8235\n3733.088\n2007.971\n\n\nGentoo\n47.50488\n14.98211\n217.1870\n5076.016\n2008.081"
+  },
+  {
     "objectID": "session-02.html#recap-from-yesterday",
     "href": "session-02.html#recap-from-yesterday",
     "title": "Scholarly Writing and Presentation",
@@ -334,6 +383,27 @@
     "title": "Scholarly Writing and Presentation",
     "section": "YAML header options for RevealJS presentations",
     "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html",
+    "href": "backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html",
+    "title": "Hands-on Exercises: Instructor Version",
+    "section": "",
+    "text": "Click on New File –&gt; Quarto Document to create a blank .qmd file\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nAdd some executable R code or verbatim code\nRender the document using the Render button\n\n\n\n\n\n\nDo cats prefer window seats or cozy corners in cat cafés?\n\n\n\nWe observed 50 cats in 5 different cat cafés. We recorded:\n- Cat’s choice of spot (window or corner)\n- Cat’s age (young, adult, senior)\n- Time of day (morning, afternoon, evening)\n\n\n\n\n# Create a simple pie chart\ncat_spots &lt;- c(window = 30, corner = 20)\npie(cat_spots, main=\"Cat's Favorite Spots\")"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html#hands-on-1",
+    "href": "backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html#hands-on-1",
+    "title": "Hands-on Exercises: Instructor Version",
+    "section": "",
+    "text": "Click on New File –&gt; Quarto Document to create a blank .qmd file\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nAdd some executable R code or verbatim code\nRender the document using the Render button\n\n\n\n\n\n\nDo cats prefer window seats or cozy corners in cat cafés?\n\n\n\nWe observed 50 cats in 5 different cat cafés. We recorded:\n- Cat’s choice of spot (window or corner)\n- Cat’s age (young, adult, senior)\n- Time of day (morning, afternoon, evening)\n\n\n\n\n# Create a simple pie chart\ncat_spots &lt;- c(window = 30, corner = 20)\npie(cat_spots, main=\"Cat's Favorite Spots\")"
+  },
+  {
+    "objectID": "backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html#hands-on-2",
+    "href": "backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html#hands-on-2",
+    "title": "Hands-on Exercises: Instructor Version",
+    "section": "Hands-on #2",
+    "text": "Hands-on #2\n\nInstructions:\n\nAdd some numbered list and non-numbered list, using the visual editor. Switch back to the markdown editor and take note of the syntax. Try creating lists using codes as well.\nAdd a piece of text and hyperlink it to a URL.\nInsert the image of a cat cafe into your report. The path to the image is Session-01/cat-cafe.jpg\n\n\n\n\n\n\nTip\n\n\n\nHint: Use the syntax ![caption](path_to_image). For example, ![Elephant](elephant.png)\n\n\n\n\nDemo code\nLists\n\nitem 1\n\nsub-item 1\nsub-item 2\n\nsub-item 3\n\n\n\n\nnumbered list\n\nsub-item a\n\nsub-sub-item i\nsub-sub-item ii\n\n\n\nLinks\nClick on this link to access the underlying research data for our research.\nImages\n\n\n\nPhoto of a cat cafe"
   },
   {
     "objectID": "backup/01-markdown-basics.html",
