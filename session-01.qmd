@@ -45,6 +45,18 @@ By the end of the session, participants will be able to:
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
 4.  Clone the GitHub repository from `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` and installed the required packages - Refer to [instructions](https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation)
 
+## Outline for today
+
+-   Literate Programming and Reproducible Research
+-   Introduction to Quarto
+-   Markdown Basics
+-   YAML
+-   Figures, tables and cross references
+
+::: callout-note
+We will have some hands-on, in between the 'lectures'!
+:::
+
 ## Literate Programming
 
 > "*Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a **computer** what to do, let us concentrate rather on explaining to **human** beings what we want a computer to do.*"
@@ -146,6 +158,11 @@ like the one you're [seeing]{.fragment .highlight-red} right now!
 ::: {.fragment .fade-up}
 and much more!
 :::
+
+## Working in different programming languages
+
+-   Quarto supports R, Python,
+-   use Quarto within Jupyter Notebook
 
 # Introduction to Quarto
 
@@ -274,7 +291,7 @@ Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd
 
 ### Output {.smaller}
 
-::: nonincremental
+::: {.nonincremental style="font-size: 25px"}
 **Unordered List**
 
 -   item 1
@@ -509,6 +526,8 @@ Refer to @fig-elephant for an illustration of an elephant.
 
 ## Figures: Layout in two columns
 
+-   Useful for side-by-side comparisons or holding two images on one page/slide
+
 **Code**
 
 ```         
@@ -535,7 +554,9 @@ To learn more about different ways of figure layouts, refer to [this page](https
 
 ## Tables
 
-This is the code for a *pipe table*:
+::: columns
+::: {.column width="50%"}
+This is the markdown source for a ***pipe table***:
 
 ```         
 | Default | Left | Right | Center |
@@ -544,20 +565,53 @@ This is the code for a *pipe table*:
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
 ```
+:::
 
-And this is the output table:
+::: {.column width="50%"}
+**Output**:
 
 | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
+:::
+:::
 
 ::: callout-note
 You don't have to construct a table by hand - use Quarto's Visual Editor or an online markdown table generator like [this one](https://www.tablesgenerator.com/markdown_tables).
 :::
 
-## Table caption and attributes
+## Table Caption
+
+::: panel-tabset
+### Markdown
+
+```         
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices
+```
+
+### Output
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Fruit prices
+:::
+
+## Table Attributes
+
+::: panel-tabset
+### Markdown
 
 ```         
 | fruit  | price  |
@@ -569,6 +623,8 @@ You don't have to construct a table by hand - use Quarto's Visual Editor or an o
 : Fruit prices {tbl-colwidths="[10,90]"}
 ```
 
+### Output
+
 | fruit  | price |
 |--------|-------|
 | apple  | 2.05  |
@@ -576,17 +632,18 @@ You don't have to construct a table by hand - use Quarto's Visual Editor or an o
 | orange | 3.09  |
 
 : Fruit prices {tbl-colwidths="\[10,90\]"}
+:::
 
-## Print table outputs
+## Creating tables from R code chunk outputs
 
-Use the `knitr::kable()` function
+To generate tables directly from R code chunk outputs, use the `knitr::kable()` function
 
 ```{r}
-#| echo: true
+#| echo: fenced
 knitr::kable(head(ggplot2::diamonds))
 ```
 
-::: notes
+::: callout-note
 kable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.
 :::
 
@@ -616,6 +673,14 @@ In order for a table to be cross-referenceable, its label must start with the tb
 
 : Fruit prices {#tbl-fruits}
 
+## Cross-referencing a table in your document
+
+```         
+Refer to @tbl-fruits for price of fruits today.
+```
+
+. . .
+
 Refer to @tbl-fruits for price of fruits today.
 
 ## Callout box
@@ -642,8 +707,6 @@ Alternatively, use the Quarto Visual Editor!
 
 :::
 ```
-
-\
 
 **Output**
 
