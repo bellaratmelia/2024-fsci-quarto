@@ -602,6 +602,41 @@
     "text": "Markdown Basics - Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6"
   },
   {
+    "objectID": "session-01.html#inline-code",
+    "href": "session-01.html#inline-code",
+    "title": "Getting Started with Quarto",
+    "section": "Inline code",
+    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\nDo you know that inline code can be executable as well?"
+  },
+  {
+    "objectID": "session-01.html#escaping-characters",
+    "href": "session-01.html#escaping-characters",
+    "title": "Getting Started with Quarto",
+    "section": "Escaping Characters",
+    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*\n\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for the first bullet point on this slide is \n`` \\ ` * ``"
+  },
+  {
+    "objectID": "session-01.html#anatomy-of-a-quarto-document",
+    "href": "session-01.html#anatomy-of-a-quarto-document",
+    "title": "Getting Started with Quarto",
+    "section": "Anatomy of a Quarto document",
+    "text": "Anatomy of a Quarto document\n\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**."
+  },
+  {
+    "objectID": "session-01.html#adding-code-chunks-to-your-document",
+    "href": "session-01.html#adding-code-chunks-to-your-document",
+    "title": "Getting Started with Quarto",
+    "section": "Adding code chunks to your document",
+    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n#write some code here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown"
+  },
+  {
+    "objectID": "session-01.html#executable-code-chunks-in-quarto",
+    "href": "session-01.html#executable-code-chunks-in-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "Executable Code Chunks in Quarto",
+    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control"
+  },
+  {
     "objectID": "session-01.html#lists",
     "href": "session-01.html#lists",
     "title": "Getting Started with Quarto",
@@ -630,8 +665,8 @@
     "text": "Images from local directory\n\nCodeOutput\n\n\n![Elephant](images/elephant.png)\n\n\n\n\n\nElephant"
   },
   {
-    "objectID": "session-01.html#anatomy-of-a-quarto-document",
-    "href": "session-01.html#anatomy-of-a-quarto-document",
+    "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
+    "href": "session-01.html#anatomy-of-a-quarto-document-1",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
     "text": "Anatomy of a Quarto document\n\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**."

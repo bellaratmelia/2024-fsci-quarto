@@ -767,6 +767,87 @@ Bella Ratmelia &amp; Dong Danping
 <p>Create your first Quarto document.</p>
 <p>Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </section>
+<section id="inline-code" class="slide level2">
+<h2>Inline code</h2>
+<p>Use single backticks to format text to look like code</p>
+<p><strong>Code</strong></p>
+<pre><code>Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`</code></pre>
+<p><strong>Output</strong> Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
+<p>This helps with visual distinction and readability.</p>
+
+<aside><div>
+<p>Do you know that inline code can be executable as well?</p>
+</div></aside></section>
+<section id="escaping-characters" class="slide level2">
+<h2>Escaping Characters</h2>
+<ul>
+<li><p>Sometimes, we need to display characters that have special meaning in Markdown, such as <code>\ ` *</code></p></li>
+<li><p>use one backslash <code>\</code> to escape the character after it</p></li>
+<li><p>example: <code>\\\*</code> in markdown source will be displayed as <strong>\*</strong></p></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If your inline code contains a backtick, use double backticks!</p>
+<pre><code>For example, the markdown source for the first bullet point on this slide is 
+`` \ ` * ``</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="anatomy-of-a-quarto-document" class="slide level2">
+<h2>Anatomy of a Quarto document</h2>
+<div>
+<ul>
+<li><strong>Metadata (YAML)</strong></li>
+</ul>
+<pre><code>---
+format: html
+---</code></pre>
+<ul>
+<li><strong>Code</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>Text</strong></li>
+</ul>
+<pre><code>## Heading 1
+This is a sentence with some **bold text**.</code></pre>
+</div>
+</section>
+<section id="adding-code-chunks-to-your-document" class="slide level2">
+<h2>Adding code chunks to your document</h2>
+<p>Use <strong>three backticks</strong> (now this is getting confusing) to create a <strong><em>fenced code block</em></strong> in your Quarto document</p>
+<pre><code>```
+#write some code here
+```</code></pre>
+<ul>
+<li><p>Fenced code block is helpful to show multiple lines of code</p></li>
+<li><p>everything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown</p></li>
+</ul>
+</section>
+<section id="executable-code-chunks-in-quarto" class="slide level2">
+<h2>Executable Code Chunks in Quarto</h2>
+<ul>
+<li>Use curly braces with language: ```{r}</li>
+<li>Allows for code execution in supported languages</li>
+<li>You will learn more about <strong>code chunk options</strong> for output control</li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+</section>
 <section id="lists" class="slide level2">
 <h2>Lists</h2>
 <div class="panel-tabset">
@@ -884,7 +965,7 @@ Bella Ratmelia &amp; Dong Danping
 <p>Adding lists, links and images to your Quarto document.</p>
 <p>Follow instructions for <code>Hands-on #2</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </section>
-<section id="anatomy-of-a-quarto-document" class="slide level2">
+<section id="anatomy-of-a-quarto-document-1" class="slide level2">
 <h2>Anatomy of a Quarto document</h2>
 <div>
 <ul>
@@ -897,10 +978,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb17-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb17-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb23-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb23-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb23-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -1245,9 +1326,9 @@ Figure&nbsp;1: An Elephant
 <h2>Creating tables from R code chunk outputs</h2>
 <p>To generate tables directly from R code chunk outputs, use the <code>knitr::kable()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb27-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
-<span id="cb27-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb33-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
+<span id="cb33-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>
