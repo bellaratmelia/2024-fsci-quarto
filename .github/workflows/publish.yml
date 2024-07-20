@@ -24,6 +24,7 @@ jobs:
             any::rmarkdown
             any::knitr
             any::tidyverse
+            any::palmerpenguins
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
