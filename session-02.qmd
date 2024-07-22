@@ -178,7 +178,7 @@ Output:
 
 # Let's try this together!
 
-Refer to `01-quarto-basics/code-chunks.qmd` for the step-by-step guide for this activity.
+Refer to `01-quarto-basics/04-code-chunks.qmd` for the step-by-step guide for this activity.
 
 # Citations and Footnotes
 
@@ -256,7 +256,7 @@ Which will print out the output below:
 
 # Let's try this together!
 
-Refer to `02-scholarly-writing/citations-references.qmd` for the step-by-step guide for this activity.
+Refer to `02-scholarly-writing/01-citations-references.qmd` for the step-by-step guide for this activity.
 
 # Specific features for Scholarly Writing
 
@@ -419,7 +419,7 @@ bibliography: references.bib
 
 # Let's try this together!
 
-Refer to `02-scholarly-writing/front-matter-metadata.qmd` for the step-by-step guide for this activity.
+Refer to `02-scholarly-writing/02-front-matter-metadata.qmd` for the step-by-step guide for this activity.
 
 # Rendering to Static Documents
 
@@ -526,4 +526,4 @@ There are many options, but several ones that you may find useful:
 
 # Let's try it together!
 
-Refer to `03-presentations/revealjs-presentation.qmd` for the step-by-step guide for this activity.
+Refer to `03-presentations/01-revealjs-presentation.qmd` for the step-by-step guide for this activity.

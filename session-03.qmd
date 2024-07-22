@@ -154,7 +154,7 @@ There are several options, each with its own advantages [^2]
 
 # Let's try it together!
 
-Refer to `04-websites/publishing-to-quartopub.qmd` for the step-by-step guide for this activity.
+Refer to `04-websites/01-publishing-to-quartopub.qmd` for the step-by-step guide for this activity.
 
 ## Publishing to GitHub - Refresher on Git
 
@@ -251,7 +251,7 @@ There are 3 ways to publish to GitHub[^3]:
 
 # Let's try it together!
 
-For today, let's try **option #3**! Refer to `04-websites/publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
+For today, let's try **option #3**! Refer to `04-websites/02-publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
 
 # Advanced Quarto Format: Blogs, Books and Manuscripts
 

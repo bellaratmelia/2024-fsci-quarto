@@ -45,7 +45,7 @@ Please ensure that you have completed the following activities before the worksh
 
 3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
 
-    -   Although Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.4
+    -   Although Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.5.55
 
 4.  Download and install [Git](https://git-scm.com/downloads), and optionally [GitHub Desktop](https://desktop.github.com/download/), depending on your preference.
 
@@ -53,7 +53,7 @@ Please ensure that you have completed the following activities before the worksh
 
 5.  Install these R packages. Copy the following code and paste it in the **Console** tab (left side pane of RStudio), and then press Enter.
 
-    `install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary"))`
+    `install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary", "palmerpenguins"))`
 
 6.  Clone the hands-on materials from GitHub. We will be using them for hands-on activities throughout the 3 days. Please follow the steps below:
 
@@ -64,3 +64,5 @@ Please ensure that you have completed the following activities before the worksh
     iii. paste this URL `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` into the `Repository URL` box (rename the project and specify a working directory if you prefer), and click on `Create Project`
 
          ![](images/clone_git_repo.PNG)
+
+7.  You're ready to go! You can close Rstudio for now and see you soon!
