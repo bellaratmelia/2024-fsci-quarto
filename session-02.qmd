@@ -56,6 +56,12 @@ diamonds %>% ggplot(aes(x = color, fill = cut)) +
     geom_bar()
 ```
 
+## How does it all work?
+
+Magic! (just kidding)
+
+![Image by Allison Horst (allisonhorst.com)](images/knitr-jupyter.png){fig-align="center"}
+
 ## Anatomy of a code chunk
 
 For R, the code chunks are generated with the help of `knitr` package.

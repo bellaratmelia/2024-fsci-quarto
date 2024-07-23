@@ -1,0 +1,17 @@
+{
+  "hash": "220c28d16b84f67849281c9b40aa530c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hands-on Exercises: Instructor Version\"\nAuthor: \"Danping\"\nformat: html\n---\n\n\n\n## Hands-on #1\n\n### Instructions\n\n1.  Click on `New File` –\\> `Quarto Document` to create a blank `.qmd` file\n2.  **Update YAML header**: title, author, date and set format to html `format: html`\n3.  **Use *visual editor* OR *markdown editor* to add headings** - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\n4.  Add some text in bold or italics\n5.  Add some executable R code or verbatim code\n6.  Render the document using the `Render` button\n\n### Demo code\n\n#### Research Question\n\nDo cats prefer window seats or cozy corners in cat cafés?\n\n#### Data Collection\n\nWe observed 50 cats in 5 different cat cafés. We recorded:\n\n\\- Cat's choice of spot (window or corner)\n\n\\- Cat's age (young, adult, senior)\n\n\\- Time of day (morning, afternoon, evening)\n\n#### Analysis\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Create a simple pie chart\ncat_spots <- c(window = 30, corner = 20)\npie(cat_spots, main=\"Cat's Favorite Spots\")\n```\n\n::: {.cell-output-display}\n![](01-basics-instructor-ver_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n## Hands-on #2\n\n### Instructions:\n\n1.  Add some numbered list and non-numbered list, using the *visual editor.* Switch back to the *markdown editor* and take note of the syntax. Try creating lists using codes as well.\n\n2.  Add a piece of text and hyperlink it to a URL.\n\n3.  Insert the image of a cat cafe into your report. The path to the image is `Session-01/cat-cafe.jpg`\n\n    ::: callout-tip\n    Hint: Use the syntax `![caption](path_to_image)`. For example, `![Elephant](elephant.png)`\n    :::\n\n#### Demo code\n\n**Lists**\n\n-   item 1\n\n    -   sub-item 1\n\n    -   sub-item 2\n\n        -   sub-item 3\n\n1.  numbered list\n\n    a.  sub-item a\n\n        i.  sub-sub-item i\n        ii. sub-sub-item ii\n\n**Links**\n\nClick on [this link](https://doi.org/10.6084/m9.figshare.25326322.v2) to access the underlying research data for our research.\n\n**Images**\n\n![Photo of a cat cafe](cat-cafe.jpg)\n",
+    "supporting": [
+      "01-basics-instructor-ver_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
