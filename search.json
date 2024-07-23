@@ -231,6 +231,13 @@
     "text": "How does it look like?\nAn example of code chunk:\n\nlibrary(tidyverse)                               \n\ndiamonds %&gt;% ggplot(aes(x = color, fill = cut)) + \n    geom_bar()"
   },
   {
+    "objectID": "session-02.html#how-does-it-all-work",
+    "href": "session-02.html#how-does-it-all-work",
+    "title": "Scholarly Writing and Presentation",
+    "section": "How does it all work?",
+    "text": "How does it all work?\nMagic! (just kidding)\n\nImage by Allison Horst (allisonhorst.com)"
+  },
+  {
     "objectID": "session-02.html#anatomy-of-a-code-chunk",
     "href": "session-02.html#anatomy-of-a-code-chunk",
     "title": "Scholarly Writing and Presentation",
