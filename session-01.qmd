@@ -263,44 +263,8 @@ Create your first Quarto document.
 
 Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
 
-## Inline code
-
-Use single backticks to format text to look like code
-
-**Code**
-
-```         
-Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
-```
-
-**Output** Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
-
-This helps with visual distinction and readability.
-
-::: aside
-Do you know that inline code can be executable as well?
-:::
-
-## Escaping Characters
-
--   Sometimes, we need to display characters that have special meaning in Markdown, such as `` \ ` * ``
-
--   use one backslash `\` to escape the character after it
-
--   example: `\\\*` in markdown source will be displayed as **\\\***
-
-::: callout-note
-If your inline code contains a backtick, use double backticks!
-
-```         
-For example, the markdown source for the first bullet point on this slide is 
-`` \ ` * ``
-```
-:::
-
 ## Anatomy of a Quarto document
 
-::: nonincremental
 -   **Metadata (YAML)**
 
 ```         
@@ -326,29 +290,7 @@ mtcars %>%
 ## Heading 1
 This is a sentence with some **bold text**.
 ```
-:::
 
-## Adding code chunks to your document
-
-Use **three backticks** (now this is getting confusing) to create a ***fenced code block*** in your Quarto document
-
-````         
-```
-#write some code here
-```
-````
-
--   Fenced code block is helpful to show multiple lines of code
-
--   everything inside the 'fences' is treated literally as code or plain text, and not processed by Markdown
-
-## Executable Code Chunks in Quarto
-
--   Use curly braces with language: \`\`\`{r}
--   Allows for code execution in supported languages
--   You will learn more about **code chunk options** for output control
-
-## 
 
 ## Lists
 
@@ -462,7 +404,6 @@ Follow instructions for `Hands-on #2` at file path: `01-quarto-basics/basics.qmd
 
 ## Anatomy of a Quarto document
 
-::: nonincremental
 -   **Metadata (YAML)**
 
 ```         
@@ -488,7 +429,64 @@ mtcars %>%
 ## Heading 1
 This is a sentence with some **bold text**.
 ```
+
+## Inline code
+
+Use single backticks to format text to look like code
+
+**Code**
+
+```         
+Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
+```
+
+**Output** Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
+
+This helps with visual distinction and readability.
+
+::: aside
+Do you know that inline code can be executable as well?
 :::
+
+## Escaping Characters
+
+-   Sometimes, we need to display characters that have special meaning in Markdown, such as `` \ ` * ``
+
+-   use one backslash `\` to escape the character after it
+
+-   example: `\\\*` in markdown source will be displayed as **\\\***
+
+::: callout-note
+If your inline code contains a backtick, use double backticks!
+
+```         
+For example, the markdown source for the first bullet point on this slide is 
+`` \ ` * ``
+```
+:::
+
+
+## Adding code chunks to your document
+
+Use **three backticks** (now this is getting confusing) to create a ***fenced code block*** in your Quarto document
+
+````         
+```
+## You may write some code (non executable) here
+```
+````
+
+-   Fenced code block is helpful to show multiple lines of code
+
+-   everything inside the 'fences' is treated literally as code or plain text, and not processed by Markdown
+
+## Executable Code Chunks in Quarto
+
+-   Use curly braces with language: \`\`\`{r}
+-   Allows for code execution in supported languages
+-   You will learn more about **code chunk options** for output control
+
+
 
 ## More YAML
 
