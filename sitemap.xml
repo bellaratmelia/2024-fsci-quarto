@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/index.html</loc>
-    <lastmod>2024-07-23T09:06:28.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/session-03.html</loc>
-    <lastmod>2024-07-23T09:06:28.563Z</lastmod>
-  </url>
-  <url>
     <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/notes_dp.html</loc>
-    <lastmod>2024-07-23T09:06:28.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/Session 01 hands-on instructor version/02-YAML-instructor-ver.html</loc>
-    <lastmod>2024-07-23T09:06:28.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/Session 01 hands-on instructor version/03b-penguins-ins.html</loc>
-    <lastmod>2024-07-23T09:06:28.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/session-02.html</loc>
-    <lastmod>2024-07-23T09:06:28.563Z</lastmod>
+    <lastmod>2024-07-26T07:58:40.823Z</lastmod>
   </url>
   <url>
     <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/Session 01 hands-on instructor version/01-basics-instructor-ver.html</loc>
-    <lastmod>2024-07-23T09:06:28.527Z</lastmod>
+    <lastmod>2024-07-26T07:58:40.823Z</lastmod>
   </url>
   <url>
-    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/01-markdown-basics.html</loc>
-    <lastmod>2024-07-23T09:06:28.527Z</lastmod>
+    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/Session 01 hands-on instructor version/03b-penguins-ins.html</loc>
+    <lastmod>2024-07-26T07:58:40.823Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/index.html</loc>
+    <lastmod>2024-07-26T07:58:40.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/session-02.html</loc>
+    <lastmod>2024-07-26T07:58:40.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/session-03.html</loc>
+    <lastmod>2024-07-26T07:58:40.855Z</lastmod>
   </url>
   <url>
     <loc>https://bellaratmelia.github.io/2024-fsci-quarto/session-01.html</loc>
-    <lastmod>2024-07-23T09:06:28.559Z</lastmod>
+    <lastmod>2024-07-26T07:58:40.855Z</lastmod>
   </url>
   <url>
     <loc>https://bellaratmelia.github.io/2024-fsci-quarto/schedule.html</loc>
-    <lastmod>2024-07-23T09:06:28.559Z</lastmod>
+    <lastmod>2024-07-26T07:58:40.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/Session 01 hands-on instructor version/02-YAML-instructor-ver.html</loc>
+    <lastmod>2024-07-26T07:58:40.823Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bellaratmelia.github.io/2024-fsci-quarto/backup/01-markdown-basics.html</loc>
+    <lastmod>2024-07-26T07:58:40.823Z</lastmod>
   </url>
 </urlset>
