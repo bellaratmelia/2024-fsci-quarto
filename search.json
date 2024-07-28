@@ -11,658 +11,931 @@
     "href": "schedule.html#session-1",
     "title": "Schedule",
     "section": "Session 1",
-    "text": "Session 1\nDate & Time: Monday, 29 July 2024, 10 AM - 1 PM (PDT)\nVenue: UCLA"
+    "text": "Session 1\nDate & Time: Monday, 29 July 2024, 10 AM - 1 PM (PDT)\nVenue: Scholarly Innovation Lab @ Charles E. Young Library, UCLA\nTopic: Getting Started with Quarto"
   },
   {
     "objectID": "schedule.html#session-2",
     "href": "schedule.html#session-2",
     "title": "Schedule",
     "section": "Session 2",
-    "text": "Session 2\nDate & Time: Tuesday, 30 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
+    "text": "Session 2\nDate & Time: Tuesday, 30 July 2024, 9 AM - 12 PM (PDT)\nVenue: Scholarly Innovation Lab @ Charles E. Young Library, UCLA\nTopic: Scholarly Writing and Presentation with Quarto"
   },
   {
     "objectID": "schedule.html#session-3",
     "href": "schedule.html#session-3",
     "title": "Schedule",
     "section": "Session 3",
-    "text": "Session 3\nDate & Time: Wednesday, 31 July 2024, 9 AM - 12 PM (PDT)\nVenue: UCLA"
+    "text": "Session 3\nDate & Time: Wednesday, 31 July 2024, 9 AM - 12 PM (PDT)\nVenue: Scholarly Innovation Lab @ Charles E. Young Library, UCLA\nTopic: Creating and Publishing Websites with Quarto"
   },
   {
     "objectID": "session-01.html#about-this-workshop",
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
     "section": "About this Workshop",
-    "text": "About this Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know."
+    "text": "About this Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#learning-objectives",
     "href": "session-01.html#learning-objectives",
     "title": "Getting Started with Quarto",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience."
+    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#setup-and-instructions",
     "href": "session-01.html#setup-and-instructions",
     "title": "Getting Started with Quarto",
     "section": "Setup and Instructions",
-    "text": "Setup and Instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nClone the GitHub repository from https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git and installed the required packages - Refer to instructions"
+    "text": "Setup and Instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nClone the GitHub repository from https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git and installed the required packages - Refer to instructions",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#outline-for-today",
     "href": "session-01.html#outline-for-today",
     "title": "Getting Started with Quarto",
     "section": "Outline for today",
-    "text": "Outline for today\n\nLiterate Programming and Reproducible Research\nIntroduction to Quarto\nMarkdown Basics\nYAML\nFigures, tables and cross references\n\n\n\n\n\n\n\nNote\n\n\nWe will have some hands-on, in between the ‘lectures’!"
+    "text": "Outline for today\n\nLiterate Programming and Reproducible Research\nIntroduction to Quarto\nMarkdown Basics\nYAML\nFigures, tables and cross references\n\n\n\n\n\n\n\nNote\n\n\nWe will have some hands-on, in between the ‘lectures’!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#literate-programming",
     "href": "session-01.html#literate-programming",
     "title": "Getting Started with Quarto",
     "section": "Literate Programming",
-    "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code"
+    "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#research-transparency-reproducibility",
     "href": "session-01.html#research-transparency-reproducibility",
     "title": "Getting Started with Quarto",
     "section": "Research Transparency & Reproducibility",
-    "text": "Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session\n\nThese are some speaker notes"
+    "text": "Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session\n\nThese are some speaker notes",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#a-quick-overview-or-recap-of-r-r-studio",
     "href": "session-01.html#a-quick-overview-or-recap-of-r-r-studio",
     "title": "Getting Started with Quarto",
     "section": "A Quick Overview or Recap of R & R Studio",
-    "text": "A Quick Overview or Recap of R & R Studio"
+    "text": "A Quick Overview or Recap of R & R Studio",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-is-quarto",
     "href": "session-01.html#what-is-quarto",
     "title": "Getting Started with Quarto",
     "section": "What is Quarto?",
-    "text": "What is Quarto?\n\nQuarto is an open-source scientific and technical publishing system\nIt is the next-generation of R Markdown\nSupports multiple programming languages (R, Python, Julia)\nEnables the creation of dynamic and reproducible documents, reports, presentations and websites\n\n\n\nOur slides and workshop websites are all built with Quarto!"
+    "text": "What is Quarto?\n\nQuarto is an open-source scientific and technical publishing system\nIt is the next-generation of R Markdown\nSupports multiple programming languages (R, Python, Julia)\nEnables the creation of dynamic and reproducible documents, reports, presentations and websites\n\n\n\nOur slides and workshop websites are all built with Quarto!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-does-a-quarto-document-look-like",
     "href": "session-01.html#what-does-a-quarto-document-look-like",
     "title": "Getting Started with Quarto",
     "section": "What does a Quarto document look like?",
-    "text": "What does a Quarto document look like?"
+    "text": "What does a Quarto document look like?",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-does-a-quarto-document-look-like-1",
     "href": "session-01.html#what-does-a-quarto-document-look-like-1",
     "title": "Getting Started with Quarto",
     "section": "What does a Quarto document look like?",
-    "text": "What does a Quarto document look like?\nA Quarto document (.qmd) is a plain text file that can be rendered to many different formats, e.g. html, PDF, .docx"
+    "text": "What does a Quarto document look like?\nA Quarto document (.qmd) is a plain text file that can be rendered to many different formats, e.g. html, PDF, .docx",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#rendering-to-different-formats",
     "href": "session-01.html#rendering-to-different-formats",
     "title": "Getting Started with Quarto",
     "section": "Rendering to different formats",
-    "text": "Rendering to different formats\n\nHTML reports and websites\nPDF reports\nMS Office Word\nPresentations (revealjs, Powerpoint, Beamer)\nBooks"
+    "text": "Rendering to different formats\n\nHTML reports and websites\nPDF reports\nMS Office Word\nPresentations (revealjs, Powerpoint, Beamer)\nBooks",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-can-you-do-with-quarto",
     "href": "session-01.html#what-can-you-do-with-quarto",
     "title": "Getting Started with Quarto",
     "section": "What can you do with Quarto?",
-    "text": "What can you do with Quarto?\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating html for web publishing\n\n\n\n\n\n\n\n\n\n\n\nGenerating reports in PDF"
+    "text": "What can you do with Quarto?\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating html for web publishing\n\n\n\n\n\n\n\n\n\n\n\nGenerating reports in PDF",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-can-you-do-with-quarto-1",
     "href": "session-01.html#what-can-you-do-with-quarto-1",
     "title": "Getting Started with Quarto",
     "section": "What can you do with Quarto?",
-    "text": "What can you do with Quarto?\n\n\n\nMS Word for office workflows"
+    "text": "What can you do with Quarto?\n\n\n\nMS Word for office workflows",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-can-you-do-with-quarto-2",
     "href": "session-01.html#what-can-you-do-with-quarto-2",
     "title": "Getting Started with Quarto",
     "section": "What can you do with Quarto?",
-    "text": "What can you do with Quarto?\nCreate dynamic presentations\nlike the one you’re seeing right now!\n\nand much more!"
+    "text": "What can you do with Quarto?\nCreate dynamic presentations\nlike the one you’re seeing right now!\n\nand much more!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#working-in-different-programming-languages",
     "href": "session-01.html#working-in-different-programming-languages",
     "title": "Getting Started with Quarto",
     "section": "Working in different programming languages",
-    "text": "Working in different programming languages\n\nQuarto supports R, Python,\nuse Quarto within Jupyter Notebook"
+    "text": "Working in different programming languages\n\nQuarto supports R, Python,\nuse Quarto within Jupyter Notebook",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#what-is-yaml",
     "href": "session-01.html#what-is-yaml",
     "title": "Getting Started with Quarto",
     "section": "What is YAML?",
-    "text": "What is YAML?\n\n\nQuarto documents begin with YAML (YAML Ain’t Markup Language) headers\nYAML specify document metadata and control settings which influences document rendering and final output in many different ways:\n\nTitle, author, date\nOutput format (HTML, PDF, Word, etc.)\nTable of contents settings\nBibliography and citation style\nAnd more!"
+    "text": "What is YAML?\n\n\nQuarto documents begin with YAML (YAML Ain’t Markup Language) headers\nYAML specify document metadata and control settings which influences document rendering and final output in many different ways:\n\nTitle, author, date\nOutput format (HTML, PDF, Word, etc.)\nTable of contents settings\nBibliography and citation style\nAnd more!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#markdown-and-r-markdown",
     "href": "session-01.html#markdown-and-r-markdown",
     "title": "Getting Started with Quarto",
     "section": "Markdown and R Markdown",
-    "text": "Markdown and R Markdown\n\nMarkdown is the underlying document syntax for Quarto and R Markdown\nlightweight markup language, which uses plain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents"
+    "text": "Markdown and R Markdown\n\nMarkdown is the underlying document syntax for Quarto and R Markdown\nlightweight markup language, which uses plain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#markdown-basics-syntax",
     "href": "session-01.html#markdown-basics-syntax",
     "title": "Getting Started with Quarto",
     "section": "Markdown Basics: Syntax",
-    "text": "Markdown Basics: Syntax\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\n\n\n\nTip\n\n\nTo create a line break, you can use two spaces at the end of a line OR a backslash \\.\nTo create a paragraph, type Enter twice."
+    "text": "Markdown Basics: Syntax\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\n\n\n\nTip\n\n\nTo create a line break, you can use two spaces at the end of a line OR a backslash \\.\nTo create a paragraph, type Enter twice.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#markdown-basics---headings",
     "href": "session-01.html#markdown-basics---headings",
     "title": "Getting Started with Quarto",
     "section": "Markdown Basics - Headings",
-    "text": "Markdown Basics - Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6"
+    "text": "Markdown Basics - Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#anatomy-of-a-quarto-document",
     "href": "session-01.html#anatomy-of-a-quarto-document",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**."
+    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#lists",
     "href": "session-01.html#lists",
     "title": "Getting Started with Quarto",
     "section": "Lists",
-    "text": "Lists\n\nCodeOutput\n\n\n**Unordered List**\n\n-   item 1\n    -   sub-item 1\n    -   sub-item 2\n        -   sub-sub-item 1\n\n**Ordered List**\n\n1.  item 1\n2.  item 2\n    i)  sub-item 1\n        A.  sub-sub-item 1\n\n**Checkbox**\n\n-  [ ] Task 1 \n-  [x] Task 2\n\n\n\nUnordered List\n\nitem 1\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\nOrdered List\n\nitem 1\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\nCheckbox\n\nTask 1\nTask 2"
+    "text": "Lists\n\nCodeOutput\n\n\n**Unordered List**\n\n-   item 1\n    -   sub-item 1\n    -   sub-item 2\n        -   sub-sub-item 1\n\n**Ordered List**\n\n1.  item 1\n2.  item 2\n    i)  sub-item 1\n        A.  sub-sub-item 1\n\n**Checkbox**\n\n-  [ ] Task 1 \n-  [x] Task 2\n\n\n\nUnordered List\n\nitem 1\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\nOrdered List\n\nitem 1\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\nCheckbox\n\nTask 1\nTask 2",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#links",
     "href": "session-01.html#links",
     "title": "Getting Started with Quarto",
     "section": "Links",
-    "text": "Links\n\n\nMarkdown Syntax\n&lt;https://quarto.org&gt;\n[Quarto](https://quarto.org)\n\nOutput\nhttps://quarto.org\nQuarto"
+    "text": "Links\n\n\nMarkdown Syntax\n&lt;https://quarto.org&gt;\n[Quarto](https://quarto.org)\n\nOutput\nhttps://quarto.org\nQuarto",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#images-from-web",
     "href": "session-01.html#images-from-web",
     "title": "Getting Started with Quarto",
     "section": "Images from web",
-    "text": "Images from web\nImages can be embedded using the following syntax: ![alt text](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo"
+    "text": "Images from web\nImages can be embedded using the following syntax: ![alt text](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#images-from-local-directory",
     "href": "session-01.html#images-from-local-directory",
     "title": "Getting Started with Quarto",
     "section": "Images from local directory",
-    "text": "Images from local directory\n\nCodeOutput\n\n\n![Elephant](images/elephant.png)\n\n\n\n\n\nElephant"
+    "text": "Images from local directory\n\nCodeOutput\n\n\n![Elephant](images/elephant.png)\n\n\n\n\n\nElephant",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
     "href": "session-01.html#anatomy-of-a-quarto-document-1",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**."
+    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#inline-code",
     "href": "session-01.html#inline-code",
     "title": "Getting Started with Quarto",
     "section": "Inline code",
-    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\nDo you know that inline code can be executable as well?"
+    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\nDo you know that inline code can be executable as well?",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#escaping-characters",
     "href": "session-01.html#escaping-characters",
     "title": "Getting Started with Quarto",
     "section": "Escaping Characters",
-    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*\n\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for the first bullet point on this slide is \n`` \\ ` * ``"
+    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*\n\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for the first bullet point on this slide is \n`` \\ ` * ``",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#adding-code-chunks-to-your-document",
     "href": "session-01.html#adding-code-chunks-to-your-document",
     "title": "Getting Started with Quarto",
     "section": "Adding code chunks to your document",
-    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown"
+    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#executable-code-chunks-in-quarto",
     "href": "session-01.html#executable-code-chunks-in-quarto",
     "title": "Getting Started with Quarto",
     "section": "Executable Code Chunks in Quarto",
-    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control"
+    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#more-yaml",
     "href": "session-01.html#more-yaml",
     "title": "Getting Started with Quarto",
     "section": "More YAML",
-    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation"
+    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#rendering",
     "href": "session-01.html#rendering",
     "title": "Getting Started with Quarto",
     "section": "Rendering",
-    "text": "Rendering\nBesides rendering with the RStudio button, you may also render via:\n\nTerminal or system shell:\n\nquarto render document.qmd # defaults to html\nquarto render document.qmd --to pdf\nquarto render document.qmd --to docx\n\nR console using quarto R package\n\nlibrary(quarto)\nquarto_render(\"document.qmd\") # defaults to html\nquarto_render(\"document.qmd\", output_format = \"pdf\")"
+    "text": "Rendering\nBesides rendering with the RStudio button, you may also render via:\n\nTerminal or system shell:\n\nquarto render document.qmd # defaults to html\nquarto render document.qmd --to pdf\nquarto render document.qmd --to docx\n\nR console using quarto R package\n\nlibrary(quarto)\nquarto_render(\"document.qmd\") # defaults to html\nquarto_render(\"document.qmd\", output_format = \"pdf\")",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures",
     "href": "session-01.html#figures",
     "title": "Getting Started with Quarto",
     "section": "Figures",
-    "text": "Figures\nJust now, we learned about adding images using this syntax ![Elephant](elephant.png) This results in the following treatment for various output types:"
+    "text": "Figures\nJust now, we learned about adding images using this syntax ![Elephant](elephant.png) This results in the following treatment for various output types:",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures-display-size",
     "href": "session-01.html#figures-display-size",
     "title": "Getting Started with Quarto",
     "section": "Figures: Display size",
-    "text": "Figures: Display size\n\nChange display size by adding width and height attributes:\n![Elephant](elephant.png){width=300}\nDefault units are pixels. You can also specify sizes using a percentage:\n![Elephant](elephant.png){width=80%}\n\n\n\n\n\n\n\nNote\n\n\nIf only width or height is specified, the other will be calculated automatically\n\n\n\n\nthis is 80% of the container size, responsive design when the content area may change, consistent sizing across different devices, screen sizes and formats"
+    "text": "Figures: Display size\n\nChange display size by adding width and height attributes:\n![Elephant](elephant.png){width=300}\nDefault units are pixels. You can also specify sizes using a percentage:\n![Elephant](elephant.png){width=80%}\n\n\n\n\n\n\n\nNote\n\n\nIf only width or height is specified, the other will be calculated automatically\n\n\n\n\nthis is 80% of the container size, responsive design when the content area may change, consistent sizing across different devices, screen sizes and formats",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures-alignment",
     "href": "session-01.html#figures-alignment",
     "title": "Getting Started with Quarto",
     "section": "Figures: Alignment",
-    "text": "Figures: Alignment\n\nFigures are centre-aligned by default. You may change alignment by doing this:\n![Elephant](elephant.png){fig-align=\"left\"}\n\n\n\n\n\n\n\nNote\n\n\nFigure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)\n\n\n\n\nElephant"
+    "text": "Figures: Alignment\n\nFigures are centre-aligned by default. You may change alignment by doing this:\n![Elephant](elephant.png){fig-align=\"left\"}\n\n\n\n\n\n\n\nNote\n\n\nFigure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)\n\n\n\n\nElephant",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures-alt-text",
     "href": "session-01.html#figures-alt-text",
     "title": "Getting Started with Quarto",
     "section": "Figures: Alt Text",
-    "text": "Figures: Alt Text\n\nAlt Text is important for accessibility, aiding visually impaired users, enhancing SEO, and providing context when images fail to load\n\n![](elephant.png){fig-alt=\"A line drawing of an elephant.\"}"
+    "text": "Figures: Alt Text\n\nAlt Text is important for accessibility, aiding visually impaired users, enhancing SEO, and providing context when images fail to load\n\n![](elephant.png){fig-alt=\"A line drawing of an elephant.\"}",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures-applying-multiple-parameters",
     "href": "session-01.html#figures-applying-multiple-parameters",
     "title": "Getting Started with Quarto",
     "section": "Figures: Applying multiple parameters",
-    "text": "Figures: Applying multiple parameters\nTo combine the above attributes, separate arguments by a space, for example:\n![](elephant.png){fig-alt=\"A drawing of an elephant.\" fig-align=\"left\" width=20%}"
+    "text": "Figures: Applying multiple parameters\nTo combine the above attributes, separate arguments by a space, for example:\n![](elephant.png){fig-alt=\"A drawing of an elephant.\" fig-align=\"left\" width=20%}",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#cross-reference-a-figure-in-your-document",
     "href": "session-01.html#cross-reference-a-figure-in-your-document",
     "title": "Getting Started with Quarto",
     "section": "Cross-reference a figure in your document",
-    "text": "Cross-reference a figure in your document\n\nYou need to add a figure ID with the fig- prefix\nuse @ to reference the figure\n\n\nCodeOutput\n\n\n![An Elephant](elephant.png){#fig-elephant}\n\nRefer to @fig-elephant for an illustration of an elephant. \n\n\n\n\n\n\n\n\nFigure 1: An Elephant\n\n\n\nRefer to Figure 1 for an illustration of an elephant."
+    "text": "Cross-reference a figure in your document\n\nYou need to add a figure ID with the fig- prefix\nuse @ to reference the figure\n\n\nCodeOutput\n\n\n![An Elephant](elephant.png){#fig-elephant}\n\nRefer to @fig-elephant for an illustration of an elephant. \n\n\n\n\n\n\n\n\nFigure 1: An Elephant\n\n\n\nRefer to Figure 1 for an illustration of an elephant.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures-layout-in-two-columns",
     "href": "session-01.html#figures-layout-in-two-columns",
     "title": "Getting Started with Quarto",
     "section": "Figures: Layout in two columns",
-    "text": "Figures: Layout in two columns\n\nUseful for side-by-side comparisons or holding two images on one page/slide\n\nCode\n::: {layout-ncol=\"2\"}\n![Surus](images/surus.png)\n\n![Hanno](images/hanno.png)\n:::"
+    "text": "Figures: Layout in two columns\n\nUseful for side-by-side comparisons or holding two images on one page/slide\n\nCode\n::: {layout-ncol=\"2\"}\n![Surus](images/surus.png)\n\n![Hanno](images/hanno.png)\n:::",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#figures-layout-in-two-columns-1",
     "href": "session-01.html#figures-layout-in-two-columns-1",
     "title": "Getting Started with Quarto",
     "section": "Figures: Layout in two columns",
-    "text": "Figures: Layout in two columns\nOutput\n\n\n\n\n\n\n\n\n\nSurus\n\n\n\n\n\n\n\nHanno\n\n\n\n\n\n\nTo learn more about different ways of figure layouts, refer to this page."
+    "text": "Figures: Layout in two columns\nOutput\n\n\n\n\n\n\n\n\n\nSurus\n\n\n\n\n\n\n\nHanno\n\n\n\n\n\n\nTo learn more about different ways of figure layouts, refer to this page.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#tables",
     "href": "session-01.html#tables",
     "title": "Getting Started with Quarto",
     "section": "Tables",
-    "text": "Tables\n\n\nThis is the markdown source for a pipe table:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\n\nOutput:\n\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like this one."
+    "text": "Tables\n\n\nThis is the markdown source for a pipe table:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\n\nOutput:\n\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like this one.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#table-caption",
     "href": "session-01.html#table-caption",
     "title": "Getting Started with Quarto",
     "section": "Table Caption",
-    "text": "Table Caption\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices\n\n\n\nFruit prices\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+    "text": "Table Caption\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices\n\n\n\nFruit prices\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#table-attributes",
     "href": "session-01.html#table-attributes",
     "title": "Getting Started with Quarto",
     "section": "Table Attributes",
-    "text": "Table Attributes\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[10,90]\"}\n\n\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+    "text": "Table Attributes\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[10,90]\"}\n\n\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#creating-tables-from-r-code-chunk-outputs",
     "href": "session-01.html#creating-tables-from-r-code-chunk-outputs",
     "title": "Getting Started with Quarto",
     "section": "Creating tables from R code chunk outputs",
-    "text": "Creating tables from R code chunk outputs\nTo generate tables directly from R code chunk outputs, use the knitr::kable() function\n\n```{r}\nknitr::kable(head(ggplot2::diamonds))\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n0.23\nIdeal\nE\nSI2\n61.5\n55\n326\n3.95\n3.98\n2.43\n\n\n0.21\nPremium\nE\nSI1\n59.8\n61\n326\n3.89\n3.84\n2.31\n\n\n0.23\nGood\nE\nVS1\n56.9\n65\n327\n4.05\n4.07\n2.31\n\n\n0.29\nPremium\nI\nVS2\n62.4\n58\n334\n4.20\n4.23\n2.63\n\n\n0.31\nGood\nJ\nSI2\n63.3\n58\n335\n4.34\n4.35\n2.75\n\n\n0.24\nVery Good\nJ\nVVS2\n62.8\n57\n336\n3.94\n3.96\n2.48\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nkable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table."
+    "text": "Creating tables from R code chunk outputs\nTo generate tables directly from R code chunk outputs, use the knitr::kable() function\n\n```{r}\nknitr::kable(head(ggplot2::diamonds))\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n0.23\nIdeal\nE\nSI2\n61.5\n55\n326\n3.95\n3.98\n2.43\n\n\n0.21\nPremium\nE\nSI1\n59.8\n61\n326\n3.89\n3.84\n2.31\n\n\n0.23\nGood\nE\nVS1\n56.9\n65\n327\n4.05\n4.07\n2.31\n\n\n0.29\nPremium\nI\nVS2\n62.4\n58\n334\n4.20\n4.23\n2.63\n\n\n0.31\nGood\nJ\nSI2\n63.3\n58\n335\n4.34\n4.35\n2.75\n\n\n0.24\nVery Good\nJ\nVVS2\n62.8\n57\n336\n3.94\n3.96\n2.48\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nkable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#cross-referencing-a-table-in-your-document",
     "href": "session-01.html#cross-referencing-a-table-in-your-document",
     "title": "Getting Started with Quarto",
     "section": "Cross-referencing a table in your document",
-    "text": "Cross-referencing a table in your document\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {#tbl-fruits}\n\n\n\n\n\n\nImportant\n\n\nIn order for a table to be cross-referenceable, its label must start with the tbl- prefix."
+    "text": "Cross-referencing a table in your document\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {#tbl-fruits}\n\n\n\n\n\n\nImportant\n\n\nIn order for a table to be cross-referenceable, its label must start with the tbl- prefix.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#cross-referencing-a-table-in-your-document-1",
     "href": "session-01.html#cross-referencing-a-table-in-your-document-1",
     "title": "Getting Started with Quarto",
     "section": "Cross-referencing a table in your document",
-    "text": "Cross-referencing a table in your document\n\n\n\nTable 1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+    "text": "Cross-referencing a table in your document\n\n\n\nTable 1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#cross-referencing-a-table-in-your-document-2",
     "href": "session-01.html#cross-referencing-a-table-in-your-document-2",
     "title": "Getting Started with Quarto",
     "section": "Cross-referencing a table in your document",
-    "text": "Cross-referencing a table in your document\nRefer to @tbl-fruits for price of fruits today.\n\nRefer to Table 1 for price of fruits today."
+    "text": "Cross-referencing a table in your document\nRefer to @tbl-fruits for price of fruits today.\n\nRefer to Table 1 for price of fruits today.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#callout-box",
     "href": "session-01.html#callout-box",
     "title": "Getting Started with Quarto",
     "section": "Callout box",
-    "text": "Callout box\n\n\n\n\n\n\n5 Types of callout blocks:\n- note\n- warning\n- important\n- tip\n- caution\n\n\nThis is how they look like:"
+    "text": "Callout box\n\n\n\n\n\n\n5 Types of callout blocks:\n- note\n- warning\n- important\n- tip\n- caution\n\n\nThis is how they look like:",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-01.html#callout-box-1",
     "href": "session-01.html#callout-box-1",
     "title": "Getting Started with Quarto",
     "section": "Callout box",
-    "text": "Callout box\nCode:\n::: callout-tip\n\nAlternatively, use the Quarto Visual Editor!\n\n:::\nOutput\n\n\n\n\n\n\nTip\n\n\nAlternatively, use the Quarto Visual Editor!"
+    "text": "Callout box\nCode:\n::: callout-tip\n\nAlternatively, use the Quarto Visual Editor!\n\n:::\nOutput\n\n\n\n\n\n\nTip\n\n\nAlternatively, use the Quarto Visual Editor!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
   },
   {
     "objectID": "session-03.html#recap-from-yesterday",
     "href": "session-03.html#recap-from-yesterday",
     "title": "Creating and Publishing Websites",
     "section": "Recap from yesterday",
-    "text": "Recap from yesterday\nWe covered the following topic:\n\nCode Chunks\nCitations\nFront Matters and scholarly writing extensions\nPresentations"
+    "text": "Recap from yesterday\nWe covered the following topic:\n\nCode Chunks\nCitations\nFront Matters and scholarly writing extensions\nPresentations",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#overview-for-today",
     "href": "session-03.html#overview-for-today",
     "title": "Creating and Publishing Websites",
     "section": "Overview for today",
-    "text": "Overview for today\n\nQuarto website (+ publishing to Quarto Pub and GitHub Pages)\nAdvanced Quarto format for future explorations: Quarto Manuscripts and Quarto Books"
+    "text": "Overview for today\n\nQuarto website (+ publishing to Quarto Pub and GitHub Pages)\nAdvanced Quarto format for future explorations: Quarto Manuscripts and Quarto Books",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#why-do-i-need-a-website",
     "href": "session-03.html#why-do-i-need-a-website",
     "title": "Creating and Publishing Websites",
     "section": "Why do I need a website?",
-    "text": "Why do I need a website?\n\n\nFor yourself:\n\nHighlight your work, including research papers, grants, publications, and ongoing projects,\nMake your contributions easily accessible to the academic community and the public.\nShare teaching materials, lecture notes, and other educational resources with students and colleagues.\n\n\nFor your research group / lab:\n\nHighlight research projects, publications, findings, and achievements to a broader audience (including potential collaborators, funding agencies, and the general public.)\nProvide updates and news about ongoing research, funding opportunities, and events.\nAttract prospective students, postdocs, and researchers who are interested in joining the lab."
+    "text": "Why do I need a website?\n\n\nFor yourself:\n\nHighlight your work, including research papers, grants, publications, and ongoing projects,\nMake your contributions easily accessible to the academic community and the public.\nShare teaching materials, lecture notes, and other educational resources with students and colleagues.\n\n\nFor your research group / lab:\n\nHighlight research projects, publications, findings, and achievements to a broader audience (including potential collaborators, funding agencies, and the general public.)\nProvide updates and news about ongoing research, funding opportunities, and events.\nAttract prospective students, postdocs, and researchers who are interested in joining the lab.",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#why-not-use-sharepoint-wordpress-squarespace-etc",
     "href": "session-03.html#why-not-use-sharepoint-wordpress-squarespace-etc",
     "title": "Creating and Publishing Websites",
     "section": "Why not use Sharepoint / WordPress / SquareSpace / etc?",
-    "text": "Why not use Sharepoint / WordPress / SquareSpace / etc?\nCouple of reasons: 1\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nOther options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)\n\nhttps://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36"
+    "text": "Why not use Sharepoint / WordPress / SquareSpace / etc?\nCouple of reasons: 1\n\nNo R Markdown support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\n\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nOther options cost money (especially SquareSpace and Wordpress.com) (+ they may do things on your content)\n\nhttps://slides.yihui.org/2017-rmarkdown-UNL-Yihui-Xie.html#36",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#example-of-websites-build-with-quarto",
     "href": "session-03.html#example-of-websites-build-with-quarto",
     "title": "Creating and Publishing Websites",
     "section": "Example of websites build with Quarto",
-    "text": "Example of websites build with Quarto\n\n\n Masiello Research Group from University of Washington\n\n Practical Deep Learning (online course) from fast.ai\n\n NASA & OpenScapes website"
+    "text": "Example of websites build with Quarto\n\n\n Masiello Research Group from University of Washington\n\n Practical Deep Learning (online course) from fast.ai\n\n NASA & OpenScapes website",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#quarto-website-vs-quarto-document",
     "href": "session-03.html#quarto-website-vs-quarto-document",
     "title": "Creating and Publishing Websites",
     "section": "Quarto Website vs Quarto Document",
-    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\nQuarto Project indicates that these documents are connected / related to each other.\nIn Quarto website, each quarto document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)"
+    "text": "Quarto Website vs Quarto Document\n\nQuarto website is a form Quarto Project with multiple quarto documents inside.\nQuarto Project indicates that these documents are connected / related to each other.\nIn Quarto website, each quarto document act as a webpage – the default format will be format: html\nHaving said that, you can also have a presentation as part of the website (just like this course website!)",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#anatomy-of-a-quarto-website",
     "href": "session-03.html#anatomy-of-a-quarto-website",
     "title": "Creating and Publishing Websites",
     "section": "Anatomy of a Quarto Website",
-    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation.\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file\n\n\n\nTo add new pages or presentations to your website, simply add a new .qmd file and adjust the navigation in _quarto.yml file."
+    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation.\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file\n\n\n\nTo add new pages or presentations to your website, simply add a new .qmd file and adjust the navigation in _quarto.yml file.",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#publishing-options",
     "href": "session-03.html#publishing-options",
     "title": "Creating and Publishing Websites",
     "section": "Publishing options",
-    "text": "Publishing options\nThere are several options, each with its own advantages 1\n\n\n\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content. Note: does not support private sites and there is no option to add collaborators or version control.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub. Since it’s on GitHub, you can add collaborators and apply version control.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nPosit Connect\nPublishing platform for secure sharing of data products within an organization. Use Posit Connect when you want to publish content within an organization rather than on the public internet.\n\n\n\n\nFor today’s session, let us try to publish to Quarto Pub and GitHub Pages!\n\nhttps://quarto.org/docs/publishing/"
+    "text": "Publishing options\nThere are several options, each with its own advantages 1\n\n\n\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content. Note: does not support private sites and there is no option to add collaborators or version control.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub. Since it’s on GitHub, you can add collaborators and apply version control.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nPosit Connect\nPublishing platform for secure sharing of data products within an organization. Use Posit Connect when you want to publish content within an organization rather than on the public internet.\n\n\n\n\nFor today’s session, let us try to publish to Quarto Pub and GitHub Pages!\n\nhttps://quarto.org/docs/publishing/",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#quarto-pub-vs-github-pages",
     "href": "session-03.html#quarto-pub-vs-github-pages",
     "title": "Creating and Publishing Websites",
     "section": "Quarto Pub vs GitHub Pages",
-    "text": "Quarto Pub vs GitHub Pages\n\n\nQuarto Pub\n\nEasiest way to publish\nBest for single-contributor project\nNo version control option\nNo private site / repo option\n\n\nGitHub Pages\n\nBest for multi-contributor project\nVersion control option\nPrivate site / repo option"
+    "text": "Quarto Pub vs GitHub Pages\n\n\nQuarto Pub\n\nEasiest way to publish\nBest for single-contributor project\nNo version control option\nNo private site / repo option\n\n\nGitHub Pages\n\nBest for multi-contributor project\nVersion control option\nPrivate site / repo option",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#publishing-to-github---refresher-on-git",
     "href": "session-03.html#publishing-to-github---refresher-on-git",
     "title": "Creating and Publishing Websites",
     "section": "Publishing to GitHub - Refresher on Git",
-    "text": "Publishing to GitHub - Refresher on Git\nSome glossaries:\n\nGit: Git is a popular version control system that helps you manage and keep track of your source code history. It’s widely used in software development but can be used for any set of files you want to track changes to.\nGitHub: GitHub is a web-based platform that uses Git for version control and is widely used for software development and collaborative projects. It provides a place to host your Git repositories and offers additional features to enhance collaboration, project management, and code sharing.\nRepositories (Repos): A Git repository is where your project’s files and their history are stored. You can create a new repo or clone (copy) an existing one.\nRemote Repos: These are hosted versions of your local repo on platforms like GitHub, GitLab, or Bitbucket. You can push your changes to a remote repo to share with others or to back up your work. Others can clone your remote repo and contribute to it.\nCommits: A commit is like a snapshot of your project at a certain point in time. Each commit has a unique ID and includes a message describing what changes were made. You can commit changes locally and push them to a remote repository."
+    "text": "Publishing to GitHub - Refresher on Git\nSome glossaries:\n\nGit: Git is a popular version control system that helps you manage and keep track of your source code history. It’s widely used in software development but can be used for any set of files you want to track changes to.\nGitHub: GitHub is a web-based platform that uses Git for version control and is widely used for software development and collaborative projects. It provides a place to host your Git repositories and offers additional features to enhance collaboration, project management, and code sharing.\nRepositories (Repos): A Git repository is where your project’s files and their history are stored. You can create a new repo or clone (copy) an existing one.\nRemote Repos: These are hosted versions of your local repo on platforms like GitHub, GitLab, or Bitbucket. You can push your changes to a remote repo to share with others or to back up your work. Others can clone your remote repo and contribute to it.\nCommits: A commit is like a snapshot of your project at a certain point in time. Each commit has a unique ID and includes a message describing what changes were made. You can commit changes locally and push them to a remote repository.",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#refresher-on-git-continued",
     "href": "session-03.html#refresher-on-git-continued",
     "title": "Creating and Publishing Websites",
     "section": "Refresher on Git (continued)",
-    "text": "Refresher on Git (continued)\n\nBranches: A branch is a separate line of development. The default branch is usually called “main” or “master”. You can create new branches to work on features or fixes without affecting the main branch.\nMerging: Merging is the process of combining changes from different branches. When your feature or fix is ready, you merge it back into the main branch.\nPushing: uploading your local repository content to a remote repository.\nPulling: fetching and combining changes from a remote repository to your local repository."
+    "text": "Refresher on Git (continued)\n\nBranches: A branch is a separate line of development. The default branch is usually called “main” or “master”. You can create new branches to work on features or fixes without affecting the main branch.\nMerging: Merging is the process of combining changes from different branches. When your feature or fix is ready, you merge it back into the main branch.\nPushing: uploading your local repository content to a remote repository.\nPulling: fetching and combining changes from a remote repository to your local repository.",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#refresher-on-git---typical-git-workflow-with-analogy",
     "href": "session-03.html#refresher-on-git---typical-git-workflow-with-analogy",
     "title": "Creating and Publishing Websites",
     "section": "Refresher on Git - Typical Git Workflow (with analogy)",
-    "text": "Refresher on Git - Typical Git Workflow (with analogy)\n\n\n\n\n\n\n\n\n\n\nStep\nGit Task and Command\nOnline Shopping Equivalent\n\n\n1\nStage your changes.\ngit add .\nAdding items to your shopping cart.\n\n\n2\nCommit your changes with a commit message\ngit commit -m \"describe the changes here\"\nThis creates a new commit in your local repository with the staged changes.\nInputting your payment info and buyer’s note to the seller (e.g. “leave package at the porch”).\n\n\n3\nPush your commits to the remote repository hosted in GitHub\ngit push origin main\nClicking the “Purchase” button.\n\n\n4\nUpdate your local repository with changes from the remote repository\ngit pull origin main\nGetting updates on the status of your purchase."
+    "text": "Refresher on Git - Typical Git Workflow (with analogy)\n\n\n\n\n\n\n\n\n\n\nStep\nGit Task and Command\nOnline Shopping Equivalent\n\n\n1\nStage your changes.\ngit add .\nAdding items to your shopping cart.\n\n\n2\nCommit your changes with a commit message\ngit commit -m \"describe the changes here\"\nThis creates a new commit in your local repository with the staged changes.\nInputting your payment info and buyer’s note to the seller (e.g. “leave package at the porch”).\n\n\n3\nPush your commits to the remote repository hosted in GitHub\ngit push origin main\nClicking the “Purchase” button.\n\n\n4\nUpdate your local repository with changes from the remote repository\ngit pull origin main\nGetting updates on the status of your purchase.",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#publishing-to-github",
     "href": "session-03.html#publishing-to-github",
     "title": "Creating and Publishing Websites",
     "section": "Publishing to GitHub",
-    "text": "Publishing to GitHub\nThere are 3 ways to publish to GitHub1:\n\n\nOption 1: Manual transfer\n\nRender quarto website on your local machine\nManually transfer the rendering result (placed in _site folder to your GitHub repository’s gh-pages branch. GitHub Pages will use the contents inside this branch.\n\n\nOption 2: Publishing command\n\nRender quarto website on your local machine.\nUse quarto publish gh-pages command in your terminal to publish the rendering results to GitHub.\n\n\nOption 3: GitHub Action\n\nInstead of rendering in local machine, set up a GitHub action file to instruct GitHub to render the website on the “cloud”.\n\n\nPush source code change to GitHub repository.\nGitHub renders the contents on the “cloud” and then display the result via GitHub Pages.\n(optional) You can also instruct GitHub to execute any code chunks on the “cloud” by modifying the GitHub action file to ensure the correct package versions are installed.\n\n\nhttps://quarto.org/docs/publishing/github-pages.html"
+    "text": "Publishing to GitHub\nThere are 3 ways to publish to GitHub1:\n\n\nOption 1: Manual transfer\n\nRender quarto website on your local machine\nManually transfer the rendering result (placed in _site folder to your GitHub repository’s gh-pages branch. GitHub Pages will use the contents inside this branch.\n\n\nOption 2: Publishing command\n\nRender quarto website on your local machine.\nUse quarto publish gh-pages command in your terminal to publish the rendering results to GitHub.\n\n\nOption 3: GitHub Action\n\nInstead of rendering in local machine, set up a GitHub action file to instruct GitHub to render the website on the “cloud”.\n\n\nPush source code change to GitHub repository.\nGitHub renders the contents on the “cloud” and then display the result via GitHub Pages.\n(optional) You can also instruct GitHub to execute any code chunks on the “cloud” by modifying the GitHub action file to ensure the correct package versions are installed.\n\n\nhttps://quarto.org/docs/publishing/github-pages.html",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#quarto-blog",
     "href": "session-03.html#quarto-blog",
     "title": "Creating and Publishing Websites",
     "section": "Quarto Blog",
-    "text": "Quarto Blog\nExactly like Quarto website, but with added blog functionality! Some examples:\n\n\n Masiello Research Group from University of Washington\n\n Mike Mahoney personal website & blog\n\n Tom Mock personal website & blog"
+    "text": "Quarto Blog\nExactly like Quarto website, but with added blog functionality! Some examples:\n\n\n Masiello Research Group from University of Washington\n\n Mike Mahoney personal website & blog\n\n Tom Mock personal website & blog",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#quarto-books",
     "href": "session-03.html#quarto-books",
     "title": "Creating and Publishing Websites",
     "section": "Quarto Books",
-    "text": "Quarto Books\nQuarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats, such as HTML, PDF, MS Word, Epub, and AsciiDoc.\nSome examples of Quarto Books:\n\n\n R for Data Science (2nd edition) by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund\n\n Python for Data Analysis (3rd edition) by Wes McKinney\n\n Hands-on Programming with R by Garret Grolemund"
+    "text": "Quarto Books\nQuarto Books are combinations of multiple documents (chapters) into a single manuscript. Books can be created in a variety of formats, such as HTML, PDF, MS Word, Epub, and AsciiDoc.\nSome examples of Quarto Books:\n\n\n R for Data Science (2nd edition) by Hadley Wickham and Mine Çetinkaya-Rundel, and Garrett Grolemund\n\n Python for Data Analysis (3rd edition) by Wes McKinney\n\n Hands-on Programming with R by Garret Grolemund",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-03.html#quarto-manuscript",
     "href": "session-03.html#quarto-manuscript",
     "title": "Creating and Publishing Websites",
     "section": "Quarto Manuscript",
-    "text": "Quarto Manuscript\nLatest Quarto project format released in January 2024. The underlying structure is very similar to Quarto website.\n\nhttps://quarto-ext.github.io/manuscript-template-jupyter/"
+    "text": "Quarto Manuscript\nLatest Quarto project format released in January 2024. The underlying structure is very similar to Quarto website.\n\nhttps://quarto-ext.github.io/manuscript-template-jupyter/",
+    "crumbs": [
+      "Creating and Publishing Websites"
+    ]
   },
   {
     "objectID": "session-02.html#recap-from-yesterday",
     "href": "session-02.html#recap-from-yesterday",
     "title": "Scholarly Writing and Presentation",
     "section": "Recap from yesterday",
-    "text": "Recap from yesterday\nWe covered the following topic:\n\nQuarto and Research Transparency and Reproducibility\nRmarkdown basics"
+    "text": "Recap from yesterday\nWe covered the following topic:\n\nQuarto and Research Transparency and Reproducibility\nRmarkdown basics",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#overview-for-today",
     "href": "session-02.html#overview-for-today",
     "title": "Scholarly Writing and Presentation",
     "section": "Overview for today",
-    "text": "Overview for today\n\nLiterate Programming - Weaving Code chunks with narrative text (using knitr )\nCitations and Footnotes\nAcademic templates\nRendering to static Word document and RevealJS presentation (like this presentation!)"
+    "text": "Overview for today\n\nLiterate Programming - Weaving Code chunks with narrative text (using knitr )\nCitations and Footnotes\nAcademic templates\nRendering to static Word document and RevealJS presentation (like this presentation!)",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#refresher-literate-programming",
     "href": "session-02.html#refresher-literate-programming",
     "title": "Scholarly Writing and Presentation",
     "section": "Refresher: Literate Programming",
-    "text": "Refresher: Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.\nIn Quarto, this is enabled through Code Chunks"
+    "text": "Refresher: Literate Programming\n\nLiterate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.\n\nEssentially:\n\nThe program is written as a coherent narrative where code segments and explanations are woven together in a way that emphasizes understanding and readability\nThe code segments ordered in a logical manner for the reader, rather than the order required by the compiler.\nThe narrative format helps to bridge the gap between the code and the theoretical framework, ensuring that the computational steps are aligned with the objectives.\nIn Quarto, this is enabled through Code Chunks",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#how-does-it-look-like",
     "href": "session-02.html#how-does-it-look-like",
     "title": "Scholarly Writing and Presentation",
     "section": "How does it look like?",
-    "text": "How does it look like?\nAn example of code chunk:\n\nlibrary(tidyverse)                               \n\ndiamonds %&gt;% ggplot(aes(x = color, fill = cut)) + \n    geom_bar()"
+    "text": "How does it look like?\nAn example of code chunk:\n\nlibrary(tidyverse)                               \n\ndiamonds %&gt;% ggplot(aes(x = color, fill = cut)) + \n    geom_bar()",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#how-does-it-all-work",
     "href": "session-02.html#how-does-it-all-work",
     "title": "Scholarly Writing and Presentation",
     "section": "How does it all work?",
-    "text": "How does it all work?\nMagic! (just kidding)\n\nImage by Allison Horst (allisonhorst.com)"
+    "text": "How does it all work?\nMagic! (just kidding)\n\nImage by Allison Horst (allisonhorst.com)",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#anatomy-of-a-code-chunk",
     "href": "session-02.html#anatomy-of-a-code-chunk",
     "title": "Scholarly Writing and Presentation",
     "section": "Anatomy of a code chunk",
-    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many code chunk options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)"
+    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many code chunk options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#code-highlighting",
     "href": "session-02.html#code-highlighting",
     "title": "Scholarly Writing and Presentation",
     "section": "Code Highlighting",
-    "text": "Code Highlighting\n\n\nUse highlight-style to specify the code highlighting style by choosing from the supported themes: a11y, arrow, atom-one, ayu, breeze, github, gruvbox\n\nThe themes are “adaptive” and will automatically switch between dark and light modes based on the website’s theme.\n\nUse code-line-numbers to highlight specific lines of codes (this will make more sense for presentation, but you can also apply this to static documents)\n\n\n\n\n```{r}\n#| echo: true\n#| output: false\n#| code-line-numbers: \"3,4\"\n#| highlight-style: github\n#| code-overflow: wrap\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = price)) +\n  geom_histogram(binwidth = 500, fill = \"blue\", color = \"black\") +\n  labs(title = \"Histogram of Diamond Prices\", \n       x = \"Price (USD)\", \n       y = \"Frequency\")\n```\n\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = price)) +\n  geom_histogram(binwidth = 500, fill = \"blue\", color = \"black\") +\n  labs(title = \"Histogram of Diamond Prices\", \n       x = \"Price (USD)\", \n       y = \"Frequency\")"
+    "text": "Code Highlighting\n\n\nUse highlight-style to specify the code highlighting style by choosing from the supported themes: a11y, arrow, atom-one, ayu, breeze, github, gruvbox\n\nThe themes are “adaptive” and will automatically switch between dark and light modes based on the website’s theme.\n\nUse code-line-numbers to highlight specific lines of codes (this will make more sense for presentation, but you can also apply this to static documents)\n\n\n\n\n```{r}\n#| echo: true\n#| output: false\n#| code-line-numbers: \"3,4\"\n#| highlight-style: github\n#| code-overflow: wrap\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = price)) +\n  geom_histogram(binwidth = 500, fill = \"blue\", color = \"black\") +\n  labs(title = \"Histogram of Diamond Prices\", \n       x = \"Price (USD)\", \n       y = \"Frequency\")\n```\n\n\nlibrary(tidyverse)\n\ndiamonds %&gt;% ggplot(aes(x = price)) +\n  geom_histogram(binwidth = 500, fill = \"blue\", color = \"black\") +\n  labs(title = \"Histogram of Diamond Prices\", \n       x = \"Price (USD)\", \n       y = \"Frequency\")",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#code-annotations",
     "href": "session-02.html#code-annotations",
     "title": "Scholarly Writing and Presentation",
     "section": "Code Annotations",
-    "text": "Code Annotations\n\n\n\n1library(tidyverse)\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n\n\n1\n\nLoad the tidyverse library\n\n2\n\nVisualize the distribution of color and kind of cuts for each color\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.\nGreat for teaching / presentation!"
+    "text": "Code Annotations\n\n\n\n1library(tidyverse)\n\n2diamonds %&gt;% ggplot(aes(x = color, fill = cut)) +\n    geom_bar()\n\n\n1\n\nLoad the tidyverse library\n\n2\n\nVisualize the distribution of color and kind of cuts for each color\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode blocks and executable code cells in Quarto can include line-based annotations to further explain the code and the flow of the logic to your readers.\nGreat for teaching / presentation!",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#anatomy-of-a-code-annotation",
     "href": "session-02.html#anatomy-of-a-code-annotation",
     "title": "Scholarly Writing and Presentation",
     "section": "Anatomy of a code annotation",
-    "text": "Anatomy of a code annotation\n\n\nSyntax (in visual editor):\n\nOutput:\n\n\n\nEach annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., # &lt;1&gt;).\nIf the annotation covers multiple lines, the same annotation number can be repeated.\nAfter the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number."
+    "text": "Anatomy of a code annotation\n\n\nSyntax (in visual editor):\n\nOutput:\n\n\n\nEach annotated line must end with a comment using the language-specific comment character for the code cell, followed by a space and the annotation number enclosed in angle brackets (e.g., # &lt;1&gt;).\nIf the annotation covers multiple lines, the same annotation number can be repeated.\nAfter the code cell, provide an ordered list that details the contents of each annotation. Each item in this list should correspond to the line(s) of code marked with the same annotation number.",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#citations-in-quarto",
     "href": "session-02.html#citations-in-quarto",
     "title": "Scholarly Writing and Presentation",
     "section": "Citations in Quarto",
-    "text": "Citations in Quarto\nBy default, Quarto will use Pandoc engine to convert the in-text citations and generate the references in your document. You will need the following components:\n\nA quarto document formatted with in-text citations in Rmarkdown syntax (more on this later).\nA bibliographic file, e.g. BibLaTeX (.bib) or BibTeX (.bibtex) file.\nA Citation Style Language (CSL) file which specifies the formatting to use when generating the citations and bibliography (when not using natbib or biblatex to generate the bibliography).\n\nBy default, Quarto will use the Chicago style. You can download additional .csl file in this CSL Project repository: https://github.com/citation-style-language/styles"
+    "text": "Citations in Quarto\nBy default, Quarto will use Pandoc engine to convert the in-text citations and generate the references in your document. You will need the following components:\n\nA quarto document formatted with in-text citations in Rmarkdown syntax (more on this later).\nA bibliographic file, e.g. BibLaTeX (.bib) or BibTeX (.bibtex) file.\nA Citation Style Language (CSL) file which specifies the formatting to use when generating the citations and bibliography (when not using natbib or biblatex to generate the bibliography).\n\nBy default, Quarto will use the Chicago style. You can download additional .csl file in this CSL Project repository: https://github.com/citation-style-language/styles",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#bibliographic-data-source-csl-file",
     "href": "session-02.html#bibliographic-data-source-csl-file",
     "title": "Scholarly Writing and Presentation",
     "section": "Bibliographic data source + CSL file",
-    "text": "Bibliographic data source + CSL file\nBoth files have to be specified in the YAML header like so: (In this example, the .bib file and the .csl file is located in the same folder as the .qmd document.)\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style.\n\nYou will need to download the csl file from the repository and place it in your working directory.\nCSL Project repository: https://github.com/citation-style-language/styles"
+    "text": "Bibliographic data source + CSL file\nBoth files have to be specified in the YAML header like so: (In this example, the .bib file and the .csl file is located in the same folder as the .qmd document.)\n---\ntitle: \"Manuscript\"\nbibliography: references.bib\ncsl: nature.csl\n---\n\nreferences.bib is the bibliographic text file. This will also be automatically generated after you include a citation in your document for the first time.\nnature.csl is the citation style document, in this example is the nature citation style.\n\nYou will need to download the csl file from the repository and place it in your working directory.\nCSL Project repository: https://github.com/citation-style-language/styles",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#in-text-citations",
     "href": "session-02.html#in-text-citations",
     "title": "Scholarly Writing and Presentation",
     "section": "In-text citations",
-    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)\n\n\n\n\nInsert in-text citations by typing @ which will trigger a popup of items saved in your Zotero library.\nInserting citations and footnotes is generally easier in Visual editor :\n\nclick on Insert &gt; Citation, which will bring up a popup box where you can choose your citation source!\nclick on Insert &gt; Footnotes to add footnotes"
+    "text": "In-text citations\nCommon ones:\n\n\n\n\n\n\n\nSyntax\nOutput\n\n\n\n\n@katz2021 mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nKatz et al. [-@katz2021] mentioned that…\nKatz et al. (2021) mentioned that…\n\n\nSoftware citation is good [@katz2021, pp. 33-35]\nSoftware citation is good (Katz et al. 2021, 33–35)!\n\n\nMore researchers are saying that software citation is good [@katz2021; @park2019]\nMore researchers are saying that software citation is good (Katz et al. 2021; Park and Wolfram 2019)\n\n\n\n\nInsert in-text citations by typing @ which will trigger a popup of items saved in your Zotero library.\nInserting citations and footnotes is generally easier in Visual editor :\n\nclick on Insert &gt; Citation, which will bring up a popup box where you can choose your citation source!\nclick on Insert &gt; Footnotes to add footnotes",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#citation-sources",
     "href": "session-02.html#citation-sources",
     "title": "Scholarly Writing and Presentation",
     "section": "Citation Sources",
-    "text": "Citation Sources\nOther than your Zotero library, here are the sources that you can retrieve from:"
+    "text": "Citation Sources\nOther than your Zotero library, here are the sources that you can retrieve from:",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#the-references-section",
     "href": "session-02.html#the-references-section",
     "title": "Scholarly Writing and Presentation",
     "section": "The References section",
-    "text": "The References section\nBy default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the source view on Quarto):\n### References\n\n::: {#refs}\n:::\nWhich will print out the output below:"
+    "text": "The References section\nBy default, Quarto will place the references section at the end of the document. You can also specify the placement by putting this section in your document (note that the example below is the source view on Quarto):\n### References\n\n::: {#refs}\n:::\nWhich will print out the output below:",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#academic-templates-with-quarto-journals",
     "href": "session-02.html#academic-templates-with-quarto-journals",
     "title": "Scholarly Writing and Presentation",
     "section": "Academic Templates with Quarto Journals",
-    "text": "Academic Templates with Quarto Journals\n\n\n\n\n\nhttps://quarto.org/docs/extensions/listing-journals.html\n\n\n\n\nQuarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.\nThese extensions provide rich YAML metadata specifically for academic writing (often referred as “Front Matter” metadata).\nLet’s dive into these Front Matter YAML metadata first before we explore the templates!"
+    "text": "Academic Templates with Quarto Journals\n\n\n\n\n\nhttps://quarto.org/docs/extensions/listing-journals.html\n\n\n\n\nQuarto provides extensions for manuscript writing that contains styles specific for several journals/publishers, such as PLOS, ACM, JOSS, Elsevier, and more.\nThese extensions provide rich YAML metadata specifically for academic writing (often referred as “Front Matter” metadata).\nLet’s dive into these Front Matter YAML metadata first before we explore the templates!",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#front-matter",
     "href": "session-02.html#front-matter",
     "title": "Scholarly Writing and Presentation",
     "section": "Front Matter",
-    "text": "Front Matter\n\n\nScholarly articles demand extensive details in their front matter, beyond just a title and author.\nQuarto offers a comprehensive range of YAML metadata keys to include these details.\nThis metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.\n\n\nBelow is a YAML header example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\n  - name: Danping Dong\n    id: dp\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\ncitation: \n  container-title: Journal of Library Carpentry\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\nfunding: \"The author received no specific funding for this work.\"\n---"
+    "text": "Front Matter\n\n\nScholarly articles demand extensive details in their front matter, beyond just a title and author.\nQuarto offers a comprehensive range of YAML metadata keys to include these details.\nThis metadata covers specifying authors and their affiliations, abstract, keywords, copyright, licensing, and funding.\n\n\nBelow is a YAML header example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\n  - name: Danping Dong\n    id: dp\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\ncitation: \n  container-title: Journal of Library Carpentry\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\nfunding: \"The author received no specific funding for this work.\"\n---",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#author-related-metadata-options",
     "href": "session-02.html#author-related-metadata-options",
     "title": "Scholarly Writing and Presentation",
     "section": "Author-related metadata options",
-    "text": "Author-related metadata options\nThe author key includes several sub-keys that offer additional details needed for scholarly articles. For example, you can add an author’s affiliation, roles, email contact, and whether the author is a corresponding author.\n---\nauthor:\n  name: Bella Ratmelia\n  orcid: 0000-0003-4913-9508\n  url: https://bellaratmelia.github.io\n  email: bellar@smu.edu.sg\n  corresponding: true\n  roles: \"Conceptualization\"\n  affiliation: \n    - name: Singapore Management University\n      department: SMU Libraries\n      country: SG\n      url: www.smu.edu.sg\n      ror: 050qmg959\n---"
+    "text": "Author-related metadata options\nThe author key includes several sub-keys that offer additional details needed for scholarly articles. For example, you can add an author’s affiliation, roles, email contact, and whether the author is a corresponding author.\n---\nauthor:\n  name: Bella Ratmelia\n  orcid: 0000-0003-4913-9508\n  url: https://bellaratmelia.github.io\n  email: bellar@smu.edu.sg\n  corresponding: true\n  roles: \"Conceptualization\"\n  affiliation: \n    - name: Singapore Management University\n      department: SMU Libraries\n      country: SG\n      url: www.smu.edu.sg\n      ror: 050qmg959\n---",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#article-related-metadata-options",
     "href": "session-02.html#article-related-metadata-options",
     "title": "Scholarly Writing and Presentation",
     "section": "Article-related metadata options",
-    "text": "Article-related metadata options\nThese metadata include things like abstract, keywords, license, copyright, and funding information.\n---\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\nfunding: \"The author received no specific funding for this work.\"\n---"
+    "text": "Article-related metadata options\nThese metadata include things like abstract, keywords, license, copyright, and funding information.\n---\nabstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nkeywords:\n  - Library\n  - Carpentry\nlicense: \"CC BY\"\ncopyright: \n  holder: Bella Ratmelia\n  year: 2024\nfunding: \"The author received no specific funding for this work.\"\n---",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#metadata-for-citable-articles---web-article",
     "href": "session-02.html#metadata-for-citable-articles---web-article",
     "title": "Scholarly Writing and Presentation",
     "section": "Metadata for citable articles - web article",
-    "text": "Metadata for citable articles - web article\nFor articles published to the web, include author, date and citation url metadata. For example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndescription: | \n  Best practices in organizing shelf space in the library\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\ncitation: true\nbibliography: references.bib\n---"
+    "text": "Metadata for citable articles - web article\nFor articles published to the web, include author, date and citation url metadata. For example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndescription: | \n  Best practices in organizing shelf space in the library\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\ncitation: true\nbibliography: references.bib\n---",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#metadata-for-citable-articles---journal-article",
     "href": "session-02.html#metadata-for-citable-articles---journal-article",
     "title": "Scholarly Writing and Presentation",
     "section": "Metadata for citable articles - journal article",
-    "text": "Metadata for citable articles - journal article\nFor journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:\n---\ncitation: \n  type: article-journal\n  container-title: \"Journal of Library Carpentry\"\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\n  url: https://example.com/summarizing-output\nbibliography: references.bib\n---"
+    "text": "Metadata for citable articles - journal article\nFor journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:\n---\ncitation: \n  type: article-journal\n  container-title: \"Journal of Library Carpentry\"\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\n  url: https://example.com/summarizing-output\nbibliography: references.bib\n---",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#front-matter---rendering-result-in-html",
     "href": "session-02.html#front-matter---rendering-result-in-html",
     "title": "Scholarly Writing and Presentation",
     "section": "Front Matter - Rendering result in HTML",
-    "text": "Front Matter - Rendering result in HTML"
+    "text": "Front Matter - Rendering result in HTML",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#info-on-licensing-and-citing",
     "href": "session-02.html#info-on-licensing-and-citing",
     "title": "Scholarly Writing and Presentation",
     "section": "Info on licensing and citing",
-    "text": "Info on licensing and citing"
+    "text": "Info on licensing and citing",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#rendering-to-docx",
     "href": "session-02.html#rendering-to-docx",
     "title": "Scholarly Writing and Presentation",
     "section": "Rendering to Docx",
-    "text": "Rendering to Docx\nBy default, Quarto will render document output to HTML. We can change it to render to Word by changing the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  docx:\n    toc: true\n    number-sections: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nYou need to have Microsoft Word installed to be able to produce and view the Word output."
+    "text": "Rendering to Docx\nBy default, Quarto will render document output to HTML. We can change it to render to Word by changing the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  docx:\n    toc: true\n    number-sections: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nYou need to have Microsoft Word installed to be able to produce and view the Word output.",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#rendering-to-pdf",
     "href": "session-02.html#rendering-to-pdf",
     "title": "Scholarly Writing and Presentation",
     "section": "Rendering to PDF",
-    "text": "Rendering to PDF\nSimilar to docx, you can change the render output to PDF by amending the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nLatest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of TinyTex and any missing TeX packages (required for LaTeX rendering)\nIf you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to an HTML page, and then “print” them as PDF.\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou can update or install TinyTex in the RStudio Terminal with this command:\nquarto install tinytex"
+    "text": "Rendering to PDF\nSimilar to docx, you can change the render output to PDF by amending the YAML header like so:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    highlight-style: github\n---\n\n\n\n\n\n\nNote\n\n\nLatest version of Quarto has a built-in built in PDF compilation engine, which among other things performs automatic installation of TinyTex and any missing TeX packages (required for LaTeX rendering)\nIf you encounter persistent errors when rendering to PDF, a workaround that I like to use is to render it to an HTML page, and then “print” them as PDF.\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou can update or install TinyTex in the RStudio Terminal with this command:\nquarto install tinytex",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#why-revealjs-and-not-ppt",
     "href": "session-02.html#why-revealjs-and-not-ppt",
     "title": "Scholarly Writing and Presentation",
     "section": "Why RevealJS (and not ppt?)",
-    "text": "Why RevealJS (and not ppt?)\n\nNot a proprietary format - it is rendered as HTML slides which you can put on GitHub if you’d like to host it online.\nBeing open-source, Reveal.js is free to use, which eliminates licensing costs associated with PowerPoint.\nExtensive customization options through HTML, CSS, and JavaScript - and easily switch to HTML or PDF.\nPresentations are HTML-based and can be accessed via any web browser without needing specific software.\nWorks across different operating systems and devices without compatibility issues.\nPresentations can be designed to be responsive and accessible, ensuring they look good on any device or screen size.\nPresentations can be hosted locally for offline access or online for easy sharing.\nMultiple people can collaborate on a presentation using version control systems like Git and track changes made.\nAccess to a large community of developers who contribute to the project and provide support."
+    "text": "Why RevealJS (and not ppt?)\n\nNot a proprietary format - it is rendered as HTML slides which you can put on GitHub if you’d like to host it online.\nBeing open-source, Reveal.js is free to use, which eliminates licensing costs associated with PowerPoint.\nExtensive customization options through HTML, CSS, and JavaScript - and easily switch to HTML or PDF.\nPresentations are HTML-based and can be accessed via any web browser without needing specific software.\nWorks across different operating systems and devices without compatibility issues.\nPresentations can be designed to be responsive and accessible, ensuring they look good on any device or screen size.\nPresentations can be hosted locally for offline access or online for easy sharing.\nMultiple people can collaborate on a presentation using version control systems like Git and track changes made.\nAccess to a large community of developers who contribute to the project and provide support.",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#rendering-to-presentation",
     "href": "session-02.html#rendering-to-presentation",
     "title": "Scholarly Writing and Presentation",
     "section": "Rendering to Presentation",
-    "text": "Rendering to Presentation\nSimilar to docx and PDF, we can change the render output format to revealjs through the YAML header like so:\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n\n\n\n\n\nNote\n\n\nFun Fact: The slides for this workshops are created with Quarto and RevealJS!"
+    "text": "Rendering to Presentation\nSimilar to docx and PDF, we can change the render output format to revealjs through the YAML header like so:\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n\n\n\n\n\nNote\n\n\nFun Fact: The slides for this workshops are created with Quarto and RevealJS!",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "session-02.html#yaml-header-options-for-revealjs-presentations",
     "href": "session-02.html#yaml-header-options-for-revealjs-presentations",
     "title": "Scholarly Writing and Presentation",
     "section": "YAML header options for RevealJS presentations",
-    "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title."
+    "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title.",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
   },
   {
     "objectID": "index.html",
