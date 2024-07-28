@@ -11,16 +11,22 @@ The schedule may be adjusted to ensure it aligns with the participants' comfort 
 
 Date & Time: Monday, 29 July 2024, 10 AM - 1 PM (PDT)
 
-Venue: UCLA
+Venue: Scholarly Innovation Lab @ Charles E. Young Library, UCLA
+
+Topic: [Getting Started with Quarto](https://bellaratmelia.github.io/2024-fsci-quarto/session-01.html)
 
 ## Session 2
 
 Date & Time: Tuesday, 30 July 2024, 9 AM - 12 PM (PDT)
 
-Venue: UCLA
+Venue: Scholarly Innovation Lab @ Charles E. Young Library, UCLA
+
+Topic: [Scholarly Writing and Presentation with Quarto](https://bellaratmelia.github.io/2024-fsci-quarto/session-02.html)
 
 ## Session 3
 
 Date & Time: Wednesday, 31 July 2024, 9 AM - 12 PM (PDT)
 
-Venue: UCLA
+Venue: Scholarly Innovation Lab @ Charles E. Young Library, UCLA
+
+Topic: [Creating and Publishing Websites with Quarto](https://bellaratmelia.github.io/2024-fsci-quarto/session-03.html)
