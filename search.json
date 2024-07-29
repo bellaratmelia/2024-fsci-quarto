@@ -272,7 +272,7 @@
     "href": "session-01.html#images-from-web",
     "title": "Getting Started with Quarto",
     "section": "Images from web",
-    "text": "Images from web\nImages can be embedded using the following syntax: ![alt text](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
+    "text": "Images from web\nImages can be embedded using the following syntax: ![caption](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -302,7 +302,7 @@
     "href": "session-01.html#inline-code",
     "title": "Getting Started with Quarto",
     "section": "Inline code",
-    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\nDo you know that inline code can be executable as well?",
+    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for \\ ` * is \n`` \\ ` * ``\n\n\n\n\n\nDo you know that inline code can be executable as well?",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -312,7 +312,7 @@
     "href": "session-01.html#escaping-characters",
     "title": "Getting Started with Quarto",
     "section": "Escaping Characters",
-    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*\n\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for the first bullet point on this slide is \n`` \\ ` * ``",
+    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -322,7 +322,7 @@
     "href": "session-01.html#adding-code-chunks-to-your-document",
     "title": "Getting Started with Quarto",
     "section": "Adding code chunks to your document",
-    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown",
+    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Quarto",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -342,7 +342,7 @@
     "href": "session-01.html#more-yaml",
     "title": "Getting Started with Quarto",
     "section": "More YAML",
-    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation",
+    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation\n\n\n\n\n\n\n\n\nCaution\n\n\nProper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -383,6 +383,16 @@
     "title": "Getting Started with Quarto",
     "section": "Figures: Alignment",
     "text": "Figures: Alignment\n\nFigures are centre-aligned by default. You may change alignment by doing this:\n![Elephant](elephant.png){fig-align=\"left\"}\n\n\n\n\n\n\n\nNote\n\n\nFigure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)\n\n\n\n\nElephant",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-alignment-1",
+    "href": "session-01.html#figures-alignment-1",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Alignment",
+    "text": "Figures: Alignment\n\nElephant",
     "crumbs": [
       "Getting Started with Quarto"
     ]

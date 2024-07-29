@@ -919,7 +919,7 @@ This is a sentence with some **bold text**.</code></pre>
 </section>
 <section id="images-from-web" class="slide level2">
 <h2>Images from web</h2>
-<p>Images can be embedded using the following syntax: <code>![alt text](image url)</code>.</p>
+<p>Images can be embedded using the following syntax: <code>![caption](image url)</code>.</p>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
 <div class="tab-content">
@@ -997,6 +997,21 @@ This is a sentence with some **bold text**.</code></pre>
 <pre><code>Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`</code></pre>
 <p><strong>Output</strong> Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 <p>This helps with visual distinction and readability.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If your inline code contains a backtick, use double backticks!</p>
+<pre><code>For example, the markdown source for \ ` * is 
+`` \ ` * ``</code></pre>
+</div>
+</div>
+</div>
 
 <aside><div>
 <p>Do you know that inline code can be executable as well?</p>
@@ -1008,21 +1023,6 @@ This is a sentence with some **bold text**.</code></pre>
 <li><p>use one backslash <code>\</code> to escape the character after it</p></li>
 <li><p>example: <code>\\\*</code> in markdown source will be displayed as <strong>\*</strong></p></li>
 </ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>If your inline code contains a backtick, use double backticks!</p>
-<pre><code>For example, the markdown source for the first bullet point on this slide is 
-`` \ ` * ``</code></pre>
-</div>
-</div>
-</div>
 </section>
 <section id="adding-code-chunks-to-your-document" class="slide level2">
 <h2>Adding code chunks to your document</h2>
@@ -1032,7 +1032,7 @@ This is a sentence with some **bold text**.</code></pre>
 ```</code></pre>
 <ul>
 <li><p>Fenced code block is helpful to show multiple lines of code</p></li>
-<li><p>everything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown</p></li>
+<li><p>everything inside the ‘fences’ is treated literally as code or plain text, and not processed by Quarto</p></li>
 </ul>
 </section>
 <section id="executable-code-chunks-in-quarto" class="slide level2">
@@ -1063,6 +1063,19 @@ format:
 <li><p>References &amp; Citation</p></li>
 </ul>
 </div></div>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Caution</strong></p>
+</div>
+<div class="callout-content">
+<p>Proper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="rendering" class="slide level2">
 <h2>Rendering</h2>
@@ -1084,7 +1097,7 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <section id="lets-try-this-together-2" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>More YAML options and rendering.</p>
-<p>Follow instructions for <code>Hands-on #3</code> at file path: <code>01-quarto-basics/YAML.qmd</code></p>
+<p>Follow instructions at file path: <code>01-quarto-basics/02-YAML.qmd</code></p>
 </section>
 <section id="figures" class="slide level2">
 <h2>Figures</h2>
@@ -1146,6 +1159,10 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 </div>
 
 <img data-src="images/elephant.png" class="r-stretch quarto-figure-center"><p class="caption">Elephant</p></section>
+<section id="figures-alignment-1" class="slide level2">
+<h2>Figures: Alignment</h2>
+
+<img data-src="images/elephant.png" width="300" class="r-stretch quarto-figure-left"><p class="caption">Elephant</p></section>
 <section id="figures-alt-text" class="slide level2">
 <h2>Figures: Alt Text</h2>
 <ul>
@@ -1611,7 +1628,7 @@ Alternatively, use the Quarto Visual Editor!
 </section></section>
 <section id="lets-try-this-together-3" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
-<p>Try out figures, tables and cross references.</p>
+<p>Follow instructions at <code>01-quarto-basics/03a-figures-tables.qmd</code></p>
 </section>
 
 <section id="recap-of-todays-session" class="title-slide slide level1 center">
