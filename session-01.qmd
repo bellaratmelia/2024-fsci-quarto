@@ -106,7 +106,6 @@ These are some speaker notes
 
 ![](images/rstudio-tour.jpg){fig-align="center"}
 
-
 # Introduction to Quarto
 
 ## What is Quarto?
@@ -434,7 +433,7 @@ This is a sentence with some **bold text**.
 
 ## Images from web
 
-Images can be embedded using the following syntax: `![alt text](image url)`.
+Images can be embedded using the following syntax: `![caption](image url)`.
 
 ::: panel-tabset
 ### Code
@@ -512,6 +511,15 @@ Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd
 
 This helps with visual distinction and readability.
 
+::: callout-note
+If your inline code contains a backtick, use double backticks!
+
+```         
+For example, the markdown source for \ ` * is 
+`` \ ` * ``
+```
+:::
+
 ::: aside
 Do you know that inline code can be executable as well?
 :::
@@ -523,15 +531,6 @@ Do you know that inline code can be executable as well?
 -   use one backslash `\` to escape the character after it
 
 -   example: `\\\*` in markdown source will be displayed as **\\\***
-
-::: callout-note
-If your inline code contains a backtick, use double backticks!
-
-```         
-For example, the markdown source for the first bullet point on this slide is 
-`` \ ` * ``
-```
-:::
 
 ## Adding code chunks to your document
 
@@ -545,7 +544,7 @@ Use **three backticks** (now this is getting confusing) to create a ***fenced co
 
 -   Fenced code block is helpful to show multiple lines of code
 
--   everything inside the 'fences' is treated literally as code or plain text, and not processed by Markdown
+-   everything inside the 'fences' is treated literally as code or plain text, and not processed by Quarto
 
 ## Executable Code Chunks in Quarto
 
@@ -581,6 +580,10 @@ format:
 :::
 :::
 
+::: callout-caution
+Proper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.
+:::
+
 ## Rendering
 
 Besides rendering with the RStudio button, you may also render via:
@@ -605,7 +608,7 @@ quarto_render("document.qmd", output_format = "pdf")
 
 More YAML options and rendering.
 
-Follow instructions for `Hands-on #3` at file path: `01-quarto-basics/YAML.qmd`
+Follow instructions at file path: `01-quarto-basics/02-YAML.qmd`
 
 ## Figures
 
@@ -640,6 +643,10 @@ Figure captions are left-aligned by default to accommodate longer captions (whic
 :::
 
 ![Elephant](images/elephant.png)
+
+## Figures: Alignment
+
+![Elephant](images/elephant.png){width=300 fig-align="left"}
 
 ## Figures: Alt Text
 
@@ -866,7 +873,7 @@ Alternatively, use the Quarto Visual Editor!
 
 # Let's try this together!
 
-Try out figures, tables and cross references.
+Follow instructions at `01-quarto-basics/03a-figures-tables.qmd`
 
 # Recap of today's session
 
