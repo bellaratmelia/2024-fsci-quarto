@@ -32,7 +32,7 @@
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
     "section": "About this Workshop",
-    "text": "About this Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
+    "text": "About this Workshop\n\nPrior experience with R is highly recommended for this course\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -168,11 +168,31 @@
     ]
   },
   {
-    "objectID": "session-01.html#working-in-different-programming-languages",
-    "href": "session-01.html#working-in-different-programming-languages",
+    "objectID": "session-01.html#quarto-is-more-than-just-r",
+    "href": "session-01.html#quarto-is-more-than-just-r",
     "title": "Getting Started with Quarto",
-    "section": "Working in different programming languages",
-    "text": "Working in different programming languages\n\nQuarto supports R, Python,\nuse Quarto within Jupyter Notebook",
+    "section": "Quarto is more than just R",
+    "text": "Quarto is more than just R\n\nQuarto supports R, Python, Julia, Observable and more\nQuarto can directly render Jupyter Notebooks (.ipynb) without conversion\n\nquarto render document.ipynb",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#executable-python-code-blocks-in-quarto",
+    "href": "session-01.html#executable-python-code-blocks-in-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "Executable Python code blocks in Quarto",
+    "text": "Executable Python code blocks in Quarto\n\nInstall the reticulate package to seamlessly integrate Python code chunks in Quarto install.packages(\"reticulate\")\nWhen you use a Python chunk in a Quarto document, knitr uses reticulate to execute the Python code\n\n\n\nNote: Knitr is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#anatomy-of-a-quarto-document",
+    "href": "session-01.html#anatomy-of-a-quarto-document",
+    "title": "Getting Started with Quarto",
+    "section": "Anatomy of a Quarto document",
+    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -218,8 +238,8 @@
     ]
   },
   {
-    "objectID": "session-01.html#anatomy-of-a-quarto-document",
-    "href": "session-01.html#anatomy-of-a-quarto-document",
+    "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
+    "href": "session-01.html#anatomy-of-a-quarto-document-1",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
     "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
@@ -268,8 +288,8 @@
     ]
   },
   {
-    "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
-    "href": "session-01.html#anatomy-of-a-quarto-document-1",
+    "objectID": "session-01.html#anatomy-of-a-quarto-document-2",
+    "href": "session-01.html#anatomy-of-a-quarto-document-2",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
     "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",

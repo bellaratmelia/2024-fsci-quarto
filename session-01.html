@@ -56,44 +56,44 @@
         -khtml-user-select: none; -moz-user-select: none;
         -ms-user-select: none; user-select: none;
         padding: 0 4px; width: 4em;
-        color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
     div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
+      { color: #1f1c1b;  }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    code span { color: #1f1c1b; } /* Normal */
+    code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+    code span.an { color: #ca60ca; } /* Annotation */
+    code span.at { color: #0057ae; } /* Attribute */
+    code span.bn { color: #b08000; } /* BaseN */
+    code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+    code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #924c9d; } /* Char */
+    code span.cn { color: #aa5500; } /* Constant */
+    code span.co { color: #898887; } /* Comment */
+    code span.cv { color: #0095ff; } /* CommentVar */
+    code span.do { color: #607880; } /* Documentation */
+    code span.dt { color: #0057ae; } /* DataType */
+    code span.dv { color: #b08000; } /* DecVal */
+    code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+    code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #b08000; } /* Float */
+    code span.fu { color: #644a9b; } /* Function */
+    code span.im { color: #ff5500; } /* Import */
+    code span.in { color: #b08000; } /* Information */
+    code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+    code span.op { color: #ca60ca; } /* Operator */
+    code span.ot { color: #006e28; } /* Other */
+    code span.pp { color: #006e28; } /* Preprocessor */
+    code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+    code span.sc { color: #3daee9; } /* SpecialChar */
+    code span.ss { color: #ff5500; } /* SpecialString */
+    code span.st { color: #bf0303; } /* String */
+    code span.va { color: #0057ae; } /* Variable */
+    code span.vs { color: #bf0303; } /* VerbatimString */
+    code span.wa { color: #bf0303; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -407,12 +407,13 @@ Bella Ratmelia &amp; Dong Danping
 <h1>Welcome</h1>
 <p>Hello!</p>
 <p>Let’s get to know each other.</p>
-<p><em>What is your research area? Are you familiar with RStudio or R Markdown?</em></p>
+<p><em>What is your role/field of work/research area? Where are you from and what brought you to FSCI?</em></p>
+<p><em>Are you familiar with RStudio or R Markdown? What do you want to learn from this workshop?</em></p>
 </section>
 <section id="about-this-workshop" class="slide level2">
 <h2>About this Workshop</h2>
 <ul>
-<li>We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown</li>
+<li>Prior experience with R is highly recommended for this course</li>
 <li><a href="https://bellaratmelia.github.io/2024-fsci-quarto/">Workshop Website</a> (built with Quarto)
 <ul>
 <li>Pre-workshop setup instructions</li>
@@ -494,7 +495,7 @@ Bella Ratmelia &amp; Dong Danping
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images\03a_elife_figure.PNG"></p>
+<p><a href="https://elifesciences.org/articles/30274/executable"><img data-src="images\03a_elife_figure.PNG" alt="A figure from the reproducible article"></a></p>
 <figcaption>A figure from the reproducible article</figcaption>
 </figure>
 </div>
@@ -502,7 +503,7 @@ Bella Ratmelia &amp; Dong Danping
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images\03b_elife_figure_code.PNG"></p>
+<p><a href="https://elifesciences.org/articles/30274/executable"><img data-src="images\03b_elife_figure_code.PNG" alt="The underlying live codes for the same figure"></a></p>
 <figcaption>The underlying live codes for the same figure</figcaption>
 </figure>
 </div>
@@ -535,7 +536,12 @@ Bella Ratmelia &amp; Dong Danping
 <section id="a-quick-overview-or-recap-of-r-r-studio" class="slide level2">
 <h2>A Quick Overview or Recap of R &amp; R Studio</h2>
 
-<img data-src="images/rstudio-tour.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="images/rstudio-tour.jpg" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="introduction-to-quarto" class="title-slide slide level1 center">
+<h1>Introduction to Quarto</h1>
+
+</section>
 <section id="what-is-quarto" class="slide level2">
 <h2>What is Quarto?</h2>
 <ul>
@@ -629,17 +635,66 @@ Bella Ratmelia &amp; Dong Danping
 <p>and much more!</p>
 </div>
 </section>
-<section id="working-in-different-programming-languages" class="slide level2">
-<h2>Working in different programming languages</h2>
+<section id="quarto-is-more-than-just-r" class="slide level2">
+<h2>Quarto is more than just R</h2>
 <ul>
-<li>Quarto supports R, Python,</li>
-<li>use Quarto within Jupyter Notebook</li>
+<li>Quarto supports R, <a href="https://quarto.org/docs/computations/python.html">Python</a>, Julia, Observable and more</li>
+<li>Quarto can directly render Jupyter Notebooks (.ipynb) without conversion</li>
 </ul>
-</section></section>
-<section>
-<section id="introduction-to-quarto" class="title-slide slide level1 center">
-<h1>Introduction to Quarto</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> render document.ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="executable-python-code-blocks-in-quarto" class="slide level2">
+<h2>Executable Python code blocks in Quarto</h2>
+<ul>
+<li>Install the <code>reticulate</code> package to seamlessly integrate Python code chunks in Quarto <code>install.packages("reticulate")</code></li>
+<li>When you use a Python chunk in a Quarto document, <code>knitr</code> uses <code>reticulate</code> to execute the Python code</li>
+</ul>
 
+<aside><div>
+<p>Note: <code>Knitr</code> is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<div class="cell" data-execution="false">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># Dictionary of cats and their ages</span></span>
+<span id="cb2-2"><a></a>cat_ages <span class="op">=</span> {</span>
+<span id="cb2-3"><a></a>    <span class="st">"Whiskers"</span>: <span class="dv">3</span>,</span>
+<span id="cb2-4"><a></a>    <span class="st">"Mittens"</span>: <span class="dv">5</span>,</span>
+<span id="cb2-5"><a></a>    <span class="st">"Ginger"</span>: <span class="dv">2</span>,</span>
+<span id="cb2-6"><a></a>    <span class="st">"Luna"</span>: <span class="dv">4</span>,</span>
+<span id="cb2-7"><a></a>    <span class="st">"Oreo"</span>: <span class="dv">1</span></span>
+<span id="cb2-8"><a></a>}</span>
+<span id="cb2-9"><a></a></span>
+<span id="cb2-10"><a></a><span class="co"># Calculate average age</span></span>
+<span id="cb2-11"><a></a>average_age <span class="op">=</span> <span class="bu">sum</span>(cat_ages.values()) <span class="op">/</span> <span class="bu">len</span>(cat_ages)</span>
+<span id="cb2-12"><a></a><span class="bu">print</span>(<span class="ss">f"Average age of cats: </span><span class="sc">{</span>average_age<span class="sc">:.1f}</span><span class="ss"> years"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Average age of cats: 3.0 years</code></pre>
+</div>
+</div>
+</section>
+<section id="anatomy-of-a-quarto-document" class="slide level2">
+<h2>Anatomy of a Quarto document</h2>
+<ul>
+<li><strong>Metadata (YAML)</strong></li>
+</ul>
+<pre><code>---
+format: html
+---</code></pre>
+<ul>
+<li><strong>Code</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>Text</strong></li>
+</ul>
+<pre><code>## Heading 1
+This is a sentence with some **bold text**.</code></pre>
 </section>
 <section id="what-is-yaml" class="slide level2">
 <h2>What is YAML?</h2>
@@ -681,19 +736,19 @@ Bella Ratmelia &amp; Dong Danping
 </thead>
 <tbody>
 <tr class="odd">
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td>superscript<sup>2</sup> / subscript<sub>2</sub></td>
 </tr>
 <tr class="odd">
-<td><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><del>strikethrough</del></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><code>verbatim code</code></td>
 </tr>
 </tbody>
@@ -767,7 +822,7 @@ Bella Ratmelia &amp; Dong Danping
 <p>Create your first Quarto document.</p>
 <p>Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </section>
-<section id="anatomy-of-a-quarto-document" class="slide level2">
+<section id="anatomy-of-a-quarto-document-1" class="slide level2">
 <h2>Anatomy of a Quarto document</h2>
 <ul>
 <li><strong>Metadata (YAML)</strong></li>
@@ -779,10 +834,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb12-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb12-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb12-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -901,13 +956,18 @@ This is a sentence with some **bold text**.</code></pre>
 </div>
 </div>
 </section></section>
-<section>
 <section id="lets-try-this-together-1" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>Adding lists, links and images to your Quarto document.</p>
 <p>Follow instructions for <code>Hands-on #2</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </section>
-<section id="anatomy-of-a-quarto-document-1" class="slide level2">
+
+<section>
+<section id="break-10-min" class="title-slide slide level1 center">
+<h1>Break (10 min)</h1>
+
+</section>
+<section id="anatomy-of-a-quarto-document-2" class="slide level2">
 <h2>Anatomy of a Quarto document</h2>
 <ul>
 <li><strong>Metadata (YAML)</strong></li>
@@ -919,10 +979,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb20-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb20-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb20-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb26-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -1319,9 +1379,9 @@ Figure&nbsp;1: An Elephant
 <h2>Creating tables from R code chunk outputs</h2>
 <p>To generate tables directly from R code chunk outputs, use the <code>knitr::kable()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb33-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
-<span id="cb33-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb39-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
+<span id="cb39-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>
