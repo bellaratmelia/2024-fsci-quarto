@@ -4,6 +4,7 @@ author: "Bella Ratmelia & Dong Danping"
 format:
   revealjs: 
     incremental: false
+    highlight-style: breeze
 ---
 
 # Welcome
@@ -12,11 +13,13 @@ Hello!
 
 Let's get to know each other.
 
-*What is your research area? Are you familiar with RStudio or R Markdown?*
+*What is your role/field of work/research area? Where are you from and what brought you to FSCI?*
+
+*Are you familiar with RStudio or R Markdown? What do you want to learn from this workshop?*
 
 ## About this Workshop
 
--   We assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown
+-   Prior experience with R is highly recommended for this course
 -   [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
     -   Pre-workshop setup instructions
     -   Workshop materials
@@ -80,9 +83,9 @@ Essentially, literate programming is about:
 ### Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
-![A figure from the reproducible article](images\03a_elife_figure.PNG)
+[![A figure from the reproducible article](images\03a_elife_figure.PNG)](https://elifesciences.org/articles/30274/executable)
 
-![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)
+[![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)](https://elifesciences.org/articles/30274/executable)
 :::
 
 ## Research Transparency & Reproducibility
@@ -102,6 +105,9 @@ These are some speaker notes
 ## A Quick Overview or Recap of R & R Studio
 
 ![](images/rstudio-tour.jpg){fig-align="center"}
+
+
+# Introduction to Quarto
 
 ## What is Quarto?
 
@@ -159,12 +165,45 @@ like the one you're [seeing]{.fragment .highlight-red} right now!
 and much more!
 :::
 
-## Working in different programming languages
+## Quarto is more than just R
 
--   Quarto supports R, Python,
--   use Quarto within Jupyter Notebook
+-   Quarto supports R, Python, Julia, Observable and more
+-   Quarto can directly render Jupyter Notebooks (.ipynb) without conversion
 
-# Introduction to Quarto
+``` bash
+quarto render document.ipynb
+```
+
+## Executable Python code blocks in Quarto
+
+-   Install the `reticulate` package to seamlessly integrate Python code chunks in Quarto `install.packages("reticulate")`
+-   When you use a Python chunk in a Quarto document, `knitr` uses `reticulate` to execute the Python code
+
+::: aside
+Note: `Knitr` is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.
+:::
+
+------------------------------------------------------------------------
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+#| echo: fenced
+#| output-location: slide
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
 
 ## What is YAML?
 
@@ -291,7 +330,6 @@ mtcars %>%
 This is a sentence with some **bold text**.
 ```
 
-
 ## Lists
 
 ::: panel-tabset
@@ -402,6 +440,8 @@ Adding lists, links and images to your Quarto document.
 
 Follow instructions for `Hands-on #2` at file path: `01-quarto-basics/basics.qmd`
 
+# Break (10 min)
+
 ## Anatomy of a Quarto document
 
 -   **Metadata (YAML)**
@@ -465,7 +505,6 @@ For example, the markdown source for the first bullet point on this slide is
 ```
 :::
 
-
 ## Adding code chunks to your document
 
 Use **three backticks** (now this is getting confusing) to create a ***fenced code block*** in your Quarto document
@@ -485,8 +524,6 @@ Use **three backticks** (now this is getting confusing) to create a ***fenced co
 -   Use curly braces with language: \`\`\`{r}
 -   Allows for code execution in supported languages
 -   You will learn more about **code chunk options** for output control
-
-
 
 ## More YAML
 
