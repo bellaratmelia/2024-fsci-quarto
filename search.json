@@ -718,6 +718,16 @@
     ]
   },
   {
+    "objectID": "session-02.html#quarto-in-the-research-cycle",
+    "href": "session-02.html#quarto-in-the-research-cycle",
+    "title": "Scholarly Writing and Presentation",
+    "section": "Quarto in the research cycle",
+    "text": "Quarto in the research cycle\n\nInfographic by Kramer & Bosman",
+    "crumbs": [
+      "Scholarly Writing and Presentation"
+    ]
+  },
+  {
     "objectID": "session-02.html#refresher-literate-programming",
     "href": "session-02.html#refresher-literate-programming",
     "title": "Scholarly Writing and Presentation",
@@ -882,7 +892,7 @@
     "href": "session-02.html#metadata-for-citable-articles---web-article",
     "title": "Scholarly Writing and Presentation",
     "section": "Metadata for citable articles - web article",
-    "text": "Metadata for citable articles - web article\nFor articles published to the web, include author, date and citation url metadata. For example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndescription: | \n  Best practices in organizing shelf space in the library\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\ncitation: true\nbibliography: references.bib\n---",
+    "text": "Metadata for citable articles - web article\nFor articles published to the web, include author, date and citation url metadata. For example:\n---\ntitle: \"Library Carpentry: Best practices in organizing shelf space in the library\"\ndescription: | \n  Best practices in organizing shelf space in the library\ndate: 2024-07-01\nauthor:\n  - name: Bella Ratmelia\n    id: br\n    orcid: 0000-0003-4913-9508\n    email: bellar@smu.edu.sg\n    corresponding: true\n    affiliation: \n      - name: Singapore Management University\n        city: Singapore\n        url: www.smu.edu.sg\ncitation: \n  url: https://smu.edu.sg/library\nbibliography: references.bib\n---",
     "crumbs": [
       "Scholarly Writing and Presentation"
     ]
