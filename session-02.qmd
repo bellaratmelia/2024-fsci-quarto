@@ -24,6 +24,10 @@ We covered the following topic:
 
 -   Rendering to static Word document and RevealJS presentation (like this presentation!)
 
+## Quarto in the research cycle
+
+![Infographic by Kramer & Bosman](https://i2.wp.com/blogsmedia.lse.ac.uk/blogs.dir/9/files/2015/11/author-tools-5.jpg?w=590&ssl=1)
+
 ## Refresher: Literate Programming
 
 > Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.
@@ -393,7 +397,8 @@ author:
       - name: Singapore Management University
         city: Singapore
         url: www.smu.edu.sg
-citation: true
+citation: 
+  url: https://smu.edu.sg/library
 bibliography: references.bib
 ---
 ```
