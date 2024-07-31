@@ -243,7 +243,7 @@ There are 3 ways to publish to GitHub[^3]:
 
 1.  Push source code change to GitHub repository.
 
-2.  GitHub renders the contents on the "cloud" and then display the result via GitHub Pages.
+2.  GitHub renders the contents on the "cloud" via [**GitHub Actions**](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) and then display the result via GitHub Pages.
 
 3.  (optional) You can also instruct GitHub to execute any code chunks on the "cloud" by modifying the GitHub action file to ensure the correct package versions are installed.
 :::
