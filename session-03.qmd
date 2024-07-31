@@ -108,6 +108,10 @@ In a new Quarto Website project, you will see the following files:
 
 To add new pages or presentations to your website, simply add a new `.qmd` file and adjust the navigation in `_quarto.yml` file.
 
+::: callout-tip
+Complete list of website options are available in this [**documentation page**](https://quarto.org/docs/websites/).
+:::
+
 ## Publishing options
 
 There are several options, each with its own advantages [^2]
