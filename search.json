@@ -602,7 +602,7 @@
     "href": "session-03.html#anatomy-of-a-quarto-website",
     "title": "Creating and Publishing Websites",
     "section": "Anatomy of a Quarto Website",
-    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation.\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file\n\n\n\nTo add new pages or presentations to your website, simply add a new .qmd file and adjust the navigation in _quarto.yml file.",
+    "text": "Anatomy of a Quarto Website\nIn a new Quarto Website project, you will see the following files:\n\n\n\n\n\n\n\n_quarto.yml\nThe Quarto website project file. You can define site-wide YAML headers here, including the website navigation.\n\n\nabout.qmd\nThe about page - automatically created\n\n\nindex.qmd\nThe website home page - automatically created\n\n\nstyles.css\nAdditional CSS styling if you’d like to customize further\n\n\nproject_name.Rproj\nThe R project file\n\n\n\nTo add new pages or presentations to your website, simply add a new .qmd file and adjust the navigation in _quarto.yml file.\n\n\n\n\n\n\nTip\n\n\nComplete list of website options are available in this documentation page.",
     "crumbs": [
       "Creating and Publishing Websites"
     ]
