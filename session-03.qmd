@@ -301,6 +301,8 @@ Latest Quarto project format released in January 2024. The underlying structure 
 
 # Thank you!
 
-**Last activity: One-up One-down**
+**2 last questions:**
 
-Could you share one thing you like about the course, and one thing that you think can be improved?
+1.  Now that we've reviewed what Quarto can do, in what ways do you think it could be useful for your projects or day-to-day work?
+
+2.  One-up-one-down: Could you share one thing you like about the course, and one thing that you think can be improved?

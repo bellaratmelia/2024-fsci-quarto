@@ -88,6 +88,8 @@ There are many code chunk options, but the important ones are:
 
 -   `output-location` - Location of output relative to the code that generates it (more relevant for presentations)
 
+Complete list of code chunk options for Knitr in this [**documentation page**](https://quarto.org/docs/reference/cells/cells-knitr.html).
+
 ## Code Highlighting
 
 ::: nonincremental
@@ -420,6 +422,10 @@ bibliography: references.bib
 ---  
 ```
 
+::: callout-tip
+The front matter metadata in Quarto is based on the schema from Citation Style Language project (expressed as YAML instead of XML). See the complete list of options in this [**documentation page**](https://docs.citationstyles.org/en/stable/index.html).
+:::
+
 ## Front Matter - Rendering result in HTML
 
 ![](images/04_quarto_frontmatter.jpg){fig-align="center"}
@@ -534,6 +540,8 @@ There are many options, but several ones that you may find useful:
 -   `theme` - Theme name, theme scss file, or a mix of both.
 
 -   `scrollable` - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the `.scrollable` class on the slide title.
+
+Complete list of options in this [**documentation page**](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
 
 # Let's try it together!
 
