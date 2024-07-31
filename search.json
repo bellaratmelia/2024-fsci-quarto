@@ -762,7 +762,7 @@
     "href": "session-02.html#anatomy-of-a-code-chunk",
     "title": "Scholarly Writing and Presentation",
     "section": "Anatomy of a code chunk",
-    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many code chunk options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)",
+    "text": "Anatomy of a code chunk\nFor R, the code chunks are generated with the help of knitr package.\nEach code chunk will have a list of cell options that looks like this if you use source view:\n```{r}\n#| label: fig-polar\n#| echo: false\n#| output: true\n```\nThere are many code chunk options, but the important ones are:\n\necho - Whether to display the source code in the rendered output (true/false)\noutput - Whether to display the output of the code (true/false)\nlabel - Unique label for the code chunks - useful for cross-referencing!\noutput-location - Location of output relative to the code that generates it (more relevant for presentations)\n\nComplete list of code chunk options for Knitr in this documentation page.",
     "crumbs": [
       "Scholarly Writing and Presentation"
     ]
@@ -902,7 +902,7 @@
     "href": "session-02.html#metadata-for-citable-articles---journal-article",
     "title": "Scholarly Writing and Presentation",
     "section": "Metadata for citable articles - journal article",
-    "text": "Metadata for citable articles - journal article\nFor journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:\n---\ncitation: \n  type: article-journal\n  container-title: \"Journal of Library Carpentry\"\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\n  url: https://example.com/summarizing-output\nbibliography: references.bib\n---",
+    "text": "Metadata for citable articles - journal article\nFor journal articles, there are additional metadata that needs to be included such as volume, issue, publisher, and page numbers, like so:\n---\ncitation: \n  type: article-journal\n  container-title: \"Journal of Library Carpentry\"\n  volume: 1\n  issue: 1\n  doi: 10.5555/12345678\n  url: https://example.com/summarizing-output\nbibliography: references.bib\n---  \n\n\n\n\n\n\nTip\n\n\nThe front matter metadata in Quarto is based on the schema from Citation Style Language project (expressed as YAML instead of XML). See the complete list of options in this documentation page.",
     "crumbs": [
       "Scholarly Writing and Presentation"
     ]
@@ -972,7 +972,7 @@
     "href": "session-02.html#yaml-header-options-for-revealjs-presentations",
     "title": "Scholarly Writing and Presentation",
     "section": "YAML header options for RevealJS presentations",
-    "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title.",
+    "text": "YAML header options for RevealJS presentations\nThere are many options, but several ones that you may find useful:\n\nincremental - controls whether to show all bullet points at once, or as you progress the slides.\nslide-number - controls whether to show slide numbers (will appear at the bottom right corner)\ntheme - Theme name, theme scss file, or a mix of both.\nscrollable - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the .scrollable class on the slide title.\n\nComplete list of options in this documentation page.",
     "crumbs": [
       "Scholarly Writing and Presentation"
     ]
