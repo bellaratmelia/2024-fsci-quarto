@@ -4,7 +4,7 @@
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
     "section": "About this Workshop",
-    "text": "About this Workshop\n\nPrior experience with R is highly recommended for this course\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
+    "text": "About this Workshop\n\nWe assume that you have some basic knowledge of R, RStudio and probably a little bit of Markdown\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -140,31 +140,11 @@
     ]
   },
   {
-    "objectID": "session-01.html#quarto-is-more-than-just-r",
-    "href": "session-01.html#quarto-is-more-than-just-r",
+    "objectID": "session-01.html#working-in-different-programming-languages",
+    "href": "session-01.html#working-in-different-programming-languages",
     "title": "Getting Started with Quarto",
-    "section": "Quarto is more than just R",
-    "text": "Quarto is more than just R\n\nQuarto supports R, Python, Julia, Observable and more\nQuarto can directly render Jupyter Notebooks (.ipynb) without conversion\n\nquarto render document.ipynb",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#executable-python-code-blocks-in-quarto",
-    "href": "session-01.html#executable-python-code-blocks-in-quarto",
-    "title": "Getting Started with Quarto",
-    "section": "Executable Python code blocks in Quarto",
-    "text": "Executable Python code blocks in Quarto\n\nInstall the reticulate package to seamlessly integrate Python code chunks in Quarto install.packages(\"reticulate\")\nWhen you use a Python chunk in a Quarto document, knitr uses reticulate to execute the Python code\n\n\n\nNote: Knitr is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#anatomy-of-a-quarto-document",
-    "href": "session-01.html#anatomy-of-a-quarto-document",
-    "title": "Getting Started with Quarto",
-    "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "section": "Working in different programming languages",
+    "text": "Working in different programming languages\n\nQuarto supports R, Python,\nuse Quarto within Jupyter Notebook",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -210,11 +190,51 @@
     ]
   },
   {
-    "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
-    "href": "session-01.html#anatomy-of-a-quarto-document-1",
+    "objectID": "session-01.html#inline-code",
+    "href": "session-01.html#inline-code",
+    "title": "Getting Started with Quarto",
+    "section": "Inline code",
+    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\nDo you know that inline code can be executable as well?",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#escaping-characters",
+    "href": "session-01.html#escaping-characters",
+    "title": "Getting Started with Quarto",
+    "section": "Escaping Characters",
+    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*\n\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for the first bullet point on this slide is \n`` \\ ` * ``",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#anatomy-of-a-quarto-document",
+    "href": "session-01.html#anatomy-of-a-quarto-document",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "text": "Anatomy of a Quarto document\n\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#adding-code-chunks-to-your-document",
+    "href": "session-01.html#adding-code-chunks-to-your-document",
+    "title": "Getting Started with Quarto",
+    "section": "Adding code chunks to your document",
+    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n#write some code here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Markdown",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#executable-code-chunks-in-quarto",
+    "href": "session-01.html#executable-code-chunks-in-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "Executable Code Chunks in Quarto",
+    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -244,7 +264,7 @@
     "href": "session-01.html#images-from-web",
     "title": "Getting Started with Quarto",
     "section": "Images from web",
-    "text": "Images from web\nImages can be embedded using the following syntax: ![caption](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
+    "text": "Images from web\nImages can be embedded using the following syntax: ![alt text](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -260,51 +280,11 @@
     ]
   },
   {
-    "objectID": "session-01.html#anatomy-of-a-quarto-document-2",
-    "href": "session-01.html#anatomy-of-a-quarto-document-2",
+    "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
+    "href": "session-01.html#anatomy-of-a-quarto-document-1",
     "title": "Getting Started with Quarto",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#inline-code",
-    "href": "session-01.html#inline-code",
-    "title": "Getting Started with Quarto",
-    "section": "Inline code",
-    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for \\ ` * is \n`` \\ ` * ``\n\n\n\n\n\nDo you know that inline code can be executable as well?",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#escaping-characters",
-    "href": "session-01.html#escaping-characters",
-    "title": "Getting Started with Quarto",
-    "section": "Escaping Characters",
-    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#adding-code-chunks-to-your-document",
-    "href": "session-01.html#adding-code-chunks-to-your-document",
-    "title": "Getting Started with Quarto",
-    "section": "Adding code chunks to your document",
-    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Quarto",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#executable-code-chunks-in-quarto",
-    "href": "session-01.html#executable-code-chunks-in-quarto",
-    "title": "Getting Started with Quarto",
-    "section": "Executable Code Chunks in Quarto",
-    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control",
+    "text": "Anatomy of a Quarto document\n\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -314,7 +294,7 @@
     "href": "session-01.html#more-yaml",
     "title": "Getting Started with Quarto",
     "section": "More YAML",
-    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation\n\n\n\n\n\n\n\n\nCaution\n\n\nProper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.",
+    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -355,16 +335,6 @@
     "title": "Getting Started with Quarto",
     "section": "Figures: Alignment",
     "text": "Figures: Alignment\n\nFigures are centre-aligned by default. You may change alignment by doing this:\n![Elephant](elephant.png){fig-align=\"left\"}\n\n\n\n\n\n\n\nNote\n\n\nFigure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)\n\n\n\n\nElephant",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#figures-alignment-1",
-    "href": "session-01.html#figures-alignment-1",
-    "title": "Getting Started with Quarto",
-    "section": "Figures: Alignment",
-    "text": "Figures: Alignment\n\nElephant",
     "crumbs": [
       "Getting Started with Quarto"
     ]
