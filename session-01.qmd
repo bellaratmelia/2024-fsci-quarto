@@ -73,16 +73,16 @@ Essentially, literate programming is about:
 
 ### Example: eLife Reproducible Article
 
-![](images\02_reproducible_elife.PNG)
+![](images/02_reproducible_elife.PNG)
 
 ------------------------------------------------------------------------
 
 ### Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
-![A figure from the reproducible article](images\03a_elife_figure.PNG)
+![A figure from the reproducible article](images/03a_elife_figure.PNG)
 
-![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)
+![The underlying live codes for the same figure](images/03b_elife_figure_code.PNG)
 :::
 
 ## Research Transparency & Reproducibility
