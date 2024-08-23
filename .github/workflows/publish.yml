@@ -25,6 +25,7 @@ jobs:
             any::knitr
             any::tidyverse
             any::palmerpenguins
+            any::reticulate
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

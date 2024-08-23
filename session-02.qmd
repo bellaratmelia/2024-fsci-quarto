@@ -24,6 +24,10 @@ We covered the following topic:
 
 -   Rendering to static Word document and RevealJS presentation (like this presentation!)
 
+## Quarto in the research cycle
+
+![Infographic by Kramer & Bosman](https://i2.wp.com/blogsmedia.lse.ac.uk/blogs.dir/9/files/2015/11/author-tools-5.jpg?w=590&ssl=1)
+
 ## Refresher: Literate Programming
 
 > Literate Programming, introduced by Donald Knuth in the 1980s, is a programming paradigm that emphasizes the intertwining of human-readable documentation and source code.
@@ -56,6 +60,12 @@ diamonds %>% ggplot(aes(x = color, fill = cut)) +
     geom_bar()
 ```
 
+## How does it all work?
+
+Magic! (just kidding)
+
+![Image by Allison Horst (allisonhorst.com)](images/knitr-jupyter.png){fig-align="center"}
+
 ## Anatomy of a code chunk
 
 For R, the code chunks are generated with the help of `knitr` package.
@@ -77,6 +87,8 @@ There are many code chunk options, but the important ones are:
 -   `label` - Unique label for the code chunks - useful for cross-referencing!
 
 -   `output-location` - Location of output relative to the code that generates it (more relevant for presentations)
+
+Complete list of code chunk options for Knitr in this [**documentation page**](https://quarto.org/docs/reference/cells/cells-knitr.html).
 
 ## Code Highlighting
 
@@ -178,7 +190,7 @@ Output:
 
 # Let's try this together!
 
-Refer to `01-quarto-basics/code-chunks.qmd` for the step-by-step guide for this activity.
+Refer to `01-quarto-basics/04-code-chunks.qmd` for the step-by-step guide for this activity.
 
 # Citations and Footnotes
 
@@ -256,7 +268,7 @@ Which will print out the output below:
 
 # Let's try this together!
 
-Refer to `02-scholarly-writing/citations-references.qmd` for the step-by-step guide for this activity.
+Refer to `02-scholarly-writing/01-citations-references.qmd` for the step-by-step guide for this activity.
 
 # Specific features for Scholarly Writing
 
@@ -387,7 +399,8 @@ author:
       - name: Singapore Management University
         city: Singapore
         url: www.smu.edu.sg
-citation: true
+citation: 
+  url: https://smu.edu.sg/library
 bibliography: references.bib
 ---
 ```
@@ -409,6 +422,10 @@ bibliography: references.bib
 ---  
 ```
 
+::: callout-tip
+The front matter metadata in Quarto is based on the schema from Citation Style Language project (expressed as YAML instead of XML). See the complete list of options in this [**documentation page**](https://docs.citationstyles.org/en/stable/index.html).
+:::
+
 ## Front Matter - Rendering result in HTML
 
 ![](images/04_quarto_frontmatter.jpg){fig-align="center"}
@@ -419,7 +436,7 @@ bibliography: references.bib
 
 # Let's try this together!
 
-Refer to `02-scholarly-writing/front-matter-metadata.qmd` for the step-by-step guide for this activity.
+Refer to `02-scholarly-writing/02-front-matter-metadata.qmd` for the step-by-step guide for this activity.
 
 # Rendering to Static Documents
 
@@ -524,6 +541,8 @@ There are many options, but several ones that you may find useful:
 
 -   `scrollable` - controls whether to allow content that overflows slides vertically to scroll. This can also be set per-slide by including the `.scrollable` class on the slide title.
 
+Complete list of options in this [**documentation page**](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
+
 # Let's try it together!
 
-Refer to `03-presentations/revealjs-presentation.qmd` for the step-by-step guide for this activity.
+Refer to `03-presentations/01-revealjs-presentation.qmd` for the step-by-step guide for this activity.

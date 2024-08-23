@@ -108,6 +108,10 @@ In a new Quarto Website project, you will see the following files:
 
 To add new pages or presentations to your website, simply add a new `.qmd` file and adjust the navigation in `_quarto.yml` file.
 
+::: callout-tip
+Complete list of website options are available in this [**documentation page**](https://quarto.org/docs/websites/).
+:::
+
 ## Publishing options
 
 There are several options, each with its own advantages [^2]
@@ -154,7 +158,7 @@ There are several options, each with its own advantages [^2]
 
 # Let's try it together!
 
-Refer to `04-websites/publishing-to-quartopub.qmd` for the step-by-step guide for this activity.
+Refer to `04-websites/01-publishing-to-quartopub.qmd` for the step-by-step guide for this activity.
 
 ## Publishing to GitHub - Refresher on Git
 
@@ -243,7 +247,7 @@ There are 3 ways to publish to GitHub[^3]:
 
 1.  Push source code change to GitHub repository.
 
-2.  GitHub renders the contents on the "cloud" and then display the result via GitHub Pages.
+2.  GitHub renders the contents on the "cloud" via [**GitHub Actions**](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) and then display the result via GitHub Pages.
 
 3.  (optional) You can also instruct GitHub to execute any code chunks on the "cloud" by modifying the GitHub action file to ensure the correct package versions are installed.
 :::
@@ -251,7 +255,7 @@ There are 3 ways to publish to GitHub[^3]:
 
 # Let's try it together!
 
-For today, let's try **option #3**! Refer to `04-websites/publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
+For today, let's try **option #3**! Refer to `04-websites/02-publishing-to-gh-pages.qmd` for the step-by-step guide for this activity.
 
 # Advanced Quarto Format: Blogs, Books and Manuscripts
 
@@ -301,6 +305,8 @@ Latest Quarto project format released in January 2024. The underlying structure 
 
 # Thank you!
 
-**Last activity: One-up One-down**
+**2 last questions:**
 
-Could you share one thing you like about the course, and one thing that you think can be improved?
+1.  Now that we've reviewed what Quarto can do, in what ways do you think it could be useful for your projects or day-to-day work?
+
+2.  One-up-one-down: Could you share one thing you like about the course, and one thing that you think can be improved?

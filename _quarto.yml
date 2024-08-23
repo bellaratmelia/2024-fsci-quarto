@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  render: 
+    - "*.qmd"
   
 website:
   title: "FSCI2024 C03"
@@ -11,6 +13,17 @@ website:
       - href: index.qmd
         text: Home
       - schedule.qmd
+      - sidebar:materials
+  sidebar:
+    - id: materials
+      title: "Materials"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - session-01.qmd
+        - session-02.qmd
+        - session-03.qmd
 
 format:
   html:
